@@ -1,5 +1,10 @@
-# TERN OpenVPN setup
+# Virtual provate networks
 
+- OpenVPN (TERN)
+- Kinect (Campbell Scientific)
+- DynDNS
+
+##  TERN OpenVPN setup
 (Ian McHugh)
 
 ### General description
@@ -28,11 +33,15 @@ To enable communications between the modem / router and a remote machine, openVP
 
 DEVICE-SPECIFIC SETTINGS
 
-MAXON Datamax MA100-1010/1020-4G
+MAXON Datamax MA100-1010/1020-4G applicable to Quadmax MA-6060 as well.
 
 Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘admin’ and ‘admin’, and the default IP address is 192.168.0.1), and check that you have web connectivity. On the front panel of the device, the ‘Online’ LED will be lit if all is well. Check that you have the most recent firmware version (listed at top right in Figure 1 below). Many of the requisite openVPN settings may not be available if your firmware version is not current. Maxon firmware updates can be accessed here:
 
-https://www.rfi.com.au/MA100-1010-4G
+[https://www.rfi.com.au/MA100-1010-4G](http://support.maxon.com.au/download/Datamax+%20-%20MA100-1010/)
+
+
+[http://support.maxon.com.au/download/MA-6060/](http://support.maxon.com.au/download/MA-6060/)
+    
 
 0)  Update firmware to enable TLS cipher options for OpenVPN
 
