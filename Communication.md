@@ -28,9 +28,17 @@ Recommendations for industrial-grade modems:
 
 In locations with marginal reception, it is recommended to use a modem that allows the use of two antennas, preferably yagi, in parallel (MiMo). Both antennas must be pointing to the same tower (!), and must be about 50 cm apart vertically for optimal boost of marginal signals.\
 
-    -   [Directional antenna, Mimo capable](https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/)
+-   [Directional antenna, Mimo capable](https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/)
 
--   Router Check if a modem provides sufficient ethernet ports (router functionality) for all devices on the local tower network. Consider
+### Router
+
+Check if a modem provides sufficient ethernet ports (router functionality) for all devices on the local tower network. Consider a modem with sufficient built-in ethernet ports. Avoid office-grade network routers. They are susceptible to power surges, lightning strikes and do not operate well at high or low temperatures. Check if what data transmission rates are required at a research tower. Chose a GBit capable-router if required (ie for high-frequency spectral data). Many industrial MBit-routers offer sufficient performance for most flux-related data transfer and are more robust.
+
+## Router recommendations
+
+-   [Industrial 5-port 100 MBit router](https://www.brainboxes.com/product/industrial-ethernet-switches/fast-ethernet/sw-505) (5 to 30V, DIN rail mount)
+
+-   [Industrial 8-port 100 MBit router](https://www.brainboxes.com/product/industrial-ethernet-switches/fast-ethernet/sw-508) (5 to 30V, DIN rail mount)
 
 ### Satellite communication
 

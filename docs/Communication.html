@@ -130,6 +130,10 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#g-modem-options" id="toc-g-modem-options" class="nav-link" data-scroll-target="#g-modem-options">4G modem options</a></li>
   <li><a href="#antennas" id="toc-antennas" class="nav-link" data-scroll-target="#antennas">Antennas</a></li>
+  <li><a href="#router" id="toc-router" class="nav-link" data-scroll-target="#router">Router</a></li>
+  </ul></li>
+  <li><a href="#router-recommendations" id="toc-router-recommendations" class="nav-link" data-scroll-target="#router-recommendations">Router recommendations</a>
+  <ul class="collapse">
   <li><a href="#satellite-communication" id="toc-satellite-communication" class="nav-link" data-scroll-target="#satellite-communication">Satellite communication</a></li>
   </ul></li>
   </ul></li>
@@ -146,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Communication</h1>
 <section id="modem" class="level2">
 <h2 class="anchored" data-anchor-id="modem">Modem</h2>
-<p>If a site has reasonable 4G/5G coverage, a modem can used for data transmission. In Australia, the recommended -and frequently only - phone network for remote locations is Telstra. TERN EP provides data-only Telstra SIM cards on request. Some towers might not require a 4G modem if there is an internet connection readily available. Then a router will suffice.</p>
+<p>If a site has reasonable 4G/5G coverage, a modem can used for data transmission. In Australia, the recommended -and frequently only - phone network for remote locations is Telstra. TERN EP provides data-only Telstra SIM cards on request. Some towers might not require a 4G modem if there is an internet connection (WiFi, DSL, fibreoptics, fixed-wireless, satellite, …) readily available. Then a router will suffice.</p>
 <section id="g-modem-options" class="level3">
 <h3 class="anchored" data-anchor-id="g-modem-options">4G modem options</h3>
 <p>Selection criteria for modems:</p>
@@ -164,17 +168,27 @@ ul.task-list li input[type="checkbox"] {
 <section id="antennas" class="level3">
 <h3 class="anchored" data-anchor-id="antennas">Antennas</h3>
 <ul>
-<li><p>Omnidirectional (omni) antennas are “fire and forget”: they will connect to any network in the area, and can switch between multiple network towers depending on signal strength or if a phone tower goes offline.<br>
+<li><p>Omnidirectional (omni) antennas are “install and forget”: they will connect to any phone network in the area, and can switch between multiple network towers depending on signal strength or if a phone tower goes offline.<br>
 </p></li>
 <li><p>Directional (yagi) antennas must be pointing to a known, specific network tower. This will improve the signal. The downside is, that the antenna points to a specific tower. If that network tower goes down, this antenna will not connect to another tower.</p></li>
 </ul>
 <p>In locations with marginal reception, it is recommended to use a modem that allows the use of two antennas, preferably yagi, in parallel (MiMo). Both antennas must be pointing to the same tower (!), and must be about 50 cm apart vertically for optimal boost of marginal signals.<br>
 </p>
-<pre><code>-   [Directional antenna, Mimo capable](https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/)</code></pre>
 <ul>
-<li>Router Check if a modem provides sufficient ethernet ports (router functionality) for all devices on the local tower network. Consider</li>
+<li>[Directional antenna, Mimo capable](https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/)</li>
 </ul>
 </section>
+<section id="router" class="level3">
+<h3 class="anchored" data-anchor-id="router">Router</h3>
+<p>Check if a modem provides sufficient ethernet ports (router functionality) for all devices on the local tower network. Consider a modem with sufficient built-in ethernet ports. Avoid office-grade network routers. They are susceptible to power surges, lightning strikes and do not operate well at high or low temperatures. Check if what data transmission rates are required at a research tower. Chose a GBit capable-router if required (ie for high-frequency spectral data). Many industrial MBit-routers offer sufficient performance for most flux-related data transfer and are more robust.</p>
+</section>
+</section>
+<section id="router-recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="router-recommendations">Router recommendations</h2>
+<ul>
+<li><p><a href="https://www.brainboxes.com/product/industrial-ethernet-switches/fast-ethernet/sw-505">Industrial 5-port 100 MBit router</a> (5 to 30V)</p></li>
+<li><p><a href="https://www.brainboxes.com/product/industrial-ethernet-switches/fast-ethernet/sw-508">Industrial 8-port 100 MBit router</a> (5 to 30V)</p></li>
+</ul>
 <section id="satellite-communication" class="level3">
 <h3 class="anchored" data-anchor-id="satellite-communication">Satellite communication</h3>
 <p><a href="./Home.html">Home</a></p>
