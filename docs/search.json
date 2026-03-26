@@ -1,50 +1,29 @@
 [
   {
-    "objectID": "Home.html",
-    "href": "Home.html",
-    "title": "OzFlux tower handbook",
+    "objectID": "Communication.html",
+    "href": "Communication.html",
+    "title": "Communication",
     "section": "",
-    "text": "This handbook covers mainly technical aspects of building a flux tower. It does not cover the scientific background of eddy covariance.\nPlease refer to the manuals and papers below for in-depth information:"
+    "text": "If a site has reasonable 4G/5G coverage, a modem can be used for data transmission. In Australia, the recommended network for remote locations is Telstra. TERN EP provides data-only Telstra SIM cards on request.\n\n\n\nOptions for Campbell Scientific enclosures (fibreglass and steel)\n\n\n\n\nFibreglass enclosures in the field after several years (left) and one year (right) (Markus Loew)\n\n\n\n\n\nDelaminating fibreglass enclosure, Licor (Markus Loew)\n\n\n\n\n\nFibreglass enclosure after many years in the field, without delamination (Markus Loew)\n\n\n\n\n\n\nIn general, check the quality of hinges, locks, and ensure that wast can not pool on top of the seals of the enclosure. Ensure good grounding / earth protection for metal enclosures\nIf vandalism or theft is a possibility at the tower location, consider heavy duty enclosure are add additional protection around the instrumentation (see below)\nSuppliers of enclosures\nIP Enclosures\nDelvallebox see their NEMA steel series\nTropac enclosures (untested)\nCampbell Scientific enclosures (fibreglass and steel)\n\n\n\n\n\nBetter protection in harsh environments from wildlife, and weather. Matt Northwood built custom structures that protect the enclosures from ants, provides sun protection for the enclosures inside and for people working in the instruments, improved protection from wildfire and weather, increased security.\n\n\n\nDIY protective structure for enclosures (Matt Northwood)\n\n\n\nShade cover\nCustom cover to fit over enclosure:\n\n\n\nCustom shade cover for a Campbell Scientific fibreglass enclosure (Matt Northwood)"
   },
   {
-    "objectID": "Home.html#a-technical-guide-on-setting-up-an-ozflux-tower",
-    "href": "Home.html#a-technical-guide-on-setting-up-an-ozflux-tower",
-    "title": "OzFlux tower handbook",
+    "objectID": "Communication.html#modem",
+    "href": "Communication.html#modem",
+    "title": "Communication",
     "section": "",
-    "text": "This handbook covers mainly technical aspects of building a flux tower. It does not cover the scientific background of eddy covariance.\nPlease refer to the manuals and papers below for in-depth information:"
+    "text": "If a site has reasonable 4G/5G coverage, a modem can be used for data transmission. In Australia, the recommended network for remote locations is Telstra. TERN EP provides data-only Telstra SIM cards on request.\n\n\n\nOptions for Campbell Scientific enclosures (fibreglass and steel)\n\n\n\n\nFibreglass enclosures in the field after several years (left) and one year (right) (Markus Loew)\n\n\n\n\n\nDelaminating fibreglass enclosure, Licor (Markus Loew)\n\n\n\n\n\nFibreglass enclosure after many years in the field, without delamination (Markus Loew)\n\n\n\n\n\n\nIn general, check the quality of hinges, locks, and ensure that wast can not pool on top of the seals of the enclosure. Ensure good grounding / earth protection for metal enclosures\nIf vandalism or theft is a possibility at the tower location, consider heavy duty enclosure are add additional protection around the instrumentation (see below)\nSuppliers of enclosures\nIP Enclosures\nDelvallebox see their NEMA steel series\nTropac enclosures (untested)\nCampbell Scientific enclosures (fibreglass and steel)"
   },
   {
-    "objectID": "Tower-types.html",
-    "href": "Tower-types.html",
-    "title": "My Document",
-    "section": "",
-    "text": "Tower types"
-  },
-  {
-    "objectID": "Enclosures.html",
-    "href": "Enclosures.html",
-    "title": "Enclosures",
-    "section": "",
-    "text": "Fibreglass enclosures are the default for instruments from Licor and Campbell Scientific. These are relatively lightweight and come with attachments to suit towers and poles. In the case of enclosures from Campbell Scientific, their included peg-board mount fits they data logger and accessories.\nLong-term, fibreglass enclosures degrade to varying extent due to sun/UV exposure. They can delaminate. and become brittle. Delamination can happen within one year, but might not happen after several years. Custom shade covers are recommended in some areas (see below).\n\nOptions for Campbell Scientific enclosures (fibreglass and steel)\n\n\n\n\nFibreglass enclosures in the field after several years (left) and one year (right) (Markus Loew)\n\n\n\n\n\nDelaminating fibreglass enclosure, Licor (Markus Loew)\n\n\n\n\n\nFibreglass enclosure after many years in the field, without delamination (Markus Loew)\n\n\n\n\n\nMetal enclosures are standard in many electrical installations. They are not always best for flux towers, though. Metal enclosures with plastic locks or other parts fail similarly to fibreglass enclosures as the UV degrades the plastic parts.\nWorking with steel enclosures can be difficult to drill into to install cabling, and they can rust. The weight of steel enclosures can make install on tower more difficult.\nAluminium enclosures can be too flimsy for long-term use in the field, depending on type. A big downside of aluminium is heat buildup inside. A sun cover is recommended depending on location.\n\nIn general, check the quality of hinges, locks, and ensure that wast can not pool on top of the seals of the enclosure. Ensure good grounding / earth protection for metal enclosures\nIf vandalism or theft is a possibility at the tower location, consider heavy duty enclosure are add additional protection around the instrumentation (see below)\nSuppliers of enclosures\nIP Enclosures\nDelvallebox see their NEMA steel series\nTropac enclosures (untested)\nCampbell Scientific enclosures (fibreglass and steel)\n\n\n\n\n\nBetter protection in harsh environments from wildlife, and weather. Matt Northwood built custom structures that protect the enclosures from ants, provides sun protection for the enclosures inside and for people working in the instruments, improved protection from wildfire and weather, increased security.\n\n\n\nDIY protective structure for enclosures (Matt Northwood)\n\n\n\nShade cover\nCustom cover to fit over enclosure:\n\n\n\nCustom shade cover for a Campbell Scientific fibreglass enclosure (Matt Northwood)"
-  },
-  {
-    "objectID": "Enclosures.html#commercial-enclosures",
-    "href": "Enclosures.html#commercial-enclosures",
-    "title": "Enclosures",
-    "section": "",
-    "text": "Fibreglass enclosures are the default for instruments from Licor and Campbell Scientific. These are relatively lightweight and come with attachments to suit towers and poles. In the case of enclosures from Campbell Scientific, their included peg-board mount fits they data logger and accessories.\nLong-term, fibreglass enclosures degrade to varying extent due to sun/UV exposure. They can delaminate. and become brittle. Delamination can happen within one year, but might not happen after several years. Custom shade covers are recommended in some areas (see below).\n\nOptions for Campbell Scientific enclosures (fibreglass and steel)\n\n\n\n\nFibreglass enclosures in the field after several years (left) and one year (right) (Markus Loew)\n\n\n\n\n\nDelaminating fibreglass enclosure, Licor (Markus Loew)\n\n\n\n\n\nFibreglass enclosure after many years in the field, without delamination (Markus Loew)\n\n\n\n\n\nMetal enclosures are standard in many electrical installations. They are not always best for flux towers, though. Metal enclosures with plastic locks or other parts fail similarly to fibreglass enclosures as the UV degrades the plastic parts.\nWorking with steel enclosures can be difficult to drill into to install cabling, and they can rust. The weight of steel enclosures can make install on tower more difficult.\nAluminium enclosures can be too flimsy for long-term use in the field, depending on type. A big downside of aluminium is heat buildup inside. A sun cover is recommended depending on location.\n\nIn general, check the quality of hinges, locks, and ensure that wast can not pool on top of the seals of the enclosure. Ensure good grounding / earth protection for metal enclosures\nIf vandalism or theft is a possibility at the tower location, consider heavy duty enclosure are add additional protection around the instrumentation (see below)\nSuppliers of enclosures\nIP Enclosures\nDelvallebox see their NEMA steel series\nTropac enclosures (untested)\nCampbell Scientific enclosures (fibreglass and steel)"
-  },
-  {
-    "objectID": "Enclosures.html#diy-enclosures-and-shade-covers",
-    "href": "Enclosures.html#diy-enclosures-and-shade-covers",
-    "title": "Enclosures",
+    "objectID": "Communication.html#diy-enclosures-and-shade-covers",
+    "href": "Communication.html#diy-enclosures-and-shade-covers",
+    "title": "Communication",
     "section": "",
     "text": "Better protection in harsh environments from wildlife, and weather. Matt Northwood built custom structures that protect the enclosures from ants, provides sun protection for the enclosures inside and for people working in the instruments, improved protection from wildfire and weather, increased security.\n\n\n\nDIY protective structure for enclosures (Matt Northwood)\n\n\n\nShade cover\nCustom cover to fit over enclosure:\n\n\n\nCustom shade cover for a Campbell Scientific fibreglass enclosure (Matt Northwood)"
   },
   {
-    "objectID": "Enclosures.html#glands-and-putty",
-    "href": "Enclosures.html#glands-and-putty",
-    "title": "Enclosures",
+    "objectID": "Communication.html#glands-and-putty",
+    "href": "Communication.html#glands-and-putty",
+    "title": "Communication",
     "section": "Glands and putty",
     "text": "Glands and putty\nThe simplest way to feed cables into an enclosure is a simple hole with protective pipe. Once the cables are installed, the hole is sealed with electrical putty against water ingress and wildlife.\n\n\nThis is not a perfect seal as insects and water will still get in! And the electrical putty becomes brittle over time. Still, it is a simple and fast way to install cables. Campbell Scientific enclosures use this system by default. Such electrical putty is hard to find in Australia (?). Campbell Scientific provides electrical putty with their enclosures.\nLAPP Australia Cable glands\nPrysmian R391 Electrical Weatherproof Compound, Supplier 1\nPrysmian R391 Electrical Weatherproof Compound, Supplier 2\n\n\n\n\nCampbell Scientific enclosure with simple cable access and electrical putty as seal (Markus Loew)\n\n\n\nGlands with wulti-hole inserts\nMulti-hole inserts provide a better seal around the cables than the electrical putty shown above.\n\nInstalling and removing cables is not as easy compared to the other methods, especially if there are plugs at the end.\nthese inserts provide excellent cable management\nLapp Australia Multi-Hole inserts\n\n\n\n\nNylon cable glands with multi-hole inserts (Matt Northwood)\n\n\n\n\nSkintop cubes\nAn alternative to cable glands are skintop cubes. A rectangular frame is installed into the enclosure wall. This frame holds eight to ten inserts that surround individual cables entering the enclosure.\n\nas each cable has it’s own insert, individual cables can be easily removed / inserted. This becomes handy when wires need replacing or when installing cables with plug at the end, like e.g. ethernet\nrelative expensive\nthe inserts are initially difficult the remove from the cables. This can be frustrating on location. After re-opening them once or twice, though, they can be opened without tools while still being watertight afterwards.\navailable from Lapp Australia Skintop Cubes\n\n\n\n\nSkintop multi-cable insert with blank inserts for future cables on the left and inserts with cables on the right (Markus Loew)\n\n\n\n\n\nSkintop cube frame and inserts (Markus Loew)\n\n\nHome"
   },
@@ -96,5 +75,54 @@
     "title": "Climbing and rigging",
     "section": "",
     "text": "Buy metal, steel, aluminum poles at your locat steel and aluminium merchant\nAluminum and steel tubing usually have in-compatible diameters\nConnections between steel and aluminium can become oxidised\nHome"
+  },
+  {
+    "objectID": "Enclosures.html",
+    "href": "Enclosures.html",
+    "title": "Enclosures",
+    "section": "",
+    "text": "Fibreglass enclosures are the default for instruments from Licor and Campbell Scientific. These are relatively lightweight and come with attachments to suit towers and poles. In the case of enclosures from Campbell Scientific, their included peg-board mount fits they data logger and accessories.\nLong-term, fibreglass enclosures degrade to varying extent due to sun/UV exposure. They can delaminate. and become brittle. Delamination can happen within one year, but might not happen after several years. Custom shade covers are recommended in some areas (see below).\n\nOptions for Campbell Scientific enclosures (fibreglass and steel)\n\n\n\n\nFibreglass enclosures in the field after several years (left) and one year (right) (Markus Loew)\n\n\n\n\n\nDelaminating fibreglass enclosure, Licor (Markus Loew)\n\n\n\n\n\nFibreglass enclosure after many years in the field, without delamination (Markus Loew)\n\n\n\n\n\nMetal enclosures are standard in many electrical installations. They are not always best for flux towers, though. Metal enclosures with plastic locks or other parts fail similarly to fibreglass enclosures as the UV degrades the plastic parts.\nWorking with steel enclosures can be difficult to drill into to install cabling, and they can rust. The weight of steel enclosures can make install on tower more difficult.\nAluminium enclosures can be too flimsy for long-term use in the field, depending on type. A big downside of aluminium is heat buildup inside. A sun cover is recommended depending on location.\n\nIn general, check the quality of hinges, locks, and ensure that wast can not pool on top of the seals of the enclosure. Ensure good grounding / earth protection for metal enclosures\nIf vandalism or theft is a possibility at the tower location, consider heavy duty enclosure are add additional protection around the instrumentation (see below)\nSuppliers of enclosures\nIP Enclosures\nDelvallebox see their NEMA steel series\nTropac enclosures (untested)\nCampbell Scientific enclosures (fibreglass and steel)\n\n\n\n\n\nBetter protection in harsh environments from wildlife, and weather. Matt Northwood built custom structures that protect the enclosures from ants, provides sun protection for the enclosures inside and for people working in the instruments, improved protection from wildfire and weather, increased security.\n\n\n\nDIY protective structure for enclosures (Matt Northwood)\n\n\n\nShade cover\nCustom cover to fit over enclosure:\n\n\n\nCustom shade cover for a Campbell Scientific fibreglass enclosure (Matt Northwood)"
+  },
+  {
+    "objectID": "Enclosures.html#commercial-enclosures",
+    "href": "Enclosures.html#commercial-enclosures",
+    "title": "Enclosures",
+    "section": "",
+    "text": "Fibreglass enclosures are the default for instruments from Licor and Campbell Scientific. These are relatively lightweight and come with attachments to suit towers and poles. In the case of enclosures from Campbell Scientific, their included peg-board mount fits they data logger and accessories.\nLong-term, fibreglass enclosures degrade to varying extent due to sun/UV exposure. They can delaminate. and become brittle. Delamination can happen within one year, but might not happen after several years. Custom shade covers are recommended in some areas (see below).\n\nOptions for Campbell Scientific enclosures (fibreglass and steel)\n\n\n\n\nFibreglass enclosures in the field after several years (left) and one year (right) (Markus Loew)\n\n\n\n\n\nDelaminating fibreglass enclosure, Licor (Markus Loew)\n\n\n\n\n\nFibreglass enclosure after many years in the field, without delamination (Markus Loew)\n\n\n\n\n\nMetal enclosures are standard in many electrical installations. They are not always best for flux towers, though. Metal enclosures with plastic locks or other parts fail similarly to fibreglass enclosures as the UV degrades the plastic parts.\nWorking with steel enclosures can be difficult to drill into to install cabling, and they can rust. The weight of steel enclosures can make install on tower more difficult.\nAluminium enclosures can be too flimsy for long-term use in the field, depending on type. A big downside of aluminium is heat buildup inside. A sun cover is recommended depending on location.\n\nIn general, check the quality of hinges, locks, and ensure that wast can not pool on top of the seals of the enclosure. Ensure good grounding / earth protection for metal enclosures\nIf vandalism or theft is a possibility at the tower location, consider heavy duty enclosure are add additional protection around the instrumentation (see below)\nSuppliers of enclosures\nIP Enclosures\nDelvallebox see their NEMA steel series\nTropac enclosures (untested)\nCampbell Scientific enclosures (fibreglass and steel)"
+  },
+  {
+    "objectID": "Enclosures.html#diy-enclosures-and-shade-covers",
+    "href": "Enclosures.html#diy-enclosures-and-shade-covers",
+    "title": "Enclosures",
+    "section": "",
+    "text": "Better protection in harsh environments from wildlife, and weather. Matt Northwood built custom structures that protect the enclosures from ants, provides sun protection for the enclosures inside and for people working in the instruments, improved protection from wildfire and weather, increased security.\n\n\n\nDIY protective structure for enclosures (Matt Northwood)\n\n\n\nShade cover\nCustom cover to fit over enclosure:\n\n\n\nCustom shade cover for a Campbell Scientific fibreglass enclosure (Matt Northwood)"
+  },
+  {
+    "objectID": "Enclosures.html#glands-and-putty",
+    "href": "Enclosures.html#glands-and-putty",
+    "title": "Enclosures",
+    "section": "Glands and putty",
+    "text": "Glands and putty\nThe simplest way to feed cables into an enclosure is a simple hole with protective pipe. Once the cables are installed, the hole is sealed with electrical putty against water ingress and wildlife.\n\n\nThis is not a perfect seal as insects and water will still get in! And the electrical putty becomes brittle over time. Still, it is a simple and fast way to install cables. Campbell Scientific enclosures use this system by default. Such electrical putty is hard to find in Australia (?). Campbell Scientific provides electrical putty with their enclosures.\nLAPP Australia Cable glands\nPrysmian R391 Electrical Weatherproof Compound, Supplier 1\nPrysmian R391 Electrical Weatherproof Compound, Supplier 2\n\n\n\n\nCampbell Scientific enclosure with simple cable access and electrical putty as seal (Markus Loew)\n\n\n\nGlands with wulti-hole inserts\nMulti-hole inserts provide a better seal around the cables than the electrical putty shown above.\n\nInstalling and removing cables is not as easy compared to the other methods, especially if there are plugs at the end.\nthese inserts provide excellent cable management\nLapp Australia Multi-Hole inserts\n\n\n\n\nNylon cable glands with multi-hole inserts (Matt Northwood)\n\n\n\n\nSkintop cubes\nAn alternative to cable glands are skintop cubes. A rectangular frame is installed into the enclosure wall. This frame holds eight to ten inserts that surround individual cables entering the enclosure.\n\nas each cable has it’s own insert, individual cables can be easily removed / inserted. This becomes handy when wires need replacing or when installing cables with plug at the end, like e.g. ethernet\nrelative expensive\nthe inserts are initially difficult the remove from the cables. This can be frustrating on location. After re-opening them once or twice, though, they can be opened without tools while still being watertight afterwards.\navailable from Lapp Australia Skintop Cubes\n\n\n\n\nSkintop multi-cable insert with blank inserts for future cables on the left and inserts with cables on the right (Markus Loew)\n\n\n\n\n\nSkintop cube frame and inserts (Markus Loew)\n\n\nHome"
+  },
+  {
+    "objectID": "Tower-types.html",
+    "href": "Tower-types.html",
+    "title": "My Document",
+    "section": "",
+    "text": "Tower types"
+  },
+  {
+    "objectID": "Home.html",
+    "href": "Home.html",
+    "title": "OzFlux tower handbook",
+    "section": "",
+    "text": "This handbook covers mainly technical aspects of building a flux tower. It does not cover the scientific background of eddy covariance.\nPlease refer to the manuals and papers below for in-depth information:"
+  },
+  {
+    "objectID": "Home.html#a-technical-guide-on-setting-up-an-ozflux-tower",
+    "href": "Home.html#a-technical-guide-on-setting-up-an-ozflux-tower",
+    "title": "OzFlux tower handbook",
+    "section": "",
+    "text": "This handbook covers mainly technical aspects of building a flux tower. It does not cover the scientific background of eddy covariance.\nPlease refer to the manuals and papers below for in-depth information:"
   }
 ]

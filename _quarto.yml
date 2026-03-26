@@ -8,6 +8,8 @@ website:
     left:
       - text: Home
         file: Home.md
+      - text: Communications
+        file: Communication.md
       - text: Climbing & Rigging
         file: ClimbingRigging.md
       - text: Enclosures
