@@ -100,17 +100,37 @@ Apogee CS310 PAR sensor program constants and wiring:
 
 ### Averging soil temperature thermocouple (TCAV)
 
-'TCAV #1 '3H Signal (purple) '3L Signal reference (red) 'gnd Shield (clear)
+`TCAV #1 '3H Signal (purple) '3L Signal reference (red) 'gnd Shield (clear)`
 
-'TCAV #2 '4H Signal (purple) '4L Signal reference (red) 'gnd Shield (clear)
+`TCAV #2 '4H Signal (purple) '4L Signal reference (red) 'gnd Shield (clear)`
 
 ### Soil moisture user constants / wiring (CR1000X)
 
-`Const CS65X_1_SDI12_PORT = C5 'Unique control port. Const CS65X_2_SDI12_PORT = C7 'Unique control port. Const NMBR_CS65X = 4 'Unique number of CS65X to measure.`
+`Const CS65X_1_SDI12_PORT = C5 'Unique control port.`
 
-`C5 SDI-12 data #1 (SDI-12 address = 0) (green) 'C7 SDI-12 data #2 (SDI-12 address = 0) (green) 'G RS-232 Rx #1 (orange) ' RS-232 Rx #2 (orange)`
+`Const CS65X_2_SDI12_PORT = C7 'Unique control port.`
 
-`12V SDI-12 power #1 (red) ' SDI-12 power #2 (red) 'G SDI-12 data/power reference #1 (black) ' Shield #1 (clear) ' SDI-12 data/power reference #2 (black) ' Shield #2 (clear)`
+`Const NMBR_CS65X = 4 'Unique number of CS65X to measure.`
+
+`C5 SDI-12 data #1 (SDI-12 address = 0) (green)`
+
+`'C7 SDI-12 data #2 (SDI-12 address = 0) (green)`
+
+`'G RS-232 Rx #1 (orange)`
+
+`' RS-232 Rx #2 (orange)`
+
+`12V SDI-12 power #1 (red)`
+
+`SDI-12 power #2 (red)`
+
+`G SDI-12 data/power reference #1 (black)`
+
+`Shield #1 (clear)`
+
+`SDI-12 data/power reference #2 (black)`
+
+`Shield #2 (clear)`
 
 ### Rain gauge user constants / wiring (CR1000X)
 
