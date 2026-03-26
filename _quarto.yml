@@ -10,13 +10,18 @@ website:
         file: Home.md
       - text: Communication
         file: Communication.md
+      - text: OpenVPN
+        file: TERNOpenVPN.md
       - text: Climbing & Rigging
         file: ClimbingRigging.md
-      - text: Enclosures
-        file: Enclosures.md
       - text: Tower Types
         file: Tower-types.md
-
+      - text: Enclosures
+        file: Enclosures.md
+      - text: Sensors
+        file: Sensorwiring.md
+     
+      
 format:
   html:
     theme: cosmo

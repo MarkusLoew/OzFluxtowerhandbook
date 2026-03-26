@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>climbingrigging – OzFlux Tower Handbook</title>
+<title>ternopenvpn – OzFlux Tower Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,11 +97,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Communication</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./TERNOpenVPN.html"> 
+    <a class="nav-link active" href="./TERNOpenVPN.html" aria-current="page"> 
 <span class="menu-text">OpenVPN</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./ClimbingRigging.html" aria-current="page"> 
+    <a class="nav-link" href="./ClimbingRigging.html"> 
 <span class="menu-text">Climbing &amp; Rigging</span></a>
   </li>  
   <li class="nav-item">
@@ -132,17 +132,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#climbing-and-rigging" id="toc-climbing-and-rigging" class="nav-link active" data-scroll-target="#climbing-and-rigging">Climbing and rigging</a>
+  <li><a href="#tern-openvpn-setup" id="toc-tern-openvpn-setup" class="nav-link active" data-scroll-target="#tern-openvpn-setup">TERN OpenVPN setup</a>
   <ul class="collapse">
-  <li><a href="#riggers" id="toc-riggers" class="nav-link" data-scroll-target="#riggers">Riggers</a></li>
-  <li><a href="#working-at-heights-competency" id="toc-working-at-heights-competency" class="nav-link" data-scroll-target="#working-at-heights-competency">Working at heights competency</a>
-  <ul class="collapse">
-  <li><a href="#tower-climbing-and-rescue-training-courses" id="toc-tower-climbing-and-rescue-training-courses" class="nav-link" data-scroll-target="#tower-climbing-and-rescue-training-courses">Tower climbing and rescue training courses</a></li>
-  </ul></li>
-  <li><a href="#climbing-gear" id="toc-climbing-gear" class="nav-link" data-scroll-target="#climbing-gear">Climbing gear</a></li>
-  <li><a href="#pick-off-tower-rescue" id="toc-pick-off-tower-rescue" class="nav-link" data-scroll-target="#pick-off-tower-rescue">Pick-off tower rescue</a></li>
-  <li><a href="#rigging-clamps-mounting-hardware" id="toc-rigging-clamps-mounting-hardware" class="nav-link" data-scroll-target="#rigging-clamps-mounting-hardware">Rigging, clamps, mounting hardware</a></li>
-  <li><a href="#pipes-tubes" id="toc-pipes-tubes" class="nav-link" data-scroll-target="#pipes-tubes">Pipes, tubes</a></li>
+  <li><a href="#general-description" id="toc-general-description" class="nav-link" data-scroll-target="#general-description">General description</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -153,133 +145,176 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="climbing-and-rigging" class="level1">
-<h1>Climbing and rigging</h1>
-<section id="riggers" class="level2">
-<h2 class="anchored" data-anchor-id="riggers">Riggers</h2>
-<p>For tower builds, tower inspections, rigging, contact the rigging companies below. All operate Australia-wide:</p>
+<section id="tern-openvpn-setup" class="level1">
+<h1>TERN OpenVPN setup</h1>
+<p>(Ian McHugh)</p>
+<section id="general-description" class="level3">
+<h3 class="anchored" data-anchor-id="general-description">General description</h3>
+<p>We use openVPN for connection and upload / download of data to and from the loggers and other IP-capable devices. This gives us a secure, network-wide solution that offers access to both the modem router and the devices connected to its local area network. This is invaluable for allowing remote configuration. The initial configuration consists of 5 main steps (steps 1-3 are device-specific, and are covered in further detail based on device subsequently):</p>
+<ol type="1">
+<li>Establish openVPN connection</li>
+</ol>
+<p>This consists of configuring the modem / router as an openVPN client with settings that allow secure connection to the openVPN server via specific encryption protocols, in combination with a key file or files the user uploads to the device. The file(s) can be acquired from TERN EP central.</p>
+<ol start="2" type="1">
+<li>Configure LAN IP</li>
+</ol>
+<p>This consists of applying subnetwork settings for the modem itself, and for the IP range covered by the DHCP server (from within which specific IP addresses will be assigned to client hardware). Note that site VPN IP and subnet IP addresses are specifically tied to individual sites.</p>
+<ol start="3" type="1">
+<li>Configure DHCP server</li>
+</ol>
+<p>This consists of assigning fixed local IP addresses to different hardware components (loggers, IP cameras, IRGAs etc) based on their unique MAC addresses.</p>
+<ol start="4" type="1">
+<li>Configure hardware to use DHCP</li>
+</ol>
+<p>This is generally only required / relevant for loggers, but ensures that they request IP leases via DHCP - and thus have a predictable IP address assigned, as per (3) above - instead of assigning the IP address within the hardware itself, which increases both the complexity of the configuration (multiple pieces of hardware must be configured correctly for the system to work) and the potential for IP collisions.</p>
+<ol start="5" type="1">
+<li>Configure remote PC and communications software</li>
+</ol>
+<p>To enable communications between the modem / router and a remote machine, openVPN client software must also be running on the remote machine. You may need to check your IT departmental policy on the use of openVPN, as some universities may stop openVPN traffic by default. In most cases, hardware devices are accessed via support software. The main software package of most relevance to most researchers is Campbell Scientific’s Loggernet package, to which instructions herein are confined. Please contact TERN EP central node to discuss connection / configuration / communication needs for other hardware.</p>
+<p>DEVICE-SPECIFIC SETTINGS</p>
+<p>MAXON Datamax MA100-1010/1020-4G</p>
+<p>Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘admin’ and ‘admin’, and the default IP address is 192.168.0.1), and check that you have web connectivity. On the front panel of the device, the ‘Online’ LED will be lit if all is well. Check that you have the most recent firmware version (listed at top right in Figure 1 below). Many of the requisite openVPN settings may not be available if your firmware version is not current. Maxon firmware updates can be accessed here:</p>
+<p>https://www.rfi.com.au/MA100-1010-4G</p>
+<ol start="0" type="1">
+<li>Update firmware to enable TLS cipher options for OpenVPN</li>
+</ol>
+<p>See status website of router, Firmware version should be: v3.0.2-100-1020(Aug 23 2021 11:03:31) std - build 5656M</p>
+<p>To update the firmware, get the file from here:</p>
+<p><a href="http://support.maxon.com.au/download/Datamax%20LoRa/Firmware/" class="uri">http://support.maxon.com.au/download/Datamax%20LoRa/Firmware/</a></p>
+<p>File: uimage-MA100-1020-V3.0.2-20210823.flash</p>
+<p>Use network connection to Maxon datamax to write the new firmware to device</p>
+<ol type="1">
+<li>Establish openVPN connection</li>
+</ol>
+<p>Under ‘Advanced Features’ → ‘OPENVPN’, ensure settings match those in Figure 1. Further down the same admin page, we can upload the requisite certificates / keys for secure connection (Figure 2). In the case of the Maxon modems, the text in the single file issued to the site user must be split into four sections (to minimise editing – and potential introduction of unwanted edits/characters in the originally-issued file - it is best to create local subfiles for each of the below), which are uploaded by cutting and pasting the relevant sections of text into the appropriate text boxes, as follows (Maxon text box headings in quotations):</p>
 <ul>
-<li><p>Commconns constructions, 30 Backwater Crt, Kirwans Bridge, VIC 3608, Phone 0407 576 343, Ian Burrowes <a href="mailto:ian@commcons.com.au" class="email">ian@commcons.com.au</a>, admin@commcons.com.au</p></li>
-<li><p>High Access Rigging, Ian Grivel, 0418 896 688</p></li>
-<li><p>Karera Pty Ltd, 2/49 Gavenlock Road, Tuggerah, NSW, 2259, Phone 1300 425 905, Joel Dawes <a href="mailto:joel.dawes@karera.com" class="email">joel.dawes@karera.com</a>, sales@karera.com, <a href="www.karera.com.au">www.karera.com.au</a></p></li>
-<li><p>Meridian Communications, A 71 Metrolink Circuit, Campbellfield VIC 3061, Bernie Cunningham, <a href="mailto:bcunningham@meridiancommunications.com.au" class="email">bcunningham@meridiancommunications.com.au</a>, <a href="https://www.meridiancommunications.com.au/">www.meridiancommunications.com.au</a></p></li>
+<li><p>‘TLS Auth Key’: the section of text between <tls-auth> and </tls-auth>, including only the text between (and INCLUSIVE OF) “—–BEGIN OpenVPN Static key V1—–” and “—–END OpenVPN Static key V1—–”</p></li>
+<li><p>‘CA Cert’ (Root certificate): the section of text between <ca> and </ca>, including only the text between (and INCLUSIVE OF) “—–BEGIN CERTIFICATE—–” and “—–END CERTIFICATE—–”</p></li>
+<li><p>‘Public Client Cert’ (Public certificate): the section of text between <cert> and </cert>, including only the text between (and INCLUSIVE OF) “—–BEGIN CERTIFICATE—–” and “—–END CERTIFICATE—–”</p></li>
+<li><p>‘Private Client Key’ (Private key): the section of text between <key> and </key>, including only the text between (and INCLUSIVE OF) “—–BEGIN PRIVATE KEY—–” and “—–END PRIVATE KEY—–”</p></li>
 </ul>
-</section>
-<section id="working-at-heights-competency" class="level2">
-<h2 class="anchored" data-anchor-id="working-at-heights-competency">Working at heights competency</h2>
-<p>Two nationally accredited training units are essential to work on an Australian tower as mandated by the Australian Government:</p>
-<ul>
-<li><p><a href="https://training.gov.au/training/details/RIIWHS204E/unitdetails">RIIWHS204E Work safely heights</a></p></li>
-<li><p><a href="https://training.gov.au/training/details/ICTTCR203/unitdetails">ICTTCR203 Use safe rigging practices to climb and perform rescues on telecommunications network structures</a></p></li>
-</ul>
-<p>Re-training is recommended every two to three years if not competent, or “if not actively working at heights” frequently.<br>
-The training certificates do not expire officially by law, but employers or tower owners might require regular re-training regardless. Check with your OHS team!</p>
-<section id="tower-climbing-and-rescue-training-courses" class="level3">
-<h3 class="anchored" data-anchor-id="tower-climbing-and-rescue-training-courses">Tower climbing and rescue training courses</h3>
-<ul>
-<li><p><a href="https://www.pinnaclesafety.com.au/courses/height-safety/tower-rescue-training">Pinnacle Safety and Training: Tower climbing and rescue training</a></p></li>
-<li><p><a href="https://safetyaustraliatraining.com.au/work-safely-at-heights/">Safety Training Australia: Work Safely at Heights training</a></p></li>
-</ul>
-<p>Ensure the training covers both, RIIWHS204E and ICTTCR203!<br>
-One-day refresher courses are available for people who already did the full two-day training courses.</p>
-</section>
-</section>
-<section id="climbing-gear" class="level2">
-<h2 class="anchored" data-anchor-id="climbing-gear">Climbing gear</h2>
-<p>Two persons must be present when climbing a tower. Each person must have a full set of climbing safety gear and work gear. Items must comply with the Australian Safety ratings.</p>
-<p>See <a href="https://www.heightdynamics.com.au/tower-climbing-tools-for-telco-workers/">Tower Climbing equipment (Heightdynamics)</a> for details.</p>
-<ul>
-<li><p>Harness</p></li>
-<li><p>Helmet</p></li>
-<li><p>Twin-hooks, ie twin fall arrest lanyard</p></li>
-<li><p>Work positioning lanyard (Pole strap or e.g.&nbsp;Petzl Grillon)</p></li>
-<li><p>Tower rescue kit (pulley system, dogbone, descender, etc, …, see detailed list and link below)</p></li>
-<li><p>static work rope (longer than height of tower)</p></li>
-<li><p>static rescue rope 11 mm OD (longer than height of tower), Australian Standard 4142.3</p></li>
-<li><p>Ladsafe detachable cable sleeve, fall arrest system compatible with the ladsafe rope system on the tower</p></li>
-<li><p>small first aid kit</p></li>
-<li><p>carabines (at least five per person)</p></li>
-<li><p>rated slings (at least five per person)</p></li>
-<li><p>pulley wheel(s)</p></li>
-<li><p>rope brake</p></li>
-<li><p>climbing tool bags with tool-lanyards</p></li>
-<li><p>tools with lanyard attachments (tool fall protection)</p></li>
-<li><p>wrist strap to secure tool-lanyards while working</p></li>
-<li><p>two-way radio</p></li>
-<li><p>gloves</p></li>
-</ul>
-<p>Yearly climbing gear inspections by a certified inspector are required. Contact rigging companies to schedule inspection.</p>
-</section>
-<section id="pick-off-tower-rescue" class="level2">
-<h2 class="anchored" data-anchor-id="pick-off-tower-rescue">Pick-off tower rescue</h2>
-<p>A short, non-comprehensive, and unofficial, <strong><em>not certified</em></strong> overview on the pick-off rescue technique that allows you to rescue a stranded colleague from the tower. This list does not replace accredited training sessions. <strong>Follow the instructions at your own risk!</strong></p>
-<p><strong>This procedure is only to be performed by a qualified and competent operator!</strong></p>
-<p>Training and familiarity with the procedure is required. This is a short overview on the steps s a reminder. The instructions might be incomplete or might not cover your situation.</p>
-<p><a href="https://rigginglabacademy.com/rope-access-pick-off-rescue-for-tower-workers/">Description Rope Access Pick-Off Rescue for Tower Workers (Rigging Lab)</a></p>
-<ul>
-<li><p>Alert emergency services before climbing up on the tower</p></li>
-<li><p>Look after your own safety first, only climb and help if you’re competent and trained in the rescue procedure!</p></li>
-<li><p>Gather rescue kit:<br>
-harness<br>
-helmet<br>
-static rope, 11 mm OD, longer than tower height, with figure8 knot at the top end and knot at the lower end<br>
-sling, carabiner for securing the rope on the tower<br>
-twin-hooks<br>
-work positioning lanyard (pole-strap, Petzl Grillon)<br>
-pulley system (Petzl Jag)<br>
-Petzl ID with additional carabiner for rope brake to safely lower two people<br>
-dog bone, ie two carabiners connected with short sling<br>
-additional carabiners<br>
-radio<br>
-mobile phone<br>
-small first aid kit</p></li>
-<li><p>always maintain proper fall protection at all times</p></li>
-<li><p>climb to the casualty, provide first aid if possible</p></li>
-<li><p>climb past the casualty, secure the abseil rope to tower several meters above the victim (basket sling, carabiner, figure-8 knot</p></li>
-<li><p>descent back down to casualty, establish safe work position using twin hooks, staff pole</p></li>
-<li><p>use pulley system to lift casualty towards you, pulley connects harness anchor points of both persons</p></li>
-<li><p>connect harness main anchor point of victim to your harness main anchor point using dog bone (two carabiners connected via short sling, or two carabiners connected with dogbone, or y-lanyard)</p></li>
-<li><p>feed rope through descender (Petzl ID), double check correct direction, AND loop rope through carabine on secondary harness (hip) anchor point as brake (because the Petzl ID is only rated for one person!)</p></li>
-<li><p>ensure safe connection between victim and you</p></li>
-<li><p>when victim is safely connected to rescuer, remove any ladsafe, pole-strap, safety device etc between victim and tower.</p></li>
-<li><p>descend the tower on rope using both Grillon and carabine rope brake</p></li>
-<li><p>continue delivering first aid to the victim until emergency services arrive</p></li>
-</ul>
-</section>
-<section id="rigging-clamps-mounting-hardware" class="level2">
-<h2 class="anchored" data-anchor-id="rigging-clamps-mounting-hardware">Rigging, clamps, mounting hardware</h2>
-<p>Clamps for installing crossarms, instrumentation, and to build tower elements</p>
-<p>Check material compatibility regarding oxidation when connecting steel with aluminium clamps.</p>
-<p>Providers for clamps and other mounting hardware:</p>
-<ul>
-<li><p><a href="https://www.rfi.com.au/comms-products/installation-components/clamps">RFI Technology Solutions</a> provide various clamps, antenna mounts, “bull bar brackets”. Their clamps are very solid items, a riggers favourite regarding strength and durability.</p></li>
-<li><p><a href="https://www.tubeclamp.com.au/">Tubeclamp</a> provide smooth round clamps, good for installs where turbulent air flow is a problem, e.g.&nbsp;in vicinity of the anemometer. They provide split clamps for easy install of crossarms too.</p>
-<ul>
-<li>Downside: Only one bolt is securing the connection on each side, hence these are not as rigid as other clamps. Use threadlocker.</li>
-</ul></li>
-<li><p><a href="https://www.interclamp.com/products/interclamp-fittings/">Interclamp fittings</a> Wide variety of tube fittings, similar to Tubeclamp and Unifit.</p></li>
-<li><p><a href="https://www.uni-fit.com.au/">UniFit</a> Handrail fittings that can be used for instrument mounts or non-load-bearing applications. Similar to Tubeclamp and Interclamp</p></li>
-<li><p><a href="https://www.nurail.com/">NuRail</a> The default clamp system for Licor instruments and some Campbell Scientic instruments. Smooth, round clamps to limit air disturbance around instruments.</p>
-<ul>
-<li>Bolts can seize up after several years.</li>
-<li>No local Australian distributor, except Campbell Scientific for selected items.</li>
-<li>imperial tube sizes only, potential issues when working with Australian pipe sizes.</li>
-</ul></li>
-<li><p><a href="https://www.campbellsci.com.au/">Campbell Scientific: Specialised mounts and general clamps, including NuRail</a> (offer specific instrument mounts, but also general mounting systems, clamps)</p></li>
-</ul>
+<p>If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, select ‘Status’ → ‘OpenVPN’. A successful connection should appear as shown in Figure 3 (‘CONNECTED SUCCESS’ reported under ‘State’). If the text boxes on this page are blank, then you do not have a working openVPN connection.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Clamps_PXL_20251127_025544787.jpg" class="img-fluid figure-img"></p>
-<figcaption>Various clamps for round pipes (Markus Loew)</figcaption>
+<p><img src="ovpn_modem_setup_instructions_ML_html_1adc9aae.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape1</figcaption>
 </figure>
 </div>
-</section>
-<section id="pipes-tubes" class="level2">
-<h2 class="anchored" data-anchor-id="pipes-tubes">Pipes, tubes</h2>
-<p>Buy metal, steel, aluminum poles at your locat steel and aluminium merchant</p>
-<p>Aluminum and steel tubing usually have in-compatible diameters</p>
-<p>Connections between steel and aluminium can become oxidised</p>
-<p><a href="./Home.html">Home</a></p>
+<p><img src="ovpn_modem_setup_instructions_ML_html_7bcd34e0.png" class="img-fluid"><em>Figure 1: Maxon openVPN settings.</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ovpn_modem_setup_instructions_ML_html_1adc9aae.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape2</figcaption>
+</figure>
+</div>
+<p><img src="ovpn_modem_setup_instructions_ML_html_db8592fa.png" class="img-fluid"><em>Figure 2: Maxon openVPN settings (continued).</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ovpn_modem_setup_instructions_ML_html_1adc9aae.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape3</figcaption>
+</figure>
+</div>
+<p><img src="ovpn_modem_setup_instructions_ML_html_21c86555.png" class="img-fluid"><em>Figure 3: Maxon openVPN connection confirmation.</em></p>
+<ol start="2" type="1">
+<li>Configure LAN IP</li>
+</ol>
+<p>Under ‘LAN and WAN Setup’ → ‘LAN’, set the local IP address of the device to the assigned subnet IP for the site (Figure 4; note that the IP assignment has already been altered for the router in the figure – a new router will have default device IP as noted above; see Appendix A for a list of site-assigned IP addresses). Change the ‘Network Address Server Settings (DHCP)’ start IP address to be compatible with (but not collide with) the device IP address (in Figure 4, start IP address is 192.168.2.100).</p>
+<p>Once these settings are applied, you may lose access to the modem, as your connection is to an IP address that is no longer applicable. Reconnect via ethernet using the newly configured IP address.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ovpn_modem_setup_instructions_ML_html_1adc9aae.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape4</figcaption>
+</figure>
+</div>
+<p><img src="ovpn_modem_setup_instructions_ML_html_e48a7d67.png" class="img-fluid"><em>Figure 4: Maxon LAN settings.</em></p>
+<ol start="3" type="1">
+<li>Configure DHCP server</li>
+</ol>
+<p>This step requires that the MAC addresses of the devices be known (see section 5 for information about obtaining MAC addresses for loggers and other devices). Under ‘LAN and WAN Setup’ → ‘Services’, in the ‘DHCP server’ panel (Figure 5), click ‘Add’, and enter MAC address, Host Name (the name the device will appear as in the DHCP client table) and desired IP address (note this must be in the IP range set in ‘LAN and WAN Setup’ → ‘LAN’). Client Lease Time can be left at the default 1440 minutes (meaning lease is renewed daily, but the same client hardware – as identified by MAC address - will always get the same IP lease).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ovpn_modem_setup_instructions_ML_html_6be09b8f.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape5</figcaption>
+</figure>
+</div>
+<p><img src="ovpn_modem_setup_instructions_ML_html_bf34a289.png" class="img-fluid"><em>Figure 5: Maxon DHCP IP reservation.</em></p>
+<p>SIERRA WIRELESS RV50X<a href="#sdfootnote1sym">1</a></p>
+<p>Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘user’ and ‘12345’, and the default IP address is 192.168.13.31<a href="#sdfootnote2sym">2</a>), and check that you have web connectivity. On the front panel of the device, the network LED will be lit if all is well (see url for manual in footnote below – LED descriptions in Table 8-1, p37). Check that you have the most recent firmware version (under ‘Software and Firmware’ button at top of screen). Many of the requisite openVPN settings may not be available if your firmware version is not current. Sierra firmware (radio and carrier) updates can be accessed here:</p>
+<p>https://source.sierrawireless.com/resources/airlink/software_downloads/rv50/rv50-firmware-list/</p>
+<ol type="1">
+<li>Establish openVPN connection</li>
+</ol>
+<p>In the top menu under ‘VPN’, select ‘VPN1’ from the side menu and ensure settings match those in Figure 6. On the same page, we can upload the requisite certificates / keys for secure connection. In the case of the RV50X, the text in the single file issued to the site user must be split into four separate files and saved locally, then uploaded separately (RV50X text box headings in quotations):</p>
+<ul>
+<li><p>‘Load Root Certificate’ (Root certificate): saved file encapsulating section of text between <ca> and </ca>, including only the text between (and INCLUSIVE OF) “—–BEGIN CERTIFICATE—–” and “—–END CERTIFICATE—–”</p></li>
+<li><p>‘Load Client Certificate’ (Public certificate): saved file encapsulating section of text between <cert> and </cert>, including only the text between (and INCLUSIVE OF) “—–BEGIN CERTIFICATE—–” and “—–END CERTIFICATE—–”</p></li>
+<li><p>‘Load Client Certificate Key’ (Private key): the section of text between <key> and </key>, including only the text between (and INCLUSIVE OF) “—–BEGIN PRIVATE KEY—–” and “—–END PRIVATE KEY—–”</p></li>
+<li><p>‘Load Client TLS Key’ (TLS Authentication Key): saved file encapsulating section of text between <tls-auth> and </tls-auth>, including only the text between (and INCLUSIVE OF) “—–BEGIN OpenVPN Static key V1—–” and “—–END OpenVPN Static key V1—–”</p></li>
+</ul>
+<p>If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, ‘VPN1 Status’ at the top of the page should show ‘Connected’ (Figure 6).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ovpn_modem_setup_instructions_ML_html_4b76fffb.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape6</figcaption>
+</figure>
+</div>
+<p><img src="ovpn_modem_setup_instructions_ML_html_fb59a2d7.png" class="img-fluid"><em>Figure 6: Sierra RV50X openVPN settings.</em></p>
+<ol start="2" type="1">
+<li>Configure LAN IP</li>
+</ol>
+<p>On the tab menu, select ‘LAN’, then from the left hand menu select ‘Ethernet’. Set the device IP address to the assigned subnet IP address for the site (Figure 7; note in the image the IP assignment is for Wombat State Forest site – a new router will have the default IP as above; see Appendix A for a list of assigned site IP addresses). Change ‘Starting IP’ and ‘Ending IP’ to be compatible with (but not collide with) the device IP address (in Figure 7, IP range is 192.168.12.100 → 192.168.12.150).</p>
+<p>Once these settings are applied, you may lose access to the modem, as your connection is to an IP address that is no longer applicable. Reconnect via ethernet using the newly configured IP address.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ovpn_modem_setup_instructions_ML_html_42bf2ebc.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape7</figcaption>
+</figure>
+</div>
+<p><img src="ovpn_modem_setup_instructions_ML_html_93dbaff4.png" class="img-fluid"><em>Figure 7: Sierra RV50X LAN settings.</em></p>
+<ol start="3" type="1">
+<li>Configure DHCP server</li>
+</ol>
+<p>This step requires that the MAC addresses of the devices be known (see section 5 for information about obtaining MAC addresses for loggers and other devices). On the tab menu, select ‘LAN’, then from the left hand menu select ‘DHCP/Addressing’. In the ‘Reservation List’ box, select ‘Add More’, then enter MAC address and corresponding IP address for each IP-capable device to be deployed (Figure 8).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ovpn_modem_setup_instructions_ML_html_184609e.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape8</figcaption>
+</figure>
+</div>
+<p><img src="ovpn_modem_setup_instructions_ML_html_621cb8a.png" class="img-fluid"><em>Figure 8: Sierra RV50X DHCP IP reservation.</em></p>
+<ol start="4" type="1">
+<li>Configure hardware to use DHCP</li>
+</ol>
+<p>Loggers and other IP-capable hardware (e.g.&nbsp;Campbell Scientific CCFC and other field cameras) must be connected to the modem via Ethernet. If the modem has only a single Ethernet port (e.g.&nbsp;RV50X), then a multi-port Ethernet switch (such as Brainboxes SW504 12V 4-port switch) must be used to expand the number of devices that can be connected.</p>
+<p>In Loggernet’s Device Configuration Utility, ‘Deployment’ tab, ensure the IP address in the ‘Ethernet’ sub-tab is set to ‘0.0.0.0’ (default; Figure 9 below). This ensures that the logger is assigned the IP address registered to the logger’s MAC address in the DHCP server settings. Note here that the MAC address of the logger is also visible on this page.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ovpn_modem_setup_instructions_ML_html_72bff12a.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape9</figcaption>
+</figure>
+</div>
+<p><img src="ovpn_modem_setup_instructions_ML_html_5dcdc6e1.jpg" class="img-fluid"><em>Figure 9: Logger IP setup.</em></p>
+<p>While configuring the logger, the TCP Port should also be set / noted (Figure 10; default is 6785 - this can be left as is for most configurations); this is required for subsequent connection.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ovpn_modem_setup_instructions_ML_html_85f11aaa.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape10</figcaption>
+</figure>
+</div>
+<p><img src="ovpn_modem_setup_instructions_ML_html_13c33a20.jpg" class="img-fluid"><em>Figure 10: Logger Pakbus/TCP setup.</em></p>
+<ol start="5" type="1">
+<li>Configure remote PC and communications software</li>
+</ol>
+<p>Finally, in Loggernet’s ‘Setup’ utility, configure the IP and port numbers for the logger (Figure 11).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ovpn_modem_setup_instructions_ML_html_1a45504f.gif" class="img-fluid figure-img"></p>
+<figcaption>Shape11</figcaption>
+</figure>
+</div>
+<p><img src="ovpn_modem_setup_instructions_ML_html_96095c48.jpg" class="img-fluid"><em>Figure 11: Loggernet Setup configuration.</em></p>
+<p><a href="#sdfootnote1anc">1</a> Campbell Scientific is a reseller of these modems; the Campbell manual for their use can be found here: https://s.campbellsci.com/documents/au/manuals/rv50.pdf</p>
+<p><a href="#sdfootnote2anc">2</a> RV50(X)s running OS version 4.13 and older had both HTTP port 9191 and HTTPS port 9443 enabled by default. When using HTTP (not HTTPS) with these older OS versions, enter the IP address using port number 9191, for example, http://192.168.13.31:9191. You may be warned that the connection is not secure – allow an exception for this address and continue.</p>
 
 
 </section>
