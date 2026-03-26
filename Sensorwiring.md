@@ -100,9 +100,21 @@ Apogee CS310 PAR sensor program constants and wiring:
 
 ### Averging soil temperature thermocouple (TCAV)
 
-`TCAV #1 '3H Signal (purple) '3L Signal reference (red) 'gnd Shield (clear)`
+`TCAV #1`
 
-`TCAV #2 '4H Signal (purple) '4L Signal reference (red) 'gnd Shield (clear)`
+`3H Signal (purple)`
+
+`3L Signal reference (red)`
+
+`gnd Shield (clear)`
+
+`TCAV #2`
+
+`4H Signal (purple)`
+
+`4L Signal reference (red)`
+
+`gnd Shield (clear)`
 
 ### Soil moisture user constants / wiring (CR1000X)
 
