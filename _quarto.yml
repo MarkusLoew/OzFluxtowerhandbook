@@ -8,7 +8,7 @@ website:
     left:
       - text: Home
         file: Home.md
-      - text: Communications
+      - text: Communication
         file: Communication.md
       - text: Climbing & Rigging
         file: ClimbingRigging.md
