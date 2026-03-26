@@ -4,8 +4,8 @@ project:
   title: "OzFlux Tower Handbook"
 
 website:
-  navbar:
-    left:
+  sidebar:
+    contents:
       - text: Home
         file: Home.md
       - text: Communication
