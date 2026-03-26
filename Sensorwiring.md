@@ -4,7 +4,27 @@ This guide applies to tower using the OzFLux standard programs (available from g
 
 ## Wiring information
 
-This wiring guide is for an all-in one flux tower system. This system consists of one logger with extension module handling all sensors at once, wired up in a single enclosure. Examples of towers using this wiring scheme and standard program are: Boolcoomatta, the three Dookie towers. Even if logger, extension module and soil system are separate from each other, the basic wiring still applies to some extent. Hardware used: - Campbell Scientific CR1000x(e) data logger - Campbell Scientific Volt116 extension module - Campbell Scientific Irgason - Kipp & Zonen CNR4 four-component radiometer - Vaisala HMP155 temperature and humidity sensor - Apogee PAR sensor - Hukseflux FG01 soil heat flux (two at Dookie towers, four for Boolcoomatta tower) - Campbell Scientific TCAV averaging soil temperature probe (two for Dookie towers, four for Boolcoomatta) - Campbell Scientific CS650 soil mositure probe (four for Dookie towers, and Boolcoomatta tower) - Campbell Scientific SoilVUE10 soil profile probe (Boolcoomatta only)
+This wiring guide is for an all-in one flux tower system. This system consists of one logger with extension module handling all sensors at once, wired up in a single enclosure. Examples of towers using this wiring scheme and standard program are: Boolcoomatta, the three Dookie towers. Even if logger, extension module and soil system are separate from each other, the basic wiring still applies to some extent. Hardware used:
+
+-   Campbell Scientific CR1000x(e) data logger
+
+-   Campbell Scientific Volt116 extension module
+
+-   Campbell Scientific Irgason
+
+-   Kipp & Zonen CNR4 four-component radiometer
+
+-   Vaisala HMP155 temperature and humidity sensor
+
+-   Apogee PAR sensor
+
+-   Hukseflux FG01 soil heat flux (two at Dookie towers, four for Boolcoomatta tower)
+
+-   Campbell Scientific TCAV averaging soil temperature probe (two for Dookie towers, four for Boolcoomatta)
+
+-   Campbell Scientific CS650 soil mositure probe (four for Dookie towers, and Boolcoomatta tower)
+
+-   Campbell Scientific SoilVUE10 soil profile probe (Boolcoomatta only)
 
 ### User constants
 
