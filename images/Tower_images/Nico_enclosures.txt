@@ -1,0 +1,116 @@
+External email: Please exercise caution
+
+Hi Markus
+
+When I joined Mike he already was running 2 flux systems - CowBay and Daintree.
+Both sites had locally manufactured enclosures for the logger/computer out of 2..3mm thick aluminium.
+Hinges where stainless steel (on outside) and stainless locks (integrated into door like those steel ones got.
+Pro - no corrosion, easy/safe to drill holes into
+Con - door opening not optimal, door sealing/water ingress issues due to design error, get hot without shade
+
+Due to the cons I didn't appreciate their pros back then. They'd been painted with some sun-reflective white roof coating to remedy the heat a bit.. which was sort of ok. But sunshades worked better in the end.
+Overall, they worked fine for what they were and would still be there if things wouldn't have changed.
+
+The batteries where housed in plastic cargo boxes and at Robson still are.
+But those take up 'floor-space' and high moisture levels/condensation is a problem, but they have their purpose.
+But no comparison to metal naturally and their format is unpractical due to them sitting on the ground and take up space.
+
+I then got an off-the-shelf steel enclosure (Rittal brand) for a 'wall mounted' battery/charger/power box at CowBay.
+Design flawless, but material and thus longevity just didn't cut it.  Also drilling holes into it was a bit of a pita.
+We deployed one and it lasted for 8-9 years.. then the door fell off ;-)
+
+Next I looked into stainless enclosures of same design for ground adjacent systems (soilpits, sound recorder power hubs) and while they where corrosion-wise fine, drilling any holes into them turned from pita into hellish times (even with cobalt hss drills).
+We deployed two, one still going strong, the other got pulled (still fine) due to change in site.
+
+After all that and having to deal with ALL the Irga control boxes disintegrating I tried to find aluminium enclosures made like the steel ones - but couldn't find any.  :-(
+So I did what I always do in such a case - made my own (sourcing hinges/locks similar to the steel ones was the biggest hurdle IMHO).
+
+First was the power hub enclosure for Robson, 2mm alu, 700x500x300 with very big details to avoid local shop from not being able to make it.  Works to this day, 12 years later?
+Next was the UHF repeater box for Robson (500x300x200) with details that mirror industry standard, still there, working fine.
+Then I did the ones for the Fletcher power hub that house the batteries and charger/etc.
+After that CowBay got a refurb and same deal, just this time we had them also apply vinyl wrap to match the sites branding (public space).
+
+So my process now boils down to this - I got a parametric master file for Autodesk Inventor that lets me set the outside dimensions easily and adopts the sheetmetal pieces I can check out for lasercutting with bending marks.  For inside options I also got parametric stuff to get me mounting boards in the 1" square hole pattern of the Campbell boxes aso.. that stuff is more complicated though and fitting out by me is then even more involved than most people will tolerate..
+Once the stuff is cut a local sheet metal shop then bends and welds them up with me being very careful for them not to screw it up ;-)
+I also have the lock position/cutout in there already (sort of squareish hole), while hinges need manual positioning/mounting as the whole process is not THAT accurate.. final dim +/- 2mm.
+Latest boxes I did where for the soilpits at both Robson and CowBay.
+
+But I guess that's way too involved and cumbersome..  so, I checked the internet and would you believe it?!
+
+https://www.ipenclosures.com.au/aluminium-electrical-enclosures/
+they offer stainless keyed, quarter turns as option.. those boxes seem perfect
+
+https://www.brenclosures.com.au/products/ipal/ 
+if you can get them to install 2-3 locks for larger doors instead of that mechanic in there they should be perfect
+
+https://www.delvallebox.com/en/aluminium-electrical-enclosures/aluminium-wall-enclosure-ip66-luxor
+shown with plastic hinges/locks.. but their NEMA series (steel) has the proper stuff.. maybe there is an option there?
+
+https://www.nvent.com/en-az/hoffman/products/wall-mounted-aluminum-single-door-enclosure-was-0
+same as delvale.. plastic locks, but hinges inside.  Maybe the locks can be modded or ordered differently?
+
+https://www.hammfg.com/electrical/products/aluminum/ejal
+had one of those by chance.. they only work under a roof as water pools on the door seal, otherwise, small, sturdy and alu
+
+
+Biggest downside with alu will be heat buildup.. so a sunshade or placing it under something is helpful.
+Also, because it's alu it will be even less robust re intruders than steel enclosures.. but the steel enclosure we had at CowBay got opened by an electrician without much of a fuss (was quarter lock keyed), so yeah.. I wouldn't count on that anyway really.
+
+TL;DR:
+get aluminium
+
+
+re critters:
+Ants/wasps will find any hole or even make one if they encounter rubber/foam.. like on door seals or cable entries.
+It wasn't that big of a prob yet, but poison should help with that.. I did this now for the new soilpit box at CowBay.
+
+
+re humidity/water:
+Door seals with water not being pooled on them (esp at the top) is most important as hot day with a shower will suck it right in otherwise.  The boxes at above links should have no problem with this (except for the hammond brand).
+Humidity best solution is to have something warm (for power boxes no problem, the charger) as this will create heat and lower RH (esp when connected to outside via goretex or even just a mesh).
+I didn't had time yet (and enough pressure) to tinker with dehumidification where I didn't have a heatsource in there (soilpits for ex).
+I got a peltier dehumidifier taken apart to test something, but that hasn't made any progress for a year or more..
+Professionals just have resistive heaters in them and vent.
+
+
+Cheers
+Nico
+
+PS: if you want/need pictures for any of this pls say so.  I got plenty, but will take a moment to grab them and make them 'useful'.
+
+PPS: I also did make 2-3 enclosures from PVC pipe (100mm, 150mm) with screw on caps (special stuff, works, but yeah).. and have fiber glass boxes in use as well, but mostly in the shade or where time/cost/priorities didn't give me a choice.  As I'm now aware of aluminium enclosures (Thank you for making me search this again) being available off the shelf I'll be able to avoid fiberglass in the future completely.  :-)
+
+
+Nico Weigand | Technical Research Officer
+College of Science and Engineering
+James Cook University Cairns Campus, Cairns, QLD 4870
+phone: 07 4095 1368
+mobile: 0419 639 326
+email: nico.weigand@jcu.edu.au
+www.jcu.edu.au
+CRICOS Provider Code 00117J
+On 5/11/25 08:43, Markus Loew wrote:
+
+This message was sent from someone external to JCU. Please do not click links or open attachments unless you recognise the source of this email and know the content is safe.
+
+Hi Matt and Nico,
+
+I was recently asked to put together a helping booklet for assembling fluxtowers that will provide tips and tricks of the trade to people new to eddycovariance.
+
+We recently discussed enclosure longevity in our Monday meeting. Now I'm wondering if you could share some recommendations and insight into finding, building, and installing enclosures.
+
+At Uni Melbourne I'm sitting on a large stack of fibreglass enclosures from Campbell from previous experiments and crashed / rebuilt towers in various states from brand-new to blistering fibres.
+
+At Tumbarumba, I had bad experiences with the metal enclosures that were used on top of the tower: all the plastic locking mechanisms of all the steel enclosures had failed. They were brittle from UV exposure. Either the keys broke, lock broke, or the locking stub failed which left the enclosures unable to open and/or unable to lock. That caused quite some drama on the old tower.
+Can you recommend good enclosure brands and models?
+
+Also, I seem to be lucky regarding water ingress and insects living in my enclosures. Neither is a problem for my towers so far. Eagles are an issue for cables, but they don't touch the enclosures - yet. 
+Maybe you have some detailed insights from your more extreme environments on how to keep kritters and water out that you could share?
+
+Thank you very much!
+
+Cheers,
+Markus
+
+
+
