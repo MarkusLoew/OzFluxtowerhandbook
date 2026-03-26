@@ -354,14 +354,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="soil-moisture-user-constants-wiring-cr1000x" class="level3">
 <h3 class="anchored" data-anchor-id="soil-moisture-user-constants-wiring-cr1000x">Soil moisture user constants / wiring (CR1000X)</h3>
 <p><code>Const CS65X_1_SDI12_PORT = C5 'Unique control port. Const CS65X_2_SDI12_PORT = C7 'Unique control port. Const NMBR_CS65X = 4 'Unique number of CS65X to measure.</code></p>
-<p>‘C5 SDI-12 data #1 (SDI-12 address = 0) (green) ’C7 SDI-12 data #2 (SDI-12 address = 0) (green) ’G RS-232 Rx #1 (orange)’ RS-232 Rx #2 (orange)</p>
-<p>‘12V SDI-12 power #1 (red)’ SDI-12 power #2 (red) ‘G SDI-12 data/power reference #1 (black)’ Shield #1 (clear) ’ SDI-12 data/power reference #2 (black) ’ Shield #2 (clear)</p>
-<p>’Search for text “Duplicate above for additional probes.” to add code for additional probes.</p>
+<p><code>C5 SDI-12 data #1 (SDI-12 address = 0) (green) 'C7 SDI-12 data #2 (SDI-12 address = 0) (green) 'G RS-232 Rx #1 (orange) ' RS-232 Rx #2 (orange)</code></p>
+<p><code>12V SDI-12 power #1 (red) ' SDI-12 power #2 (red) 'G SDI-12 data/power reference #1 (black) ' Shield #1 (clear) ' SDI-12 data/power reference #2 (black) ' Shield #2 (clear)</code></p>
 </section>
 <section id="rain-gauge-user-constants-wiring-cr1000x" class="level3">
 <h3 class="anchored" data-anchor-id="rain-gauge-user-constants-wiring-cr1000x">Rain gauge user constants / wiring (CR1000X)</h3>
-<p>Const RAIN_PULSE_INPUT = P1 ’Unique pulse input channel for tipping bucket. Const RAIN_CAL = 0.2 ’Unique multiplier for tipping bucket.</p>
-<p>‘P1 Signal (black) ’G Signal reference (white)’ Shield (clear)</p>
+<p><code>Const RAIN_PULSE_INPUT = P1 'Unique pulse input channel for tipping bucket.</code></p>
+<p><code>Const RAIN_CAL = 0.2 'Unique multiplier for tipping bucket.</code></p>
+<p><code>'P1 Signal (black) 'G Signal reference (white) ' Shield (clear)</code></p>
 </section>
 <section id="air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" class="level3">
 <h3 class="anchored" data-anchor-id="air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116">Air temperature and humidity (Vailsala HMP155 wired to Volt116)</h3>
@@ -376,7 +376,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>Const NR_SW_INCOMING_CAL = 1000/12.82 'Unique multiplier for CNR 4 shortwave incoming radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023) Const NR_SW_OUTGOING_CAL = 1000/12.63 'Unique multiplier for CNR 4 shortwave outgoing radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023)</code></p>
 <p><code>Const NR_LW_INCOMING_CAL = 1000/9.09 'Unique multiplier for CNR 4 longwave incoming radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 2234203 (Dec 2023)</code></p>
 <p><code>Const NR_LW_OUTGOING_CAL = 1000/9.41 'Unique multiplier for CNR 4 longwave outgoing radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023)</code></p>
-<p>‘3H Incoming shortwave radiation signal (red) ’3L Incoming shortwave radiation signal reference (blue) ’gnd Shield (clear)’ short jumper wire to 3L ‘4H Outgoing shortwave radiation signal (white) ’4L Outgoing shortwave radiation signal reference (black) ’gnd short jumper wire to 4L ’5H Incoming longwave radiation signal (gray) ’5L Incoming longwave radiation signal reference (yellow) ’gnd short jumper wire to 5L ’6H Outgoing longwave radiation signal (brown) ’6L Outgoing longwave radiation signal reference (green) ’gnd short jumper wire to 6L ’7H Thermistor signal (white) ’gnd Thermistor signal reference (black)’ Shield (clear) ’X2 Thermistor excitation (red)</p>
+<p><code>'3H Incoming shortwave radiation signal (red) '3L Incoming shortwave radiation signal reference (blue) 'gnd Shield (clear) ' short jumper wire to 3L '4H Outgoing shortwave radiation signal (white) '4L Outgoing shortwave radiation signal reference (black) 'gnd short jumper wire to 4L '5H Incoming longwave radiation signal (gray) '5L Incoming longwave radiation signal reference (yellow) 'gnd short jumper wire to 5L '6H Outgoing longwave radiation signal (brown) '6L Outgoing longwave radiation signal reference (green) 'gnd short jumper wire to 6L '7H Thermistor signal (white) 'gnd Thermistor signal reference (black) ' Shield (clear) 'X2 Thermistor excitation (red)</code></p>
 <ul>
 <li>The Kipp and Zonen CNR sensor provided cables are different than the cable provided by Campbell Scientific! Campbell Scientfic adds a resistor to the cable!</li>
 </ul>

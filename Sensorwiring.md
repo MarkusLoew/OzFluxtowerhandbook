@@ -108,17 +108,17 @@ Apogee CS310 PAR sensor program constants and wiring:
 
 `Const CS65X_1_SDI12_PORT = C5 'Unique control port. Const CS65X_2_SDI12_PORT = C7 'Unique control port. Const NMBR_CS65X = 4 'Unique number of CS65X to measure.`
 
-'C5 SDI-12 data #1 (SDI-12 address = 0) (green) 'C7 SDI-12 data #2 (SDI-12 address = 0) (green) 'G RS-232 Rx #1 (orange) ' RS-232 Rx #2 (orange)
+`C5 SDI-12 data #1 (SDI-12 address = 0) (green) 'C7 SDI-12 data #2 (SDI-12 address = 0) (green) 'G RS-232 Rx #1 (orange) ' RS-232 Rx #2 (orange)`
 
-'12V SDI-12 power #1 (red) ' SDI-12 power #2 (red) 'G SDI-12 data/power reference #1 (black) ' Shield #1 (clear) ' SDI-12 data/power reference #2 (black) ' Shield #2 (clear)
-
-'Search for text "Duplicate above for additional probes." to add code for additional probes.
+`12V SDI-12 power #1 (red) ' SDI-12 power #2 (red) 'G SDI-12 data/power reference #1 (black) ' Shield #1 (clear) ' SDI-12 data/power reference #2 (black) ' Shield #2 (clear)`
 
 ### Rain gauge user constants / wiring (CR1000X)
 
-Const RAIN_PULSE_INPUT = P1 'Unique pulse input channel for tipping bucket. Const RAIN_CAL = 0.2 'Unique multiplier for tipping bucket.
+`Const RAIN_PULSE_INPUT = P1 'Unique pulse input channel for tipping bucket.`
 
-'P1 Signal (black) 'G Signal reference (white) ' Shield (clear)
+`Const RAIN_CAL = 0.2 'Unique multiplier for tipping bucket.`
+
+`'P1 Signal (black) 'G Signal reference (white) ' Shield (clear)`
 
 ### Air temperature and humidity (Vailsala HMP155 wired to Volt116)
 
@@ -140,7 +140,7 @@ Const RAIN_PULSE_INPUT = P1 'Unique pulse input channel for tipping bucket. Cons
 
 `Const NR_LW_OUTGOING_CAL = 1000/9.41 'Unique multiplier for CNR 4 longwave outgoing radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023)`
 
-'3H Incoming shortwave radiation signal (red) '3L Incoming shortwave radiation signal reference (blue) 'gnd Shield (clear) ' short jumper wire to 3L '4H Outgoing shortwave radiation signal (white) '4L Outgoing shortwave radiation signal reference (black) 'gnd short jumper wire to 4L '5H Incoming longwave radiation signal (gray) '5L Incoming longwave radiation signal reference (yellow) 'gnd short jumper wire to 5L '6H Outgoing longwave radiation signal (brown) '6L Outgoing longwave radiation signal reference (green) 'gnd short jumper wire to 6L '7H Thermistor signal (white) 'gnd Thermistor signal reference (black) ' Shield (clear) 'X2 Thermistor excitation (red)
+`'3H Incoming shortwave radiation signal (red) '3L Incoming shortwave radiation signal reference (blue) 'gnd Shield (clear) ' short jumper wire to 3L '4H Outgoing shortwave radiation signal (white) '4L Outgoing shortwave radiation signal reference (black) 'gnd short jumper wire to 4L '5H Incoming longwave radiation signal (gray) '5L Incoming longwave radiation signal reference (yellow) 'gnd short jumper wire to 5L '6H Outgoing longwave radiation signal (brown) '6L Outgoing longwave radiation signal reference (green) 'gnd short jumper wire to 6L '7H Thermistor signal (white) 'gnd Thermistor signal reference (black) ' Shield (clear) 'X2 Thermistor excitation (red)`
 
 -   The Kipp and Zonen CNR sensor provided cables are different than the cable provided by Campbell Scientific! Campbell Scientfic adds a resistor to the cable!
 
