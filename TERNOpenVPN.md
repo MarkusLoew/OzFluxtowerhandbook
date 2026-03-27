@@ -1,4 +1,4 @@
-# Virtual provate networks
+# Virtual private networks
 
 -   OpenVPN (TERN)
 -   Kinect (Campbell Scientific)
@@ -32,17 +32,15 @@ This is generally only required / relevant for loggers, but ensures that they re
 
 To enable communications between the modem / router and a remote machine, openVPN client software must also be running on the remote machine. You may need to check your IT departmental policy on the use of openVPN, as some universities may stop openVPN traffic by default. In most cases, hardware devices are accessed via support software. The main software package of most relevance to most researchers is Campbell Scientific’s Loggernet package, to which instructions herein are confined. Please contact TERN EP central node to discuss connection / configuration / communication needs for other hardware.
 
-DEVICE-SPECIFIC SETTINGS
+## Device-specific settings
 
-MAXON Datamax MA100-1010/1020-4G applicable to Quadmax MA-6060 as well.
+### MAXON Datamax MA100-1010/1020-4G and Maxon Quadmax MA-6060
 
 Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘admin’ and ‘admin’, and the default IP address is 192.168.0.1), and check that you have web connectivity. On the front panel of the device, the ‘Online’ LED will be lit if all is well. Check that you have the most recent firmware version (listed at top right in Figure 1 below). Many of the requisite openVPN settings may not be available if your firmware version is not current. Maxon firmware updates can be accessed here:
 
 [https://www.rfi.com.au/MA100-1010-4G](http://support.maxon.com.au/download/Datamax+%20-%20MA100-1010/)
 
-<http://support.maxon.com.au/download/MA-6060/>
-
-0)  Update firmware to enable TLS cipher options for OpenVPN
+Update firmware to enable TLS cipher options for OpenVPN
 
 See status website of router, Firmware version should be: v3.0.2-100-1020(Aug 23 2021 11:03:31) std - build 5656M
 
@@ -51,6 +49,10 @@ To update the firmware, get the file from here:
 <http://support.maxon.com.au/download/Datamax%20LoRa/Firmware/>
 
 File: uimage-MA100-1020-V3.0.2-20210823.flash
+
+Or here for the Maxon MA-6060:
+
+<http://support.maxon.com.au/download/MA-6060/>
 
 Use network connection to Maxon datamax to write the new firmware to device
 
@@ -68,23 +70,13 @@ Under ‘Advanced Features’ → ‘OPENVPN’, ensure settings match those in 
 
 If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, select ‘Status’ → ‘OpenVPN’. A successful connection should appear as shown in Figure 3 (‘CONNECTED SUCCESS’ reported under ‘State’). If the text boxes on this page are blank, then you do not have a working openVPN connection.
 
-![](ovpn_modem_setup_instructions_ML_html_7bcd34e0.png)
-
 ![](images/ovpn_images/ovpn_modem_setup_instructions_ML_html_7bcd34e0.png)
 
 *Figure 1: Maxon openVPN settings.*
 
-![Shape2](ovpn_modem_setup_instructions_ML_html_1adc9aae.gif)
-
-![](ovpn_modem_setup_instructions_ML_html_db8592fa.png)
-
 ![](images/ovpn_images/ovpn_modem_setup_instructions_ML_html_db8592fa.png)
 
 *Figure 2: Maxon openVPN settings (continued).*
-
-![Shape3](ovpn_modem_setup_instructions_ML_html_1adc9aae.gif)
-
-![](ovpn_modem_setup_instructions_ML_html_21c86555.png)
 
 ![](images/ovpn_images/ovpn_modem_setup_instructions_ML_html_21c86555.png)
 
@@ -95,10 +87,6 @@ If this has been configured successfully, you should now be able to access the V
 Under ‘LAN and WAN Setup’ → ‘LAN’, set the local IP address of the device to the assigned subnet IP for the site (Figure 4; note that the IP assignment has already been altered for the router in the figure – a new router will have default device IP as noted above; see Appendix A for a list of site-assigned IP addresses). Change the ‘Network Address Server Settings (DHCP)’ start IP address to be compatible with (but not collide with) the device IP address (in Figure 4, start IP address is 192.168.2.100).
 
 Once these settings are applied, you may lose access to the modem, as your connection is to an IP address that is no longer applicable. Reconnect via ethernet using the newly configured IP address.
-
-![Shape4](ovpn_modem_setup_instructions_ML_html_1adc9aae.gif)
-
-![](ovpn_modem_setup_instructions_ML_html_e48a7d67.png)
 
 ![](images/ovpn_images/ovpn_modem_setup_instructions_ML_html_e48a7d67.png)
 
