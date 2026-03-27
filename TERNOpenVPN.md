@@ -34,6 +34,10 @@ To enable communications between the modem / router and a remote machine, openVP
 
 ## Device-specific settings
 
+### Maxon Dualmax MA-2055
+
+This modem allows to upload the full *.ovpn* file provided be TERN as a single file! This allows a one-click configuration for OpenVPN without the manual extraction of the various keys.
+
 ### MAXON Datamax MA100-1010/1020-4G and Maxon Quadmax MA-6060
 
 Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘admin’ and ‘admin’, and the default IP address is 192.168.0.1), and check that you have web connectivity. On the front panel of the device, the ‘Online’ LED will be lit if all is well. Check that you have the most recent firmware version (listed at top right in Figure 1 below). Many of the requisite openVPN settings may not be available if your firmware version is not current. Maxon firmware updates can be accessed here:
@@ -60,13 +64,13 @@ Use network connection to Maxon datamax to write the new firmware to device
 
 Under ‘Advanced Features’ → ‘OPENVPN’, ensure settings match those in Figure 1. Further down the same admin page, we can upload the requisite certificates / keys for secure connection (Figure 2). In the case of the Maxon modems, the text in the single file issued to the site user must be split into four sections (to minimise editing – and potential introduction of unwanted edits/characters in the originally-issued file - it is best to create local subfiles for each of the below), which are uploaded by cutting and pasting the relevant sections of text into the appropriate text boxes, as follows (Maxon text box headings in quotations):
 
--   `‘TLS Auth Key’: the section of text between <tls-auth> and </tls-auth>, including only the text between (and INCLUSIVE OF) “-----BEGIN OpenVPN Static key V1-----” and “-----END OpenVPN Static key V1-----”`
+-   TLS Auth Key`The section of text between <tls-auth> and </tls-auth>, including only the text between (and INCLUSIVE OF) “-----BEGIN OpenVPN Static key V1-----” and “-----END OpenVPN Static key V1-----”`
 
--   ‘`CA Cert’ (Root certificate): the section of text between <ca> and </ca>, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”`
+-   CA Cert (Root certificate)`the section of text between <ca> and </ca>, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”`
 
--   `‘Public Client Cert’ (Public certificate): the section of text between <cert> and </cert>, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”`
+-   Public Client Cert (Public certificate)`the section of text between <cert> and </cert>, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”`
 
--   `‘Private Client Key’ (Private key): the section of text between <key> and </key>, including only the text between (and INCLUSIVE OF) “-----BEGIN PRIVATE KEY-----” and “-----END PRIVATE KEY-----”`
+-   Private Client Key (Private key):`the section of text between <key> and </key>, including only the text between (and INCLUSIVE OF) “-----BEGIN PRIVATE KEY-----” and “-----END PRIVATE KEY-----”`
 
 If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, select ‘Status’ → ‘OpenVPN’. A successful connection should appear as shown in Figure 3 (‘CONNECTED SUCCESS’ reported under ‘State’). If the text boxes on this page are blank, then you do not have a working openVPN connection.
 
