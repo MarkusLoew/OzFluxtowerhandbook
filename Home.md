@@ -7,7 +7,7 @@ nocite: |
 
 ## A technical guide on setting up an OzFlux tower
 
-This handbook covers mainly *technical* aspects of building a flux tower. It does not cover the *scientific* background of eddy covariance.
+Building a eddycovarariance tower from scratch can be a daunting task. This handbook covers *technical* aspects of building a flux tower. It does not cover the *scientific* background of eddy covariance. While there are resources already that help with getting started (see references below), this handbook will provide practical guidance of getting a tower off with hands-on sections on hardware, and software.
 
 Please refer to the manuals and papers below for in-depth information:
 

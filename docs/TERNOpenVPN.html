@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Tower-types.html" class="sidebar-item-text sidebar-link">
+  <a href="./Tower-types.md" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tower Types</span></a>
   </div>
 </li>
@@ -229,17 +229,22 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="http://support.maxon.com.au/download/Datamax%20LoRa/Firmware/" class="uri">http://support.maxon.com.au/download/Datamax%20LoRa/Firmware/</a></p>
 <p>File: uimage-MA100-1020-V3.0.2-20210823.flash</p>
 <p>Or here for the Maxon MA-6060:</p>
-<p><a href="http://support.maxon.com.au/download/MA-6060/" class="uri">http://support.maxon.com.au/download/MA-6060/</a></p>
+<p><a href="http://support.maxon.com.au/download/MA-6060/" class="uri">http://support.maxon.com.au/download/MA-6060/</a><br>
+File: <a href="http://support.maxon.com.au/download/MA-6060/Firmware/MA-6060%20v1.0.0(Sep%2025%202019%20144719)%20-%20build%2037993805M.flash" class="uri">http://support.maxon.com.au/download/MA-6060/Firmware/MA-6060%20v1.0.0(Sep%2025%202019%20144719)%20-%20build%2037993805M.flash</a></p>
 <p>Use network connection to Maxon datamax to write the new firmware to device</p>
 <ol type="1">
 <li>Establish openVPN connection</li>
 </ol>
 <p>Under ‘Advanced Features’ → ‘OPENVPN’, ensure settings match those in Figure 1. Further down the same admin page, we can upload the requisite certificates / keys for secure connection (Figure 2). In the case of the Maxon modems, the text in the single file issued to the site user must be split into four sections (to minimise editing – and potential introduction of unwanted edits/characters in the originally-issued file - it is best to create local subfiles for each of the below), which are uploaded by cutting and pasting the relevant sections of text into the appropriate text boxes, as follows (Maxon text box headings in quotations):</p>
 <ul>
-<li><p>TLS Auth Key<code>The section of text between &lt;tls-auth&gt; and &lt;/tls-auth&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN OpenVPN Static key V1-----” and “-----END OpenVPN Static key V1-----”</code></p></li>
-<li><p>CA Cert (Root certificate)<code>the section of text between &lt;ca&gt; and &lt;/ca&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”</code></p></li>
-<li><p>Public Client Cert (Public certificate)<code>the section of text between &lt;cert&gt; and &lt;/cert&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”</code></p></li>
-<li><p>Private Client Key (Private key):<code>the section of text between &lt;key&gt; and &lt;/key&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN PRIVATE KEY-----” and “-----END PRIVATE KEY-----”</code></p></li>
+<li><p>TLS Auth Key<br>
+<code>The section of text between &lt;tls-auth&gt; and &lt;/tls-auth&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN OpenVPN Static key V1-----” and “-----END OpenVPN Static key V1-----”</code></p></li>
+<li><p>CA Cert (Root certificate)<br>
+<code>the section of text between &lt;ca&gt; and &lt;/ca&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”</code></p></li>
+<li><p>Public Client Cert (Public certificate)<br>
+<code>the section of text between &lt;cert&gt; and &lt;/cert&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----”and “-----END CERTIFICATE-----”</code></p></li>
+<li><p>Private Client Key (Private key):<br>
+<code>the section of text between &lt;key&gt; and &lt;/key&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN PRIVATE KEY-----”and “-----END PRIVATE KEY-----”</code></p></li>
 </ul>
 <p>If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, select ‘Status’ → ‘OpenVPN’. A successful connection should appear as shown in Figure 3 (‘CONNECTED SUCCESS’ reported under ‘State’). If the text boxes on this page are blank, then you do not have a working openVPN connection.</p>
 <p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_7bcd34e0.png" class="img-fluid"></p>
@@ -269,10 +274,10 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>In the top menu under ‘VPN’, select ‘VPN1’ from the side menu and ensure settings match those in Figure 6. On the same page, we can upload the requisite certificates / keys for secure connection. In the case of the RV50X, the text in the single file issued to the site user must be split into four separate files and saved locally, then uploaded separately (RV50X text box headings in quotations):</p>
 <ul>
-<li><p><code>‘Load Root Certificate’ (Root certificate): saved file encapsulating section of text between &lt;ca&gt; and &lt;/ca&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”</code></p></li>
-<li><p><code>‘Load Client Certificate’ (Public certificate): saved file encapsulating section of text between &lt;cert&gt; and &lt;/cert&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”</code></p></li>
-<li><p><code>‘Load Client Certificate Key’ (Private key): the section of text between &lt;key&gt; and &lt;/key&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN PRIVATE KEY-----” and “-----END PRIVATE KEY-----”</code></p></li>
-<li><p><code>‘Load Client TLS Key’ (TLS Authentication Key): saved file encapsulating section of text between &lt;tls-auth&gt; and &lt;/tls-auth&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN OpenVPN Static key V1-----” and “-----END OpenVPN Static key V1-----”</code></p></li>
+<li><p>Load Root Certificate (Root certificate)<code>saved file encapsulating section of text between &lt;ca&gt; and &lt;/ca&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----”and“-----END CERTIFICATE-----”</code></p></li>
+<li><p>Load Client Certificate’ (Public certificate)<code>saved file encapsulating section of text between &lt;cert&gt; and &lt;/cert&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----”and “-----END CERTIFICATE-----”</code></p></li>
+<li><p>Load Client Certificate Key (Private key)<code>the section of text between &lt;key&gt; and &lt;/key&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN PRIVATE KEY-----”and “-----END PRIVATE KEY-----”</code></p></li>
+<li><p>‘Load Client TLS Key’ (TLS Authentication Key):<code>saved file encapsulating section of text between &lt;tls-auth&gt; and &lt;/tls-auth&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN OpenVPN Static key V1-----”and“-----END OpenVPN Static key V1-----”</code></p></li>
 </ul>
 <p>If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, ‘VPN1 Status’ at the top of the page should show ‘Connected’ (Figure 6).</p>
 <p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_fb59a2d7.png" class="img-fluid"></p>
