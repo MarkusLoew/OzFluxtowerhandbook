@@ -6,7 +6,7 @@ This guide applies to tower using the OzFLux standard programs (available from g
 
 This wiring guide is for an all-in one flux tower system. This system consists of one logger with extension module handling all sensors at once, wired up in a single enclosure. Examples of towers using this wiring scheme and standard program are: Boolcoomatta, the three Dookie towers. Even if logger, extension module and soil system are separate from each other, the basic wiring still applies to some extent.
 
-![All-in-one-enclosure EC system with Irgason, meteorological sensors, soil sensors (4 x CS650, 2x FG01, 2x TCAV), modem (Maxon Datamax MA-2055), fuse panel, SDI12-hub, ground bar.](images/Dookie1_Logger_enclosure_PXL_20240911_022955292.jpg){alt="All-in-one-enclosure EC system with Irgason, meteorological sensors, soil sensors (4 x CS650, 2x FG01, 2x TCAV), modem (Maxon Datamax MA-2055)." fig-alt="All-in-one EC system with soil sensors, modem. Logger, Volt116 module, fuse panel, SDI12-hub, modem"}
+![All-in-one-enclosure EC system with Irgason, meteorological sensors, soil sensors (4 x CS650, 2x FG01, 2x TCAV), modem (Maxon Datamax MA-2055).](images/Dookie1_Logger_enclosure_PXL_20240911_022955292.jpg){fig-alt="All-in-one EC system with soil sensors, modem. Logger, Volt116 module, fuse panel, SDI12-data and powerhub, modem"}
 
 Hardware used:
 
@@ -124,21 +124,21 @@ Apogee CS310 PAR sensor program constants and wiring:
 
 ### Averging soil temperature thermocouple (TCAV)
 
-`TCAV #1`
+TCAV #1
 
-`3H Signal (purple)`
+| Logger port | Function                      | Wire colour |
+|-------------|-------------------------------|-------------|
+| 3H          | Temperature signal TCAV #1    | purple      |
+| 3L          | Temperature reference TCAV #1 | red         |
+| gnd         | Shield                        | clear       |
 
-`3L Signal reference (red)`
+TCAV #2
 
-`gnd Shield (clear)`
-
-`TCAV #2`
-
-`4H Signal (purple)`
-
-`4L Signal reference (red)`
-
-`gnd Shield (clear)`
+| Logger port | Function                      | Wire colour |
+|-------------|-------------------------------|-------------|
+| 4H          | Temperature signal TCAV #2    | purple      |
+| 4L          | Temperature reference TCAV #2 | red         |
+| gnd         | Shield                        | clear       |
 
 ### Soil moisture user constants / wiring (CR1000X)
 
@@ -148,25 +148,22 @@ Apogee CS310 PAR sensor program constants and wiring:
 
 `Const NMBR_CS65X = 4 'Unique number of CS65X to measure.`
 
-`C5 SDI-12 data #1 (SDI-12 address = 0) (green)`
+If there are more than two CS650 soil moisture sensors (or, in general, multiple SDI-12 sensor of the same type), it is best to not wire the sensors directly to the logger panel. Instead, build a terminal block which combines multiple data, power, ground lines, etc together (see section on terminal blocks). Then run a single cable to the corresponding port on the logger.
 
-`'C7 SDI-12 data #2 (SDI-12 address = 0) (green)`
+Be careful with control ports, though: To combine multiple sensor control lines into one SDI-terminal, the sensors must be programmed to have a unique SDI-bus address ID! In the example below, one sensor with SDI-ID #0 are wired to control port C5, the other sensor with SDI-ID #0 is wired to control port C7. The SDI-ID of a sensor can be changed. Either via the CS650 mode in Loggernet Devconfig, or via a terminal command through a datalogger. When changing SDI-IDs, only one sensor can be connected to a control port. SDI-sensors can be connected to any control (C) port with an odd number.
 
-`'G RS-232 Rx #1 (orange)`
-
-`' RS-232 Rx #2 (orange)`
-
-`12V SDI-12 power #1 (red)`
-
-`SDI-12 power #2 (red)`
-
-`G SDI-12 data/power reference #1 (black)`
-
-`Shield #1 (clear)`
-
-`SDI-12 data/power reference #2 (black)`
-
-`Shield #2 (clear)`
+| Logger port | Function                       | Wire colour |
+|-------------|--------------------------------|-------------|
+| C5          | SDI-12 data #1 (Address = 0)   | green       |
+| C7          | SDI-12 data #2 (Address = 0)   | green       |
+| gnd         | RS-232 #1                      | orange      |
+| gnd         | RS-232 #1                      | orange      |
+| 12V         | SDI-12 power +12V #1           | red         |
+| 12V         | SDI-12 power +12V #2           | red         |
+| G           | SDI-12 data/power reference #1 | black       |
+| G           | SDI-12 data/power reference #2 | black       |
+| gnd         | Shield #1                      | clear       |
+| gnd         | Shield #2                      | clear       |
 
 ### Rain gauge user constants / wiring (CR1000X)
 
