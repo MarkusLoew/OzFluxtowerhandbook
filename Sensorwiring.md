@@ -169,23 +169,39 @@ Be careful with control ports, though: To combine multiple sensor control lines 
 | gnd         | Shield #1                      | clear       |
 | gnd         | Shield #2                      | clear       |
 
-### Rain gauge user constants / wiring (CR1000X)
+### Rain gauge CS701 user constants / wiring (CR1000X)
+
+Many rangauges use similar wiring. Check the manual if your specific models followes the wiring scheme of the Campbell Scientific CS701 rain gauge.
 
 `Const RAIN_PULSE_INPUT = P1 'Unique pulse input channel for tipping bucket.`
 
 `Const RAIN_CAL = 0.2 'Unique multiplier for tipping bucket.`
 
-Table to do
-
-`'P1 Signal (black) 'G Signal reference (white) ' Shield (clear)`
+| Logger port | Function         | Wire colour |
+|-------------|------------------|-------------|
+| P1          | Signal           | black       |
+| G           | Signal reference | white       |
+| gnd         | Shield           | clear       |
 
 ### Air temperature and humidity (Vailsala HMP155 wired to Volt116)
 
-`Const T_RH_ANALOG_INPUT = 1 'Unique differential input channel for temperature and humidity probe. Const T_RH_T_MULT = 0.14 'Unique multiplier for temperature; HC2S3 = 0.1, HMP155A = 0.14, or HMP45C = 0.1. Const T_RH_T_OFFSET = -80 'Unique offset for temperature; HC2S3 = -40, HMP155A = -80, or HMP45C = -40.`
+`Const T_RH_ANALOG_INPUT = 1 'Unique differential input channel for temperature and humidity probe. Const T_RH_T_MULT = 0.14 'Unique multiplier for temperature; HC2S3 = 0.1, HMP155A = 0.14, or HMP45C = 0.1.`
+
+`Const T_RH_T_OFFSET = -80 'Unique offset for temperature; HC2S3 = -40, HMP155A = -80, or HMP45C = -40.`
 
 Table to do
 
-`' Dookie2 HMP155 ser No V4720665 (2023) '1H Temperature signal (yellow) HMP155: yellow '1L Temperature signal reference HMP155: white(orange in loop with 11L, was purple, was white) --> Jumper to white 'gnd Shield '2H RH signal (blue) HMP155: blue '2L RH signal reference HMP155 only one signal reference for temp and rH: white 1L (orange, was purple, was white) '12V Power (red) 'G Power reference (black)`
+`' Dookie2 HMP155 ser No V4720665 (2023)`
+
+`'1H Temperature signal (yellow) HMP155: yellow '1L Temperature signal reference HMP155: white(orange in loop with 1L, --> Jumper to white`
+
+`'gnd Shield`
+
+`'2H RH signal (blue)`
+
+`HMP155: blue '2L RH signal reference HMP155 only one signal reference for temp and rH: white 1L  '12V Power (red)`
+
+`'G Power reference (black)`
 
 ### 4-component radiation user constants / wiring (Kipp & Zonen CNR4 wired to VOLT116)
 

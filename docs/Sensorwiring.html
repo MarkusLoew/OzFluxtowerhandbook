@@ -168,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#averging-soil-temperature-thermocouple-tcav" id="toc-averging-soil-temperature-thermocouple-tcav" class="nav-link" data-scroll-target="#averging-soil-temperature-thermocouple-tcav">Averging soil temperature thermocouple (TCAV)</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   <li><a href="#soil-moisture-user-constants-wiring-cr1000x" id="toc-soil-moisture-user-constants-wiring-cr1000x" class="nav-link" data-scroll-target="#soil-moisture-user-constants-wiring-cr1000x">Soil moisture user constants / wiring (CR1000X)</a></li>
-  <li><a href="#rain-gauge-user-constants-wiring-cr1000x" id="toc-rain-gauge-user-constants-wiring-cr1000x" class="nav-link" data-scroll-target="#rain-gauge-user-constants-wiring-cr1000x">Rain gauge user constants / wiring (CR1000X)</a></li>
+  <li><a href="#rain-gauge-cs701-user-constants-wiring-cr1000x" id="toc-rain-gauge-cs701-user-constants-wiring-cr1000x" class="nav-link" data-scroll-target="#rain-gauge-cs701-user-constants-wiring-cr1000x">Rain gauge CS701 user constants / wiring (CR1000X)</a></li>
   <li><a href="#air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" id="toc-air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" class="nav-link" data-scroll-target="#air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116">Air temperature and humidity (Vailsala HMP155 wired to Volt116)</a></li>
   <li><a href="#component-radiation-user-constants-wiring-kipp-zonen-cnr4-wired-to-volt116" id="toc-component-radiation-user-constants-wiring-kipp-zonen-cnr4-wired-to-volt116" class="nav-link" data-scroll-target="#component-radiation-user-constants-wiring-kipp-zonen-cnr4-wired-to-volt116">4-component radiation user constants / wiring (Kipp &amp; Zonen CNR4 wired to VOLT116)</a></li>
   </ul></li>
@@ -496,18 +496,49 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
-<section id="rain-gauge-user-constants-wiring-cr1000x" class="level3">
-<h3 class="anchored" data-anchor-id="rain-gauge-user-constants-wiring-cr1000x">Rain gauge user constants / wiring (CR1000X)</h3>
+<section id="rain-gauge-cs701-user-constants-wiring-cr1000x" class="level3">
+<h3 class="anchored" data-anchor-id="rain-gauge-cs701-user-constants-wiring-cr1000x">Rain gauge CS701 user constants / wiring (CR1000X)</h3>
+<p>Many rangauges use similar wiring. Check the manual if your specific models followes the wiring scheme of the Campbell Scientific CS701 rain gauge.</p>
 <p><code>Const RAIN_PULSE_INPUT = P1 'Unique pulse input channel for tipping bucket.</code></p>
 <p><code>Const RAIN_CAL = 0.2 'Unique multiplier for tipping bucket.</code></p>
-<p>Table to do</p>
-<p><code>'P1 Signal (black) 'G Signal reference (white) ' Shield (clear)</code></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Logger port</th>
+<th>Function</th>
+<th>Wire colour</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P1</td>
+<td>Signal</td>
+<td>black</td>
+</tr>
+<tr class="even">
+<td>G</td>
+<td>Signal reference</td>
+<td>white</td>
+</tr>
+<tr class="odd">
+<td>gnd</td>
+<td>Shield</td>
+<td>clear</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" class="level3">
 <h3 class="anchored" data-anchor-id="air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116">Air temperature and humidity (Vailsala HMP155 wired to Volt116)</h3>
-<p><code>Const T_RH_ANALOG_INPUT = 1 'Unique differential input channel for temperature and humidity probe. Const T_RH_T_MULT = 0.14 'Unique multiplier for temperature; HC2S3 = 0.1, HMP155A = 0.14, or HMP45C = 0.1. Const T_RH_T_OFFSET = -80 'Unique offset for temperature; HC2S3 = -40, HMP155A = -80, or HMP45C = -40.</code></p>
+<p><code>Const T_RH_ANALOG_INPUT = 1 'Unique differential input channel for temperature and humidity probe. Const T_RH_T_MULT = 0.14 'Unique multiplier for temperature; HC2S3 = 0.1, HMP155A = 0.14, or HMP45C = 0.1.</code></p>
+<p><code>Const T_RH_T_OFFSET = -80 'Unique offset for temperature; HC2S3 = -40, HMP155A = -80, or HMP45C = -40.</code></p>
 <p>Table to do</p>
-<p><code>' Dookie2 HMP155 ser No V4720665 (2023) '1H Temperature signal (yellow) HMP155: yellow '1L Temperature signal reference HMP155: white(orange in loop with 11L, was purple, was white) --&gt; Jumper to white 'gnd Shield '2H RH signal (blue) HMP155: blue '2L RH signal reference HMP155 only one signal reference for temp and rH: white 1L (orange, was purple, was white) '12V Power (red) 'G Power reference (black)</code></p>
+<p><code>' Dookie2 HMP155 ser No V4720665 (2023)</code></p>
+<p><code>'1H Temperature signal (yellow) HMP155: yellow '1L Temperature signal reference HMP155: white(orange in loop with 1L, --&gt; Jumper to white</code></p>
+<p><code>'gnd Shield</code></p>
+<p><code>'2H RH signal (blue)</code></p>
+<p><code>HMP155: blue '2L RH signal reference HMP155 only one signal reference for temp and rH: white 1L  '12V Power (red)</code></p>
+<p><code>'G Power reference (black)</code></p>
 </section>
 <section id="component-radiation-user-constants-wiring-kipp-zonen-cnr4-wired-to-volt116" class="level3">
 <h3 class="anchored" data-anchor-id="component-radiation-user-constants-wiring-kipp-zonen-cnr4-wired-to-volt116">4-component radiation user constants / wiring (Kipp &amp; Zonen CNR4 wired to VOLT116)</h3>
