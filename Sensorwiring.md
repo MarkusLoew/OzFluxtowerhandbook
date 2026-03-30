@@ -118,11 +118,15 @@ Apogee CS310 PAR sensor program constants and wiring:
 | gnd         | PAR signal ground | black       |
 | gnd         | PAR shield        | clear       |
 
-' -\> Soil temperature user constants / wiring (CR1000X)
+TO ADD:
+
+Licor PAR sensor and multiplier configuration and wiring
+
+### Averging soil temperature thermocouple (TCAV)
 
 `Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel. Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.`
 
-### Averging soil temperature thermocouple (TCAV)
+### 
 
 TCAV #1
 
