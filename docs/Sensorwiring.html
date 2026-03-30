@@ -166,6 +166,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#soil-heat-flux" id="toc-soil-heat-flux" class="nav-link" data-scroll-target="#soil-heat-flux">Soil heat flux</a></li>
   <li><a href="#par-sensor" id="toc-par-sensor" class="nav-link" data-scroll-target="#par-sensor">PAR sensor</a></li>
   <li><a href="#averging-soil-temperature-thermocouple-tcav" id="toc-averging-soil-temperature-thermocouple-tcav" class="nav-link" data-scroll-target="#averging-soil-temperature-thermocouple-tcav">Averging soil temperature thermocouple (TCAV)</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   <li><a href="#soil-moisture-user-constants-wiring-cr1000x" id="toc-soil-moisture-user-constants-wiring-cr1000x" class="nav-link" data-scroll-target="#soil-moisture-user-constants-wiring-cr1000x">Soil moisture user constants / wiring (CR1000X)</a></li>
   <li><a href="#rain-gauge-user-constants-wiring-cr1000x" id="toc-rain-gauge-user-constants-wiring-cr1000x" class="nav-link" data-scroll-target="#rain-gauge-user-constants-wiring-cr1000x">Rain gauge user constants / wiring (CR1000X)</a></li>
   <li><a href="#air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" id="toc-air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" class="nav-link" data-scroll-target="#air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116">Air temperature and humidity (Vailsala HMP155 wired to Volt116)</a></li>
@@ -362,11 +363,15 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>’ -&gt; Soil temperature user constants / wiring (CR1000X)</p>
-<p><code>Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel. Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.</code></p>
+<p>TO ADD:</p>
+<p>Licor PAR sensor and multiplier configuration and wiring</p>
 </section>
 <section id="averging-soil-temperature-thermocouple-tcav" class="level3">
 <h3 class="anchored" data-anchor-id="averging-soil-temperature-thermocouple-tcav">Averging soil temperature thermocouple (TCAV)</h3>
+<p><code>Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel. Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.</code></p>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
 <p>TCAV #1</p>
 <table class="caption-top table">
 <thead>
@@ -490,26 +495,18 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p><code>C5 SDI-12 data #1 (SDI-12 address = 0) (green)</code></p>
-<p><code>'C7 SDI-12 data #2 (SDI-12 address = 0) (green)</code></p>
-<p><code>'G RS-232 Rx #1 (orange)</code></p>
-<p><code>' RS-232 Rx #2 (orange)</code></p>
-<p><code>12V SDI-12 power #1 (red)</code></p>
-<p><code>SDI-12 power #2 (red)</code></p>
-<p><code>G SDI-12 data/power reference #1 (black)</code></p>
-<p><code>Shield #1 (clear)</code></p>
-<p><code>SDI-12 data/power reference #2 (black)</code></p>
-<p><code>Shield #2 (clear)</code></p>
 </section>
 <section id="rain-gauge-user-constants-wiring-cr1000x" class="level3">
 <h3 class="anchored" data-anchor-id="rain-gauge-user-constants-wiring-cr1000x">Rain gauge user constants / wiring (CR1000X)</h3>
 <p><code>Const RAIN_PULSE_INPUT = P1 'Unique pulse input channel for tipping bucket.</code></p>
 <p><code>Const RAIN_CAL = 0.2 'Unique multiplier for tipping bucket.</code></p>
+<p>Table to do</p>
 <p><code>'P1 Signal (black) 'G Signal reference (white) ' Shield (clear)</code></p>
 </section>
 <section id="air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" class="level3">
 <h3 class="anchored" data-anchor-id="air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116">Air temperature and humidity (Vailsala HMP155 wired to Volt116)</h3>
 <p><code>Const T_RH_ANALOG_INPUT = 1 'Unique differential input channel for temperature and humidity probe. Const T_RH_T_MULT = 0.14 'Unique multiplier for temperature; HC2S3 = 0.1, HMP155A = 0.14, or HMP45C = 0.1. Const T_RH_T_OFFSET = -80 'Unique offset for temperature; HC2S3 = -40, HMP155A = -80, or HMP45C = -40.</code></p>
+<p>Table to do</p>
 <p><code>' Dookie2 HMP155 ser No V4720665 (2023) '1H Temperature signal (yellow) HMP155: yellow '1L Temperature signal reference HMP155: white(orange in loop with 11L, was purple, was white) --&gt; Jumper to white 'gnd Shield '2H RH signal (blue) HMP155: blue '2L RH signal reference HMP155 only one signal reference for temp and rH: white 1L (orange, was purple, was white) '12V Power (red) 'G Power reference (black)</code></p>
 </section>
 <section id="component-radiation-user-constants-wiring-kipp-zonen-cnr4-wired-to-volt116" class="level3">
@@ -520,6 +517,7 @@ ul.task-list li input[type="checkbox"] {
 <p><code>Const NR_SW_INCOMING_CAL = 1000/12.82 'Unique multiplier for CNR 4 shortwave incoming radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023) Const NR_SW_OUTGOING_CAL = 1000/12.63 'Unique multiplier for CNR 4 shortwave outgoing radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023)</code></p>
 <p><code>Const NR_LW_INCOMING_CAL = 1000/9.09 'Unique multiplier for CNR 4 longwave incoming radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 2234203 (Dec 2023)</code></p>
 <p><code>Const NR_LW_OUTGOING_CAL = 1000/9.41 'Unique multiplier for CNR 4 longwave outgoing radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023)</code></p>
+<p>Table to do</p>
 <p><code>'3H Incoming shortwave radiation signal (red) '3L Incoming shortwave radiation signal reference (blue) 'gnd Shield (clear) ' short jumper wire to 3L '4H Outgoing shortwave radiation signal (white) '4L Outgoing shortwave radiation signal reference (black) 'gnd short jumper wire to 4L '5H Incoming longwave radiation signal (gray) '5L Incoming longwave radiation signal reference (yellow) 'gnd short jumper wire to 5L '6H Outgoing longwave radiation signal (brown) '6L Outgoing longwave radiation signal reference (green) 'gnd short jumper wire to 6L '7H Thermistor signal (white) 'gnd Thermistor signal reference (black) ' Shield (clear) 'X2 Thermistor excitation (red)</code></p>
 <ul>
 <li>The Kipp and Zonen CNR sensor provided cables are different than the cable provided by Campbell Scientific! Campbell Scientfic adds a resistor to the cable!</li>

@@ -175,11 +175,15 @@ Be careful with control ports, though: To combine multiple sensor control lines 
 
 `Const RAIN_CAL = 0.2 'Unique multiplier for tipping bucket.`
 
+Table to do
+
 `'P1 Signal (black) 'G Signal reference (white) ' Shield (clear)`
 
 ### Air temperature and humidity (Vailsala HMP155 wired to Volt116)
 
 `Const T_RH_ANALOG_INPUT = 1 'Unique differential input channel for temperature and humidity probe. Const T_RH_T_MULT = 0.14 'Unique multiplier for temperature; HC2S3 = 0.1, HMP155A = 0.14, or HMP45C = 0.1. Const T_RH_T_OFFSET = -80 'Unique offset for temperature; HC2S3 = -40, HMP155A = -80, or HMP45C = -40.`
+
+Table to do
 
 `' Dookie2 HMP155 ser No V4720665 (2023) '1H Temperature signal (yellow) HMP155: yellow '1L Temperature signal reference HMP155: white(orange in loop with 11L, was purple, was white) --> Jumper to white 'gnd Shield '2H RH signal (blue) HMP155: blue '2L RH signal reference HMP155 only one signal reference for temp and rH: white 1L (orange, was purple, was white) '12V Power (red) 'G Power reference (black)`
 
@@ -196,6 +200,8 @@ Be careful with control ports, though: To combine multiple sensor control lines 
 `Const NR_LW_INCOMING_CAL = 1000/9.09 'Unique multiplier for CNR 4 longwave incoming radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 2234203 (Dec 2023)`
 
 `Const NR_LW_OUTGOING_CAL = 1000/9.41 'Unique multiplier for CNR 4 longwave outgoing radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023)`
+
+Table to do
 
 `'3H Incoming shortwave radiation signal (red) '3L Incoming shortwave radiation signal reference (blue) 'gnd Shield (clear) ' short jumper wire to 3L '4H Outgoing shortwave radiation signal (white) '4L Outgoing shortwave radiation signal reference (black) 'gnd short jumper wire to 4L '5H Incoming longwave radiation signal (gray) '5L Incoming longwave radiation signal reference (yellow) 'gnd short jumper wire to 5L '6H Outgoing longwave radiation signal (brown) '6L Outgoing longwave radiation signal reference (green) 'gnd short jumper wire to 6L '7H Thermistor signal (white) 'gnd Thermistor signal reference (black) ' Shield (clear) 'X2 Thermistor excitation (red)`
 
