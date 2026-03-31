@@ -50,6 +50,8 @@ Stand-alone towers require large foundations, but provide a safe and stable towe
 
 The large footprint of stand-alone towers allows generous platforms on top. However, in some cases, it can be difficult to install instrumentation on the edge of the tower where there is no platform and if the location is far away from the stair case. Large. tall towers like e.g. Tumbarumba, have a wide lattice construction, limiting options for accessing some locations without extensive climbing.
 
+![Whroo 36 m stand-alone tower with small footprint (Markus Loew)](images/tower_types/Whroo_stand_alone_tower_PXL_20251119_072928938.jpg)
+
 ![Tumbarumba stand-alone 70 m tower (post 2025) with staircase (Markus Loew)](images/tower_types/Tumbarumba_post_2025_PXL_20250328_005142813.jpg)
 
 ![Wombat Forest 40 m stand-alone tower with ladder (Markus Loew)](images/tower_types/WombatForest_stand_alone_tower_PXL_20240606_025120478.jpg)
