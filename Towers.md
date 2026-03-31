@@ -2,21 +2,25 @@
 
 ## Single pole towers
 
-Need foundation and potentially guy wired to avoid movement. Cheap, easy to install.
+Very small footprint, but need a foundation for the pole and potentially guy wires to avoid movement. Cheap, easy to install without disturbing the environment. Access to the sensors is via portable ladder.
 
-![One of the Dookie towers, second season of operation: single pole tower to allow machinery to get close to the tower. Steep guy wires (Markus Loew)](images/tower_types/Dookie_single_pole_PXL_20250902_034506670.jpg)
+![One of the Dookie towers, second season of operation: single pole tower (48 mm OD pole 4 m long, 1 m set in ground in concrete foundation) to allow machinery to get close to the tower. Steep guy wires (Markus Loew).](images/tower_types/Dookie_single_pole_PXL_20250902_034506670.jpg)
 
 ## Tripod towers
 
-Maximum height up to \< 4 m. Tripod base has quite a large footprint. Easy to set up, allows to take the tower into the ecosystem with little disturbance and can be removed without leaving much of a trace. E.g. Campbell Scientific: [CM106B-CSA](https://www.campbellsci.com.au/cm106b-csa)
+Maximum height up to \< 4 m. Tripod base has quite a large footprint. Easy to set up, allows to take the tower into the ecosystem with little disturbance and can be removed without leaving much of a trace. Legs can be adjusted to allow for uneven ground.
+
+E.g. Campbell Scientific: [CM106B-CSA](https://www.campbellsci.com.au/cm106b-csa)
 
 ![Tripod tower in agricultural environment (Dookie 1, first year of operation, Markus Loew)](images/tower_types/Triod_tower_Dooke1_year1_PXL_20240911_030259457.jpg)
 
 ## Hinged towers
 
-Various heights up to 14 m. These towers can be climbed (working at heights certificate required. But the hinged construction allows to lower the tower down for instrument installation and maintenance.
+Various heights up to 14 m. These towers can be climbed (working at heights certificate required). But the hinged construction allows to lower the tower down for instrument installation and maintenance to avoid climbing.
 
-Available from [APAC Portable Hinged Tripod Lattice Tower, AL340 Series](https://apacinfrastructure.com.au/al340-portable-tripod-lattice-tower-8-metre) APAC Infrastructure Pty Ltd, Unit 6/33-47 Fred Chaplin Circuit, Caloundra, Sunshine Coast, QLD, 4551
+Available from: [APAC Portable Hinged Tripod Lattice Tower, AL340 Series](https://apacinfrastructure.com.au/al340-portable-tripod-lattice-tower-8-metre)
+
+APAC Infrastructure Pty Ltd, Unit 6/33-47 Fred Chaplin Circuit, Caloundra, Sunshine Coast, QLD, 4551
 
 ![Boolcoomatta hinged tower on tripod base (Markus Loew)](images/tower_types/Boolcoomatta_hinged_tower_PXL_20250813_061750715.jpg)
 
@@ -36,13 +40,15 @@ EVTA Group, Gisborne, 12 Meek Street, New Gisborne, Victoria, 3438
 
 ## Scaffolding towers
 
-No recommended in Australia. OHS regulations require tower safety inspection every 30 days! Commonly used in Europe (Americas?) with and without guy wires up to 50+ m. Benefit: scaffolding towers can be built on location without bringing in large cranes. This allows to minimise disturbance of the ecosystem during the build phase. And the scaffolding can be buit in close vicinity of trees / branches which allows to undertake leaf-level measurements and sampling in the canopy. The small size and lack of disturbance minimised the updraft, "chimney" effect that surround tall towers.
+No recommended in Australia!
+
+OHS regulations require tower safety inspection every 30 days! But scaffolding towers are commonly used in Europe (Americas?) with and without guy wires up to 50+ m. Benefit: scaffolding towers are cheap to build, and can be built on location without bringing in large cranes. This allows to minimise disturbance of the ecosystem during the build phase. The scaffolding can be buit in close vicinity of trees / branches which potentially allows to undertake leaf-level measurements and sampling in the canopy. The small size and lack of disturbance minimises the updraft, "chimney" effect that surround tall towers.
 
 ## Guyed towers
 
 Small footprint, but usually require crane to install, hence more initial disturbance to the environment. Guywires allow for slim and tall tower structures. However, the guy wires can bring the tower down when a tree falls on them (see Warra and Wombat Forest.
 
-![Tumbarumba guyed tower (pre-2025). (Markus Loew)](images/tower_types/Tumbarumba_pre-2025_guyed_tower_PXL_20220707_004347948.jpg)
+![Tumbarumba guyed tower (post fire, pre-2025). (Markus Loew)](images/tower_types/Tumbarumba_pre-2025_guyed_tower_PXL_20220707_004347948.jpg)
 
 ## Stand-alone towers
 
