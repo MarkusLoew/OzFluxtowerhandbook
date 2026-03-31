@@ -15,7 +15,7 @@ website:
       - text: Climbing & Rigging
         file: ClimbingRigging.md
       - text: Tower Types
-        file: Tower-types.md
+        file: Towers.md
       - text: Enclosures
         file: Enclosures.md
       - text: Sensors
