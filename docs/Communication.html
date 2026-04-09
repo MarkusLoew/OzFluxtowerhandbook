@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./Communication.html">Communication</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -113,26 +113,43 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Towers.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tower Types</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Communication, networking, telemetry</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Communication.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Communication</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./TERNOpenVPN.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OpenVPN</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./OzFluxnetwork.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">OzFlux Networking</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ClimbingRigging.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Climbing &amp; Rigging</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Towers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tower Types</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -159,28 +176,44 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#communication" id="toc-communication" class="nav-link active" data-scroll-target="#communication">Communication</a>
   <ul class="collapse">
+  <li><a href="#direct-download-from-data-logger" id="toc-direct-download-from-data-logger" class="nav-link" data-scroll-target="#direct-download-from-data-logger">Direct download from data logger</a>
+  <ul class="collapse">
+  <li><a href="#serial-communication" id="toc-serial-communication" class="nav-link" data-scroll-target="#serial-communication">Serial communication</a></li>
+  </ul></li>
   <li><a href="#modem" id="toc-modem" class="nav-link" data-scroll-target="#modem">Modem</a>
   <ul class="collapse">
   <li><a href="#g-modem-options" id="toc-g-modem-options" class="nav-link" data-scroll-target="#g-modem-options">4G modem options</a></li>
   <li><a href="#antennas" id="toc-antennas" class="nav-link" data-scroll-target="#antennas">Antennas</a></li>
-  <li><a href="#router" id="toc-router" class="nav-link" data-scroll-target="#router">Router</a></li>
   </ul></li>
-  <li><a href="#router-recommendations" id="toc-router-recommendations" class="nav-link" data-scroll-target="#router-recommendations">Router recommendations</a>
-  <ul class="collapse">
   <li><a href="#satellite-communication" id="toc-satellite-communication" class="nav-link" data-scroll-target="#satellite-communication">Satellite communication</a></li>
+  <li><a href="#router" id="toc-router" class="nav-link" data-scroll-target="#router">Router</a>
+  <ul class="collapse">
+  <li><a href="#router-recommendations" id="toc-router-recommendations" class="nav-link" data-scroll-target="#router-recommendations">Router recommendations</a></li>
   </ul></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./Communication.html">Communication</a></li></ol></nav></header>
 
 
 
 
 <section id="communication" class="level1">
 <h1>Communication</h1>
+<section id="direct-download-from-data-logger" class="level2">
+<h2 class="anchored" data-anchor-id="direct-download-from-data-logger">Direct download from data logger</h2>
+<p>In the simplest case, communication with a logger can be done by directly, by connecting a computer to the logger and downloading the data manually. This method is straightforward but requires physical access to the logger.</p>
+<section id="serial-communication" class="level3">
+<h3 class="anchored" data-anchor-id="serial-communication">Serial communication</h3>
+<p>Many modern computers don’t have a serial port, so a USB-to-serial adapter may be required. Recommended serial-to-usb adapters:</p>
+<p><a href="https://ftdichip.com/products/us232r-10-bulk/">FTDI Chip model US232R-10 usb to RS232</a></p>
+<p>Available via e.g.&nbsp;<a href="https://au.rs-online.com/web/p/interface-adapters-converters/0429274">RS-online</a></p>
+<p>Check your computer settings what serial port the adapter is using. Windows: check “<code>Device manager</code>”, section “ports”. Linux: check <code>ls /dev/tty*</code> for new devices.</p>
+<p>Latest generation Campbell Scientific and other manufacturer’s loggers have built in USB-to-serial converters, no dedicated serial cable and plug are required. The communication protocol is still RS232 and it is still required what serial port is used for communication.</p>
+</section>
+</section>
 <section id="modem" class="level2">
 <h2 class="anchored" data-anchor-id="modem">Modem</h2>
 <p>If a site has reasonable 4G/5G coverage, a modem can used for data transmission. In Australia, the recommended -and frequently only - phone network for remote locations is Telstra. TERN EP provides data-only Telstra SIM cards on request. Some towers might not require a 4G modem if there is an internet connection (WiFi, DSL, fibreoptics, fixed-wireless, satellite, …) readily available. Then a router will suffice.</p>
@@ -213,19 +246,21 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/">Directional antenna, Mimo capable</a></li>
 </ul>
 </section>
-<section id="router" class="level3">
-<h3 class="anchored" data-anchor-id="router">Router</h3>
+</section>
+<section id="satellite-communication" class="level2">
+<h2 class="anchored" data-anchor-id="satellite-communication">Satellite communication</h2>
+<p>to do</p>
+</section>
+<section id="router" class="level2">
+<h2 class="anchored" data-anchor-id="router">Router</h2>
 <p>Check if a modem provides sufficient ethernet ports (router functionality) for all devices on the local tower network. Consider a modem with sufficient built-in ethernet ports. Avoid office-grade network routers. They are susceptible to power surges, lightning strikes and do not operate well at high or low temperatures. Check if what data transmission rates are required at a research tower. Chose a GBit capable-router if required (ie for high-frequency spectral data). Many industrial MBit-routers offer sufficient performance for most flux-related data transfer and are more robust.</p>
-</section>
-</section>
-<section id="router-recommendations" class="level2">
-<h2 class="anchored" data-anchor-id="router-recommendations">Router recommendations</h2>
+<section id="router-recommendations" class="level3">
+<h3 class="anchored" data-anchor-id="router-recommendations">Router recommendations</h3>
 <ul>
 <li><p><a href="https://www.brainboxes.com/product/industrial-ethernet-switches/fast-ethernet/sw-505">Industrial 5-port 100 MBit router</a> (5 to 30V, DIN rail mount)</p></li>
 <li><p><a href="https://www.brainboxes.com/product/industrial-ethernet-switches/fast-ethernet/sw-508">Industrial 8-port 100 MBit router</a> (5 to 30V, DIN rail mount)</p></li>
 </ul>
-<section id="satellite-communication" class="level3">
-<h3 class="anchored" data-anchor-id="satellite-communication">Satellite communication</h3>
+<p>General network routers like office-grade, indoor routers (e.g.&nbsp;Netgear) are known to be more susceptible to electrical interference (lightning, power surges) and do not operate well at extreme temperatures compared to these “industrial” routers.</p>
 <p><a href="./Home.html">Home</a></p>
 
 

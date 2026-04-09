@@ -1,5 +1,23 @@
 # Communication
 
+## Direct download from data logger
+
+In the simplest case, communication with a logger can be done by directly, by connecting a computer to the logger and downloading the data manually. This method is straightforward but requires physical access to the logger.
+
+### Serial communication
+
+Many modern computers don't have a serial port, so a USB-to-serial adapter may be required. Recommended serial-to-usb adapters:
+
+[FTDI Chip model US232R-10 usb to RS232](https://ftdichip.com/products/us232r-10-bulk/)
+
+
+Available via e.g. [RS-online](https://au.rs-online.com/web/p/interface-adapters-converters/0429274)
+
+
+Check your computer settings what serial port the adapter is using. Windows: check "`Device manager`", section "ports". Linux: check `ls /dev/tty*` for new devices.
+
+Latest generation Campbell Scientific and other manufacturer's loggers have built in USB-to-serial converters, no dedicated serial cable and plug are required. The communication protocol is still RS232 and it is still required what serial port is used for communication.
+
 ## Modem
 
 If a site has reasonable 4G/5G coverage, a modem can used for data transmission. In Australia, the recommended -and frequently only - phone network for remote locations is Telstra. TERN EP provides data-only Telstra SIM cards on request. Some towers might not require a 4G modem if there is an internet connection (WiFi, DSL, fibreoptics, fixed-wireless, satellite, ...) readily available. Then a router will suffice.
@@ -34,16 +52,22 @@ In locations with marginal reception, it is recommended to use a modem that allo
 
 -   [Directional antenna, Mimo capable](https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/)
 
-### Router
+## Satellite communication
+
+to do
+
+
+## Router
 
 Check if a modem provides sufficient ethernet ports (router functionality) for all devices on the local tower network. Consider a modem with sufficient built-in ethernet ports. Avoid office-grade network routers. They are susceptible to power surges, lightning strikes and do not operate well at high or low temperatures. Check if what data transmission rates are required at a research tower. Chose a GBit capable-router if required (ie for high-frequency spectral data). Many industrial MBit-routers offer sufficient performance for most flux-related data transfer and are more robust.
 
-## Router recommendations
+### Router recommendations
 
 -   [Industrial 5-port 100 MBit router](https://www.brainboxes.com/product/industrial-ethernet-switches/fast-ethernet/sw-505) (5 to 30V, DIN rail mount)
 
 -   [Industrial 8-port 100 MBit router](https://www.brainboxes.com/product/industrial-ethernet-switches/fast-ethernet/sw-508) (5 to 30V, DIN rail mount)
 
-### Satellite communication
+General network routers like office-grade, indoor routers (e.g. Netgear) are known to be more susceptible to electrical interference (lightning, power surges) and do not operate well at extreme temperatures compared to these "industrial" routers.
+
 
 [Home](./Home.html)

@@ -8,14 +8,18 @@ website:
     contents:
       - text: Home
         file: Home.md
-      - text: Communication
-        file: Communication.md
-      - text: OpenVPN
-        file: TERNOpenVPN.md
-      - text: Climbing & Rigging
-        file: ClimbingRigging.md
       - text: Tower Types
         file: Towers.md
+      - section: "Communication, networking, telemetry"
+        contents:
+        - text: Communication
+          file: Communication.md
+        - text: OpenVPN
+          file: TERNOpenVPN.md
+        - text: OzFlux Networking
+          file: OzFluxnetwork.md
+      - text: Climbing & Rigging
+        file: ClimbingRigging.md
       - text: Enclosures
         file: Enclosures.md
       - text: Sensors

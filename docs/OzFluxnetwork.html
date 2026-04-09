@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ternopenvpn – OzFlux Tower Handbook</title>
+<title>ozfluxnetwork – OzFlux Tower Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./TERNOpenVPN.html">OpenVPN</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./OzFluxnetwork.html">OzFlux Networking</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,13 +134,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./TERNOpenVPN.html" class="sidebar-item-text sidebar-link active">
+  <a href="./TERNOpenVPN.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OpenVPN</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./OzFluxnetwork.html" class="sidebar-item-text sidebar-link">
+  <a href="./OzFluxnetwork.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">OzFlux Networking</span></a>
   </div>
 </li>
@@ -174,165 +174,40 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#virtual-private-networks" id="toc-virtual-private-networks" class="nav-link active" data-scroll-target="#virtual-private-networks">Virtual private networks</a>
+  <li><a href="#network-settings-within-ozflux" id="toc-network-settings-within-ozflux" class="nav-link active" data-scroll-target="#network-settings-within-ozflux">Network settings within OzFlux</a>
   <ul class="collapse">
-  <li><a href="#tern-openvpn-setup" id="toc-tern-openvpn-setup" class="nav-link" data-scroll-target="#tern-openvpn-setup">TERN OpenVPN setup</a>
-  <ul class="collapse">
-  <li><a href="#general-description" id="toc-general-description" class="nav-link" data-scroll-target="#general-description">General description</a></li>
-  </ul></li>
-  <li><a href="#device-specific-settings" id="toc-device-specific-settings" class="nav-link" data-scroll-target="#device-specific-settings">Device-specific settings</a>
-  <ul class="collapse">
-  <li><a href="#maxon-dualmax-ma-2055" id="toc-maxon-dualmax-ma-2055" class="nav-link" data-scroll-target="#maxon-dualmax-ma-2055">Maxon Dualmax MA-2055</a></li>
-  <li><a href="#maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060" id="toc-maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060" class="nav-link" data-scroll-target="#maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060">MAXON Datamax MA100-1010/1020-4G and Maxon Quadmax MA-6060</a></li>
-  </ul></li>
+  <li><a href="#network-level" id="toc-network-level" class="nav-link" data-scroll-target="#network-level">Network level</a></li>
+  <li><a href="#site-level" id="toc-site-level" class="nav-link" data-scroll-target="#site-level">Site level</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./TERNOpenVPN.html">OpenVPN</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./OzFluxnetwork.html">OzFlux Networking</a></li></ol></nav></header>
 
 
 
 
-<section id="virtual-private-networks" class="level1">
-<h1>Virtual private networks</h1>
+<section id="network-settings-within-ozflux" class="level1">
+<h1>Network settings within OzFlux</h1>
+<section id="network-level" class="level2">
+<h2 class="anchored" data-anchor-id="network-level">Network level</h2>
+<p>Each flux tower has an assigned network IP range within the TERN OpenVPN network. IP addresses are provided and managed by TERN (contact Gerhard or Ian for access). TERN OpenVPN provides a secure VPN connection for remote access to the flux tower network, each tower sites uses a unique private network mask in the 192.168.x.x range.</p>
+</section>
+<section id="site-level" class="level2">
+<h2 class="anchored" data-anchor-id="site-level">Site level</h2>
+<p>Each flux tower site has its own local network, typically using a private IP range within the 192.168.x.x subnet. This local network connects all devices at the site, including data loggers, modems, and routers. To make network management easier, it is recommended that all sites use similar device-to-IP address mappings:</p>
 <ul>
-<li>OpenVPN (TERN)</li>
-<li>Kinect (Campbell Scientific)</li>
-<li>DynDNS</li>
+<li>Modem: 192.168.x.1</li>
+<li>EC logger: 192.168.x.100</li>
+<li>Additional logger like e.g.&nbsp;soil sensor loggers: 192.168.x.101</li>
+<li>Profile system: 192.168.x.103</li>
+<li>Phenocam(s): 192.168.x.110 to 192.168.x.119</li>
+<li>network-enabled IRGAs (Li7500 RS): 192.168.x.120</li>
+<li>other items (associated loggers like Cosmoz system, surface temperature, radiation loggers, power system controllers, WiFi-extenders, …): 192.168.x.130 or higher</li>
 </ul>
-<section id="tern-openvpn-setup" class="level2">
-<h2 class="anchored" data-anchor-id="tern-openvpn-setup">TERN OpenVPN setup</h2>
-<p>(Ian McHugh)</p>
-<section id="general-description" class="level3">
-<h3 class="anchored" data-anchor-id="general-description">General description</h3>
-<p>We use openVPN for connection and upload / download of data to and from the loggers and other IP-capable devices. This gives us a secure, network-wide solution that offers access to both the modem router and the devices connected to its local area network. This is invaluable for allowing remote configuration. The initial configuration consists of 5 main steps (steps 1-3 are device-specific, and are covered in further detail based on device subsequently):</p>
-<ol type="1">
-<li>Establish openVPN connection</li>
-</ol>
-<p>This consists of configuring the modem / router as an openVPN client with settings that allow secure connection to the openVPN server via specific encryption protocols, in combination with a key file or files the user uploads to the device. The file(s) can be acquired from TERN EP central.</p>
-<ol start="2" type="1">
-<li>Configure LAN IP</li>
-</ol>
-<p>This consists of applying subnetwork settings for the modem itself, and for the IP range covered by the DHCP server (from within which specific IP addresses will be assigned to client hardware). Note that site VPN IP and subnet IP addresses are specifically tied to individual sites.</p>
-<ol start="3" type="1">
-<li>Configure DHCP server</li>
-</ol>
-<p>This consists of assigning fixed local IP addresses to different hardware components (loggers, IP cameras, IRGAs etc) based on their unique MAC addresses.</p>
-<ol start="4" type="1">
-<li>Configure hardware to use DHCP</li>
-</ol>
-<p>This is generally only required / relevant for loggers, but ensures that they request IP leases via DHCP - and thus have a predictable IP address assigned, as per (3) above - instead of assigning the IP address within the hardware itself, which increases both the complexity of the configuration (multiple pieces of hardware must be configured correctly for the system to work) and the potential for IP collisions.</p>
-<ol start="5" type="1">
-<li>Configure remote PC and communications software</li>
-</ol>
-<p>To enable communications between the modem / router and a remote machine, openVPN client software must also be running on the remote machine. You may need to check your IT departmental policy on the use of openVPN, as some universities may stop openVPN traffic by default. In most cases, hardware devices are accessed via support software. The main software package of most relevance to most researchers is Campbell Scientific’s Loggernet package, to which instructions herein are confined. Please contact TERN EP central node to discuss connection / configuration / communication needs for other hardware.</p>
-</section>
-</section>
-<section id="device-specific-settings" class="level2">
-<h2 class="anchored" data-anchor-id="device-specific-settings">Device-specific settings</h2>
-<section id="maxon-dualmax-ma-2055" class="level3">
-<h3 class="anchored" data-anchor-id="maxon-dualmax-ma-2055">Maxon Dualmax MA-2055</h3>
-<p>This modem allows to upload the full <em>.ovpn</em> file provided be TERN as a single file! This allows a one-click configuration for OpenVPN without the manual extraction of the various keys.</p>
-</section>
-<section id="maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060" class="level3">
-<h3 class="anchored" data-anchor-id="maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060">MAXON Datamax MA100-1010/1020-4G and Maxon Quadmax MA-6060</h3>
-<p>Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘admin’ and ‘admin’, and the default IP address is 192.168.0.1), and check that you have web connectivity. On the front panel of the device, the ‘Online’ LED will be lit if all is well. Check that you have the most recent firmware version (listed at top right in Figure 1 below). Many of the requisite openVPN settings may not be available if your firmware version is not current. Maxon firmware updates can be accessed here:</p>
-<p><a href="http://support.maxon.com.au/download/Datamax+%20-%20MA100-1010/">https://www.rfi.com.au/MA100-1010-4G</a></p>
-<p>Update firmware to enable TLS cipher options for OpenVPN</p>
-<p>See status website of router, Firmware version should be: v3.0.2-100-1020(Aug 23 2021 11:03:31) std - build 5656M</p>
-<p>To update the firmware, get the file from here:</p>
-<p><a href="http://support.maxon.com.au/download/Datamax%20LoRa/Firmware/" class="uri">http://support.maxon.com.au/download/Datamax%20LoRa/Firmware/</a></p>
-<p>File: uimage-MA100-1020-V3.0.2-20210823.flash</p>
-<p>Or here for the Maxon MA-6060:</p>
-<p><a href="http://support.maxon.com.au/download/MA-6060/" class="uri">http://support.maxon.com.au/download/MA-6060/</a><br>
-File: <a href="http://support.maxon.com.au/download/MA-6060/Firmware/MA-6060%20v1.0.0(Sep%2025%202019%20144719)%20-%20build%2037993805M.flash" class="uri">http://support.maxon.com.au/download/MA-6060/Firmware/MA-6060%20v1.0.0(Sep%2025%202019%20144719)%20-%20build%2037993805M.flash</a></p>
-<p>Use network connection to Maxon datamax to write the new firmware to device</p>
-<ol type="1">
-<li>Establish openVPN connection</li>
-</ol>
-<p>Under ‘Advanced Features’ → ‘OPENVPN’, ensure settings match those in Figure 1. Further down the same admin page, we can upload the requisite certificates / keys for secure connection (Figure 2). In the case of the Maxon modems, the text in the single file issued to the site user must be split into four sections (to minimise editing – and potential introduction of unwanted edits/characters in the originally-issued file - it is best to create local subfiles for each of the below), which are uploaded by cutting and pasting the relevant sections of text into the appropriate text boxes, as follows (Maxon text box headings in quotations):</p>
-<ul>
-<li><p>TLS Auth Key<br>
-<code>The section of text between &lt;tls-auth&gt; and &lt;/tls-auth&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN OpenVPN Static key V1-----” and “-----END OpenVPN Static key V1-----”</code></p></li>
-<li><p>CA Cert (Root certificate)<br>
-<code>the section of text between &lt;ca&gt; and &lt;/ca&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”</code></p></li>
-<li><p>Public Client Cert (Public certificate)<br>
-<code>the section of text between &lt;cert&gt; and &lt;/cert&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----”and “-----END CERTIFICATE-----”</code></p></li>
-<li><p>Private Client Key (Private key):<br>
-<code>the section of text between &lt;key&gt; and &lt;/key&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN PRIVATE KEY-----”and “-----END PRIVATE KEY-----”</code></p></li>
-</ul>
-<p>If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, select ‘Status’ → ‘OpenVPN’. A successful connection should appear as shown in Figure 3 (‘CONNECTED SUCCESS’ reported under ‘State’). If the text boxes on this page are blank, then you do not have a working openVPN connection.</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_7bcd34e0.png" class="img-fluid"></p>
-<p><em>Figure 1: Maxon openVPN settings.</em></p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_db8592fa.png" class="img-fluid"></p>
-<p><em>Figure 2: Maxon openVPN settings (continued).</em></p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_21c86555.png" class="img-fluid"></p>
-<p><em>Figure 3: Maxon openVPN connection confirmation.</em></p>
-<ol start="2" type="1">
-<li>Configure LAN IP</li>
-</ol>
-<p>Under ‘LAN and WAN Setup’ → ‘LAN’, set the local IP address of the device to the assigned subnet IP for the site (Figure 4; note that the IP assignment has already been altered for the router in the figure – a new router will have default device IP as noted above; see Appendix A for a list of site-assigned IP addresses). Change the ‘Network Address Server Settings (DHCP)’ start IP address to be compatible with (but not collide with) the device IP address (in Figure 4, start IP address is 192.168.2.100).</p>
-<p>Once these settings are applied, you may lose access to the modem, as your connection is to an IP address that is no longer applicable. Reconnect via ethernet using the newly configured IP address.</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_e48a7d67.png" class="img-fluid"></p>
-<p><em>Figure 4: Maxon LAN settings.</em></p>
-<ol start="3" type="1">
-<li>Configure DHCP server</li>
-</ol>
-<p>This step requires that the MAC addresses of the devices be known (see section 5 for information about obtaining MAC addresses for loggers and other devices). Under ‘LAN and WAN Setup’ → ‘Services’, in the ‘DHCP server’ panel (Figure 5), click ‘Add’, and enter MAC address, Host Name (the name the device will appear as in the DHCP client table) and desired IP address (note this must be in the IP range set in ‘LAN and WAN Setup’ → ‘LAN’). Client Lease Time can be left at the default 1440 minutes (meaning lease is renewed daily, but the same client hardware – as identified by MAC address - will always get the same IP lease).</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_bf34a289.png" class="img-fluid"></p>
-<p><em>Figure 5: Maxon DHCP IP reservation.</em></p>
-<p>SIERRA WIRELESS RV50X<a href="#sdfootnote1sym">1</a></p>
-<p>Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘user’ and ‘12345’, and the default IP address is 192.168.13.31 <a href="#sdfootnote2sym">2</a>), and check that you have web connectivity. On the front panel of the device, the network LED will be lit if all is well (see url for manual in footnote below – LED descriptions in Table 8-1, p37). Check that you have the most recent firmware version (under ‘Software and Firmware’ button at top of screen). Many of the requisite openVPN settings may not be available if your firmware version is not current. Sierra firmware (radio and carrier) updates can be accessed here:</p>
-<p><a href="https://source.sierrawireless.com/resources/airlink/software_downloads/rv50/rv50-firmware-list/" class="uri">https://source.sierrawireless.com/resources/airlink/software_downloads/rv50/rv50-firmware-list/</a></p>
-<ol type="1">
-<li>Establish openVPN connection</li>
-</ol>
-<p>In the top menu under ‘VPN’, select ‘VPN1’ from the side menu and ensure settings match those in Figure 6. On the same page, we can upload the requisite certificates / keys for secure connection. In the case of the RV50X, the text in the single file issued to the site user must be split into four separate files and saved locally, then uploaded separately (RV50X text box headings in quotations):</p>
-<ul>
-<li><p>Load Root Certificate (Root certificate)<code>saved file encapsulating section of text between &lt;ca&gt; and &lt;/ca&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----”and“-----END CERTIFICATE-----”</code></p></li>
-<li><p>Load Client Certificate’ (Public certificate)<code>saved file encapsulating section of text between &lt;cert&gt; and &lt;/cert&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----”and “-----END CERTIFICATE-----”</code></p></li>
-<li><p>Load Client Certificate Key (Private key)<code>the section of text between &lt;key&gt; and &lt;/key&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN PRIVATE KEY-----”and “-----END PRIVATE KEY-----”</code></p></li>
-<li><p>‘Load Client TLS Key’ (TLS Authentication Key):<code>saved file encapsulating section of text between &lt;tls-auth&gt; and &lt;/tls-auth&gt;, including only the text between (and INCLUSIVE OF) “-----BEGIN OpenVPN Static key V1-----”and“-----END OpenVPN Static key V1-----”</code></p></li>
-</ul>
-<p>If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, ‘VPN1 Status’ at the top of the page should show ‘Connected’ (Figure 6).</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_fb59a2d7.png" class="img-fluid"></p>
-<p><em>Figure 6: Sierra RV50X openVPN settings.</em></p>
-<ol start="2" type="1">
-<li>Configure LAN IP</li>
-</ol>
-<p>On the tab menu, select ‘LAN’, then from the left hand menu select ‘Ethernet’. Set the device IP address to the assigned subnet IP address for the site (Figure 7; note in the image the IP assignment is for Wombat State Forest site – a new router will have the default IP as above; see Appendix A for a list of assigned site IP addresses). Change ‘Starting IP’ and ‘Ending IP’ to be compatible with (but not collide with) the device IP address (in Figure 7, IP range is 192.168.12.100 → 192.168.12.150).</p>
-<p>Once these settings are applied, you may lose access to the modem, as your connection is to an IP address that is no longer applicable. Reconnect via ethernet using the newly configured IP address.</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_93dbaff4.png" class="img-fluid"></p>
-<p><em>Figure 7: Sierra RV50X LAN settings.</em></p>
-<ol start="3" type="1">
-<li>Configure DHCP server</li>
-</ol>
-<p>This step requires that the MAC addresses of the devices be known (see section 5 for information about obtaining MAC addresses for loggers and other devices). On the tab menu, select ‘LAN’, then from the left hand menu select ‘DHCP/Addressing’. In the ‘Reservation List’ box, select ‘Add More’, then enter MAC address and corresponding IP address for each IP-capable device to be deployed (Figure 8).</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_621cb8a.png" class="img-fluid"></p>
-<p><em>Figure 8: Sierra RV50X DHCP IP reservation.</em></p>
-<ol start="4" type="1">
-<li>Configure hardware to use DHCP</li>
-</ol>
-<p>Loggers and other IP-capable hardware (e.g.&nbsp;Campbell Scientific CCFC and other field cameras) must be connected to the modem via Ethernet. If the modem has only a single Ethernet port (e.g.&nbsp;RV50X), then a multi-port Ethernet switch (such as Brainboxes SW504 12V 4-port switch) must be used to expand the number of devices that can be connected.</p>
-<p>In Loggernet’s Device Configuration Utility, ‘Deployment’ tab, ensure the IP address in the ‘Ethernet’ sub-tab is set to ‘0.0.0.0’ (default; Figure 9 below). This ensures that the logger is assigned the IP address registered to the logger’s MAC address in the DHCP server settings. Note here that the MAC address of the logger is also visible on this page.</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_5dcdc6e1.jpg" class="img-fluid"></p>
-<p><em>Figure 9: Logger IP setup.</em></p>
-<p>While configuring the logger, the TCP Port should also be set / noted (Figure 10; default is 6785 - this can be left as is for most configurations); this is required for subsequent connection.</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_13c33a20.jpg" class="img-fluid"></p>
-<p><em>Figure 10: Logger Pakbus/TCP setup.</em></p>
-<ol start="5" type="1">
-<li>Configure remote PC and communications software</li>
-</ol>
-<p>Finally, in Loggernet’s ‘Setup’ utility, configure the IP and port numbers for the logger (Figure 11).</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_96095c48.jpg" class="img-fluid"></p>
-<p><em>Figure 11: Loggernet Setup configuration.</em></p>
-<p><a href="#sdfootnote1anc">1</a> Campbell Scientific is a reseller of these modems; the Campbell manual for their use can be found here: <a href="https://s.campbellsci.com/documents/au/manuals/rv50.pdf" class="uri">https://s.campbellsci.com/documents/au/manuals/rv50.pdf</a></p>
-<p><a href="#sdfootnote2anc">2</a> RV50(X)s running OS version 4.13 and older had both HTTP port 9191 and HTTPS port 9443 enabled by default. When using HTTP (not HTTPS) with these older OS versions, enter the IP address using port number 9191, for example, http://192.168.13.31:9191. You may be warned that the connection is not secure – allow an exception for this address and continue.</p>
 
 
-</section>
 </section>
 </section>
 
