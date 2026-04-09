@@ -23,9 +23,7 @@ website:
       - text: Enclosures
         file: Enclosures.md
       - text: Sensors
-        file: Sensorwiring.md
-     
-      
+        file: Sensorwiring.md      
 format:
   html:
     theme: cosmo

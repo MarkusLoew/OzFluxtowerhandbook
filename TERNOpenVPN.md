@@ -61,21 +61,21 @@ File: <http://support.maxon.com.au/download/MA-6060/Firmware/MA-6060%20v1.0.0(Se
 
 Use network connection to Maxon datamax to write the new firmware to device
 
-1)  Establish openVPN connection
+#### 1)  Establish openVPN connection
 
 Under ‘Advanced Features’ → ‘OPENVPN’, ensure settings match those in Figure 1. Further down the same admin page, we can upload the requisite certificates / keys for secure connection (Figure 2). In the case of the Maxon modems, the text in the single file issued to the site user must be split into four sections (to minimise editing – and potential introduction of unwanted edits/characters in the originally-issued file - it is best to create local subfiles for each of the below), which are uploaded by cutting and pasting the relevant sections of text into the appropriate text boxes, as follows (Maxon text box headings in quotations):
 
 -   TLS Auth Key\
-    `The section of text between <tls-auth> and </tls-auth>, including only the text between (and INCLUSIVE OF) “-----BEGIN OpenVPN Static key V1-----” and “-----END OpenVPN Static key V1-----”`
+    The section of text between <tls-auth> and </tls-auth>, including only the text between (and INCLUSIVE OF) `“-----BEGIN OpenVPN Static key V1-----” and “-----END OpenVPN Static key V1-----”`
 
 -   CA Cert (Root certificate)\
-    `the section of text between <ca> and </ca>, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”`
+    the section of text between <ca> and </ca>, including only the text between (and INCLUSIVE OF) `“-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”`
 
 -   Public Client Cert (Public certificate)\
-    `the section of text between <cert> and </cert>, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----”and “-----END CERTIFICATE-----”`
+    the section of text between <cert> and </cert>, including only the text between (and INCLUSIVE OF) `“-----BEGIN CERTIFICATE-----”and “-----END CERTIFICATE-----”`
 
 -   Private Client Key (Private key):\
-    `the section of text between <key> and </key>, including only the text between (and INCLUSIVE OF) “-----BEGIN PRIVATE KEY-----”and “-----END PRIVATE KEY-----”`
+    the section of text between <key> and </key>, including only the text between (and INCLUSIVE OF) `“-----BEGIN PRIVATE KEY-----”and “-----END PRIVATE KEY-----”`
 
 If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, select ‘Status’ → ‘OpenVPN’. A successful connection should appear as shown in Figure 3 (‘CONNECTED SUCCESS’ reported under ‘State’). If the text boxes on this page are blank, then you do not have a working openVPN connection.
 
@@ -91,7 +91,7 @@ If this has been configured successfully, you should now be able to access the V
 
 *Figure 3: Maxon openVPN connection confirmation.*
 
-2)  Configure LAN IP
+#### 2)  Configure LAN IP
 
 Under ‘LAN and WAN Setup’ → ‘LAN’, set the local IP address of the device to the assigned subnet IP for the site (Figure 4; note that the IP assignment has already been altered for the router in the figure – a new router will have default device IP as noted above; see Appendix A for a list of site-assigned IP addresses). Change the ‘Network Address Server Settings (DHCP)’ start IP address to be compatible with (but not collide with) the device IP address (in Figure 4, start IP address is 192.168.2.100).
 
@@ -101,7 +101,7 @@ Once these settings are applied, you may lose access to the modem, as your conne
 
 *Figure 4: Maxon LAN settings.*
 
-3)  Configure DHCP server
+#### 3)  Configure DHCP server
 
 This step requires that the MAC addresses of the devices be known (see section 5 for information about obtaining MAC addresses for loggers and other devices). Under ‘LAN and WAN Setup’ → ‘Services’, in the ‘DHCP server’ panel (Figure 5), click ‘Add’, and enter MAC address, Host Name (the name the device will appear as in the DHCP client table) and desired IP address (note this must be in the IP range set in ‘LAN and WAN Setup’ → ‘LAN’). Client Lease Time can be left at the default 1440 minutes (meaning lease is renewed daily, but the same client hardware – as identified by MAC address - will always get the same IP lease).
 
@@ -109,23 +109,23 @@ This step requires that the MAC addresses of the devices be known (see section 5
 
 *Figure 5: Maxon DHCP IP reservation.*
 
-SIERRA WIRELESS RV50X[1](#sdfootnote1sym)
+### SIERRA WIRELESS RV50X[1](#sdfootnote1sym)
 
 Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘user’ and ‘12345’, and the default IP address is 192.168.13.31 [2](#sdfootnote2sym)), and check that you have web connectivity. On the front panel of the device, the network LED will be lit if all is well (see url for manual in footnote below – LED descriptions in Table 8-1, p37). Check that you have the most recent firmware version (under ‘Software and Firmware’ button at top of screen). Many of the requisite openVPN settings may not be available if your firmware version is not current. Sierra firmware (radio and carrier) updates can be accessed here:
 
 <https://source.sierrawireless.com/resources/airlink/software_downloads/rv50/rv50-firmware-list/>
 
-1)  Establish openVPN connection
+#### 1)  Establish openVPN connection
 
 In the top menu under ‘VPN’, select ‘VPN1’ from the side menu and ensure settings match those in Figure 6. On the same page, we can upload the requisite certificates / keys for secure connection. In the case of the RV50X, the text in the single file issued to the site user must be split into four separate files and saved locally, then uploaded separately (RV50X text box headings in quotations):
 
--   Load Root Certificate (Root certificate)`saved file encapsulating section of text between <ca> and </ca>, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----”and“-----END CERTIFICATE-----”`
+-   Load Root Certificate (Root certificate)saved file encapsulating section of text between `<ca> and </ca>`, including only the text between (and INCLUSIVE OF) `“-----BEGIN CERTIFICATE-----”and“-----END CERTIFICATE-----”`
 
--   Load Client Certificate’ (Public certificate)`saved file encapsulating section of text between <cert> and </cert>, including only the text between (and INCLUSIVE OF) “-----BEGIN CERTIFICATE-----”and “-----END CERTIFICATE-----”`
+-   Load Client Certificate’ (Public certificate)saved file encapsulating section of text between `<cert> and </cert>`, including only the text between (and INCLUSIVE OF) `“-----BEGIN CERTIFICATE-----”and “-----END CERTIFICATE-----”`
 
--   Load Client Certificate Key (Private key)`the section of text between <key> and </key>, including only the text between (and INCLUSIVE OF) “-----BEGIN PRIVATE KEY-----”and “-----END PRIVATE KEY-----”`
+-   Load Client Certificate Key (Private key)the section of text between `<key> and </key>`, including only the text between (and INCLUSIVE OF) `“-----BEGIN PRIVATE KEY-----”and “-----END PRIVATE KEY-----”`
 
--   ‘Load Client TLS Key’ (TLS Authentication Key):`saved file encapsulating section of text between <tls-auth> and </tls-auth>, including only the text between (and INCLUSIVE OF) “-----BEGIN OpenVPN Static key V1-----”and“-----END OpenVPN Static key V1-----”`
+-   ‘Load Client TLS Key’ (TLS Authentication Key):saved file encapsulating section of text between `<tls-auth> and </tls-auth>`, including only the text between (and INCLUSIVE OF) `“-----BEGIN OpenVPN Static key V1-----”and“-----END OpenVPN Static key V1-----”`
 
 If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, ‘VPN1 Status’ at the top of the page should show ‘Connected’ (Figure 6).
 
@@ -133,7 +133,7 @@ If this has been configured successfully, you should now be able to access the V
 
 *Figure 6: Sierra RV50X openVPN settings.*
 
-2)  Configure LAN IP
+#### 2)  Configure LAN IP
 
 On the tab menu, select ‘LAN’, then from the left hand menu select ‘Ethernet’. Set the device IP address to the assigned subnet IP address for the site (Figure 7; note in the image the IP assignment is for Wombat State Forest site – a new router will have the default IP as above; see Appendix A for a list of assigned site IP addresses). Change ‘Starting IP’ and ‘Ending IP’ to be compatible with (but not collide with) the device IP address (in Figure 7, IP range is 192.168.12.100 → 192.168.12.150).
 
@@ -143,7 +143,7 @@ Once these settings are applied, you may lose access to the modem, as your conne
 
 *Figure 7: Sierra RV50X LAN settings.*
 
-3)  Configure DHCP server
+#### 3)  Configure DHCP server
 
 This step requires that the MAC addresses of the devices be known (see section 5 for information about obtaining MAC addresses for loggers and other devices). On the tab menu, select ‘LAN’, then from the left hand menu select ‘DHCP/Addressing’. In the ‘Reservation List’ box, select ‘Add More’, then enter MAC address and corresponding IP address for each IP-capable device to be deployed (Figure 8).
 
@@ -151,7 +151,7 @@ This step requires that the MAC addresses of the devices be known (see section 5
 
 *Figure 8: Sierra RV50X DHCP IP reservation.*
 
-4)  Configure hardware to use DHCP
+#### 4)  Configure hardware to use DHCP
 
 Loggers and other IP-capable hardware (e.g. Campbell Scientific CCFC and other field cameras) must be connected to the modem via Ethernet. If the modem has only a single Ethernet port (e.g. RV50X), then a multi-port Ethernet switch (such as Brainboxes SW504 12V 4-port switch) must be used to expand the number of devices that can be connected.
 
@@ -167,7 +167,7 @@ While configuring the logger, the TCP Port should also be set / noted (Figure 10
 
 *Figure 10: Logger Pakbus/TCP setup.*
 
-5)  Configure remote PC and communications software
+#### 5)  Configure remote PC and communications software
 
 Finally, in Loggernet’s ‘Setup’ utility, configure the IP and port numbers for the logger (Figure 11).
 
@@ -178,3 +178,5 @@ Finally, in Loggernet’s ‘Setup’ utility, configure the IP and port numbers
 [1](#sdfootnote1anc) Campbell Scientific is a reseller of these modems; the Campbell manual for their use can be found here: <https://s.campbellsci.com/documents/au/manuals/rv50.pdf>
 
 [2](#sdfootnote2anc) RV50(X)s running OS version 4.13 and older had both HTTP port 9191 and HTTPS port 9443 enabled by default. When using HTTP (not HTTPS) with these older OS versions, enter the IP address using port number 9191, for example, http://192.168.13.31:9191. You may be warned that the connection is not secure – allow an exception for this address and continue.
+
+[Home](./Home.html)

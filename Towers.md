@@ -61,3 +61,5 @@ The large footprint of stand-alone towers allows generous platforms on top. Howe
 ![Tumbarumba stand-alone 70 m tower (post 2025) with staircase (Markus Loew)](images/tower_types/Tumbarumba_post_2025_PXL_20250328_005142813.jpg)
 
 ![Wombat Forest 40 m stand-alone tower with ladder (Markus Loew)](images/tower_types/WombatForest_stand_alone_tower_PXL_20240606_025120478.jpg)
+
+[Home](./Home.html)

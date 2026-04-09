@@ -157,10 +157,10 @@ Providers for clamps and other mounting hardware:
 
 ## Pipes, tubes
 
-Buy metal, steel, aluminum poles at your locat steel and aluminium merchant
+Buy metal, steel, aluminum poles at your local steel and aluminium merchant.
 
-Aluminum and steel tubing usually have in-compatible diameters
+Aluminum and steel tubing usually have in-compatible diameters!
 
-Connections between steel and aluminium can become oxidised
+Connections between steel and aluminium can become oxidised!
 
 [Home](./Home.html)

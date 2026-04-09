@@ -234,3 +234,5 @@ Kipp and Zonen yellow Thermistor yellow cable has different colours and requires
 `'X2 Thermistor excitation (brown)`
 
 `'1kOhm resistor between X2 (brown) and 7H (white)`
+
+[Home](./Home.html)
