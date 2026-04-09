@@ -192,11 +192,14 @@ ul.task-list li input[type="checkbox"] {
 <h1>Network settings within OzFlux</h1>
 <section id="network-level" class="level2">
 <h2 class="anchored" data-anchor-id="network-level">Network level</h2>
-<p>Each flux tower has an assigned IP range within the TERN OpenVPN network. IP addresses are provided and managed by TERN (contact Gerhard or Ian for access). TERN OpenVPN provides a secure VPN connection for remote access to the flux tower network, each tower sites uses a unique private network mask in the 192.168.x.x range.</p>
+<p>Each flux tower has an assigned IP range within the TERN OpenVPN network. IP addresses are provided and managed by TERN (contact Gerhard or Ian for access). TERN OpenVPN provides a secure VPN connection for remote access to the flux tower network, each tower site uses a unique private network mask in the 192.168.x.x range.</p>
 </section>
 <section id="site-level" class="level2">
 <h2 class="anchored" data-anchor-id="site-level">Site level</h2>
-<p>Each flux tower site has its own local network, typically using a private IP range within the 192.168.x.x subnet. This local network connects all devices at the site, including data loggers, modems, and routers. All network-connected devices at the site should have a fixed IP address within this range (check your modem settings on how to assign IP addresses to devices ie MAC-address mapping). See e.g.&nbsp;DHCP settings <a href="./TERNOpenVPN.html#configure-dhcp-server">Modem network setup</a> or similar for your modem. To make network management and troubleshooting easier across OzFlux, it is recommended that all sites use similar device-to-IP address mappings:</p>
+<p>Each flux tower site has its own local network, typically using a private IP range within the 192.168.x.x subnet. This local network connects all devices at the site, including data loggers, modems, and routers. All network-connected devices at the site should have a fixed IP address within this range. Check your modem settings on how to assign IP addresses to devices ie MAC-address mapping. See e.g.&nbsp;DHCP settings <a href="./TERNOpenVPN.html#configure-dhcp-server">Modem network setup</a> or similar for your modem.</p>
+<p>Once a device connected to the modem, it takes time to change its IP address (<code>IP lease time</code>). Therefore, it is best to set up the desired device MAC-to-IP mapping before the first connection. Then the device uses the designated address from the start. Otherwise, it can take several hours or even days for the device to accept the new IP address (depending on the lease time configured in the DHCP server). Some modems /devices are stubborn to change the IP address of a DHCP client, but it usually resolves itself after some time.</p>
+<p>You can discover the MAC address of a specific device in your <a href="./TERNOpenVPN.html#configure-dhcp-server">modem management interface</a>. Or you can check if the MAC address is printed on the device or provided in the configuration software of the device. For Campbell Scientific systems, the MAC address is usually available through <code>Loggernet Connect</code>, <code>PC 400</code>, <code>ECMon</code>, <code>Devconfig</code>, etc. For Licor instruments, use device specific software e.g.&nbsp;<code>LI-7500 3.0.2</code>, <code>Li-7x00 A RS DS</code> or <code>Li-COR Li-8x0</code>.</p>
+<p>To make network management and troubleshooting easier across OzFlux, it is recommended that all sites use similar device-to-IP address mappings:</p>
 <ul>
 <li>Modem: 192.168.x.1</li>
 <li>EC logger: 192.168.x.100</li>
@@ -204,10 +207,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Profile system: 192.168.x.102 or .103</li>
 <li>Phenocam(s): 192.168.x.110 to 192.168.x.119</li>
 <li>network-enabled IRGAs (Li7500 RS): 192.168.x.120</li>
-<li>other non-flux systems (associated loggers like Cosmoz system, surface temperature, radiation, power system controll interfaces, managed routers, network-enabled relays, WiFi-extenders, …): 192.168.x.130 or higher where possible.</li>
+<li>other, non-flux systems (associated loggers like Cosmoz system, surface temperature, radiation, power system control interfaces, managed routers, network-enabled relays, WiFi-extenders, …): 192.168.x.130 or higher (where possible).</li>
 </ul>
 <p>Centralised data download and processing via TERN EPCN requires that IP-addresses for all flux-related devices are known and stable!</p>
-<p>To be debated if loggers (like Cosmoz and surface temperature / radiation loggers) should share adjacent IP-ranges and only non-logger systems use the IP range &gt; .130</p>
+<p><code>To be debated if loggers (like Cosmoz and surface temperature / radiation loggers) should share adjacent IP-ranges and only non-logger systems use the IP range &gt; .130</code></p>
 <p><a href="./Home.html">Home</a></p>
 
 
