@@ -123,7 +123,7 @@ As ethernet cables have a tiny diameter, voltage is boosted by the POE injector 
 
 Large devices like the UniFi Outdoor 7 WiFi hub requires POE+, ie 56V, to operate!
 
-Be aware of power demands: The conversion from 12V to 48V or even 56V to operate a POE device is quite power-consuming. These POE injectors and devices can use 0.6A (7.2 W\@12V) continuously, which is about 2/3 of the continuous power-draw of an all-in-one flux tower (0.8A)!
+Be aware of power demands: The conversion from 12V to 48V or even 56V to operate a POE device is quite power-consuming.
 
 Recommended 12V-operated POE injectors (<https://www.telcoantennas.com.au/>):
 
