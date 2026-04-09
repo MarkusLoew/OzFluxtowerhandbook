@@ -6,7 +6,7 @@ This guide applies to tower using the OzFLux standard programs (available from g
 
 This wiring guide is for an all-in one flux tower system. This system consists of one logger with extension module handling all sensors at once, wired up in a single enclosure. Examples of towers using this wiring scheme and standard program are: Boolcoomatta, the three Dookie towers. Even if logger, extension module and soil system are separate from each other, the basic wiring still applies to some extent.
 
-![All-in-one-enclosure EC system with Irgason, meteorological sensors, soil sensors (4 x CS650, 2x FG01, 2x TCAV), modem (Maxon Datamax MA-2055).](images/Dookie1_Logger_enclosure_PXL_20240911_022955292.jpg){fig-alt="All-in-one EC system with soil sensors, modem. Logger, Volt116 module, fuse panel, SDI12-data and powerhub, modem"}
+![All-in-one-enclosure EC system with Irgason, meteorological sensors, soil sensors (4 x CS650, 2x FG01, 2x TCAV), modem (Maxon Datamax MA-2055), fuse panel, SDI-12 hub.](images/Dookie1_Logger_enclosure_PXL_20240911_022955292.jpg){fig-alt="All-in-one EC system with soil sensors, modem. Logger, Volt116 module, fuse panel, SDI12-data and powerhub, modem (Maxon Datamax MA-2055), fuse panel, SDI-12 hub."}
 
 Hardware used:
 

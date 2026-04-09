@@ -48,7 +48,7 @@ Recommendations for industrial-grade modems:
 
 -   [Maxon Quadmax MA-6060](https://rfi-sb.rfi.com.au/MA-6060) Slim-line modem, dual SIM slots, four ethernet ports, dual 4G antennas, two WiFi antennas, DIN rail on the thin side. Has built-in analog relay to devices like e.g. phenocam. Capable to connect to OpenVPN, and similar services.
 
--   [Maxon Dualmax MA-2055](https://rfi-sb.rfi.com.au/MA-2055) Flat, but slightly wide modem, dual SIM slots, two ethernet ports, dual 4G antennas, no WiFi (!), DIN rail on the wide side (not space-saving out of the box). Capable to connect to OpenVPN, and similar services.
+-   [Maxon Dualmax MA-2055](https://rfi-sb.rfi.com.au/MA-2055) Flat, but slightly wide modem, dual SIM slots, two ethernet ports, dual 4G antennas, no WiFi (!), DIN rail on the wide side (not space-saving out of the box). Capable to connect to OpenVPN, and similar services. While the dualmax modem comes with a DIN-rail mount in the back, it uses quite a bit of space in an enclosure. Here is a 3d-printed angle mount that suits the 2.54 cm grid pattern of Campbell Scientific enclosure. This allows the Dualmax modem to be mounted flat or vertical to save space. [Download modem angle bracket mount, STL 3D print file](./downloads/Dualmax_modem_panel_mount_Loew.stl "STL file download") (Markus Loew)
 
 -   [Robustel R1520](https://www.rfi.com.au/R1520) Wide modem, dual SIM slots, two ethernet ports, dual 4G antennas, WiFi, DIN rail on the wide side (not space-saving out of the box). Capable to connect to OpenVPN, and similar services.
 
