@@ -38,7 +38,7 @@ To enable communications between the modem / router and a remote machine, openVP
 
 This modem allows to upload the full *.ovpn* file provided by TERN as a single file! This allows a convenient and trouble-free, one-click configuration of the OpenVPN connection without the manual extraction of the various keys (see below).
 
-![OpenVPN configuration interface for a Maxon Dualmax modem. The whole openVPN-file is uploaded as provided without further settings. The modem interface can be finicky about filename. Use the shown filename if you encounter issues (Markus Loew).](images/ovpn_images/Dualmax_ovpn_file_config.png)
+![OpenVPN configuration interface for a Maxon Dualmax modem. The whole openVPN-file is uploaded as provided without further settings. The modem interface can be finicky about the filename. Use the shown filename if you encounter issues (Markus Loew).](images/ovpn_images/Dualmax_ovpn_file_config.png)
 
 OpenVPN on the Maxon Dualmax can also be configured manually by providing individual keys for each section and setting up the connection manually:
 
