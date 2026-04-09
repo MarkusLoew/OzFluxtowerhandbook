@@ -260,8 +260,8 @@ ul.task-list li input[type="checkbox"] {
 <section id="antennas" class="level3">
 <h3 class="anchored" data-anchor-id="antennas">Antennas</h3>
 <ul>
-<li><p>Omnidirectional (omni) antennas are “install and forget”: they will connect to any phone network in the area, and can switch between multiple network towers depending on signal strength or if a phone tower goes offline.</p></li>
-<li><p>Directional (yagi) antennas must be pointing to a known, specific network tower. This will improve the signal. The downside is, that the antenna points to a specific tower. If that network tower goes down, this antenna will not connect to another tower.</p></li>
+<li><p><strong>Omnidirectional</strong> (omni) antennas are “install and forget”: they will connect to any phone network in the area, and can switch between multiple network towers depending on signal strength or if a phone tower goes offline.</p></li>
+<li><p><strong>Directional</strong> (yagi) antennas must be pointing to a known, specific network tower. This will improve the signal. The downside is, that the antenna points to a specific tower. If that network tower goes down, this antenna will not connect to another tower.</p></li>
 </ul>
 <p>In locations with marginal reception, it is recommended to use a modem that allows the use of two antennas, preferably yagi, in parallel (MiMo). Both antennas must be pointing to the same tower (!), and must be about 50 cm apart vertically for optimal signal boost.</p>
 <ul>
@@ -282,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/communication/checking_for_connectivity.jpg" class="img-fluid figure-img"></p>
-<figcaption>Checking and mapping 4G connectivity on location months before deciding on a location for the flux tower. Two directional antennas on telescopic pruning pole connected to a battery-powered Maxon Quadmax modem were used to test mobile network reception and data transmisson bandwith. (Markus Loew)</figcaption>
+<figcaption>Checking and mapping 4G connectivity on location months before deciding on a location for the flux tower. Two directional antennas on telescopic pruning pole connected to a battery-powered Maxon Quadmax modem were used to test mobile network reception and data transmission bandwidth. A connection was found from a tower 20 km away. (Markus Loew)</figcaption>
 </figure>
 </div>
 </section>
@@ -315,9 +315,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="poe-injectors" class="level2">
 <h2 class="anchored" data-anchor-id="poe-injectors">POE injectors</h2>
 <p>Some network devices like WiFi extenders (Starlink?), require power-over-ethernet. This provides the power to operate the device via the ethernet cable.</p>
-<p>As ethernet cables have a tiny diamater, voltage is boosted by the POE injector to cover large distances.</p>
-<p>Large devices like UniFi Outdoor 7 WiFi hub requires POE+ ie 56V to operate!</p>
-<p>Be aware of power demands: The conversion from 12V to 48V or even 56V to operate a POE device is power-consuming. These POE injectors can use 0.6A (7.2 W@12V) continuously, which is about 2/3 of an all-in-one flux tower (0.8A)!</p>
+<p>As ethernet cables have a tiny diameter, voltage is boosted by the POE injector to cover large distances.</p>
+<p>Large devices like the UniFi Outdoor 7 WiFi hub requires POE+, ie 56V, to operate!</p>
+<p>Be aware of power demands: The conversion from 12V to 48V or even 56V to operate a POE device is quite power-consuming. These POE injectors and devices can use 0.6A (7.2 W@12V) continuously, which is about 2/3 of the continuous power-draw of an all-in-one flux tower (0.8A)!</p>
 <p>Recommended 12V-operated POE injectors (<a href="https://www.telcoantennas.com.au/" class="uri">https://www.telcoantennas.com.au/</a>):</p>
 <ul>
 <li><p><a href="https://www.telcoantennas.com.au/12vdc-to-48vdc-poe-passive-power-over-ethernet-inj">POE 12V to 48V</a></p></li>

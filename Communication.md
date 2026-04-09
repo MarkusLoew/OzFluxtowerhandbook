@@ -60,9 +60,9 @@ Note: As TERN EP provides **data-only SIM cards**, the monitoring and feedback-o
 
 ### Antennas
 
--   Omnidirectional (omni) antennas are "install and forget": they will connect to any phone network in the area, and can switch between multiple network towers depending on signal strength or if a phone tower goes offline.
+-   **Omnidirectional** (omni) antennas are "install and forget": they will connect to any phone network in the area, and can switch between multiple network towers depending on signal strength or if a phone tower goes offline.
 
--   Directional (yagi) antennas must be pointing to a known, specific network tower. This will improve the signal. The downside is, that the antenna points to a specific tower. If that network tower goes down, this antenna will not connect to another tower.
+-   **Directional** (yagi) antennas must be pointing to a known, specific network tower. This will improve the signal. The downside is, that the antenna points to a specific tower. If that network tower goes down, this antenna will not connect to another tower.
 
 In locations with marginal reception, it is recommended to use a modem that allows the use of two antennas, preferably yagi, in parallel (MiMo). Both antennas must be pointing to the same tower (!), and must be about 50 cm apart vertically for optimal signal boost.
 
@@ -83,7 +83,7 @@ To determine line of sight between a phone tower and your location:
 
 Neither of these antenna-map websites can guarantee that there will be reception at the location. A fieldtrip with modem and antenna(s) and a long pole is usually required to check connectivity.
 
-![Checking and mapping 4G connectivity on location months before deciding on a location for the flux tower. Two directional antennas on telescopic pruning pole connected to a battery-powered Maxon Quadmax modem were used to test mobile network reception and data transmisson bandwith. (Markus Loew)](images/communication/checking_for_connectivity.jpg)
+![Checking and mapping 4G connectivity on location months before deciding on a location for the flux tower. Two directional antennas on telescopic pruning pole connected to a battery-powered Maxon Quadmax modem were used to test mobile network reception and data transmission bandwidth. A connection was found from a tower 20 km away. (Markus Loew)](images/communication/checking_for_connectivity.jpg)
 
 ## Satellite communication
 
@@ -119,11 +119,11 @@ General network routers like office-grade, indoor routers (e.g. Netgear) are kno
 
 Some network devices like WiFi extenders (Starlink?), require power-over-ethernet. This provides the power to operate the device via the ethernet cable.
 
-As ethernet cables have a tiny diamater, voltage is boosted by the POE injector to cover large distances.
+As ethernet cables have a tiny diameter, voltage is boosted by the POE injector to cover large distances.
 
-Large devices like UniFi Outdoor 7 WiFi hub requires POE+ ie 56V to operate!
+Large devices like the UniFi Outdoor 7 WiFi hub requires POE+, ie 56V, to operate!
 
-Be aware of power demands: The conversion from 12V to 48V or even 56V to operate a POE device is power-consuming. These POE injectors can use 0.6A (7.2 W\@12V) continuously, which is about 2/3 of an all-in-one flux tower (0.8A)!
+Be aware of power demands: The conversion from 12V to 48V or even 56V to operate a POE device is quite power-consuming. These POE injectors and devices can use 0.6A (7.2 W\@12V) continuously, which is about 2/3 of the continuous power-draw of an all-in-one flux tower (0.8A)!
 
 Recommended 12V-operated POE injectors (<https://www.telcoantennas.com.au/>):
 
