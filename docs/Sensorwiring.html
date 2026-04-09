@@ -201,14 +201,14 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="sensors-and-wiring" class="level1">
 <h1>Sensors and wiring</h1>
-<p>This guide applies to tower using the OzFLux standard programs (available from github…, Ian McHugh). Detailed Sensor and wiring information for the Campbell EasyFux system is available here (EasyFlux manual).</p>
+<p>This guide applies to tower using the OzFLux standard programs (available from <a href="https://github.com/OzFlux/logger_code">OzFlux logger code Github repository</a>, Ian McHugh).</p>
 <section id="wiring-information" class="level2">
 <h2 class="anchored" data-anchor-id="wiring-information">Wiring information</h2>
 <p>This wiring guide is for an all-in one flux tower system. This system consists of one logger with extension module handling all sensors at once, wired up in a single enclosure. Examples of towers using this wiring scheme and standard program are: Boolcoomatta, the three Dookie towers. Even if logger, extension module and soil system are separate from each other, the basic wiring still applies to some extent.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Dookie1_Logger_enclosure_PXL_20240911_022955292.jpg" class="img-fluid figure-img" alt="All-in-one EC system with soil sensors, modem. Logger, Volt116 module, fuse panel, SDI12-data and powerhub, modem (Maxon Datamax MA-2055), fuse panel, SDI-12 hub."></p>
-<figcaption>All-in-one-enclosure EC system with Irgason, meteorological sensors, soil sensors (4 x CS650, 2x FG01, 2x TCAV), modem (Maxon Datamax MA-2055), fuse panel, SDI-12 hub.</figcaption>
+<p><img src="images/Dookie1_Logger_enclosure_PXL_20240911_022955292.jpg" class="img-fluid figure-img" alt="All-in-one EC system with soil sensors, modem, logger, Volt116 module, fuse panel, SDI-12 hub, modem."></p>
+<figcaption>All-in-one-enclosure EC system with Irgason, meteorological sensors, soil sensors (4 x CS650, 2x FG01, 2x TCAV), modem (Maxon Datamax MA-2055) with two internal antennas, fuse panel, SDI-12 hub.</figcaption>
 </figure>
 </div>
 <p>Hardware used:</p>
@@ -224,6 +224,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Campbell Scientific CS650 soil mositure probe (four for Dookie towers, and Boolcoomatta tower)</p></li>
 <li><p>Campbell Scientific SoilVUE10 soil profile probe (Boolcoomatta only)</p></li>
 </ul>
+<p>While Campbell Scientific Easyflux uses are different logger software, their detailed manufacturer sensor and wiring information is a great read, even though the wiring is slightly different: <a href="https://www.campbellsci.com.au/easyflux-dl">EasyFlux</a> and <a href="https://s.campbellsci.com/documents/au/manuals/easyflux-dl-cr6op.pdf">specifically EasyFlux manual</a>.</p>
 <section id="user-constants" class="level3">
 <h3 class="anchored" data-anchor-id="user-constants">User constants</h3>
 <p>Some parts of the standard program must be modified to unique settings for each tower.</p>
