@@ -99,16 +99,12 @@ Manufacturers, engineering companies of stand-alone towers and telecommunication
     Phone: +61 8 9417 4999\
     sales\@futureau.com.au
 
-See [here for riggers to build the tower at your location](./ClimbingRigging.html#riggers)
+See [here for rigging companies that then build the tower at your location](./ClimbingRigging.html#riggers)
 
--   <div>
+![Whroo 36 m stand-alone tower with small footprint and ladder. Engineered by Clive Steele Partners, built by Commcons constructions. (Markus Loew)](images/tower_types/Whroo_stand_alone_tower_PXL_20251119_072928938.jpg)
 
-    ![Whroo 36 m stand-alone tower with small footprint (Markus Loew)](images/tower_types/Whroo_stand_alone_tower_PXL_20251119_072928938.jpg)
+![Tumbarumba stand-alone 70 m tower (post 2025) with staircase. Engineered by Roam, built by Karera Pty. (Markus Loew)](images/tower_types/Tumbarumba_post_2025_PXL_20250328_005142813.jpg)
 
-    </div>
-
-![Tumbarumba stand-alone 70 m tower (post 2025) with staircase (Markus Loew)](images/tower_types/Tumbarumba_post_2025_PXL_20250328_005142813.jpg)
-
-![Wombat Forest 40 m stand-alone tower with ladder (Markus Loew)](images/tower_types/WombatForest_stand_alone_tower_PXL_20240606_025120478.jpg)
+![Wombat Forest 40 m stand-alone tower with ladder. Designed and engineered by Roam, built by Meridian Communications. (Markus Loew)](images/tower_types/WombatForest_stand_alone_tower_PXL_20240606_025120478.jpg)
 
 [Home](./Home.html)
