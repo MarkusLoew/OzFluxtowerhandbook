@@ -22,7 +22,7 @@ The newer generation Campbell Scientific (CR310, CR6, CR1000x) and other manufac
 
 Li-Cor uses a null-modem / cross-over cable to communicate with their devices, while Campbell Scientific uses a straight-through serial cable. They are not compatible!
 
-![Varius serial cables: Campbell Scientifc-compatible serial cable with FTDI US232R-10 USB-to-serial converter (grey), Licor-compatible Null-modem serial cable with self-made serial LI-7500 Serial Adapter Cable (light grey), USB cables with USB-A to USB-Micro A (black) and USB-A to USB-C (white). CR1000 data logger with serial port only, and CR310 data logger with both serial and USB-MicroA and ethernet plug (Markus Loew).](images/communication/communication_serial_cables.jpg)
+![Varius serial cables: Campbell Scientifc-compatible serial cable with FTDI US232R-10 USB-to-serial converter (grey cable, blue white USB-to-serial converter), Li-Cor-compatible Null-modem serial cable with self-made serial LI-7500 irga serial adapter cable (light grey, green plug). USB cables with USB-A to USB-Micro A (black, suits CR6, CR310, CR1000x) and USB-A to USB-C (white, suits CR1000xe). CR1000 data logger with serial port only. CR310 data logger with serial port, USB-MicroA port, and ethernet plug (Markus Loew).](images/communication/communication_serial_cables.jpg)
 
 -   Campbell-Scientific-compatible *straight-through* *serial cable* for Campbell Scientific loggers and instruments, CR1000, CR3000, CR310, CR10x, ... e.g.: [Male D-Sub 9-Pin to Female Serial Cable](https://au.rs-online.com/web/p/serial-cables/1828782)
 
@@ -82,9 +82,33 @@ To determine line of sight between a phone tower and your location:
 -   <https://incoherency.co.uk/line-of-sight-map/>
 -   <https://www.scadacore.com/tools/rf-path/rf-line-of-sight/>
 
-Neither of these antenna-map websites can guarantee that there will be reception at the location. A fieldtrip with modem and antenna(s) and a long pole is usually required to check connectivity.
+Phone apps to check signal status and cell tower locations:
 
-![Checking and mapping 4G connectivity on location months before deciding on a location for the flux tower. Two directional antennas on telescopic pruning pole connected to a battery-powered Maxon Quadmax modem were used to test mobile network reception and data transmission bandwidth. A connection was found from a tower 20 km away. (Markus Loew)](images/communication/checking_for_connectivity.jpg)
+-   [SignalStrength App](https://play.google.com/store/apps/details?id=com.cls.networkwidget&hl=en_AU)
+
+-   [Opensignal apps](https://www.opensignal.com/apps) (Opensignal seems to use community sourced phone tower locations. The websites listed above provide a more comprehensive list of towers)
+
+#### Checking and optimising 4G connectivity, antenna direction
+
+Neither of the above antenna-map websites can guarantee that there will be reception at the location. A fieldtrip with modem and antenna(s) and a long pole is usually required to check connectivity. If there is marginal 4G coverage, it is about optimising the available signal.
+
+Check signal strength:
+
+-   4G signal strength is measured in decibel, dB(m). For details on RSSI, RSRQ, RSRP, and SINR metrics see: <https://wiki.teltonika-networks.com/view/Mobile_Signal_Strength_Recommendations>
+
+-    The tested modems above display the 4G signal strength in their "Status" or "WAN" management website. This is commonly named "RSSI" and displayed in dB(m). Less negative RSSI values indicate higher signal strength in general. For caveats regarding RSSI see <https://wiki.teltonika-networks.com/view/Mobile_Signal_Strength_Recommendations>
+
+-    Phones can be used as a quick way to check connectivity, Apps like "Signalstrength" give more details than the usual "number of bars", However, the physically small internal antennas are no match for dual, directional antennas! It is possible to establish a well working connection with dedicated antennas when a phone shows zero "bars". Size matters.
+
+-    Use two antennas in MiMo mode. This can boost signal strenght by 30 to 50% from experience (Note that the RSSI scale is logarithmic). \* Point the antennas in the direction of known phone towers (use the websites listed above to see maps of available towers). Wait for about one to three minutes and check the signal strength RSSI values displayed in your modem management interface update. Then turn the antenna to sweep for a better / worse signal.
+
+![4G WAN status display of a Maxon Quadmax modem. See "Signal Status" of -65 dBm indicating good reception. This modem uses dual directional antennas. With a single, omnidirectional antenna, the signal strength at this tower was only marginal at -85 dBm (Markus Loew).](images/communication/Quadmax_signal_strength_screenshot_from_2026-04-10 09-18-24.png)
+
+![4G cellular status display of a Maxon Dualmax modem. Signal level of -53 dBm indicates an excellent signal status. This modem uses two small "indoor" antennas inside the enclosure. The tower is in a location with general good 4G network coverage, no large outdoor antennas are needed.](images/communication/Dualmax_signal_strength_screenshot_from_2026-04-10 09-19-27.png)
+
+![Signal strength display and tower location displays from two phone apps: "SignalStrength" (left), indicating marginal 4G reception and showing an overall classification of the the 4G signal strength range. Location of 4G towers mapped by the app "Opensignal" (middle), and direction indicator of the "Opensignal" app pointing towards the nearest cell tower (right). (Markus Loew)](images/communication/signal_strength.jpg)
+
+![Checking and mapping 4G connectivity on location months before deciding on a location for the flux tower. Two directional antennas on telescopic pruning pole connected to a battery-powered Maxon Quadmax modem were used to test mobile network reception and data transmission bandwidth. A good 4G connection was established to a tower 20 km away. (Markus Loew)](images/communication/checking_for_connectivity.jpg)
 
 ## Satellite communication
 
@@ -116,7 +140,7 @@ Unmanaged-routers:
 
 General network routers like office-grade, indoor routers (e.g. Netgear) are known to be more susceptible to electrical interference (lightning, power surges) and do not operate well at extreme temperatures compared to "industrial" routers.
 
-## POE injectors
+## Power over ethernet POE injectors
 
 Some network devices like WiFi extenders (Starlink?), require power-over-ethernet. This provides the power to operate the device via the ethernet cable.
 

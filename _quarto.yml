@@ -20,6 +20,8 @@ website:
           file: OzFluxnetwork.md
       - text: Climbing & Rigging
         file: ClimbingRigging.md
+      - text Power
+        file power.md
       - text: Enclosures
         file: Enclosures.md
       - text: Sensors
