@@ -9,7 +9,12 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 ### Power demand
 
 -   [Campbell Scientific power budget spreadsheet](https://www.campbellsci.com.au/downloads/power-budget-spreadsheet) and tutorial. This spreadsheet provides power consumption data for Campbell Scientific devices and allows to calculate an overall power budget.
+
+<!-- -->
+
 -   [Victron MPPT calculator](https://www.victronenergy.com/mppt-calculator): Suggests charge controller model, calculates daily yield from solar panel size and configuration, voltage, and location.
+
+For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous power available year-round @rebmann_icos_2018
 
 ### Power sources
 
@@ -24,7 +29,7 @@ The install of a 240V electrical system at a tower location requires a certified
 #### Generator
 
 A generator is a powerful source of energy. I requires regular maintenance (e.g. every 100 hours of runtime) and re-fueling, though. Daily running costs are relatiely high compared to solar power. Operational costs of the generator powering the Tumbarumba tower is about \$9 per day (fuel - pre-2026 price - and regular maintenance included). That generator requires maintenance four times a year and re-fueling twice per year. It runs for about six to eight hours every 8 days to charge the batteries that power the research site. A local car mechanic services the generator when the maintenance interval is up. The run-time of the generator is monitored online to advice the mechanic.\
-If a generator is used, "the effect of its exhaust gases on the trace gas measurements must be minimised" and wind-direction-based screening might be required to avoid generator exhaust gases in the footprint (@aubinet_eddy_2012). The generator should be deployed away from the flux instruments to avoid bias (@moore_beginners_2024).
+If a generator is used, "the effect of its exhaust gases on the trace gas measurements must be minimised" and wind-direction-based screening might be required to avoid generator exhaust gases in the footprint (@aubinet_eddy_2012). The generator should be deployed away from the flux instruments to avoid bias @moore_beginners_2024 , @rebmann_icos_2018 .
 
 #### Solar
 
