@@ -5,15 +5,15 @@
 For tower builds, tower inspections, rigging, contact the rigging companies below. All operate Australia-wide:
 
 -   Commconns constructions, 30 Backwater Crt, Kirwans Bridge, VIC 3608, Phone 0407 576 343, Ian Burrowes [ian\@commcons.com.au](mailto:ian@commcons.com.au){.email}, admin\@commcons.com.au \
-    --\> Built Whroo and Wombat Forest tower
+    → Built the Whroo tower and the guyed Wombat Forest tower
 
 -   High Access Rigging, Ian Grivel, 0418 896 688
 
 -   Karera Pty Ltd, 2/49 Gavenlock Road, Tuggerah, NSW, 2259, Phone 1300 425 905, Joel Dawes [joel.dawes\@karera.com](mailto:joel.dawes@karera.com){.email}, sales\@karera.com, [www.karera.com.au](www.karera.com.au) \
-    --\> Built Tumbarumba tower
+    → Built the Tumbarumba tower
 
 -   Meridian Communications, A 71 Metrolink Circuit, Campbellfield VIC 3061, Bernie Cunningham, [bcunningham\@meridiancommunications.com.au](mailto:bcunningham@meridiancommunications.com.au){.email}, [www.meridiancommunications.com.au](https://www.meridiancommunications.com.au/) \
-    --\> Built stand-alone Wombat Forest tower
+    → Built the stand-alone Wombat Forest tower
 
 ## Working at heights competency
 
@@ -37,9 +37,9 @@ One-day refresher courses are available for people who already did the full two-
 
 ## Climbing gear
 
-Two persons must be present when climbing a tower. Each person must have a full set of climbing safety gear and work gear. Items must comply with the Australian Safety ratings.
+Two certified persons must be present when climbing a tower! Each person must have a full set of climbing safety gear and work gear. All items must comply with the Australian Safety ratings and must be within their expiry dates. Harnesses and general climbing gear expires after 10 years. Expired items must be "tagged out" and replaced immediately!
 
-See [Tower Climbing equipment (Heightdynamics)](https://www.heightdynamics.com.au/tower-climbing-tools-for-telco-workers/) for details.
+Gear list - See [Tower Climbing equipment (Heightdynamics)](https://www.heightdynamics.com.au/tower-climbing-tools-for-telco-workers/) for details.
 
 -   Harness
 
@@ -51,9 +51,9 @@ See [Tower Climbing equipment (Heightdynamics)](https://www.heightdynamics.com.a
 
 -   Tower rescue kit (pulley system, dogbone, descender, etc, ..., see detailed list and link below)
 
--   static work rope (longer than height of tower)
+-   static work rope to lift gear up (rope should be longer than height of tower ie twice the height when using a pulley system)
 
--   static rescue rope 11 mm OD (longer than height of tower), Australian Standard 4142.3
+-   dynamic rescue rope 11 mm OD (longer than height of tower), Australian Standard 4142.3
 
 -   Ladsafe detachable cable sleeve, fall arrest system compatible with the ladsafe rope system on the tower
 

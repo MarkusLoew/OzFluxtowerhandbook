@@ -8,7 +8,7 @@
 
 <meta name="author" content="Markus Loew">
 
-<title>ternopenvpn – OzFlux Tower Handbook</title>
+<title>sensorcalibration – OzFlux Tower Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -81,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./TERNOpenVPN.html">OpenVPN</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Sensorwiring.html">Sensors</a></li><li class="breadcrumb-item"><a href="./Sensorcalibration.html">Sensor calibration</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -135,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./TERNOpenVPN.html" class="sidebar-item-text sidebar-link active">
+  <a href="./TERNOpenVPN.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">OpenVPN</span></a>
   </div>
 </li>
@@ -182,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Sensorcalibration.html" class="sidebar-item-text sidebar-link">
+  <a href="./Sensorcalibration.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Sensor calibration</span></a>
   </div>
 </li>
@@ -198,18 +218,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#virtual-private-networks" id="toc-virtual-private-networks" class="nav-link active" data-scroll-target="#virtual-private-networks">Virtual private networks</a>
+  <li><a href="#sensor-calibration" id="toc-sensor-calibration" class="nav-link active" data-scroll-target="#sensor-calibration">Sensor calibration</a>
   <ul class="collapse">
-  <li><a href="#tern-openvpn-setup" id="toc-tern-openvpn-setup" class="nav-link" data-scroll-target="#tern-openvpn-setup">TERN OpenVPN setup</a>
+  <li><a href="#anemometer" id="toc-anemometer" class="nav-link" data-scroll-target="#anemometer">Anemometer</a></li>
+  <li><a href="#irga" id="toc-irga" class="nav-link" data-scroll-target="#irga">IRGA</a>
   <ul class="collapse">
-  <li><a href="#general-description" id="toc-general-description" class="nav-link" data-scroll-target="#general-description">General description</a></li>
+  <li><a href="#licor-7500xxx" id="toc-licor-7500xxx" class="nav-link" data-scroll-target="#licor-7500xxx">Licor 7500xxx</a></li>
+  <li><a href="#campbell-scientific-irgason" id="toc-campbell-scientific-irgason" class="nav-link" data-scroll-target="#campbell-scientific-irgason">Campbell Scientific Irgason</a></li>
+  <li><a href="#checking-co2-and-h2o-zero-in-the-field" id="toc-checking-co2-and-h2o-zero-in-the-field" class="nav-link" data-scroll-target="#checking-co2-and-h2o-zero-in-the-field">Checking CO<sub>2</sub> and H<sub>2</sub>O zero in the field</a></li>
   </ul></li>
-  <li><a href="#device-specific-settings" id="toc-device-specific-settings" class="nav-link" data-scroll-target="#device-specific-settings">Device-specific settings</a>
-  <ul class="collapse">
-  <li><a href="#maxon-dualmax-ma-2055" id="toc-maxon-dualmax-ma-2055" class="nav-link" data-scroll-target="#maxon-dualmax-ma-2055">Maxon Dualmax MA-2055</a></li>
-  <li><a href="#maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060" id="toc-maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060" class="nav-link" data-scroll-target="#maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060">MAXON Datamax MA100-1010/1020-4G and Maxon Quadmax MA-6060</a></li>
-  <li><a href="#sierra-wireless-rv50x1" id="toc-sierra-wireless-rv50x1" class="nav-link" data-scroll-target="#sierra-wireless-rv50x1">SIERRA WIRELESS RV50X1</a></li>
-  </ul></li>
+  <li><a href="#campbell-scientific-logger-calibration" id="toc-campbell-scientific-logger-calibration" class="nav-link" data-scroll-target="#campbell-scientific-logger-calibration">Campbell Scientific logger calibration?</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -217,7 +235,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./TERNOpenVPN.html">OpenVPN</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Sensorwiring.html">Sensors</a></li><li class="breadcrumb-item"><a href="./Sensorcalibration.html">Sensor calibration</a></li></ol></nav>
 <div class="quarto-title">
 </div>
 
@@ -241,170 +259,71 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="virtual-private-networks" class="level1">
-<h1>Virtual private networks</h1>
+<section id="sensor-calibration" class="level1">
+<h1>Sensor calibration</h1>
+<p>Of major EC-related instruments</p>
+<section id="anemometer" class="level2">
+<h2 class="anchored" data-anchor-id="anemometer">Anemometer</h2>
+<p>Usually no DIY calibration possible. Can check the zero by covering the anemometer (plastic bag or similar) in a wind-still room. Regular cleaning required! The wicks can disintegrate and can sometimes block the pathway.</p>
+</section>
+<section id="irga" class="level2">
+<h2 class="anchored" data-anchor-id="irga">IRGA</h2>
+<p>General:</p>
 <ul>
-<li>OpenVPN (TERN)</li>
-<li>Kinect (Campbell Scientific)</li>
-<li>DynDNS</li>
+<li><p>ICOS protocol: From <span class="citation" data-cites="sabbatini_icos_2017">Sabbatini and Papale (<a href="#ref-sabbatini_icos_2017" role="doc-biblioref">2017</a>)</span> : ICOS require an IRGA to be calibrated twice per year, four times per year if the instrument is new. It is preferred to calibrate the IRGA in the field to minimise downtime. Otherwise, a replacement IRGA must be installed to avoid gaps in the data while the actual IRGA is away for calibration. The zero of H<sub>2</sub>O and CO<sub>2</sub> signals must be checked regularly between the calibrations. The recommended frequency is every two months. In the field, the sensor is not cleaned initially before checking the zero. Thresholds of zero “drifts shall be based on CO2 concentration because more stable (drifts &gt;30 μmol mol-1 CO2 are considered significant). As an indication, also H2O drifts &gt; 1.5 mmol mol-1 are considered significant.” Factory calibrations of the IRGA is required every second year!</p></li>
+<li><p>World Meteorological Organistation guidelines<br>
+See their strict guide on “the Observations of CO2, CH4 and N2O at Global Atmosphere Watch Stations”: <span class="citation" data-cites="world_meteorological_organization_wmo_measurement_2025">World Meteorological Organization (WMO) (<a href="#ref-world_meteorological_organization_wmo_measurement_2025" role="doc-biblioref">2025</a>)</span></p></li>
+<li><p>any Irga calibration papers?</p></li>
 </ul>
-<section id="tern-openvpn-setup" class="level2">
-<h2 class="anchored" data-anchor-id="tern-openvpn-setup">TERN OpenVPN setup</h2>
-<p>(Ian McHugh)</p>
-<section id="general-description" class="level3">
-<h3 class="anchored" data-anchor-id="general-description">General description</h3>
-<p>We use openVPN for connection and upload / download of data to and from the loggers and other IP-capable devices. This gives us a secure, network-wide solution that offers access to both the modem router and the devices connected to its local area network. This is invaluable for allowing remote configuration. The initial configuration consists of 5 main steps (steps 1-3 are device-specific, and are covered in further detail based on device subsequently):</p>
-<section id="establish-openvpn-connection" class="level4">
-<h4 class="anchored" data-anchor-id="establish-openvpn-connection">1. Establish openVPN connection</h4>
-<p>This consists of configuring the modem / router as an openVPN client with settings that allow secure connection to the openVPN server via specific encryption protocols, in combination with a key file or files the user uploads to the device. The file(s) can be acquired from TERN EP central.</p>
+<section id="licor-7500xxx" class="level3">
+<h3 class="anchored" data-anchor-id="licor-7500xxx">Licor 7500xxx</h3>
+<ul>
+<li>requires Li7500-specific shroud</li>
+<li>chemicals get changed before each calibration. It takes 24 hours to flush the system once the chemicals are changed. Only then the actual calibration can take place.</li>
+</ul>
 </section>
-<section id="configure-lan-ip" class="level4">
-<h4 class="anchored" data-anchor-id="configure-lan-ip">2. Configure LAN IP</h4>
-<p>This consists of applying subnetwork settings for the modem itself, and for the IP range covered by the DHCP server (from within which specific IP addresses will be assigned to client hardware). Note that site VPN IP and subnet IP addresses are specifically tied to individual sites.</p>
+<section id="campbell-scientific-irgason" class="level3">
+<h3 class="anchored" data-anchor-id="campbell-scientific-irgason">Campbell Scientific Irgason</h3>
+<ul>
+<li>requires Irgason-specific shroud</li>
+<li>Chemicals need changing every two years or when drift occurs. Similar to the Licor IRGAs, the system needs to be flushed with the new chemicals for 24 hours before the calibration can happen.</li>
+</ul>
 </section>
-<section id="configure-dhcp-server" class="level4">
-<h4 class="anchored" data-anchor-id="configure-dhcp-server">3. Configure DHCP server</h4>
-<p>This consists of assigning fixed local IP addresses to different hardware components (loggers, IP cameras, IRGAs etc) based on their unique MAC addresses.</p>
-</section>
-<section id="configure-hardware-to-use-dhcp" class="level4">
-<h4 class="anchored" data-anchor-id="configure-hardware-to-use-dhcp">4. Configure hardware to use DHCP</h4>
-<p>This is generally only required / relevant for loggers, but ensures that they request IP leases via DHCP - and thus have a predictable IP address assigned, as per (3) above - instead of assigning the IP address within the hardware itself, which increases both the complexity of the configuration (multiple pieces of hardware must be configured correctly for the system to work) and the potential for IP collisions.</p>
-</section>
-<section id="configure-remote-pc-and-communications-software" class="level4">
-<h4 class="anchored" data-anchor-id="configure-remote-pc-and-communications-software">5. Configure remote PC and communications software</h4>
-<p>To enable communications between the modem / router and a remote machine, openVPN client software must also be running on the remote machine. You may need to check your IT departmental policy on the use of openVPN, as some universities may stop openVPN traffic by default. In most cases, hardware devices are accessed via support software. The main software package of most relevance to most researchers is <code>Campbell Scientific’s Loggernet</code> package, to which instructions herein are confined. Please contact TERN EP central node to discuss connection / configuration / communication needs for other hardware.</p>
-</section>
-</section>
-</section>
-<section id="device-specific-settings" class="level2">
-<h2 class="anchored" data-anchor-id="device-specific-settings">Device-specific settings</h2>
-<section id="maxon-dualmax-ma-2055" class="level3">
-<h3 class="anchored" data-anchor-id="maxon-dualmax-ma-2055">Maxon Dualmax MA-2055</h3>
-<p>This modem allows to upload the full <em>.ovpn</em> file provided by TERN as a single file! This allows a convenient and trouble-free, one-click configuration of the OpenVPN connection without the manual extraction of the various keys (see below).</p>
+<section id="checking-co2-and-h2o-zero-in-the-field" class="level3">
+<h3 class="anchored" data-anchor-id="checking-co2-and-h2o-zero-in-the-field">Checking CO<sub>2</sub> and H<sub>2</sub>O zero in the field</h3>
+<ul>
+<li><p>Campbell Scientific provide a handheld tool that allows to check the zeros of H<sub>2</sub>O and CO<sub>2</sub> in the field. The tools uses scrubber chemicals to produce “zero” air, ie air without CO2 or H2O. It has a built-in, battery powered pump that circulates the “zero” air through the calibration shroud that is installed in the optical path of the irga (either Licor 7500xx or Campbell Scientific Irgason). A tube connects the “out” port of the Zero Air Generator with the shroud. Air is circulated through the shroud using the battery-powered pump of the device.<br>
+To check/set the zero, the temperature sensor of the shroud is connected to the control unit of the IRGA to estimate the dew point. The irga must be turned off before connecting/disconnecting the temperature sensors. The instrument-specific software by the manufacturer (ECmon or Licor75xx) is used to check and potentially set the zero once the system is flushed with “zero” air, and the values are stable (allow 10 min to 20 min). See their instruction manuals for details.</p>
+<p><a href="https://www.campbellsci.com.au/31022">Campbell Scientific Zero Air generator</a></p></li>
+<li><p>This allows a relatively fast, hassle free check of the zero that can be done on location on the tower. A laptop with the instrument control software and USB cable (instrument-specific, in the case of Licor7500a/RS) or serial cable (with specific board adapter in case of Licor 7500) are required.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/ovpn_images/Dualmax_ovpn_file_config.png" class="img-fluid figure-img"></p>
-<figcaption>OpenVPN configuration interface for a Maxon Dualmax modem. The whole openVPN-file is uploaded as provided without further settings. The modem interface can be finicky about the filename. Use the shown filename if you encounter issues (Markus Loew).</figcaption>
+<p><img src="images/calibration/zero_air_generator_on_location.jpg" class="img-fluid figure-img"></p>
+<figcaption>Using the Campbell Scientific Zero Air Generator on location to check CO2 and H2O zeros of the IRGA. Left: Licor 7500 RS. Right: Campbell Scientific IRGASon (Markus Loew)</figcaption>
 </figure>
-</div>
-<p>OpenVPN on the Maxon Dualmax can also be configured manually by providing individual keys for each section and setting up the connection manually:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/ovpn_images/Dualmax_ovpn_config_individual_keys_OVPN_details.png" class="img-fluid figure-img"></p>
-<figcaption>TERN OpenVPN manual settings for the Maxon Dualmax (Markus Loew).</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/ovpn_images/Dualmax_ovpn_config_individual_keys_ovpn_keys.png" class="img-fluid figure-img"></p>
-<figcaption>Individual key files for the OpenVPN connection on a Maxon Dualmax modem. Keys are provided as separate files, extracted from the provided OVPN file (for key extraction details see sections for Maxon Datamax and Quadmax below). Filename of keys are specific! Rename your key files accordingly before uploading them to the modem! (Markus Loew)</figcaption>
-</figure>
-</div>
-</section>
-<section id="maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060" class="level3">
-<h3 class="anchored" data-anchor-id="maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060">MAXON Datamax MA100-1010/1020-4G and Maxon Quadmax MA-6060</h3>
-<p>Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘admin’ and ‘admin’, and the default IP address is 192.168.0.1), and check that you have web connectivity. On the front panel of the device, the ‘Online’ LED will be lit if all is well. Check that you have the most recent firmware version (listed at top right in Figure 1 below). Many of the requisite openVPN settings may not be available if your firmware version is not current. Maxon firmware updates can be accessed here:</p>
-<p><a href="http://support.maxon.com.au/download/Datamax+%20-%20MA100-1010/">https://www.rfi.com.au/MA100-1010-4G</a></p>
-<p>Update firmware to enable TLS cipher options for OpenVPN</p>
-<p>See status website of router, Firmware version should be: v3.0.2-100-1020(Aug 23 2021 11:03:31) std - build 5656M</p>
-<p>To update the firmware, get the file from here:</p>
-<p><a href="http://support.maxon.com.au/download/Datamax%20LoRa/Firmware/" class="uri">http://support.maxon.com.au/download/Datamax%20LoRa/Firmware/</a></p>
-<p>File: uimage-MA100-1020-V3.0.2-20210823.flash</p>
-<p>Or here for the Maxon MA-6060:</p>
-<p><a href="http://support.maxon.com.au/download/MA-6060/" class="uri">http://support.maxon.com.au/download/MA-6060/</a><br>
-File: <a href="http://support.maxon.com.au/download/MA-6060/Firmware/MA-6060%20v1.0.0(Sep%2025%202019%20144719)%20-%20build%2037993805M.flash" class="uri">http://support.maxon.com.au/download/MA-6060/Firmware/MA-6060%20v1.0.0(Sep%2025%202019%20144719)%20-%20build%2037993805M.flash</a></p>
-<p>Use network connection to Maxon datamax to write the new firmware to device</p>
-<section id="establish-openvpn-connection-1" class="level4">
-<h4 class="anchored" data-anchor-id="establish-openvpn-connection-1">1) Establish openVPN connection</h4>
-<p>Under ‘Advanced Features’ → ‘OPENVPN’, ensure settings match those in Figure 1. Further down the same admin page, we can upload the requisite certificates / keys for secure connection (Figure 2). In the case of the Maxon modems, the text in the single file issued to the site user must be split into four sections (to minimise editing – and potential introduction of unwanted edits/characters in the originally-issued file - it is best to create local subfiles for each of the below), which are uploaded by cutting and pasting the relevant sections of text into the appropriate text boxes, as follows (Maxon text box headings in quotations):</p>
-<ul>
-<li><p>TLS Auth Key<br>
-The section of text between <tls-auth> and </tls-auth>, including only the text between (and INCLUSIVE OF) <code>“-----BEGIN OpenVPN Static key V1-----” and “-----END OpenVPN Static key V1-----”</code></p></li>
-<li><p>CA Cert (Root certificate)<br>
-the section of text between <ca> and </ca>, including only the text between (and INCLUSIVE OF) <code>“-----BEGIN CERTIFICATE-----” and “-----END CERTIFICATE-----”</code></p></li>
-<li><p>Public Client Cert (Public certificate)<br>
-the section of text between <cert> and </cert>, including only the text between (and INCLUSIVE OF) <code>“-----BEGIN CERTIFICATE-----”and “-----END CERTIFICATE-----”</code></p></li>
-<li><p>Private Client Key (Private key):<br>
-the section of text between <key> and </key>, including only the text between (and INCLUSIVE OF) <code>“-----BEGIN PRIVATE KEY-----”and “-----END PRIVATE KEY-----”</code></p></li>
+</div></li>
 </ul>
-<p>If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, select ‘Status’ → ‘OpenVPN’. A successful connection should appear as shown in Figure 3 (‘CONNECTED SUCCESS’ reported under ‘State’). If the text boxes on this page are blank, then you do not have a working openVPN connection.</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_7bcd34e0.png" class="img-fluid"></p>
-<p><em>Figure 1: Maxon openVPN settings (Ian McHugh).</em></p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_db8592fa.png" class="img-fluid"></p>
-<p><em>Figure 2: Maxon openVPN settings (continued) (Ian McHugh).</em></p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_21c86555.png" class="img-fluid"></p>
-<p><em>Figure 3: Maxon openVPN connection confirmation (Ian McHugh).</em></p>
-</section>
-<section id="configure-lan-ip-1" class="level4">
-<h4 class="anchored" data-anchor-id="configure-lan-ip-1">2) Configure LAN IP</h4>
-<p>Under ‘LAN and WAN Setup’ → ‘LAN’, set the local IP address of the device to the assigned subnet IP for the site (Figure 4; note that the IP assignment has already been altered for the router in the figure – a new router will have default device IP as noted above; see Appendix A for a list of site-assigned IP addresses). Change the ‘Network Address Server Settings (DHCP)’ start IP address to be compatible with (but not collide with) the device IP address (in Figure 4, start IP address is 192.168.2.100).</p>
-<p>Once these settings are applied, you may lose access to the modem, as your connection is to an IP address that is no longer applicable. Reconnect via ethernet using the newly configured IP address.</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_e48a7d67.png" class="img-fluid"></p>
-<p><em>Figure 4: Maxon LAN settings (Ian McHugh).</em></p>
-</section>
-<section id="configure-dhcp-server-1" class="level4">
-<h4 class="anchored" data-anchor-id="configure-dhcp-server-1">3) Configure DHCP server</h4>
-<p>This step requires that the MAC addresses of the devices be known (see section 5 for information about obtaining MAC addresses for loggers and other devices). Under ‘LAN and WAN Setup’ → ‘Services’, in the ‘DHCP server’ panel (Figure 5), click ‘Add’, and enter MAC address, Host Name (the name the device will appear as in the DHCP client table) and desired IP address (note this must be in the IP range set in ‘LAN and WAN Setup’ → ‘LAN’). Client Lease Time can be left at the default 1440 minutes (meaning lease is renewed daily, but the same client hardware – as identified by MAC address - will always get the same IP lease).</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_bf34a289.png" class="img-fluid"></p>
-<p><em>Figure 5: Maxon DHCP IP reservation (Ian McHugh).</em></p>
 </section>
 </section>
-<section id="sierra-wireless-rv50x1" class="level3">
-<h3 class="anchored" data-anchor-id="sierra-wireless-rv50x1">SIERRA WIRELESS RV50X<a href="#sdfootnote1sym">1</a></h3>
-<p>Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘user’ and ‘12345’, and the default IP address is 192.168.13.31 <a href="#sdfootnote2sym">2</a>), and check that you have web connectivity. On the front panel of the device, the network LED will be lit if all is well (see url for manual in footnote below – LED descriptions in Table 8-1, p37). Check that you have the most recent firmware version (under ‘Software and Firmware’ button at top of screen). Many of the requisite openVPN settings may not be available if your firmware version is not current. Sierra firmware (radio and carrier) updates can be accessed here:</p>
-<p><a href="https://source.sierrawireless.com/resources/airlink/software_downloads/rv50/rv50-firmware-list/" class="uri">https://source.sierrawireless.com/resources/airlink/software_downloads/rv50/rv50-firmware-list/</a></p>
-<section id="establish-openvpn-connection-2" class="level4">
-<h4 class="anchored" data-anchor-id="establish-openvpn-connection-2">1) Establish openVPN connection</h4>
-<p>In the top menu under ‘VPN’, select ‘VPN1’ from the side menu and ensure settings match those in Figure 6. On the same page, we can upload the requisite certificates / keys for secure connection. In the case of the RV50X, the text in the single file issued to the site user must be split into four separate files and saved locally, then uploaded separately (RV50X text box headings in quotations):</p>
+<section id="campbell-scientific-logger-calibration" class="level2">
+<h2 class="anchored" data-anchor-id="campbell-scientific-logger-calibration">Campbell Scientific logger calibration?</h2>
 <ul>
-<li><p>Load Root Certificate (Root certificate)saved file encapsulating section of text between <code>&lt;ca&gt; and &lt;/ca&gt;</code>, including only the text between (and INCLUSIVE OF) <code>“-----BEGIN CERTIFICATE-----”and“-----END CERTIFICATE-----”</code></p></li>
-<li><p>Load Client Certificate’ (Public certificate)saved file encapsulating section of text between <code>&lt;cert&gt; and &lt;/cert&gt;</code>, including only the text between (and INCLUSIVE OF) <code>“-----BEGIN CERTIFICATE-----”and “-----END CERTIFICATE-----”</code></p></li>
-<li><p>Load Client Certificate Key (Private key)the section of text between <code>&lt;key&gt; and &lt;/key&gt;</code>, including only the text between (and INCLUSIVE OF) <code>“-----BEGIN PRIVATE KEY-----”and “-----END PRIVATE KEY-----”</code></p></li>
-<li><p>‘Load Client TLS Key’ (TLS Authentication Key):saved file encapsulating section of text between <code>&lt;tls-auth&gt; and &lt;/tls-auth&gt;</code>, including only the text between (and INCLUSIVE OF) <code>“-----BEGIN OpenVPN Static key V1-----”and“-----END OpenVPN Static key V1-----”</code></p></li>
+<li>every few years at manufacturer - who does actually do that? What’s the logger drift?</li>
 </ul>
-<p>If this has been configured successfully, you should now be able to access the VPN. To confirm successful connection, ‘VPN1 Status’ at the top of the page should show ‘Connected’ (Figure 6).</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_fb59a2d7.png" class="img-fluid"></p>
-<p><em>Figure 6: Sierra RV50X openVPN settings (Ian McHugh).</em></p>
-</section>
-<section id="configure-lan-ip-2" class="level4">
-<h4 class="anchored" data-anchor-id="configure-lan-ip-2">2) Configure LAN IP</h4>
-<p>On the tab menu, select ‘LAN’, then from the left hand menu select ‘Ethernet’. Set the device IP address to the assigned subnet IP address for the site (Figure 7; note in the image the IP assignment is for Wombat State Forest site – a new router will have the default IP as above; see Appendix A for a list of assigned site IP addresses). Change ‘Starting IP’ and ‘Ending IP’ to be compatible with (but not collide with) the device IP address (in Figure 7, IP range is 192.168.12.100 → 192.168.12.150).</p>
-<p>Once these settings are applied, you may lose access to the modem, as your connection is to an IP address that is no longer applicable. Reconnect via ethernet using the newly configured IP address.</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_93dbaff4.png" class="img-fluid"></p>
-<p><em>Figure 7: Sierra RV50X LAN settings (Ian McHugh).</em></p>
-</section>
-<section id="configure-dhcp-server-2" class="level4">
-<h4 class="anchored" data-anchor-id="configure-dhcp-server-2">3) Configure DHCP server</h4>
-<p>This step requires that the MAC addresses of the devices be known (see section 5 for information about obtaining MAC addresses for loggers and other devices). On the tab menu, select ‘LAN’, then from the left hand menu select ‘DHCP/Addressing’. In the ‘Reservation List’ box, select ‘Add More’, then enter MAC address and corresponding IP address for each IP-capable device to be deployed (Figure 8).</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_621cb8a.png" class="img-fluid"></p>
-<p><em>Figure 8: Sierra RV50X DHCP IP reservation (Ian McHugh).</em></p>
-</section>
-<section id="configure-hardware-to-use-dhcp-1" class="level4">
-<h4 class="anchored" data-anchor-id="configure-hardware-to-use-dhcp-1">4) Configure hardware to use DHCP</h4>
-<p>Loggers and other IP-capable hardware (e.g.&nbsp;Campbell Scientific CCFC and other field cameras) must be connected to the modem via Ethernet. If the modem has only a single Ethernet port (e.g.&nbsp;RV50X), then a multi-port Ethernet switch (such as Brainboxes SW504 12V 4-port switch) must be used to expand the number of devices that can be connected.</p>
-<p>In Loggernet’s Device Configuration Utility, ‘Deployment’ tab, ensure the IP address in the ‘Ethernet’ sub-tab is set to ‘0.0.0.0’ (default; Figure 9 below). This ensures that the logger is assigned the IP address registered to the logger’s MAC address in the DHCP server settings. Note here that the MAC address of the logger is also visible on this page.</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_5dcdc6e1.jpg" class="img-fluid"></p>
-<p><em>Figure 9: Logger IP setup (Ian McHugh).</em></p>
-<p>While configuring the logger, the TCP Port should also be set / noted (Figure 10; default is 6785 - this can be left as is for most configurations); this is required for subsequent connection.</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_13c33a20.jpg" class="img-fluid"></p>
-<p><em>Figure 10: Logger Pakbus/TCP setup (Ian McHugh).</em></p>
-</section>
-<section id="configure-remote-pc-and-communications-software-1" class="level4">
-<h4 class="anchored" data-anchor-id="configure-remote-pc-and-communications-software-1">5) Configure remote PC and communications software</h4>
-<p>Finally, in Loggernet’s ‘Setup’ utility, configure the IP and port numbers for the logger (Figure 11).</p>
-<p><img src="images/ovpn_images/ovpn_modem_setup_instructions_ML_html_96095c48.jpg" class="img-fluid"></p>
-<p><em>Figure 11: Loggernet Setup configuration (Ian McHugh).</em></p>
-<p><a href="#sdfootnote1anc">1</a> Campbell Scientific is a reseller of these modems; the Campbell manual for their use can be found here: <a href="https://s.campbellsci.com/documents/au/manuals/rv50.pdf" class="uri">https://s.campbellsci.com/documents/au/manuals/rv50.pdf</a></p>
-<p><a href="#sdfootnote2anc">2</a> RV50(X)s running OS version 4.13 and older had both HTTP port 9191 and HTTPS port 9443 enabled by default. When using HTTP (not HTTPS) with these older OS versions, enter the IP address using port number 9191, for example, http://192.168.13.31:9191. You may be warned that the connection is not secure – allow an exception for this address and continue.</p>
-<p><a href="./Home.html">Home</a></p>
+
 
 
 </section>
 </section>
-</section>
-</section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-sabbatini_icos_2017" class="csl-entry" role="listitem">
+Sabbatini, Simone, and Dario Papale. 2017. <span>“<span>ICOS</span> <span>Ecosystem</span> <span>Instructions</span> for <span>Turbulent</span> <span>Flux</span> <span>Measurements</span> of <span>CO2</span>, <span>Energy</span> and <span>Momentum</span>.”</span> <a href="https://doi.org/10.18160/QWV4-639G">https://doi.org/10.18160/QWV4-639G</a>.
+</div>
+<div id="ref-world_meteorological_organization_wmo_measurement_2025" class="csl-entry" role="listitem">
+World Meteorological Organization (WMO). 2025. <span>“Measurement <span>Guidelines</span> for the <span>Observations</span> of <span>CO2</span>, <span>CH4</span> and <span>N2O</span> at <span>Global</span> <span>Atmosphere</span> <span>Watch</span> <span>Stations</span>.”</span> <a href="https://library.wmo.int/idurl/4/69672">https://library.wmo.int/idurl/4/69672</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

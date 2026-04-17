@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Markus Loew">
 
 <title>communication – OzFlux Tower Handbook</title>
 <style>
@@ -164,12 +165,29 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Enclosures</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Sensors</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Sensorwiring.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sensors</span></a>
+ <span class="menu-text">Sensors and their wiring</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Sensorcalibration.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sensor calibration</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -202,9 +220,30 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./Communication.html">Communication</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./Communication.html">Communication</a></li></ol></nav>
+<div class="quarto-title">
+</div>
 
 
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Markus Loew </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <section id="communication" class="level1">
@@ -258,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://rfi-sb.rfi.com.au/MA-6060">Maxon Quadmax MA-6060</a> Slim-line modem, dual SIM slots, four ethernet ports, dual 4G antennas, two WiFi antennas, DIN rail on the thin side. Has built-in analog relay to devices like e.g.&nbsp;phenocam. Capable to connect to OpenVPN, and similar services.</p></li>
 <li><p><a href="https://rfi-sb.rfi.com.au/MA-2055">Maxon Dualmax MA-2055</a> Flat, but slightly wide modem, dual SIM slots, two ethernet ports, dual 4G antennas, no WiFi (!), DIN rail on the wide side (not space-saving out of the box, but custom angle bracket available, see below). Capable to connect to OpenVPN, and similar services. While the dualmax modem comes with a DIN-rail mount in the back, it uses quite a bit of space in an enclosure. Here is a 3D-printed angle mount that suits the 2.54 cm grid pattern of Campbell Scientific enclosures. This allows the Dualmax modem to be mounted flat or vertical to save space (<a href="./Sensorwiring.html#wiring-information">see photo</a>).<br>
 <a href="./downloads/Dualmax_modem_panel_mount_Loew.stl" title="STL file download">Download modem angle bracket mount, STL 3D print file</a> (Markus Loew).</p></li>
-<li><p><a href="https://www.rfi.com.au/R1520">Robustel R1520</a> Wide modem, dual SIM slots, two ethernet ports, dual 4G antennas, WiFi, DIN rail on the wide side (not space-saving out of the box). Capable to connect to OpenVPN, and similar services.</p></li>
+<li><p><a href="https://www.rfi.com.au/R1520">Robustel R1520</a> Wide modem, but rather small size, dual SIM slots, four ethernet ports, dual 4G antennas, WiFi, DIN rail on the wide side. Capable to connect to OpenVPN, and similar services.</p></li>
 <li><p><a href="https://www.belden.com/products/industrial-networking-cybersecurity/wireless/iiot-and-industrial-routers/nb1601-lsc">Belden Netmodule 1601</a> Slim-line modem, dual SIM slots, four ethernet ports, dual 4G antennas, two WiFI antennas, DIN rail on the thin side. Has built-in analog relay to devices like e.g.&nbsp;phenocam. Capable to connect to OpenVPN, and similar services.</p></li>
 <li><p><a href="https://www.campbellsci.com.au/cell220">Campbell Scientific Cell220</a> Serial modem well integrated the the Campbell Scientifc logger ecosystem. The Modem is conveniently configured via the logger program (CRBasic). This modem can interact directly with logger, and data and provides diagnostic output (like signal strength, uptime) to data tables on the logger. Modem actions can be triggered depending on logger or measurement status. No WiFi, no ethernet ports, dual antenna, single SIM card. Small form factor, highly configurable. Similar serial modems are available elsewhere too, as long as they support he full range of AT modem commands (ie Netmodule NB1600).</p></li>
 </ul>

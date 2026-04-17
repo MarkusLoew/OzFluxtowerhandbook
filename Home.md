@@ -1,5 +1,6 @@
 ---
 title: "OzFlux tower handbook"
+author: "Markus Loew, University of Melbourne"
 bibliography: ./references/References.bib # path and bibliography .bib file name
 nocite: |
    @burba_eddy_2022, @isaac_ozflux_2017, @lloyd_path_2023, @aubinet_eddy_2012, @moore_beginners_2024, @rebmann_icos_2018, @munger_measurement_2012, @campbell_scientific_easyflux_2020

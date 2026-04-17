@@ -3,6 +3,8 @@ project:
   output-dir: docs
   title: "OzFlux Tower Handbook"
 
+author: "Markus Loew"
+
 website:
   sidebar:
     contents:
@@ -24,8 +26,12 @@ website:
         file: power.md
       - text: Enclosures
         file: Enclosures.md
-      - text: Sensors
-        file: Sensorwiring.md      
+      - section: "Sensors"
+        contents:
+        - text: Sensors and their wiring
+          file: Sensorwiring.md
+        - text: Sensor calibration
+          file: Sensorcalibration.md
 format:
   html:
     theme: cosmo
