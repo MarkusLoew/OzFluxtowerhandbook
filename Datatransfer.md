@@ -15,10 +15,64 @@ Via serial cable (serial or USB) as shown on the communication page. Requires di
 
 Be aware of the security implications when using the outdated, not-encrypted ftp protocol! ftp transmits its password during each connection in clear text. In CRBAsic programs for some loggers, the password is also stored as plain text. Some universities do not allow ftp servers on their network! However, for many older or "smaller" data logger models, ftp is the only available file transfer protocol, e.g. CR310, CR1000, CR3000. But some of these loggers also provide a http server as alternative. The security risk is somewhat mitigated when the ftp connection takes place within a trusted network or VPN like TERN OpenVPN.
 
+The CRBasic command for ftp upload is [`FTPClient()`](https://help.campbellsci.com/crbasic/cr1000x/#Instructions/ftpclient.htm). with `PutGetoption 9` for a "passive" ftp server, which is the most common type an and appending to/creating file if it does not exist.
+
 ### ftp upload to a server
 
 -   use CRBasic `FTPClient()` command to send data from the logger to a server
 -   set up in a SlowSequence as not to interrupt the measurements
+
+#### Example CRBasic program for ftp upload
+
+`'server information for data upload`
+
+`Const server = "my.server.here.au"`
+
+`Const FTP_Port = 4221`
+
+`Const User = "logger"`
+
+`Const Pass = ""`
+
+`Const Folder = "/destination/ftp/towername/"`
+
+\[...\]
+
+`' Create public variable to keep track of data transfer sucess / status`
+
+`' must exist for each table`
+
+`Upload_status_TERNflux Public`
+
+\[...\]
+
+`' If the filename of the server requires a timestamp`
+
+`Public TStamp As String * 16 ' create a 30 min timestamp for ts_data`
+
+\[...\]
+
+`SlowSequence`
+
+`Scan (OUTPUT_INTERVAL, Min, 5, 0)`
+
+`Upload_status_TERNflux = FTPClient(server, User, Pass, "TERNFlux", "Towername/TERNFlux.dat", 9, 0, 0, 0, -1008)`
+
+`' to create a filename on the server that includes a timestamp:`
+
+`TStamp = Public.Timestamp(5, 1)`
+
+`'e.g. 30 min timestamp:`
+
+`TStamp = Left(TStamp, 16)`
+
+`' building the filename on the fly to include current timestamp`
+
+`Upload_status_mytable = FTPClient(Server, User, Pass, "Mytable", Folder & "Towername" & TStamp & "_30_min.dat", 9, 0, 0, Min, -1008)`
+
+`NextScan`
+
+`EndSequence`
 
 ### ftp download from the logger
 

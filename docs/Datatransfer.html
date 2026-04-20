@@ -263,12 +263,41 @@ ul.task-list li input[type="checkbox"] {
 <section id="ftp" class="level2">
 <h2 class="anchored" data-anchor-id="ftp">ftp</h2>
 <p>Be aware of the security implications when using the outdated, not-encrypted ftp protocol! ftp transmits its password during each connection in clear text. In CRBAsic programs for some loggers, the password is also stored as plain text. Some universities do not allow ftp servers on their network! However, for many older or “smaller” data logger models, ftp is the only available file transfer protocol, e.g.&nbsp;CR310, CR1000, CR3000. But some of these loggers also provide a http server as alternative. The security risk is somewhat mitigated when the ftp connection takes place within a trusted network or VPN like TERN OpenVPN.</p>
+<p>The CRBasic command for ftp upload is <a href="https://help.campbellsci.com/crbasic/cr1000x/#Instructions/ftpclient.htm"><code>FTPClient()</code></a>. with <code>PutGetoption 9</code> for a “passive” ftp server, which is the most common type an and appending to/creating file if it does not exist.</p>
 <section id="ftp-upload-to-a-server" class="level3">
 <h3 class="anchored" data-anchor-id="ftp-upload-to-a-server">ftp upload to a server</h3>
 <ul>
 <li>use CRBasic <code>FTPClient()</code> command to send data from the logger to a server</li>
 <li>set up in a SlowSequence as not to interrupt the measurements</li>
 </ul>
+<section id="example-crbasic-program-for-ftp-upload" class="level4">
+<h4 class="anchored" data-anchor-id="example-crbasic-program-for-ftp-upload">Example CRBasic program for ftp upload</h4>
+<p><code>'server information for data upload</code></p>
+<p><code>Const server = "my.server.here.au"</code></p>
+<p><code>Const FTP_Port = 4221</code></p>
+<p><code>Const User = "logger"</code></p>
+<p><code>Const Pass = ""</code></p>
+<p><code>Const Folder = "/destination/ftp/towername/"</code></p>
+<p>[…]</p>
+<p><code>' Create public variable to keep track of data transfer sucess / status</code></p>
+<p><code>' must exist for each table</code></p>
+<p><code>Upload_status_TERNflux Public</code></p>
+<p>[…]</p>
+<p><code>' If the filename of the server requires a timestamp</code></p>
+<p><code>Public TStamp As String * 16 ' create a 30 min timestamp for ts_data</code></p>
+<p>[…]</p>
+<p><code>SlowSequence</code></p>
+<p><code>Scan (OUTPUT_INTERVAL, Min, 5, 0)</code></p>
+<p><code>Upload_status_TERNflux = FTPClient(server, User, Pass, "TERNFlux", "Towername/TERNFlux.dat", 9, 0, 0, 0, -1008)</code></p>
+<p><code>' to create a filename on the server that includes a timestamp:</code></p>
+<p><code>TStamp = Public.Timestamp(5, 1)</code></p>
+<p><code>'e.g. 30 min timestamp:</code></p>
+<p><code>TStamp = Left(TStamp, 16)</code></p>
+<p><code>' building the filename on the fly to include current timestamp</code></p>
+<p><code>Upload_status_mytable = FTPClient(Server, User, Pass, "Mytable", Folder &amp; "Towername" &amp; TStamp &amp; "_30_min.dat", 9, 0, 0, Min, -1008)</code></p>
+<p><code>NextScan</code></p>
+<p><code>EndSequence</code></p>
+</section>
 </section>
 <section id="ftp-download-from-the-logger" class="level3">
 <h3 class="anchored" data-anchor-id="ftp-download-from-the-logger">ftp download from the logger</h3>
