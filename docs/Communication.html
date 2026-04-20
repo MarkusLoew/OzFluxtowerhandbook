@@ -145,6 +145,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">OzFlux Networking</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Datatransfer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data transfer</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -214,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#router-recommendations" id="toc-router-recommendations" class="nav-link" data-scroll-target="#router-recommendations">Router recommendations</a></li>
   </ul></li>
-  <li><a href="#power-over-ethernet-poe-injectors" id="toc-power-over-ethernet-poe-injectors" class="nav-link" data-scroll-target="#power-over-ethernet-poe-injectors">Power over ethernet POE injectors</a></li>
+  <li><a href="#power-over-ethernet-poe-injectors" id="toc-power-over-ethernet-poe-injectors" class="nav-link" data-scroll-target="#power-over-ethernet-poe-injectors">Power over ethernet (POE) injectors</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -302,6 +308,13 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://www.campbellsci.com.au/cell220">Campbell Scientific Cell220</a> Serial modem well integrated the the Campbell Scientifc logger ecosystem. The Modem is conveniently configured via the logger program (CRBasic). This modem can interact directly with logger, and data and provides diagnostic output (like signal strength, uptime) to data tables on the logger. Modem actions can be triggered depending on logger or measurement status. No WiFi, no ethernet ports, dual antenna, single SIM card. Small form factor, highly configurable. Similar serial modems are available elsewhere too, as long as they support he full range of AT modem commands (ie Netmodule NB1600).</p></li>
 </ul>
 <p>Note: As TERN EP provides <strong>data-only SIM cards</strong>, the monitoring and feedback-options that rely on SMS text messages of the above modems will not work! There is no “phone” quota associated to these SIM cards. E.g. the Quadmax modem can not send a warning SMS when switching from primary to the secondary SIM card when the primary card fails! And any IP-address monitoring and dial-in options these modems provide (e.g.&nbsp;direct dial-in in case OpenVPN fails), don’t work with data-only cards either.</p>
+<p>It is recommended to set up the modems to reboot themselves regularly! This ensures that the modem can recover from any temporary network issues. After a 4G network outage, not all modems keep trying to re-connect to the network. E.g. the Maxon modems only try five times and then then stop. Re-booting the modem resets this counter and the modem will connect again. Hence, set up scheduled reboot either daily or weekly. Set a conventient time of day that does not interfere with data collection or other critical operations.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/communication/modem_regular_reboot.png" class="img-fluid figure-img"></p>
+<figcaption>Schedule reboot options in the settings of a MAxon Quadmax modem. THe modem will reboot itself every day at 03:41 (Markus Loew).</figcaption>
+</figure>
+</div>
 </section>
 <section id="antennas" class="level3">
 <h3 class="anchored" data-anchor-id="antennas">Antennas</h3>
@@ -368,7 +381,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="satellite-communication" class="level2">
 <h2 class="anchored" data-anchor-id="satellite-communication">Satellite communication</h2>
-<p>to do</p>
+<p>to do ( Mark Hovenden?)</p>
 <ul>
 <li><p>12V Starlink Mini</p></li>
 <li><p>240V Starlink either via inverter or via 12V modification, POE injector? see below <a href="./Communication.html#poe-injectors">Communication.html#poe-injectors</a>?</p></li>
@@ -392,7 +405,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 <section id="power-over-ethernet-poe-injectors" class="level2">
-<h2 class="anchored" data-anchor-id="power-over-ethernet-poe-injectors">Power over ethernet POE injectors</h2>
+<h2 class="anchored" data-anchor-id="power-over-ethernet-poe-injectors">Power over ethernet (POE) injectors</h2>
 <p>Some network devices like WiFi extenders (Starlink?), require power-over-ethernet. This provides the power to operate the device via the ethernet cable.</p>
 <p>As ethernet cables have a tiny diameter, voltage is boosted by the POE injector to cover large distances.</p>
 <p>Large devices like the UniFi Outdoor 7 WiFi hub requires POE+, ie 56V, to operate!</p>

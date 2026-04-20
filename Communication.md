@@ -59,6 +59,10 @@ Recommendations for industrial-grade modems:
 
 Note: As TERN EP provides **data-only SIM cards**, the monitoring and feedback-options that rely on SMS text messages of the above modems will not work! There is no "phone" quota associated to these SIM cards. E.g. the Quadmax modem can not send a warning SMS when switching from primary to the secondary SIM card when the primary card fails! And any IP-address monitoring and dial-in options these modems provide (e.g. direct dial-in in case OpenVPN fails), don't work with data-only cards either.
 
+It is recommended to set up the modems to reboot themselves regularly! This ensures that the modem can recover from any temporary network issues. After a 4G network outage, not all modems keep trying to re-connect to the network. E.g. the Maxon modems only try five times and then then stop. Re-booting the modem resets this counter and the modem will connect again. Hence, set up scheduled reboot either daily or weekly. Set a conventient time of day that does not interfere with data collection or other critical operations.
+
+![Schedule reboot options in the settings of a MAxon Quadmax modem. THe modem will reboot itself every day at 03:41 (Markus Loew).](images/communication/modem_regular_reboot.png)
+
 ### Antennas
 
 -   **Omnidirectional** (omni) antennas are "install and forget": they will connect to any phone network in the area, and can switch between multiple network towers depending on signal strength or if a phone tower goes offline.
@@ -96,15 +100,15 @@ Check signal strength:
 
 -   4G signal strength is measured in decibel, dB(m). For details on RSSI, RSRQ, RSRP, and SINR metrics see: <https://wiki.teltonika-networks.com/view/Mobile_Signal_Strength_Recommendations>
 
--    The tested modems above display the 4G signal strength in their "Status" or "WAN" management website. This is commonly named "RSSI" and displayed in dB(m). Less negative RSSI values indicate higher signal strength in general. For caveats regarding RSSI see <https://wiki.teltonika-networks.com/view/Mobile_Signal_Strength_Recommendations>
+-   The tested modems above display the 4G signal strength in their "Status" or "WAN" management website. This is commonly named "RSSI" and displayed in dB(m). Less negative RSSI values indicate higher signal strength in general. For caveats regarding RSSI see <https://wiki.teltonika-networks.com/view/Mobile_Signal_Strength_Recommendations>
 
--    Phones can be used as a quick way to check connectivity, Apps like "Signalstrength" give more details than the usual "number of bars", However, the physically small internal antennas are no match for dual, directional antennas! It is possible to establish a well working connection with dedicated antennas when a phone shows zero "bars". Size matters.
+-   Phones can be used as a quick way to check connectivity, Apps like "Signalstrength" give more details than the usual "number of bars", However, the physically small internal antennas are no match for dual, directional antennas! It is possible to establish a well working connection with dedicated antennas when a phone shows zero "bars". Size matters.
 
--    Use two antennas in MiMo mode. This can boost signal strenght by 30 to 50% from experience (Note that the RSSI scale is logarithmic). \* Point the antennas in the direction of known phone towers (use the websites listed above to see maps of available towers). Wait for about one to three minutes and check the signal strength RSSI values displayed in your modem management interface update. Then turn the antenna to sweep for a better / worse signal.
+-   Use two antennas in MiMo mode. This can boost signal strenght by 30 to 50% from experience (Note that the RSSI scale is logarithmic). \* Point the antennas in the direction of known phone towers (use the websites listed above to see maps of available towers). Wait for about one to three minutes and check the signal strength RSSI values displayed in your modem management interface update. Then turn the antenna to sweep for a better / worse signal.
 
-![4G WAN status display of a Maxon Quadmax modem. See "Signal Status" of -65 dBm indicating good reception. This modem uses dual directional antennas. With a single, omnidirectional antenna, the signal strength at this tower was only marginal at -85 dBm (Markus Loew).](images/communication/Quadmax_signal_strength_screenshot_from_2026-04-10 09-18-24.png)
+![4G WAN status display of a Maxon Quadmax modem. See "Signal Status" of -65 dBm indicating good reception. This modem uses dual directional antennas. With a single, omnidirectional antenna, the signal strength at this tower was only marginal at -85 dBm (Markus Loew).](images/communication/Quadmax_signal_strength_screenshot_from_2026-04-10%2009-18-24.png)
 
-![4G cellular status display of a Maxon Dualmax modem. Signal level of -53 dBm indicates an excellent signal status. This modem uses two small "indoor" antennas inside the enclosure. The tower is in a location with general good 4G network coverage, no large outdoor antennas are needed.](images/communication/Dualmax_signal_strength_screenshot_from_2026-04-10 09-19-27.png)
+![4G cellular status display of a Maxon Dualmax modem. Signal level of -53 dBm indicates an excellent signal status. This modem uses two small "indoor" antennas inside the enclosure. The tower is in a location with general good 4G network coverage, no large outdoor antennas are needed.](images/communication/Dualmax_signal_strength_screenshot_from_2026-04-10%2009-19-27.png)
 
 ![Signal strength display and tower location displays from two phone apps: "SignalStrength" (left), indicating marginal 4G reception and showing an overall classification of the the 4G signal strength range. Location of 4G towers mapped by the app "Opensignal" (middle), and direction indicator of the "Opensignal" app pointing towards the nearest cell tower (right). (Markus Loew)](images/communication/signal_strength.jpg)
 
@@ -112,7 +116,7 @@ Check signal strength:
 
 ## Satellite communication
 
-to do
+to do ( Mark Hovenden?)
 
 -   12V Starlink Mini
 
@@ -140,7 +144,7 @@ Unmanaged-routers:
 
 General network routers like office-grade, indoor routers (e.g. Netgear) are known to be more susceptible to electrical interference (lightning, power surges) and do not operate well at extreme temperatures compared to "industrial" routers.
 
-## Power over ethernet POE injectors
+## Power over ethernet (POE) injectors
 
 Some network devices like WiFi extenders (Starlink?), require power-over-ethernet. This provides the power to operate the device via the ethernet cable.
 

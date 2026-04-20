@@ -8,7 +8,7 @@
 
 <meta name="author" content="Markus Loew">
 
-<title>sensorcalibration – OzFlux Tower Handbook</title>
+<title>datatransfer – OzFlux Tower Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -101,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Sensorwiring.html">Sensors</a></li><li class="breadcrumb-item"><a href="./Sensorcalibration.html">Sensor calibration</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./Datatransfer.html">Data transfer</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -167,7 +147,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Datatransfer.html" class="sidebar-item-text sidebar-link">
+  <a href="./Datatransfer.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Data transfer</span></a>
   </div>
 </li>
@@ -208,7 +188,7 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Sensorcalibration.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Sensorcalibration.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sensor calibration</span></a>
   </div>
 </li>
@@ -224,24 +204,25 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sensor-calibration" id="toc-sensor-calibration" class="nav-link active" data-scroll-target="#sensor-calibration">Sensor calibration</a>
+  <li><a href="#data-transfer" id="toc-data-transfer" class="nav-link active" data-scroll-target="#data-transfer">Data transfer</a>
   <ul class="collapse">
-  <li><a href="#anemometer" id="toc-anemometer" class="nav-link" data-scroll-target="#anemometer">Anemometer</a></li>
-  <li><a href="#irga" id="toc-irga" class="nav-link" data-scroll-target="#irga">IRGA</a>
+  <li><a href="#direct-download-from-data-logger" id="toc-direct-download-from-data-logger" class="nav-link" data-scroll-target="#direct-download-from-data-logger">Direct download from data logger</a></li>
+  <li><a href="#loggernet-pc400-internal-data-transfer" id="toc-loggernet-pc400-internal-data-transfer" class="nav-link" data-scroll-target="#loggernet-pc400-internal-data-transfer">Loggernet / PC400 internal data-transfer</a></li>
+  <li><a href="#ftp" id="toc-ftp" class="nav-link" data-scroll-target="#ftp">ftp</a>
   <ul class="collapse">
-  <li><a href="#licor-7500xxx" id="toc-licor-7500xxx" class="nav-link" data-scroll-target="#licor-7500xxx">Licor 7500xxx</a></li>
-  <li><a href="#campbell-scientific-irgason" id="toc-campbell-scientific-irgason" class="nav-link" data-scroll-target="#campbell-scientific-irgason">Campbell Scientific Irgason</a></li>
-  <li><a href="#checking-co2-and-h2o-zero-in-the-field" id="toc-checking-co2-and-h2o-zero-in-the-field" class="nav-link" data-scroll-target="#checking-co2-and-h2o-zero-in-the-field">Checking CO<sub>2</sub> and H<sub>2</sub>O zero in the field</a></li>
+  <li><a href="#ftp-upload-to-a-server" id="toc-ftp-upload-to-a-server" class="nav-link" data-scroll-target="#ftp-upload-to-a-server">ftp upload to a server</a></li>
+  <li><a href="#ftp-download-from-the-logger" id="toc-ftp-download-from-the-logger" class="nav-link" data-scroll-target="#ftp-download-from-the-logger">ftp download from the logger</a></li>
   </ul></li>
-  <li><a href="#campbell-scientific-logger-calibration" id="toc-campbell-scientific-logger-calibration" class="nav-link" data-scroll-target="#campbell-scientific-logger-calibration">Campbell Scientific logger calibration?</a></li>
+  <li><a href="#sftp-ssh" id="toc-sftp-ssh" class="nav-link" data-scroll-target="#sftp-ssh">sftp (ssh)</a></li>
   </ul></li>
+  <li><a href="#http" id="toc-http" class="nav-link" data-scroll-target="#http">http</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Sensorwiring.html">Sensors</a></li><li class="breadcrumb-item"><a href="./Sensorcalibration.html">Sensor calibration</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Communication.html">Communication, networking, telemetry</a></li><li class="breadcrumb-item"><a href="./Datatransfer.html">Data transfer</a></li></ol></nav>
 <div class="quarto-title">
 </div>
 
@@ -265,71 +246,50 @@ div.csl-indent {
 </header>
 
 
-<section id="sensor-calibration" class="level1">
-<h1>Sensor calibration</h1>
-<p>Of major EC-related instruments</p>
-<section id="anemometer" class="level2">
-<h2 class="anchored" data-anchor-id="anemometer">Anemometer</h2>
-<p>Usually no DIY calibration possible. Can check the zero by covering the anemometer (plastic bag or similar) in a wind-still room. Regular cleaning required! The wicks can disintegrate and can sometimes block the pathway.</p>
+<section id="data-transfer" class="level1">
+<h1>Data transfer</h1>
+<p>Options when using a Campbell Scientific data logger.</p>
+<section id="direct-download-from-data-logger" class="level2">
+<h2 class="anchored" data-anchor-id="direct-download-from-data-logger">Direct download from data logger</h2>
+<p>Via serial cable (serial or USB) as shown on the communication page. Requires direct access to the data logger.</p>
 </section>
-<section id="irga" class="level2">
-<h2 class="anchored" data-anchor-id="irga">IRGA</h2>
-<p>General:</p>
+<section id="loggernet-pc400-internal-data-transfer" class="level2">
+<h2 class="anchored" data-anchor-id="loggernet-pc400-internal-data-transfer">Loggernet / PC400 internal data-transfer</h2>
 <ul>
-<li><p>ICOS protocol: From <span class="citation" data-cites="sabbatini_icos_2017">Sabbatini and Papale (<a href="#ref-sabbatini_icos_2017" role="doc-biblioref">2017</a>)</span> : ICOS require an IRGA to be calibrated twice per year, four times per year if the instrument is new. It is preferred to calibrate the IRGA in the field to minimise downtime. Otherwise, a replacement IRGA must be installed to avoid gaps in the data while the actual IRGA is away for calibration. The zero of H<sub>2</sub>O and CO<sub>2</sub> signals must be checked regularly between the calibrations. The recommended frequency is every two months. In the field, the sensor is not cleaned initially before checking the zero. Thresholds of zero “drifts shall be based on CO2 concentration because more stable (drifts &gt;30 μmol mol-1 CO<sub>2</sub> are considered significant). As an indication, also H<sub>2</sub>O drifts &gt; 1.5 mmol mol-1 are considered significant.” Factory calibrations of the IRGA is required every second year!</p></li>
-<li><p>World Meteorological Organistation guidelines<br>
-See their strict guide on the Observations of CO<sub>2</sub>, CH<sub>4</sub> and N<sub>2</sub>O at Global Atmosphere Watch Stations: <span class="citation" data-cites="world_meteorological_organization_wmo_measurement_2025">World Meteorological Organization (WMO) (<a href="#ref-world_meteorological_organization_wmo_measurement_2025" role="doc-biblioref">2025</a>)</span></p></li>
-<li><p>any Irga calibration papers?</p></li>
-</ul>
-<section id="licor-7500xxx" class="level3">
-<h3 class="anchored" data-anchor-id="licor-7500xxx">Licor 7500xxx</h3>
-<ul>
-<li>requires Li7500-specific shroud</li>
-<li>chemicals get changed before each calibration. It takes 24 hours to flush the system once the chemicals are changed. Only then the actual calibration can take place.</li>
+<li>Manual download</li>
+<li>Scheduled collection</li>
 </ul>
 </section>
-<section id="campbell-scientific-irgason" class="level3">
-<h3 class="anchored" data-anchor-id="campbell-scientific-irgason">Campbell Scientific Irgason</h3>
+<section id="ftp" class="level2">
+<h2 class="anchored" data-anchor-id="ftp">ftp</h2>
+<p>Be aware of the security implications when using the outdated, not-encrypted ftp protocol! ftp transmits its password during each connection in clear text. In CRBAsic programs for some loggers, the password is also stored as plain text. Some universities do not allow ftp servers on their network! However, for many older or “smaller” data logger models, ftp is the only available file transfer protocol, e.g.&nbsp;CR310, CR1000, CR3000. But some of these loggers also provide a http server as alternative. The security risk is somewhat mitigated when the ftp connection takes place within a trusted network or VPN like TERN OpenVPN.</p>
+<section id="ftp-upload-to-a-server" class="level3">
+<h3 class="anchored" data-anchor-id="ftp-upload-to-a-server">ftp upload to a server</h3>
 <ul>
-<li>requires Irgason-specific shroud</li>
-<li>Chemicals need changing every two years or when drift occurs. Similar to the Licor IRGAs, the system needs to be flushed with the new chemicals for 24 hours before the calibration can happen.</li>
+<li>use CRBasic <code>FTPClient()</code> command to send data from the logger to a server</li>
+<li>set up in a SlowSequence as not to interrupt the measurements</li>
 </ul>
 </section>
-<section id="checking-co2-and-h2o-zero-in-the-field" class="level3">
-<h3 class="anchored" data-anchor-id="checking-co2-and-h2o-zero-in-the-field">Checking CO<sub>2</sub> and H<sub>2</sub>O zero in the field</h3>
+<section id="ftp-download-from-the-logger" class="level3">
+<h3 class="anchored" data-anchor-id="ftp-download-from-the-logger">ftp download from the logger</h3>
 <ul>
-<li><p>Campbell Scientific provide a handheld tool that allows to check the zeros of H<sub>2</sub>O and CO<sub>2</sub> in the field. The tools uses scrubber chemicals to produce “zero” air, ie air without CO<sub>2</sub> or H<sub>2</sub>O. It has a built-in, battery powered pump that circulates the “zero” air through the calibration shroud that is installed in the optical path of the irga (either Licor 7500xx or Campbell Scientific Irgason). A tube connects the “out” port of the Zero Air Generator with the shroud. Air is circulated through the shroud using the battery-powered pump of the device.<br>
-To check/set the zero, the temperature sensor of the shroud is connected to the control unit of the IRGA to estimate the dew point. The irga must be turned off before connecting / disconnecting the temperature sensor. The instrument-specific software by the manufacturer (<em>ECmon</em> or <em>Licor75xx</em>) is used to check and potentially set the zero once the system is flushed with “zero” air, and the values are stable (allow 10 min to 20 min). See their instruction manuals for details.</p>
-<p><a href="https://www.campbellsci.com.au/31022">Campbell Scientific Zero Air generator</a></p></li>
-<li><p>This allows a relatively fast, hassle free check of the zero that can be done on location on the tower. A laptop with the instrument control software and USB cable (default USB A to B n case of Campbell Scientific Irgason, or instrument-specific USB-cable in the case of Licor7500a/RS) or serial cable (with specific board adapter in case of Licor 7500) are required.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/calibration/zero_air_generator_on_location.jpg" class="img-fluid figure-img"></p>
-<figcaption>Using the Campbell Scientific Zero Air Generator on location to check CO<sub>2</sub> and H<sub>2</sub>O zeros of the IRGA. Left: Licor 7500 RS. Right: Campbell Scientific IRGASon (Markus Loew)</figcaption>
-</figure>
-</div></li>
+<li>Campbell Scientific data loggers have an optional, built-in ftp server that allows files to be downloaded directly from the logger.</li>
+<li>use any ftp computer software to download files from the logger.</li>
 </ul>
 </section>
 </section>
-<section id="campbell-scientific-logger-calibration" class="level2">
-<h2 class="anchored" data-anchor-id="campbell-scientific-logger-calibration">Campbell Scientific logger calibration?</h2>
-<ul>
-<li>every few years at manufacturer - who does actually do that? What’s the logger drift?</li>
-</ul>
-
+<section id="sftp-ssh" class="level2">
+<h2 class="anchored" data-anchor-id="sftp-ssh">sftp (ssh)</h2>
+<p>Insteas of ftp use the sftp: sftp (SSH File Transfer Protocol) is a secure alternative to ftp. It encrypts both the command and data channels, providing confidentiality and integrity. Passwords are not necessarily stored in the CRBasic program. Instead, the sftp client uses private and public keys to authenticate. The keys are stored in the memory of the data logger. An introduction to setting up keys on the logger is available <a href="https://www.campbellsci.com.au/blog/generate-sftp-keys-easily">from Campbell Scientific: “How to Generate SFTP Keys Easily”</a>. In the program, the upload is done with <code>FTPClient()</code>, see example below.</p>
+</section>
+</section>
+<section id="http" class="level1">
+<h1>http</h1>
 
 
 </section>
-</section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-sabbatini_icos_2017" class="csl-entry" role="listitem">
-Sabbatini, Simone, and Dario Papale. 2017. <span>“<span>ICOS</span> <span>Ecosystem</span> <span>Instructions</span> for <span>Turbulent</span> <span>Flux</span> <span>Measurements</span> of <span>CO2</span>, <span>Energy</span> and <span>Momentum</span>.”</span> <a href="https://doi.org/10.18160/QWV4-639G">https://doi.org/10.18160/QWV4-639G</a>.
-</div>
-<div id="ref-world_meteorological_organization_wmo_measurement_2025" class="csl-entry" role="listitem">
-World Meteorological Organization (WMO). 2025. <span>“Measurement <span>Guidelines</span> for the <span>Observations</span> of <span>CO2</span>, <span>CH4</span> and <span>N2O</span> at <span>Global</span> <span>Atmosphere</span> <span>Watch</span> <span>Stations</span>.”</span> <a href="https://library.wmo.int/idurl/4/69672">https://library.wmo.int/idurl/4/69672</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -20,6 +20,8 @@ website:
           file: TERNOpenVPN.md
         - text: OzFlux Networking
           file: OzFluxnetwork.md
+        - text: Data transfer
+          file: Datatransfer.md
       - text: Climbing & Rigging
         file: ClimbingRigging.md
       - text: Power
