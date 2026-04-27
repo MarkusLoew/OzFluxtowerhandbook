@@ -14,15 +14,23 @@ E.g. Campbell Scientific: [CM106B-CSA](https://www.campbellsci.com.au/cm106b-csa
 
 ![Tripod tower in agricultural environment (Dookie 1, first year of operation, Markus Loew)](images/tower_types/Triod_tower_Dooke1_year1_PXL_20240911_030259457.jpg)
 
+## Lattice tower
+
+[NBS Masts](https://nbsmasts.com.au/): Telescopic, hinged/tilt, lattice towers
+
 ## Hinged towers
 
 Various heights up to 14 m. These towers can be climbed (working at heights certificate required). But the hinged construction allows to lower the tower down for instrument installation and maintenance to avoid climbing.
 
-Available from: [APAC Portable Hinged Tripod Lattice Tower, AL340 Series](https://apacinfrastructure.com.au/al340-portable-tripod-lattice-tower-8-metre)
+Available from:
 
-APAC Infrastructure Pty Ltd, Unit 6/33-47 Fred Chaplin Circuit, Caloundra, Sunshine Coast, QLD, 4551
+-   [APAC Portable Hinged Tripod Lattice Tower, AL340 Series](https://apacinfrastructure.com.au/al340-portable-tripod-lattice-tower-8-metre)\
+    APAC Infrastructure Pty Ltd, Unit 6/33-47 Fred Chaplin Circuit, Caloundra, Sunshine Coast, QLD, 4551
 
-![Boolcoomatta hinged tower on tripod base. (Markus Loew)](images/tower_types/Boolcoomatta_hinged_tower_PXL_20250813_061750715.jpg)
+-   [NBS Masts](https://nbsmasts.com.au/): Telescopic, hinged/tilt, lattice towers\
+    NBS Masts, PO Box 7, Lindenow, Victoria, Australia, 3865, 03 5157 1203, sales\@nbsmasts.com.au
+
+![Boolcoomatta hinged tower on tripod base from APAC. (Markus Loew)](images/tower_types/Boolcoomatta_hinged_tower_PXL_20250813_061750715.jpg)
 
 ![Boolcoomatta hinged tower: hinge and alignment test. (Markus Loew)](images/tower_types/Boolcoomatta_hinged_tower_PXL_20250812_010904174.MP.jpg)
 
@@ -33,18 +41,19 @@ APAC Infrastructure Pty Ltd, Unit 6/33-47 Fred Chaplin Circuit, Caloundra, Sunsh
 These small or hinged towers do not require an extensive foundation in the ground. Two options of installing the APAC towers exist:
 
 -   Tripod: leave-no-trace, convenient, not as stable as surefoot base (see photos above).
-
-<!-- -->
-
 -   Surefoot base: very solid, but requires steel rods to be driven into the ground with a jackhammer at various directions. These rods can not be removed when the flux tower reaches its end-of-life or end of project. Rocky locations might hinder the installation of the ground rods. See [APAC surefoot modules](https://apacinfrastructure.com.au/search?keywords=products%20modules%20components), and [Surefoot base](https://surefootfootings.com.au/surefoot-pile-cap-s600-16p/) plate websites.
 
 ## Telescopic towers
 
-E.g pneumatic towers: [EVTA Group Light telescopic towers](https://evtagroup.com.au/2-uncategorised/117-telescopic-light-tower)
+E.g. pneumatic towers:
 
-EVTA Group, Gisborne, 12 Meek Street, New Gisborne, Victoria, 3438
+-   [EVTA Group Light telescopic towers](https://evtagroup.com.au/2-uncategorised/117-telescopic-light-tower)\
+    EVTA Group, Gisborne, 12 Meek Street, New Gisborne, Victoria, 3438
 
-![Pneumatically operated telescopuc, hinged tower on trailer platform (Swinburne Uni mobile flux towers, Markus Loew)](images/tower_types/telescopic_hinged_tower_IMG_20210223_090158.jpg)
+-   [NBS Masts - Telescopic-mast](https://nbsmasts.com.au/product-category/telescopic-mast/)\
+    NBS Masts, PO Box 7, Lindenow, Victoria, Australia, 3865
+
+![Pneumatically operated telescopuc, hinged tower on trailer platform (EVTA, Swinburne Uni mobile flux towers, Markus Loew)](images/tower_types/telescopic_hinged_tower_IMG_20210223_090158.jpg)
 
 ![Stowed-away pneumatic, telescopic, hinged tower (Swinburne Uni mobile flux towers, Markus Loew)](images/tower_types/telescopic_hinged_tower_PXL_20220311_031446953.MP.jpg)
 

@@ -77,10 +77,14 @@ Turning off the upload of 10/20 Hz flux data can help "clean the airwaves" to al
 
 -   **Directional** (yagi) antennas must be pointing to a known, specific network tower. This will improve the signal. The downside is, that the antenna points to a specific tower. If that network tower goes down, this antenna will not connect to another tower.
 
-In locations with marginal reception, it is recommended to use a modem that allows the use of **two antennas, preferably yagi, in parallel (MiMo)**. Both antennas must be pointing to the same tower (!), and must be about 50 cm apart vertically for optimal signal boost.
+In locations with marginal reception, it is recommended to use a modem that allows the use of **two antennas, preferably yagi, in parallel (MiMo)**. Both antennas must be pointing to the same phone network tower (!), and must be about 50 cm apart vertically for optimal signal boost.
 
 -   [BlackHawk Directional antenna, MiMo capable](https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/)
 -   [Comset Directional antenna, 4x Yagi antenna MiMo capable](https://comset.com.au/product/5g-mimo-4x4-lpda-antenna-3g4g5g-10-m-ant-yagi-4x4-10sp/)
+-   [ZCG Scalar directional antenna](https://zcg.com.au/product/broadband-uhf-4g-lte-and-dualband-4g-log-periodic-antenna-304-stainless-steel-650-2250-mhz-250w-n-type-female-10-2-dbi-1-15m-4/)
+-   [ZCG Various antenna mounts](https://zcg.com.au/catalogue/mobile-vehicle-mount/)
+
+When designing the tower and instrumentation location on the tower, keep in mind that **antenna cables can only be 10 m long** before significant signal degradation occurs. Hence, the modem must be close to the antenna!
 
 ### Check for available towers in the area on these websites:
 
