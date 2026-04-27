@@ -34,7 +34,7 @@ Available from:
 
 ![Boolcoomatta hinged tower: hinge and alignment test. (Markus Loew)](images/tower_types/Boolcoomatta_hinged_tower_PXL_20250812_010904174.MP.jpg)
 
-![Boolcoomatta hinged tower during sensor and equipment install on the ground. No climbing required (Markus Loew)](images/tower_types/Boolcoomatta_hinged_tower_PXL_20250813_002338525.jpg)
+![Boolcoomatta hinged tower during sensor and equipment install on the ground. No climbing required (Markus Loew).](images/tower_types/Boolcoomatta_hinged_tower_PXL_20250813_002338525.jpg)
 
 ### Foundations for small and/or hinged towers
 

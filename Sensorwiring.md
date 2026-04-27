@@ -187,23 +187,38 @@ Many rangauges use similar wiring. Check the manual if your specific models foll
 
 ### Air temperature and humidity (Vailsala HMP155 wired to Volt116)
 
-`Const T_RH_ANALOG_INPUT = 1 'Unique differential input channel for temperature and humidity probe. Const T_RH_T_MULT = 0.14 'Unique multiplier for temperature; HC2S3 = 0.1, HMP155A = 0.14, or HMP45C = 0.1.`
+`Const T_RH_ANALOG_INPUT = 1 'Unique differential input channel for temperature and humidity probe.`
 
-`Const T_RH_T_OFFSET = -80 'Unique offset for temperature; HC2S3 = -40, HMP155A = -80, or HMP45C = -40.`
+`Const T_RH_T_MULT = 0.14 'Unique multiplier for temperature; HC2S3 = 0.1, HMP155A = 0.14, or HMP45C = 0.1.`
 
-Table to do
+`Const T_RH_`
 
-`' Dookie2 HMP155 ser No V4720665 (2023)`
+`T_OFFSET = -80 'Unique offset for temperature; HC2S3 = -40, HMP155A = -80, or HMP45C = -40.`
 
-`'1H Temperature signal (yellow) HMP155: yellow '1L Temperature signal reference HMP155: white(orange in loop with 1L, --> Jumper to white`
+**Depending on the cable length, the Vaisala HMP155 is wired either in singled ended mode or in differential mode!**
 
-`'gnd Shield`
+#### HMP155 Single ended mode, for short cable, less than 6.1 m long:
 
-`'2H RH signal (blue)`
+| Logger port | Function                            | Wire colour |
+|-------------|-------------------------------------|-------------|
+| 1H          | Temperature signal                  | yellow      |
+| 1L          | Rh signal                           | blue        |
+| Gnd         | Temperature and RH signal reference | white       |
+| Power Gnd   | Power ground                        | black       |
+| 12V         | 12V power                           | red         |
+| Gnd         | Shield                              | clear       |
 
-`HMP155: blue '2L RH signal reference HMP155 only one signal reference for temp and rH: white 1L  '12V Power (red)`
+#### HMP155 Differential mode for long cables over 6.1 m long
 
-`'G Power reference (black)`
+| Logger port | Function | Wire colour |
+|------------------------|------------------------|------------------------|
+| 1H | Temperature signal | yellow |
+| 1L | Temperature signal reference | NA (connect 1L and 2L with jumper) |
+| 2H | Rh signal | blue |
+| 2L | Temperature and RH signal reference | white (and connect 1L and 2L with jumper) |
+| Power Gnd | Power ground | black |
+| 12V | 12V power | red |
+| Gnd | Shield | clear |
 
 ### 4-component radiation user constants / wiring (Kipp & Zonen CNR4 wired to VOLT116)
 
@@ -213,28 +228,50 @@ Table to do
 
 `Const NR_TsENS_VX = X2 'Unique voltage excitation channel for thermistor`
 
-`Const NR_SW_INCOMING_CAL = 1000/12.82 'Unique multiplier for CNR 4 shortwave incoming radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023) Const NR_SW_OUTGOING_CAL = 1000/12.63 'Unique multiplier for CNR 4 shortwave outgoing radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023)`
+`Const NR_SW_INCOMING_CAL = 1000/12.82 'Unique multiplier for CNR 4 shortwave incoming radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023)`
+
+`Const NR_SW_OUTGOING_CAL = 1000/12.63 'Unique multiplier for CNR 4 shortwave outgoing radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023)`
 
 `Const NR_LW_INCOMING_CAL = 1000/9.09 'Unique multiplier for CNR 4 longwave incoming radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 2234203 (Dec 2023)`
 
 `Const NR_LW_OUTGOING_CAL = 1000/9.41 'Unique multiplier for CNR 4 longwave outgoing radiation (1000/sensitivity). Kipp+Zonen CNR4 Ser No 234203 (Dec 2023)`
 
-Table to do
-
-`'3H Incoming shortwave radiation signal (red) '3L Incoming shortwave radiation signal reference (blue) 'gnd Shield (clear) ' short jumper wire to 3L '4H Outgoing shortwave radiation signal (white) '4L Outgoing shortwave radiation signal reference (black) 'gnd short jumper wire to 4L '5H Incoming longwave radiation signal (gray) '5L Incoming longwave radiation signal reference (yellow) 'gnd short jumper wire to 5L '6H Outgoing longwave radiation signal (brown) '6L Outgoing longwave radiation signal reference (green) 'gnd short jumper wire to 6L '7H Thermistor signal (white) 'gnd Thermistor signal reference (black) ' Shield (clear) 'X2 Thermistor excitation (red)`
+| Logger port | Function | Wire colour |
+|------------------------|------------------------|------------------------|
+| ***First cable ("S" port on sensor)*** |  |  |
+| 3H | Incoming shortwave radiation signal | red |
+| 3L | Incoming shortwave radiation reference | blue |
+| 3L to gnd | Jumper | NA (connect 3L and gnd with jumper cable) |
+| 4H | Outgoing shortwave radiation signal | white |
+| 4L | outgoing shortwave radiation reference | black |
+| 4L to gnd | Jumper | NA (connect 4L and gnd with jumper cable) |
+| 5H | Incoming longwave radiation signal | grey |
+| 5L | Incoming longwave radiation reference | yellow |
+| 5L to gnd | Jumper | NA (connect 5L and gnd with jumper cable) |
+| 6H | Outgoing longwave radiation signal | brown |
+| 6L | Outgoing longwave radiation reference | green |
+| 6L to gnd |  | (NA) connect 5L and gnd with jumper cable |
+| Gnd | Shield | clear |
+| ***Second cable ("T" port on sensor)*** |  |  |
+| 7H | Thermistor signal | white |
+| gnd | Thermistor reference | black |
+| X2 | Thermistor excitation | red |
+| Gnd | Ground | Thick black cable |
+| gnd | Shield | clear |
+|  | unused wires | various |
+|  |  |  |
+| ***When using a "T"cable from Kipp & Zonen*** | The "T" cable does not have a pre-soldered resistor at the "T" cable end and has different wire colours! | Typically yellow CNR4 cables are from Kipp+Zonen, black CNR4 cables are from Campbell Scientific |
+| 7H | Thermistor excitation | white |
+| Gnd | Thermistor signal reference | black (thin black wire) |
+| X2 | Thermistor excitation | brown |
+| X2 to H | connect with **resistor 1 KΩ** | (NA) resistor between X (brown) and H (white) with 1KΩ |
+| Gnd | Shield | black (thick black wire) |
+|  | unused wires | various |
 
 -   The Kipp and Zonen CNR sensor provided cables are different than the cable provided by Campbell Scientific! Campbell Scientfic adds a resistor to the cable!
 
 Kipp and Zonen yellow Thermistor yellow cable has different colours and requires to add an additional resistor to the wiring panel as follows:
 
-`'7H Thermistor signal (white)`
-
-`'gnd thin black Thermistor signal reference (thin black)`
-
-`' Shield (thick black)`
-
-`'X2 Thermistor excitation (brown)`
-
-`'1kOhm resistor between X2 (brown) and 7H (white)`
+![Kipp & Zonen CNR4 wiring (yellow cables) on a Campbell Scientific Volt116. Note the 1 kΩ resistor between excitation port and H! (Markus Loew).](images/sensors/sensor_wiring/CNR4_wiring_resistor_PXL_20260402_003720694.jpg)
 
 [Home](./Home.html)

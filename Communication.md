@@ -1,8 +1,8 @@
 # Communication
 
-## Direct download from data logger
+## Direct communication with dta logger
 
-In the simplest case, communication with a logger can be done directly, by connecting a computer to the logger and downloading the data manually. This method is straightforward but requires physical access to the logger.
+In the simplest case, communication with a logger can be done directly, by connecting a computer to the logger and downloading the data and uploading/changing programs and settings manually. This method is straightforward but requires physical access to the logger.
 
 ### Serial communication
 
@@ -18,29 +18,31 @@ Available via e.g.
 
 After connecting the converter to your computer, check your computer settings what serial port the adapter is using (e.g. COM7). Windows: check "`Device manager`", section "ports" Windows port-assignments can change depending on where the converter is plugged in. For Linux: check `ls /dev/tty*` for new devices e.g. `ttyUSB0` or `ttyACM0`.
 
-The newer generation Campbell Scientific (CR310, CR6, CR1000x) and other manufacturer's loggers have built in USB-to-serial converters. No dedicated serial cable and plug are required for those, a USB cable is sufficient to connect. The communication protocol is still RS232 and it is still required to know what serial port is used for communication.
+The newer generation Campbell Scientific (CR310, CR6, CR1000x) and other manufacturer's loggers have built in USB-to-serial converters. No dedicated serial cable and plug are required for those, a USB cable is sufficient to connect. The communication protocol is still RS232 and it is still required to know what serial port on the computer side is used for communication.
 
-Li-Cor uses a null-modem / cross-over cable to communicate with their devices, while Campbell Scientific uses a straight-through serial cable. They are not compatible!
+Li-Cor uses a null-modem / cross-over cable to communicate with their devices, while Campbell Scientific uses a straight-through serial cable. These cables are not compatible!
 
 ![Varius serial cables: Campbell Scientifc-compatible serial cable with FTDI US232R-10 USB-to-serial converter (grey cable, blue white USB-to-serial converter), Li-Cor-compatible Null-modem serial cable with self-made serial LI-7500 irga serial adapter cable (light grey, green plug). USB cables with USB-A to USB-Micro A (black, suits CR6, CR310, CR1000x) and USB-A to USB-C (white, suits CR1000xe). CR1000 data logger with serial port only. CR310 data logger with serial port, USB-MicroA port, and ethernet plug (Markus Loew).](images/communication/communication_serial_cables.jpg)
 
 -   Campbell-Scientific-compatible *straight-through* *serial cable* for Campbell Scientific loggers and instruments, CR1000, CR3000, CR310, CR10x, ... e.g.: [Male D-Sub 9-Pin to Female Serial Cable](https://au.rs-online.com/web/p/serial-cables/1828782)
 
--   Li-Cor compatible *null-modem / cross-over cable* (for e.g. Li7500, Li6400, Li810) [Female D-Sub 9-Pin to Female D-Sub Modem Cable](https://au.rs-online.com/web/p/serial-cables/2863537)
+-   Li-Cor compatible *null-modem / cross-over cable* (for e.g. Li-7500xxx, Li-6400, Li-810) [Female D-Sub 9-Pin to Female D-Sub Modem Cable](https://au.rs-online.com/web/p/serial-cables/2863537)
 
-**The two cable types are** **incompatible** out of the box. The main difference between the two is the cable-internal wiring, not necessarily the plug configuration! (Plug-converters exist). A null-modem cable has pins 2 and 3 swapped between the two ends - check electrical continuity of the pins to determine cable type!
+**The two cable types are incompatible** out of the box! The cable-internal wiring is different between the cable types, but not necessarily the plug configuration! (Also: Plug-converters exist). A null-modem cable has pins 2 and 3 swapped between the two ends of the cable. Check electrical continuity of the pins to determine the cable type!
 
 ![Serial cable for Campbell Scientific loggers, straight-through serial cable with male to female 9-pin plugs (left). Li-Cor compatible cross-over null-modem cable with female-to-female plug (right) (Markus Loew).](images/communication/serial_vs_null_modem_cable.jpg)
 
 ## Modem
 
-If a site has reasonable 4G/5G coverage, a modem can used for data transmission [(Telstra coverage map)](https://www.telstra.com.au/coverage-networks/our-coverage). In Australia, the recommended - and frequently only - phone network for remote locations is Telstra. TERN EP provides data-only Telstra SIM cards on request. Some towers might not require a 4G modem if there is an alternative internet connection (WiFi, DSL, fibreoptics, fixed-wireless, satellite, ...) readily available. Then a router will suffice.
+If a site has reasonable 4G/5G coverage, a modem can used for data transmission [(Telstra coverage map)](https://www.telstra.com.au/coverage-networks/our-coverage). In Australia, the recommended - and frequently the only - phone network for remote locations is Telstra. TERN EP provides data-only Telstra SIM cards on request. Some towers might not require a 4G modem at all if there is an alternative internet connection (WiFi, DSL, fibreoptics, fixed-wireless, satellite, ...) readily available. Then a router will suffice (see below).
 
 ### 4G modem options
 
 Selection criteria for modems:
 
--   Operating ranges (voltage, temperature): The modem must be able to operate using the available voltage(s) to avoid conversions. The modem must be able to operate within the anticipated temperature range of a research location. E.g. -20°C to 50°C.
+-   Operating voltage: The modem must be able to operate using the available voltage(s) to avoid conversions. Many industrial modems allow 9 to 36V DC input power - Make sure the voltage of your power supply is compatible at your tower site. 
+
+-   Operating temperature: The modem must be able to operate within the anticipated temperature range of a research location. E.g. -20°C to 50°C.
 
 -   Form factor: Chose a modem that fits in the available enclosure space, especially if all loggers and network devices must fit an a single enclosure. Modems that can be mounted vertically on a DIN rail allow to save space and use the "height" of the enclosure. Many modems offer DIN rail mounts, but some have the rail mount in a location so that it can not be installed in space-saving way. Then adapters might be required.
 
@@ -59,7 +61,7 @@ Recommendations for **industrial-grade modems**:
 
 -   [Campbell Scientific Cell220](https://www.campbellsci.com.au/cell220) Serial modem well integrated the the Campbell Scientifc logger ecosystem. The Modem is conveniently configured via the logger program (CRBasic). This modem can interact directly with logger, and data and provides diagnostic output (like signal strength, uptime) to data tables on the logger. Modem actions can be triggered depending on logger or measurement status. No WiFi, no ethernet ports, dual antenna, single SIM card. Small form factor, highly configurable. Similar serial modems are available elsewhere too, as long as they support he full range of AT modem commands (ie Netmodule NB1600).
 
-Note: As TERN EP provides **data-only SIM cards**, the monitoring and feedback-options that rely on SMS text messages of the above modems will not work! There is no "phone" quota associated to these SIM cards. E.g. the Quadmax modem can not send a warning SMS when switching from primary to the secondary SIM card when the primary card fails! And any IP-address monitoring and dial-in options these modems provide (e.g. direct dial-in in case OpenVPN fails), don't work with data-only cards either.
+Note: As TERN EP provides **data-only SIM cards**, any monitoring and feedback-options of the modems that rely on SMS text messages will not work! There is no "phone" quota associated to these SIM cards. E.g. the Quadmax modem can not send a warning SMS when switching from primary to the secondary SIM card when the primary card fails! And any IP-address monitoring and dial-in options that these modems provide (e.g. direct dial-in in case OpenVPN fails), don't work with data-only cards either.
 
 It is highly **recommended to set up the modems to reboot themselves regularly!** This ensures that the modem can recover from any temporary network issues. Network congestion can be temporary: holiday-makers in a nearby campsite or a music festival in the area of the tower can "overload" the 4G network, or the Telstra-network tower can be offline for maintenance. Once these issues are resolved, the tower will be come back online by itself after the next reboot. After a 4G network outage, not all modems keep trying to re-connect to the network. E.g. the Maxon modems only try five times and then then stop. Re-booting the modem resets this counter and the modem will connect again. Hence, set up scheduled reboot either daily or weekly. Set a conventient time of day that does not interfere with data collection or other critical operations. 
 
@@ -75,7 +77,7 @@ Turning off the upload of 10/20 Hz flux data can help "clean the airwaves" to al
 
 -   **Omnidirectional** (omni) antennas are "install and forget": they will connect to any phone network in the area, and can switch between multiple network towers depending on signal strength or if a phone tower goes offline.
 
--   **Directional** (yagi) antennas must be pointing to a known, specific network tower. This will improve the signal. The downside is, that the antenna points to a specific tower. If that network tower goes down, this antenna will not connect to another tower.
+-   **Directional** (yagi) antennas must be pointing to a known, specific network tower. This will improve the signal. The downside is, that the antenna points to a single tower. If that one network tower goes down, this antenna will not be able to connect to another tower.
 
 In locations with marginal reception, it is recommended to use a modem that allows the use of **two antennas, preferably yagi, in parallel (MiMo)**. Both antennas must be pointing to the same phone network tower (!), and must be about 50 cm apart vertically for optimal signal boost.
 
@@ -86,7 +88,7 @@ In locations with marginal reception, it is recommended to use a modem that allo
 
 When designing the tower and instrumentation location on the tower, keep in mind that **antenna cables can only be 10 m long** before significant signal degradation occurs. Hence, the modem must be close to the antenna!
 
-### Check for available towers in the area on these websites:
+### Check for available towers in your area on these websites:
 
 -   [RFNSA Radio Frequency National Site Archive](https://www.rfnsa.com.au/)
 
@@ -104,11 +106,11 @@ Phone apps to check signal status and cell tower locations:
 
 -   [SignalStrength App](https://play.google.com/store/apps/details?id=com.cls.networkwidget&hl=en_AU)
 
--   [Opensignal apps](https://www.opensignal.com/apps) (Opensignal seems to use community sourced phone tower locations. The websites listed above provide a more comprehensive list of towers)
+-   [Opensignal apps](https://www.opensignal.com/apps) Opensignal seems to use community sourced phone tower locations. The websites listed above provide a more comprehensive list of towers.
 
 #### Checking and optimising 4G connectivity, antenna direction
 
-Neither of the above antenna-map websites can guarantee that there will be reception at the location. A fieldtrip with modem and antenna(s) and a long pole is usually required to check connectivity. If there is marginal 4G coverage, it is about optimising the available signal.
+Neither of the above antenna-map websites can guarantee that there will be reception at the location! A fieldtrip with modem and antenna(s) and a long pole is usually required to check connectivity. If there is marginal 4G coverage, it is about optimising the available signal.
 
 Check signal strength:
 
@@ -116,9 +118,9 @@ Check signal strength:
 
 -   The tested modems above display the 4G signal strength in their "Status" or "WAN" management website. This is commonly named "RSSI" and displayed in dB(m). Less negative RSSI values indicate higher signal strength in general. For caveats regarding RSSI see <https://wiki.teltonika-networks.com/view/Mobile_Signal_Strength_Recommendations>
 
--   Phones can be used as a quick way to check connectivity, Apps like "Signalstrength" give more details than the usual "number of bars", However, the physically small internal antennas are no match for dual, directional antennas! It is possible to establish a well working connection with dedicated antennas when a phone shows zero "bars". Size matters.
+-   Phones can be used as a quick way to check connectivity, Apps like "Signalstrength" give more details than the usual "number of bars". However, the physically small internal antennas are no match for dual, directional antennas! It is possible to establish a well working connection with largeer antennas when a phone shows zero "bars". Size matters!
 
--   Use two antennas in MiMo mode. This can boost signal strenght by 30 to 50% from experience (Note that the RSSI scale is logarithmic). \* Point the antennas in the direction of known phone towers (use the websites listed above to see maps of available towers). Wait for about one to three minutes and check the signal strength RSSI values displayed in your modem management interface update. Then turn the antenna to sweep for a better / worse signal.
+-   Use two antennas in MiMo mode. This can boost signal strenght by 30 to 50% from experience (Note that the RSSI scale is logarithmic). \* Point the antennas in the direction of known phone towers (use the websites listed above to see maps of available towers). Wait for about one to three minutes and check the signal strength RSSI values displayed in your modem management interface. Then turn the antenna to sweep for a better / worse signal.
 
 ![4G WAN status display of a Maxon Quadmax modem. See "Signal Status" of -65 dBm indicating good reception. This modem uses dual directional antennas. With a single, omnidirectional antenna, the signal strength at this tower was only marginal at -85 dBm (Markus Loew).](images/communication/Quadmax_signal_strength_screenshot_from_2026-04-10%2009-18-24.png)
 
@@ -130,7 +132,7 @@ Check signal strength:
 
 ## Satellite communication
 
-to do ( Mark Hovenden?)
+to do (Mark Hovenden?)
 
 -   12V Starlink Mini
 
@@ -140,7 +142,7 @@ to do ( Mark Hovenden?)
 
 -   Power consumption during transmission?
 
--   Constant connectivity or interrupted depending on satellite availability, rain, leaves? Problem with disconnects?
+-   Constant connectivity? Or interrupted depending on satellite availability, rain, leaves? Problem with disconnects?
 
 ## Router
 
@@ -160,11 +162,11 @@ General network routers like office-grade, indoor routers (e.g. Netgear) are kno
 
 ## Power over ethernet (POE) injectors
 
-Some network devices like WiFi extenders (Starlink?), require power-over-ethernet. This provides the power to operate the device via the ethernet cable.
+Some network devices like WiFi extenders, some phenocams, (Starlink?), require power-over-ethernet. This provides the power to operate the device via the ethernet cable.
 
-As ethernet cables have a tiny diameter, voltage is boosted by the POE injector to cover large distances.
+As ethernet cables have a tiny diameter, voltage is boosted by the POE injector to cover large distances without voltage drop.
 
-Large devices like the UniFi Outdoor 7 WiFi hub requires POE+, ie 56V, to operate!
+Some large POE-powered devices like the UniFi Outdoor 7 WiFi hub require POE+, ie 56V, to operate!
 
 Be aware of power demands: The conversion from 12V to 48V or even 56V to operate a POE device is quite power-consuming.
 
