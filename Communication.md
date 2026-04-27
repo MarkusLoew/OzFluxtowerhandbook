@@ -44,7 +44,7 @@ Selection criteria for modems:
 
 -   Form factor: Chose a modem that fits in the available enclosure space, especially if all loggers and network devices must fit an a single enclosure. Modems that can be mounted vertically on a DIN rail allow to save space and use the "height" of the enclosure. Many modems offer DIN rail mounts, but some have the rail mount in a location so that it can not be installed in space-saving way. Then adapters might be required.
 
-Recommendations for industrial-grade modems:
+Recommendations for **industrial-grade modems**:
 
 -   [Maxon Quadmax MA-6060](https://rfi-sb.rfi.com.au/MA-6060) Slim-line modem, dual SIM slots, four ethernet ports, dual 4G antennas, two WiFi antennas, DIN rail on the thin side. Has built-in analog relay to devices like e.g. phenocam. Capable to connect to OpenVPN, and similar services.
 
@@ -53,15 +53,23 @@ Recommendations for industrial-grade modems:
 
 -   [Robustel R1520](https://www.rfi.com.au/R1520) Wide modem, but rather small size, dual SIM slots, four ethernet ports, dual 4G antennas, WiFi, DIN rail on the wide side. Capable to connect to OpenVPN, and similar services.
 
+-   [Comset CM685V-4](https://comset.com.au/product/4g-lte-cat-4-wifi-router-with-sim-card-slot-cm685v-4/) 4G LTE Cat 4 WiFi router with SIM card slot. Quite compact form factor. This modem operates on the powerful OpenWRT OS and provides an OpenVPN client, MiMo antenna linking, 2 ethernet ports, and WiFi. Melbourne-based company.
+
 -   [Belden Netmodule 1601](https://www.belden.com/products/industrial-networking-cybersecurity/wireless/iiot-and-industrial-routers/nb1601-lsc) Slim-line modem, dual SIM slots, four ethernet ports, dual 4G antennas, two WiFI antennas, DIN rail on the thin side. Has built-in analog relay to devices like e.g. phenocam. Capable to connect to OpenVPN, and similar services.
 
 -   [Campbell Scientific Cell220](https://www.campbellsci.com.au/cell220) Serial modem well integrated the the Campbell Scientifc logger ecosystem. The Modem is conveniently configured via the logger program (CRBasic). This modem can interact directly with logger, and data and provides diagnostic output (like signal strength, uptime) to data tables on the logger. Modem actions can be triggered depending on logger or measurement status. No WiFi, no ethernet ports, dual antenna, single SIM card. Small form factor, highly configurable. Similar serial modems are available elsewhere too, as long as they support he full range of AT modem commands (ie Netmodule NB1600).
 
 Note: As TERN EP provides **data-only SIM cards**, the monitoring and feedback-options that rely on SMS text messages of the above modems will not work! There is no "phone" quota associated to these SIM cards. E.g. the Quadmax modem can not send a warning SMS when switching from primary to the secondary SIM card when the primary card fails! And any IP-address monitoring and dial-in options these modems provide (e.g. direct dial-in in case OpenVPN fails), don't work with data-only cards either.
 
-It is recommended to set up the modems to reboot themselves regularly! This ensures that the modem can recover from any temporary network issues. After a 4G network outage, not all modems keep trying to re-connect to the network. E.g. the Maxon modems only try five times and then then stop. Re-booting the modem resets this counter and the modem will connect again. Hence, set up scheduled reboot either daily or weekly. Set a conventient time of day that does not interfere with data collection or other critical operations.
+It is highly **recommended to set up the modems to reboot themselves regularly!** This ensures that the modem can recover from any temporary network issues. Network congestion can be temporary: holiday-makers in a nearby campsite or a music festival in the area of the tower can "overload" the 4G network, or the Telstra-network tower can be offline for maintenance. Once these issues are resolved, the tower will be come back online by itself after the next reboot. After a 4G network outage, not all modems keep trying to re-connect to the network. E.g. the Maxon modems only try five times and then then stop. Re-booting the modem resets this counter and the modem will connect again. Hence, set up scheduled reboot either daily or weekly. Set a conventient time of day that does not interfere with data collection or other critical operations. 
 
-![Schedule reboot options in the settings of a MAxon Quadmax modem. THe modem will reboot itself every day at 03:41 (Markus Loew).](images/communication/modem_regular_reboot.png)
+From experience with **operating towers in bad or sometimes congested mobile phone networks** (Whroo, Boolcoomatta), the modem can come back online for at least a few minutes after an automated reboot even in a low bandwidth or congested situation before the connection drops out again. If the daily (or weekly) reboot is scheduled at a time with less network congestion (night time, weekend), the modem might be online again, at least temporarily.
+This allows to check on signal strength in the modem (to see if the antenna might be damaged, cable broken, ...), and allows to check logger program settings, or delete faulty files from the storage card.
+
+
+Turning off the upload of 10/20 Hz flux data can help "clean the airwaves" to allow the much smaller 30 min average data tables to be uploaded despite congestion. A specific logger program for low bandwidth situations is available as the *Boolcoomatta logger program* (Markus Loew) from [OzFlux logger code repository](https://github.com/OzFlux/logger_code) (Ian McHugh). This program has options in the *Public* table to change the upload format of the 10/20 Hz data (choice between compressed, small TOB1 files, or ASCII, easy-readable but uncompressed TOA5 files.) And it allows to not upload the fast data at all to save bandwidth and upload time. Having these options in the *Public* table allows to change file- and upload-related settings without risking sending a new program over a bad internet connection.
+
+![Schedule reboot options in the settings of a Maxon Quadmax modem. The modem will reboot itself every day at 03:41 (Markus Loew).](images/communication/modem_regular_reboot.png)
 
 ### Antennas
 
@@ -69,11 +77,12 @@ It is recommended to set up the modems to reboot themselves regularly! This ensu
 
 -   **Directional** (yagi) antennas must be pointing to a known, specific network tower. This will improve the signal. The downside is, that the antenna points to a specific tower. If that network tower goes down, this antenna will not connect to another tower.
 
-In locations with marginal reception, it is recommended to use a modem that allows the use of two antennas, preferably yagi, in parallel (MiMo). Both antennas must be pointing to the same tower (!), and must be about 50 cm apart vertically for optimal signal boost.
+In locations with marginal reception, it is recommended to use a modem that allows the use of **two antennas, preferably yagi, in parallel (MiMo)**. Both antennas must be pointing to the same tower (!), and must be about 50 cm apart vertically for optimal signal boost.
 
--   [Directional antenna, Mimo capable](https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/)
+-   [BlackHawk Directional antenna, MiMo capable](https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/)
+-   [Comset Directional antenna, 4x Yagi antenna MiMo capable](https://comset.com.au/product/5g-mimo-4x4-lpda-antenna-3g4g5g-10-m-ant-yagi-4x4-10sp/)
 
-Check for available towers in the area on these websites:
+### Check for available towers in the area on these websites:
 
 -   [RFNSA Radio Frequency National Site Archive](https://www.rfnsa.com.au/)
 
@@ -83,8 +92,9 @@ Check for available towers in the area on these websites:
 
 To determine line of sight between a phone tower and your location:
 
--   <https://incoherency.co.uk/line-of-sight-map/>
--   <https://www.scadacore.com/tools/rf-path/rf-line-of-sight/>
+-   [Hey What's That (Line of sight map, panorama)](https://www.heywhatsthat.com/)
+-   [Incoherency Line of Sight Map](https://incoherency.co.uk/line-of-sight-map/)
+-   [Scadacore RF Line of Sight](https://www.scadacore.com/tools/rf-path/rf-line-of-sight/)
 
 Phone apps to check signal status and cell tower locations:
 
