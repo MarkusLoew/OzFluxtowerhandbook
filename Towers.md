@@ -1,25 +1,50 @@
+---
+bibliography: ./references/References.bib # path and bibliography .bib file name
+---
+
 # Tower types
+
+
+## Tower sizes
+From @aubinet_eddy_2012:
+
+“Tower size (horizontal dimensions, not height) shall be large enough to be **safe and secure** for many years of operation, but should also limit the impact on the surrounding environment and scientific measurements of interest and minimize the flow distortion” 
+[...]
+
+
+“Large tower structures create larger canopy openings, which promote wind recirculation [...], enforcing **chimney effect**, changing the local microclimate, and, for the biological concerns, introducing opportunistic plant species, which will locally alter ecosystem structure around tower due to the radiation and temperature changes at the opening (edge effects).”
+[...]
+
+
+“As a general guideline for tower design and establishment, **the spacing between tower and nearby trees should mimic the existing mean distance between trees** (i.e., mimicking the existing natural ecosystem structures and openings).” 
+
+
 
 ## Single pole towers
 
-Very small footprint, but need a foundation for the pole and potentially guy wires to avoid movement. Cheap, easy to install without disturbing the environment. Access to the sensors is via portable ladder.
+Very small distortion to the environment, but single pole tower need a foundation for the pole and potentially guy wires to avoid movement, especially avoiding resonance. This type is cheap to build, easy to install without disturbing the environment. The access to the sensors is via portable ladder.
 
 ![One of the Dookie towers, second season of operation: single pole tower (48 mm OD pole 4 m long, 1 m set in ground in concrete foundation) to allow machinery to get close to the tower. Steep guy wires (Markus Loew).](images/tower_types/Dookie_single_pole_PXL_20250902_034506670.jpg)
 
 ## Tripod towers
 
-Maximum height up to \< 4 m. Tripod base has quite a large footprint. Easy to set up, allows to take the tower into the ecosystem with little disturbance and can be removed without leaving much of a trace. Legs can be adjusted to allow for uneven ground.
+Such tripod towers have  a maximum height up to \< 4 m. The tripod base has quite a large footprint, though. Tripods are very quick to deploy. They are easy to set up, which allows to get the tower into the ecosystem with little disturbance and can be removed without leaving much of a trace. Legs can be adjusted to allow for uneven ground.
 
 E.g. Campbell Scientific: [CM106B-CSA](https://www.campbellsci.com.au/cm106b-csa)
 
 ![Tripod tower in agricultural environment (Dookie 1, first year of operation, Markus Loew)](images/tower_types/Triod_tower_Dooke1_year1_PXL_20240911_030259457.jpg)
+
+For sites that are actively accruing canopy height, plan to construct the tower at least 5 (hc d), but mount the sensors at d C 4(hc d) at inception. The tower and measurement height shall be changed at a convenient time of the year when the height of the sensors (hm) is \< d C 3.6(hc d).” From @aubinet_eddy_2012 .
+
+
+For crops with changing canopy heights that remain below 3 m, 8 m is the suggested measurement height” (@aubinet_eddy_2012).
 
 ## Lattice tower
 
 -   [NBS Masts](https://nbsmasts.com.au/): Telescopic, hinged/tilt, lattice towers
 -   [APAC Infrastructure mounting structures](https://apacinfrastructure.com.au/product-catalogue/mounting-structures)
 
-![Lattice tower and tripod tower (Lund University, [From lufluxes.bsky.social/](https://bsky.app/profile/lufluxes.bsky.social/post/3m3d4yyv5nc2x)).](images/tower_types/Lund_towers_bafkreidpdzcmwtwzfppy2coa6zbdozl6vgo44rw43kwc2ltpeyi5tftq7e.jpg)
+![Lattice tower and tripod tower (Lund University Flux Measurement Group, [lufluxes.bsky.social/](https://bsky.app/profile/lufluxes.bsky.social/post/3m3d4yyv5nc2x)).](images/tower_types/Lund_towers_bafkreidpdzcmwtwzfppy2coa6zbdozl6vgo44rw43kwc2ltpeyi5tftq7e.jpg)
 
 ## Hinged towers
 
@@ -72,6 +97,8 @@ No recommended in Australia!
 OHS regulations require tower safety inspection every 30 days! But scaffolding towers are commonly used in Europe (Americas?) with and without guy wires up to 50+ m. Benefit: scaffolding towers are cheap to build, and can be built on location without bringing in large cranes. This allows to minimise disturbance of the ecosystem during the build phase. The scaffolding can be buit in close vicinity of trees / branches which potentially allows to undertake leaf-level measurements and sampling in the canopy. The small size and lack of disturbance minimises the updraft, "chimney" effect that surround tall towers. Scaffolding towers can even have internal staircases or short ladders that make working at height easy. Recommendations on tower size in relation to average tree canopy size, clear winner on infrastructure footprint.
 
 ![CNRA Redwood Forest Observatory scaffolding tower (from [CNRA Redwood Forest Observatory](https://wildfiretaskforce.org/cnra-and-partners-install-first-ever-redwood-forest-observatory/))](https://wildfiretaskforce.org/wp-content/uploads/2025/10/Flux-Tower.jpg)
+
+![ICOS RF-FBn Font-Blanche tower <https://meta.icos-cp.eu/resources/stations/ES_FR-FBn>](https://fileshare.icos-cp.eu/s/SrorJ6ZyjkGkAQT/preview)
 
 ## Guyed towers
 

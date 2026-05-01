@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -212,6 +232,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#tower-types" id="toc-tower-types" class="nav-link active" data-scroll-target="#tower-types">Tower types</a>
   <ul class="collapse">
+  <li><a href="#tower-sizes" id="toc-tower-sizes" class="nav-link" data-scroll-target="#tower-sizes">Tower sizes</a></li>
   <li><a href="#single-pole-towers" id="toc-single-pole-towers" class="nav-link" data-scroll-target="#single-pole-towers">Single pole towers</a></li>
   <li><a href="#tripod-towers" id="toc-tripod-towers" class="nav-link" data-scroll-target="#tripod-towers">Tripod towers</a></li>
   <li><a href="#lattice-tower" id="toc-lattice-tower" class="nav-link" data-scroll-target="#lattice-tower">Lattice tower</a></li>
@@ -256,9 +277,16 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="tower-types" class="level1">
 <h1>Tower types</h1>
+<section id="tower-sizes" class="level2">
+<h2 class="anchored" data-anchor-id="tower-sizes">Tower sizes</h2>
+<p>From <span class="citation" data-cites="aubinet_eddy_2012">Aubinet, Vesala, and Papale (<a href="#ref-aubinet_eddy_2012" role="doc-biblioref">2012</a>)</span>:</p>
+<p>“Tower size (horizontal dimensions, not height) shall be large enough to be <strong>safe and secure</strong> for many years of operation, but should also limit the impact on the surrounding environment and scientific measurements of interest and minimize the flow distortion” […]</p>
+<p>“Large tower structures create larger canopy openings, which promote wind recirculation […], enforcing <strong>chimney effect</strong>, changing the local microclimate, and, for the biological concerns, introducing opportunistic plant species, which will locally alter ecosystem structure around tower due to the radiation and temperature changes at the opening (edge effects).” […]</p>
+<p>“As a general guideline for tower design and establishment, <strong>the spacing between tower and nearby trees should mimic the existing mean distance between trees</strong> (i.e., mimicking the existing natural ecosystem structures and openings).”</p>
+</section>
 <section id="single-pole-towers" class="level2">
 <h2 class="anchored" data-anchor-id="single-pole-towers">Single pole towers</h2>
-<p>Very small footprint, but need a foundation for the pole and potentially guy wires to avoid movement. Cheap, easy to install without disturbing the environment. Access to the sensors is via portable ladder.</p>
+<p>Very small distortion to the environment, but single pole tower need a foundation for the pole and potentially guy wires to avoid movement, especially avoiding resonance. This type is cheap to build, easy to install without disturbing the environment. The access to the sensors is via portable ladder.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tower_types/Dookie_single_pole_PXL_20250902_034506670.jpg" class="img-fluid figure-img"></p>
@@ -268,7 +296,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="tripod-towers" class="level2">
 <h2 class="anchored" data-anchor-id="tripod-towers">Tripod towers</h2>
-<p>Maximum height up to &lt; 4 m. Tripod base has quite a large footprint. Easy to set up, allows to take the tower into the ecosystem with little disturbance and can be removed without leaving much of a trace. Legs can be adjusted to allow for uneven ground.</p>
+<p>Such tripod towers have a maximum height up to &lt; 4 m. The tripod base has quite a large footprint, though. Tripods are very quick to deploy. They are easy to set up, which allows to get the tower into the ecosystem with little disturbance and can be removed without leaving much of a trace. Legs can be adjusted to allow for uneven ground.</p>
 <p>E.g. Campbell Scientific: <a href="https://www.campbellsci.com.au/cm106b-csa">CM106B-CSA</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -276,6 +304,8 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Tripod tower in agricultural environment (Dookie 1, first year of operation, Markus Loew)</figcaption>
 </figure>
 </div>
+<p>For sites that are actively accruing canopy height, plan to construct the tower at least 5 (hc d), but mount the sensors at d C 4(hc d) at inception. The tower and measurement height shall be changed at a convenient time of the year when the height of the sensors (hm) is &lt; d C 3.6(hc d).” From <span class="citation" data-cites="aubinet_eddy_2012">Aubinet, Vesala, and Papale (<a href="#ref-aubinet_eddy_2012" role="doc-biblioref">2012</a>)</span> .</p>
+<p>For crops with changing canopy heights that remain below 3 m, 8 m is the suggested measurement height” (<span class="citation" data-cites="aubinet_eddy_2012">Aubinet, Vesala, and Papale (<a href="#ref-aubinet_eddy_2012" role="doc-biblioref">2012</a>)</span>).</p>
 </section>
 <section id="lattice-tower" class="level2">
 <h2 class="anchored" data-anchor-id="lattice-tower">Lattice tower</h2>
@@ -286,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tower_types/Lund_towers_bafkreidpdzcmwtwzfppy2coa6zbdozl6vgo44rw43kwc2ltpeyi5tftq7e.jpg" class="img-fluid figure-img"></p>
-<figcaption>Lattice tower and tripod tower (Lund University, <a href="https://bsky.app/profile/lufluxes.bsky.social/post/3m3d4yyv5nc2x">From lufluxes.bsky.social/</a>).</figcaption>
+<figcaption>Lattice tower and tripod tower (Lund University Flux Measurement Group, <a href="https://bsky.app/profile/lufluxes.bsky.social/post/3m3d4yyv5nc2x">lufluxes.bsky.social/</a>).</figcaption>
 </figure>
 </div>
 </section>
@@ -368,6 +398,12 @@ NBS Masts, PO Box 7, Lindenow, Victoria, Australia, 3865</p></li>
 <figcaption>CNRA Redwood Forest Observatory scaffolding tower (from <a href="https://wildfiretaskforce.org/cnra-and-partners-install-first-ever-redwood-forest-observatory/">CNRA Redwood Forest Observatory</a>)</figcaption>
 </figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://fileshare.icos-cp.eu/s/SrorJ6ZyjkGkAQT/preview.png" class="img-fluid figure-img"></p>
+<figcaption>ICOS RF-FBn Font-Blanche tower <a href="https://meta.icos-cp.eu/resources/stations/ES_FR-FBn" class="uri">https://meta.icos-cp.eu/resources/stations/ES_FR-FBn</a></figcaption>
+</figure>
+</div>
 </section>
 <section id="guyed-towers" class="level2">
 <h2 class="anchored" data-anchor-id="guyed-towers">Guyed towers</h2>
@@ -434,10 +470,15 @@ sales@futureau.com.au</p></li>
 <p><a href="./Home.html">Home</a></p>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-aubinet_eddy_2012" class="csl-entry" role="listitem">
+Aubinet, Marc, Timo Vesala, and Dario Papale, eds. 2012. <em>Eddy <span>Covariance</span>: <span>A</span> <span>Practical</span> <span>Guide</span> to <span>Measurement</span> and <span>Data</span> <span>Analysis</span></em>. Dordrecht: Springer Netherlands. <a href="https://doi.org/10.1007/978-94-007-2351-1">https://doi.org/10.1007/978-94-007-2351-1</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

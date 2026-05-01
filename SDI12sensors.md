@@ -18,7 +18,7 @@ The [Campbell Scientific A200](https://www.campbellsci.com.au/a200) is a USB-pow
 
 ### Configure SDI-12 sensor via a data logger
 
-If the A200 device is not available, the Campbell Scientific logger itself can be used to check and change SDI-12 sensor settings. Wire the sensor to one of the odd Control ports of the logger (C1, C3, C5) and power the sensor via the 12V port of the logger. To change sensor settings, only one sensor can be connected to the port. Then connect to the logger either via `DevConfig` or `Loggernet Connect`. Choose the Terminal option to access a direct interface to the logger. Hit the `Enter` key a few times to activate the terminal mode of the logger. Then type 'SDI-12'. A menu pops up offering a list of SDI-12-capable ports to connect to. Select the number of the port with the sensor connected. From here it is possible to query sensor settings via AT commands. See the command table in the logger manual for details on availbale commands and their syntax. Please note that the terminal connection times out after a while. In this case, the connection must be restarted via hitting the *Enter* key a few times.
+If the A200 device is not available, the Campbell Scientific logger itself can be used to check and change SDI-12 sensor settings. Wire the sensor to one of the odd Control ports of the logger (C1, C3, C5) and power the sensor via the 12V port of the logger. To change sensor settings, only one sensor can be connected to the port. Then connect to the logger either via `DevConfig` or `Loggernet Connect`. Choose the Terminal option to access a direct interface to the logger. Hit the `Enter` key a few times to activate the terminal mode of the logger. Then type 'SDI-12'. A menu pops up offering a list of SDI-12-capable ports to connect to. Select the number of the port with the sensor connected. From here it is possible to query sensor settings via AT commands. See the command table in the logger manual for details on availbale commands and their syntax. Please note that the terminal connection times out after a while. In this case, the connection must be restarted via hitting the `Enter` key a few times.
 
 To do: screenshots
 
@@ -30,7 +30,9 @@ Caution: It is possible that a single failing SDI-12 sensor affects all sensors 
 
 The easiest way to multiply the space on a logger is a terminal block with dedicated sections for 12V, Ground and signal. Then wire these sections on the terminal block to the corresponding port on the logger. --\> See section on terminals in the sensorwiring page (to do).
 
--   Commercial SDI-12 hub: <https://www.campbellsci.com.au/hub-sdm5>
+-   Commercial SDM and SDI-12 hub: <https://www.campbellsci.com.au/hub-sdm5>
+
+![Campbell Scientific SDM5 hub. Can be used for SDI-12 or, as in this case, as SDM hub (Markus Loew).](images/sensors/SDI12/CampbellScientific_SDM5_SDI12_hub.jpg)
 
 -   DIY terminal hub: see example below
 

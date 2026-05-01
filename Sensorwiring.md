@@ -1,6 +1,6 @@
 # Sensors and wiring
 
-This guide applies to tower using the OzFLux standard programs (available from [OzFlux logger code Github repository](https://github.com/OzFlux/logger_code), Ian McHugh).
+This guide applies to tower using the OzFlux standard programs (available from [OzFlux logger code Github repository](https://github.com/OzFlux/logger_code), Ian McHugh).
 
 ## Wiring information
 
@@ -126,9 +126,7 @@ Licor PAR sensor and multiplier configuration and wiring
 
 ### Averging soil temperature thermocouple (TCAV)
 
-`Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel. Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.`
-
-### 
+`Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel.` `Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.`
 
 TCAV #1
 
@@ -154,22 +152,22 @@ TCAV #2
 
 `Const NMBR_CS65X = 4 'Unique number of CS65X to measure.`
 
-If there are more than two CS650 soil moisture sensors (or, in general, multiple SDI-12 sensor of the same type), it is best to not wire the sensors directly to the logger panel. Instead, build a terminal block which combines multiple data, power, ground lines, etc together (see section on terminal blocks). Then run a single cable to the corresponding port on the logger.
+If there are more than two CS650 soil moisture sensors (or, in general, multiple SDI-12 sensor of the same type), it is best to not wire the sensors directly to the logger panel. Instead, build a terminal block which combines multiple data, power, ground lines, etc together (see section on [SDI-12 sensors](./SDI12sensors.html) and terminal blocks). Then run a single cable to the corresponding port on the logger.
 
-Be careful with control ports, though: To combine multiple sensor control lines into one SDI-terminal, the sensors must be programmed to have a unique SDI-bus address ID! In the example below, one sensor with SDI-ID #0 are wired to control port C5, the other sensor with SDI-ID #0 is wired to control port C7. The SDI-ID of a sensor can be changed. Either via the CS650 mode in Loggernet Devconfig, or via a terminal command through a datalogger. When changing SDI-IDs, only one sensor can be connected to a control port. SDI-sensors can be connected to any control (C) port with an odd number.
+Be careful with control ports, though: To combine multiple sensor control wires into one SDI-12 terminal, the sensors must be programmed to have a unique SDI-12 address ID! In the example below, two sensors with SDI-12 ID #0 and SDI-12 ID #1 are connected to control port C5, another set of sensors with SDI-12 ID #0 and SDI-12 ID #1 are wired to control port C7! [The SDI-12 ID of a CS650 sensor can be changed](./SDI12sensors.html). Either via the CS650 mode in `Loggernet Devconfig`, or via a terminal command through a datalogger (see [SDI-12 sensors](./SDI12sensors.html)). While changing SDI-12 IDs, only one sensor can be connected to a control port. SDI-12 sensors can be connected to any control (C) port with an odd number.
 
-| Logger port | Function                       | Wire colour |
-|-------------|--------------------------------|-------------|
-| C5          | SDI-12 data #1 (Address = 0)   | green       |
-| C7          | SDI-12 data #2 (Address = 0)   | green       |
-| gnd         | RS-232 #1                      | orange      |
-| gnd         | RS-232 #1                      | orange      |
-| 12V         | SDI-12 power +12V #1           | red         |
-| 12V         | SDI-12 power +12V #2           | red         |
-| G           | SDI-12 data/power reference #1 | black       |
-| G           | SDI-12 data/power reference #2 | black       |
-| gnd         | Shield #1                      | clear       |
-| gnd         | Shield #2                      | clear       |
+| Logger port | Function                           | Wire colour |
+|-------------|------------------------------------|-------------|
+| C5          | SDI-12 data #1 (Address = 0 and 1) | green       |
+| C7          | SDI-12 data #2 (Address = 0 and 1) | green       |
+| gnd         | RS-232 #1                          | orange      |
+| gnd         | RS-232 #1                          | orange      |
+| 12V         | SDI-12 power +12V #1               | red         |
+| 12V         | SDI-12 power +12V #2               | red         |
+| G           | SDI-12 data/power reference #1     | black       |
+| G           | SDI-12 data/power reference #2     | black       |
+| gnd         | Shield #1                          | clear       |
+| gnd         | Shield #2                          | clear       |
 
 ### Rain gauge CS701 user constants / wiring (CR1000X)
 
@@ -202,7 +200,7 @@ Many rangauges use similar wiring. Check the manual if your specific models foll
 | Logger port | Function                            | Wire colour |
 |-------------|-------------------------------------|-------------|
 | 1H          | Temperature signal                  | yellow      |
-| 1L          | Rh signal                           | blue        |
+| 1L          | RH signal                           | blue        |
 | Gnd         | Temperature and RH signal reference | white       |
 | Power Gnd   | Power ground                        | black       |
 | 12V         | 12V power                           | red         |
@@ -274,6 +272,6 @@ CNR4 program and calibration constants with examples
 
 Kipp and Zonen yellow Thermistor yellow cable has different colours and requires to add an additional resistor to the wiring panel as follows:
 
-![Kipp & Zonen CNR4 wiring (yellow cables) on a Campbell Scientific Volt116. Note the 1 kΩ resistor between excitation port and H! (Markus Loew).](images/sensors/sensor_wiring/CNR4_wiring_resistor_PXL_20260402_003720694.jpg)
+![Kipp & Zonen CNR4 wiring (yellow cables) on a Campbell Scientific Volt116. Note the 1 kΩ resistor between the excitation port X2 and H! (Markus Loew).](images/sensors/sensor_wiring/CNR4_wiring_resistor_PXL_20260402_003720694.jpg)
 
 [Home](./Home.html)

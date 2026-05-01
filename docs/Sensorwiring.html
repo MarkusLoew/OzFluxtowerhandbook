@@ -219,7 +219,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#soil-heat-flux" id="toc-soil-heat-flux" class="nav-link" data-scroll-target="#soil-heat-flux">Soil heat flux</a></li>
   <li><a href="#par-sensor" id="toc-par-sensor" class="nav-link" data-scroll-target="#par-sensor">PAR sensor</a></li>
   <li><a href="#averging-soil-temperature-thermocouple-tcav" id="toc-averging-soil-temperature-thermocouple-tcav" class="nav-link" data-scroll-target="#averging-soil-temperature-thermocouple-tcav">Averging soil temperature thermocouple (TCAV)</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   <li><a href="#soil-moisture-user-constants-wiring-cr1000x" id="toc-soil-moisture-user-constants-wiring-cr1000x" class="nav-link" data-scroll-target="#soil-moisture-user-constants-wiring-cr1000x">Soil moisture user constants / wiring (CR1000X)</a></li>
   <li><a href="#rain-gauge-cs701-user-constants-wiring-cr1000x" id="toc-rain-gauge-cs701-user-constants-wiring-cr1000x" class="nav-link" data-scroll-target="#rain-gauge-cs701-user-constants-wiring-cr1000x">Rain gauge CS701 user constants / wiring (CR1000X)</a></li>
   <li><a href="#air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" id="toc-air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" class="nav-link" data-scroll-target="#air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116">Air temperature and humidity (Vailsala HMP155 wired to Volt116)</a></li>
@@ -258,7 +257,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="sensors-and-wiring" class="level1">
 <h1>Sensors and wiring</h1>
-<p>This guide applies to tower using the OzFLux standard programs (available from <a href="https://github.com/OzFlux/logger_code">OzFlux logger code Github repository</a>, Ian McHugh).</p>
+<p>This guide applies to tower using the OzFlux standard programs (available from <a href="https://github.com/OzFlux/logger_code">OzFlux logger code Github repository</a>, Ian McHugh).</p>
 <section id="wiring-information" class="level2">
 <h2 class="anchored" data-anchor-id="wiring-information">Wiring information</h2>
 <p>This wiring guide is for an all-in one flux tower system. This system consists of one logger with extension module handling all sensors at once, wired up in a single enclosure. Examples of towers using this wiring scheme and standard program are: Boolcoomatta, the three Dookie towers. Even if logger, extension module and soil system are separate from each other, the basic wiring still applies to some extent.</p>
@@ -443,10 +442,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="averging-soil-temperature-thermocouple-tcav" class="level3">
 <h3 class="anchored" data-anchor-id="averging-soil-temperature-thermocouple-tcav">Averging soil temperature thermocouple (TCAV)</h3>
-<p><code>Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel. Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.</code></p>
-</section>
-<section id="section" class="level3">
-<h3 class="anchored" data-anchor-id="section"></h3>
+<p><code>Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel.</code> <code>Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.</code></p>
 <p>TCAV #1</p>
 <table class="caption-top table">
 <thead>
@@ -507,8 +503,8 @@ ul.task-list li input[type="checkbox"] {
 <p><code>Const CS65X_1_SDI12_PORT = C5 'Unique control port.</code></p>
 <p><code>Const CS65X_2_SDI12_PORT = C7 'Unique control port.</code></p>
 <p><code>Const NMBR_CS65X = 4 'Unique number of CS65X to measure.</code></p>
-<p>If there are more than two CS650 soil moisture sensors (or, in general, multiple SDI-12 sensor of the same type), it is best to not wire the sensors directly to the logger panel. Instead, build a terminal block which combines multiple data, power, ground lines, etc together (see section on terminal blocks). Then run a single cable to the corresponding port on the logger.</p>
-<p>Be careful with control ports, though: To combine multiple sensor control lines into one SDI-terminal, the sensors must be programmed to have a unique SDI-bus address ID! In the example below, one sensor with SDI-ID #0 are wired to control port C5, the other sensor with SDI-ID #0 is wired to control port C7. The SDI-ID of a sensor can be changed. Either via the CS650 mode in Loggernet Devconfig, or via a terminal command through a datalogger. When changing SDI-IDs, only one sensor can be connected to a control port. SDI-sensors can be connected to any control (C) port with an odd number.</p>
+<p>If there are more than two CS650 soil moisture sensors (or, in general, multiple SDI-12 sensor of the same type), it is best to not wire the sensors directly to the logger panel. Instead, build a terminal block which combines multiple data, power, ground lines, etc together (see section on <a href="./SDI12sensors.html">SDI-12 sensors</a> and terminal blocks). Then run a single cable to the corresponding port on the logger.</p>
+<p>Be careful with control ports, though: To combine multiple sensor control wires into one SDI-12 terminal, the sensors must be programmed to have a unique SDI-12 address ID! In the example below, two sensors with SDI-12 ID #0 and SDI-12 ID #1 are connected to control port C5, another set of sensors with SDI-12 ID #0 and SDI-12 ID #1 are wired to control port C7! <a href="./SDI12sensors.html">The SDI-12 ID of a CS650 sensor can be changed</a>. Either via the CS650 mode in <code>Loggernet Devconfig</code>, or via a terminal command through a datalogger (see <a href="./SDI12sensors.html">SDI-12 sensors</a>). While changing SDI-12 IDs, only one sensor can be connected to a control port. SDI-12 sensors can be connected to any control (C) port with an odd number.</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -520,12 +516,12 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>C5</td>
-<td>SDI-12 data #1 (Address = 0)</td>
+<td>SDI-12 data #1 (Address = 0 and 1)</td>
 <td>green</td>
 </tr>
 <tr class="even">
 <td>C7</td>
-<td>SDI-12 data #2 (Address = 0)</td>
+<td>SDI-12 data #2 (Address = 0 and 1)</td>
 <td>green</td>
 </tr>
 <tr class="odd">
@@ -628,7 +624,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>1L</td>
-<td>Rh signal</td>
+<td>RH signal</td>
 <td>blue</td>
 </tr>
 <tr class="odd">
@@ -887,7 +883,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/sensors/sensor_wiring/CNR4_wiring_resistor_PXL_20260402_003720694.jpg" class="img-fluid figure-img"></p>
-<figcaption>Kipp &amp; Zonen CNR4 wiring (yellow cables) on a Campbell Scientific Volt116. Note the 1 kΩ resistor between excitation port and H! (Markus Loew).</figcaption>
+<figcaption>Kipp &amp; Zonen CNR4 wiring (yellow cables) on a Campbell Scientific Volt116. Note the 1 kΩ resistor between the excitation port X2 and H! (Markus Loew).</figcaption>
 </figure>
 </div>
 <p><a href="./Home.html">Home</a></p>
