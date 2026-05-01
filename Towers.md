@@ -16,7 +16,10 @@ E.g. Campbell Scientific: [CM106B-CSA](https://www.campbellsci.com.au/cm106b-csa
 
 ## Lattice tower
 
-[NBS Masts](https://nbsmasts.com.au/): Telescopic, hinged/tilt, lattice towers
+-   [NBS Masts](https://nbsmasts.com.au/): Telescopic, hinged/tilt, lattice towers
+-   [APAC Infrastructure mounting structures](https://apacinfrastructure.com.au/product-catalogue/mounting-structures)
+
+![Lattice tower and tripod tower (Lund University, [From lufluxes.bsky.social/](https://bsky.app/profile/lufluxes.bsky.social/post/3m3d4yyv5nc2x)).](images/tower_types/Lund_towers_bafkreidpdzcmwtwzfppy2coa6zbdozl6vgo44rw43kwc2ltpeyi5tftq7e.jpg)
 
 ## Hinged towers
 
@@ -25,10 +28,14 @@ Various heights up to 14 m. These towers can be climbed (working at heights cert
 Available from:
 
 -   [APAC Portable Hinged Tripod Lattice Tower, AL340 Series](https://apacinfrastructure.com.au/al340-portable-tripod-lattice-tower-8-metre)\
+    and\
+    [APAC Hinged Winch Mast](https://apacinfrastructure.com.au/product-catalogue/mounting-structures/gh100-galvanised-steel-hinged-mast-winch-raised)\
     APAC Infrastructure Pty Ltd, Unit 6/33-47 Fred Chaplin Circuit, Caloundra, Sunshine Coast, QLD, 4551
 
 -   [NBS Masts](https://nbsmasts.com.au/): Telescopic, hinged/tilt, lattice towers\
     NBS Masts, PO Box 7, Lindenow, Victoria, Australia, 3865, 03 5157 1203, sales\@nbsmasts.com.au
+
+![APAC hinged winch mast with surefoot base (Liam Grace).](images/tower_types/Hinged_tower_IMG_20251128_125001.jpg)
 
 ![Boolcoomatta hinged tower on tripod base from APAC. (Markus Loew)](images/tower_types/Boolcoomatta_hinged_tower_PXL_20250813_061750715.jpg)
 
@@ -41,7 +48,8 @@ Available from:
 These small or hinged towers do not require an extensive foundation in the ground. Two options of installing the APAC towers exist:
 
 -   Tripod: leave-no-trace, convenient, not as stable as surefoot base (see photos above).
--   Surefoot base: very solid, but requires steel rods to be driven into the ground with a jackhammer at various directions. These rods can not be removed when the flux tower reaches its end-of-life or end of project. Rocky locations might hinder the installation of the ground rods. See [APAC surefoot modules](https://apacinfrastructure.com.au/search?keywords=products%20modules%20components), and [Surefoot base](https://surefootfootings.com.au/surefoot-pile-cap-s600-16p/) plate websites.
+-   Surefoot base: very solid, but requires steel rods to be driven into the ground with a jackhammer at various directions. A petrol-powered jackhammer with anvil attachement is required. See the Surefoot jackhammer suggestions and requirements in the [Surefootings manual](https://surefootfootings.com.au/wp-content/uploads/2022/08/Surefoot_B-Low-Resolution-1.pdf). These rods can not be removed when the flux tower reaches its end-of-life or end of project and is taken down. Rocky locations might hinder the installation of the ground rods.\
+    See [APAC surefoot modules](https://apacinfrastructure.com.au/search?keywords=products%20modules%20components), and [Surefoot base](https://surefootfootings.com.au/surefoot-pile-cap-s600-16p/) plate websites.
 
 ## Telescopic towers
 
@@ -62,6 +70,8 @@ E.g. pneumatic towers:
 No recommended in Australia!
 
 OHS regulations require tower safety inspection every 30 days! But scaffolding towers are commonly used in Europe (Americas?) with and without guy wires up to 50+ m. Benefit: scaffolding towers are cheap to build, and can be built on location without bringing in large cranes. This allows to minimise disturbance of the ecosystem during the build phase. The scaffolding can be buit in close vicinity of trees / branches which potentially allows to undertake leaf-level measurements and sampling in the canopy. The small size and lack of disturbance minimises the updraft, "chimney" effect that surround tall towers. Scaffolding towers can even have internal staircases or short ladders that make working at height easy. Recommendations on tower size in relation to average tree canopy size, clear winner on infrastructure footprint.
+
+![CNRA Redwood Forest Observatory scaffolding tower (from [CNRA Redwood Forest Observatory](https://wildfiretaskforce.org/cnra-and-partners-install-first-ever-redwood-forest-observatory/))](https://wildfiretaskforce.org/wp-content/uploads/2025/10/Flux-Tower.jpg)
 
 ## Guyed towers
 

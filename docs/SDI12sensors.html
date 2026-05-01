@@ -278,10 +278,14 @@ ul.task-list li input[type="checkbox"] {
 <p>While it is fantastic that SDI-12 allow to connect multiple sensors to a single port, the physical wiring can become cumbersome. Each sensor needs 12V power, a control wire, ground connection, etc. Space is limited on the logger. Use a SDI-12 hub instead, either DIY or commercial.</p>
 <p>Caution: It is possible that a single failing SDI-12 sensor affects all sensors affected to single port (shorted power, failing sensor). If possible spread SDI-12 sensors across multiple ports - if they are availabe.</p>
 <p>The easiest way to multiply the space on a logger is a terminal block with dedicated sections for 12V, Ground and signal. Then wire these sections on the terminal block to the corresponding port on the logger. –&gt; See section on terminals in the sensorwiring page (to do).</p>
+<ul>
+<li><p>Commercial SDI-12 hub: <a href="https://www.campbellsci.com.au/hub-sdm5" class="uri">https://www.campbellsci.com.au/hub-sdm5</a></p></li>
+<li><p>DIY terminal hub: see example below</p></li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/sensors/SDI12/SDI12_hub_terminal_blocks_DIY.jpg" class="img-fluid figure-img"></p>
-<figcaption>A DIY SDI-12 sensor hub inside a logger box to allow easy wiring for multiple sensors. Left, fused terminal block for general 12V power (black) and ground (grey). Then SDI-12 hub terminal to expand the ports of the logger for four CS650 soil moisture sensors: 12V power from logger (red wires), sensor ground (orange and black wires), sensor signal (green wires). Note that the terminal block for the sensor signal (green wires) is split. Two sensor are connected to one port, instead of four sensors on one port. Fused power terminals and sensor terminals are different types to avoid confusion in the field (Markus Loew).</figcaption>
+<figcaption>A DIY SDI-12 sensor hub inside a logger box to allow easy wiring for multiple sensors using push-in DIN rail terminals. Left, fused terminal block for general 12V power (black) and ground (grey). Then SDI-12 hub terminal to expand the ports of the logger for four CS650 soil moisture sensors: 12V power from logger (red wires), sensor ground (orange and black wires), sensor signal (green wires). Note that the terminal block for the sensor signal (green wires) is split. Two sensor are connected to one port, instead of four sensors on one port. Fused power terminals and sensor terminals are different types to avoid confusion in the field (Markus Loew).</figcaption>
 </figure>
 </div>
 <p><a href="./Home.html">Home</a></p>

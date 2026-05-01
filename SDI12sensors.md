@@ -30,6 +30,10 @@ Caution: It is possible that a single failing SDI-12 sensor affects all sensors 
 
 The easiest way to multiply the space on a logger is a terminal block with dedicated sections for 12V, Ground and signal. Then wire these sections on the terminal block to the corresponding port on the logger. --\> See section on terminals in the sensorwiring page (to do).
 
-![A DIY SDI-12 sensor hub inside a logger box to allow easy wiring for multiple sensors. Left, fused terminal block for general 12V power (black) and ground (grey). Then SDI-12 hub terminal to expand the ports of the logger for four CS650 soil moisture sensors: 12V power from logger (red wires), sensor ground (orange and black wires), sensor signal (green wires). Note that the terminal block for the sensor signal (green wires) is split. Two sensor are connected to one port, instead of four sensors on one port. Fused power terminals and sensor terminals are different types to avoid confusion in the field (Markus Loew).](images/sensors/SDI12/SDI12_hub_terminal_blocks_DIY.jpg)
+-   Commercial SDI-12 hub: <https://www.campbellsci.com.au/hub-sdm5>
+
+-   DIY terminal hub: see example below
+
+![A DIY SDI-12 sensor hub inside a logger box to allow easy wiring for multiple sensors using push-in DIN rail terminals. Left, fused terminal block for general 12V power (black) and ground (grey). Then SDI-12 hub terminal to expand the ports of the logger for four CS650 soil moisture sensors: 12V power from logger (red wires), sensor ground (orange and black wires), sensor signal (green wires). Note that the terminal block for the sensor signal (green wires) is split. Two sensor are connected to one port, instead of four sensors on one port. Fused power terminals and sensor terminals are different types to avoid confusion in the field (Markus Loew).](images/sensors/SDI12/SDI12_hub_terminal_blocks_DIY.jpg)
 
 [Home](./Home.html)
