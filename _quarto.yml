@@ -32,6 +32,8 @@ website:
         contents:
         - text: Sensors and their wiring
           file: Sensorwiring.md
+        - text: SDI12 sensors
+          file: SDI12sensors.md
         - text: Sensor calibration
           file: Sensorcalibration.md
 format:

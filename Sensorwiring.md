@@ -222,6 +222,8 @@ Many rangauges use similar wiring. Check the manual if your specific models foll
 
 ### 4-component radiation user constants / wiring (Kipp & Zonen CNR4 wired to VOLT116)
 
+CNR4 program and calibration constants with examples
+
 `Const NR_ANALOG_INPUT = 3 'Unique differential analog input channel.`
 
 `Const NR_TsENS_ANALOG_INPUT = 13 'Unique single-ended analog input channel for body T`
