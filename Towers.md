@@ -5,7 +5,7 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 # Tower types
 
 
-## Tower sizes
+## Tower size considerations
 From @aubinet_eddy_2012:
 
 “Tower size (horizontal dimensions, not height) shall be large enough to be **safe and secure** for many years of operation, but should also limit the impact on the surrounding environment and scientific measurements of interest and minimize the flow distortion” 
@@ -22,7 +22,7 @@ From @aubinet_eddy_2012:
 
 ## Single pole towers
 
-Very small distortion to the environment, but single pole tower need a foundation for the pole and potentially guy wires to avoid movement, especially avoiding resonance. This type is cheap to build, easy to install without disturbing the environment. The access to the sensors is via portable ladder.
+Very small distortion to the environment, but single pole tower need a foundation for the pole and potentially guy wires to avoid movement, especially avoiding resonance at some windspeeds. This tower type is cheap to build, easy to install without disturbing the environment. The access to the sensors is via a portable ladder.
 
 ![One of the Dookie towers, second season of operation: single pole tower (48 mm OD pole 4 m long, 1 m set in ground in concrete foundation) to allow machinery to get close to the tower. Steep guy wires (Markus Loew).](images/tower_types/Dookie_single_pole_PXL_20250902_034506670.jpg)
 
@@ -34,7 +34,7 @@ E.g. Campbell Scientific: [CM106B-CSA](https://www.campbellsci.com.au/cm106b-csa
 
 ![Tripod tower in agricultural environment (Dookie 1, first year of operation, Markus Loew)](images/tower_types/Triod_tower_Dooke1_year1_PXL_20240911_030259457.jpg)
 
-For sites that are actively accruing canopy height, plan to construct the tower at least 5 (hc d), but mount the sensors at d C 4(hc d) at inception. The tower and measurement height shall be changed at a convenient time of the year when the height of the sensors (hm) is \< d C 3.6(hc d).” From @aubinet_eddy_2012 .
+For sites that are actively accruing canopy height, plan to construct the tower at least 5 (hc d), but mount the sensors at d C 4(hc d) at inception. The tower and measurement height shall be changed at a convenient time of the year when the height of the sensors (hm) is \< d C 3.6(hc d) (@aubinet_eddy_2012).
 
 
 For crops with changing canopy heights that remain below 3 m, 8 m is the suggested measurement height” (@aubinet_eddy_2012).
@@ -86,15 +86,15 @@ E.g. pneumatic towers:
 -   [NBS Masts - Telescopic-mast](https://nbsmasts.com.au/product-category/telescopic-mast/)\
     NBS Masts, PO Box 7, Lindenow, Victoria, Australia, 3865
 
-![Pneumatically operated telescopuc, hinged tower on trailer platform (EVTA, Swinburne Uni mobile flux towers, Markus Loew)](images/tower_types/telescopic_hinged_tower_IMG_20210223_090158.jpg)
+![Pneumatically operated telescopic, hinged tower on trailer platform using telescopic pole from EVTA (Swinburne University mobile flux towers, Markus Loew)](images/tower_types/telescopic_hinged_tower_IMG_20210223_090158.jpg)
 
-![Stowed-away pneumatic, telescopic, hinged tower (Swinburne Uni mobile flux towers, Markus Loew)](images/tower_types/telescopic_hinged_tower_PXL_20220311_031446953.MP.jpg)
+![Stowed-away pneumatic, telescopic, hinged tower (Swinburne University mobile flux towers, Markus Loew)](images/tower_types/telescopic_hinged_tower_PXL_20220311_031446953.MP.jpg)
 
 ## Scaffolding towers
 
-No recommended in Australia!
+Not recommended in Australia!
 
-OHS regulations require tower safety inspection every 30 days! But scaffolding towers are commonly used in Europe (Americas?) with and without guy wires up to 50+ m. Benefit: scaffolding towers are cheap to build, and can be built on location without bringing in large cranes. This allows to minimise disturbance of the ecosystem during the build phase. The scaffolding can be buit in close vicinity of trees / branches which potentially allows to undertake leaf-level measurements and sampling in the canopy. The small size and lack of disturbance minimises the updraft, "chimney" effect that surround tall towers. Scaffolding towers can even have internal staircases or short ladders that make working at height easy. Recommendations on tower size in relation to average tree canopy size, clear winner on infrastructure footprint.
+OHS regulations require tower safety inspection every 30 days! But scaffolding towers are commonly used in Europe (Americas?) with and without guy wires. Benefit: scaffolding towers are cheap to build, and can be built on location without bringing in large cranes. This allows to minimise disturbance of the ecosystem during the build phase. The scaffolding can be buit in close vicinity of trees / branches which potentially allows to undertake leaf-level measurements and sampling in the canopy. The small size and lack of disturbance minimises the updraft, "chimney" effect that surround tall towers. Scaffolding towers can even have internal staircases or short ladders that make working at height easy. Regarding the relationship between tower size and average tree canopy horizontal size, scaffolding towers are clear winners due to their relatively small infrastructure footprint.
 
 ![CNRA Redwood Forest Observatory scaffolding tower (from [CNRA Redwood Forest Observatory](https://wildfiretaskforce.org/cnra-and-partners-install-first-ever-redwood-forest-observatory/))](https://wildfiretaskforce.org/wp-content/uploads/2025/10/Flux-Tower.jpg)
 
@@ -104,13 +104,13 @@ OHS regulations require tower safety inspection every 30 days! But scaffolding t
 
 Small footprint, but usually require crane to install, hence more initial disturbance to the environment. Guywires allow for slim and tall tower structures. However, the guy wires can bring the tower down when a tree falls on them (see Warra and Wombat Forest incidents).
 
-![Tumbarumba guyed tower (post fire, pre-2025). (Markus Loew)](images/tower_types/Tumbarumba_pre-2025_guyed_tower_PXL_20220707_004347948.jpg)
+![Tumbarumba guyed tower (post fire, pre-2025) (Markus Loew).](images/tower_types/Tumbarumba_pre-2025_guyed_tower_PXL_20220707_004347948.jpg)
 
 ## Stand-alone towers
 
-Stand-alone towers but provide a safe and stable work platform without the danger of trees falling on a guy wire taking the tower down in the process. They requires considerable amount o construction work, that will affect the vicinity of the tower. Large and deep excavations for the foundation are required, causing considerable disturbance of the immediate ecosystem. Cranes are needed to install the tower that bring soil compaction, disturbance and might require removal of trees to allow the crane to turn. Good road access to the tower is required to bring in excavators concrete trucks and cranses. Tall stand-alone towers can be big enough for a stair case. That allows easy access to the instrumentation on top. With a regulation-conform staircase on the tower, climbing certificates might not be required, similar to a public look-out tower (check your local laws and regulations).
+Stand-alone towers provide a safe and stable work platform without the danger of trees falling on a guy wire taking the tower down in the process. They requires considerable amount of construction work, that will affect the vicinity of the tower. Large and deep excavations for the foundation are required, causing considerable disturbance of the immediate ecosystem. Cranes are needed to install the tower that bring soil compaction, disturbance and might require removal of trees to allow the crane to turn. Good road access to the tower is required as well to bring in excavators, concrete trucks, and cranes. Tall stand-alone towers can be big enough for a stair case. That allows easy access to the instrumentation on top. With a regulation-conform staircase on the tower, climbing certificates might not be required, similar to a public look-out tower (check your local laws and regulations).
 
-The large footprint of stand-alone towers allows generous platforms on top. Such platforms make it easy to work at height compared to sitting in a harness suspended off the tower. However, in some cases, it can be difficult to install instrumentation along the height of the tall stand-alone towers where there is no platform and if the desired instrument location is far away from the staircase or ladder. Large. tall towers like e.g. Tumbarumba, have a wide lattice construction, limiting options for accessing some locations without extensive climbing. Tube dimensions of lattice and tower legs might require specific instrumentation mounts that are not available off-the-shelf. Check with your tower-construction company reagding instrumentation mounts when designing the tower. Off the shelf towers from e.g. ROAM are designed to suit heavy mobile phone systems which use 60 mm OD steel pipes and square/angle brackets to install instruments. These poles and brackets are not suitable out-of-the-box to install flux-related instruments as these are usually designed around round maximum 48 mm OD tube sizes.
+The large physical footprint of stand-alone towers allows generous platforms on top. Such platforms make it easy to work at height compared to sitting in a harness suspended off the tower. However, in some cases, it can be difficult to install instrumentation along the height of the tall stand-alone towers where there is no platform and if the desired instrument location is far away from the staircase or ladder. Large. tall towers like e.g. Tumbarumba, have a wide lattice construction, limiting options for accessing some locations without extensive climbing. Tube dimensions of lattice and tower legs might require specific instrumentation mounts that are not available off-the-shelf. Check with your tower-construction company reagding instrumentation mounts when designing the tower. Off the shelf towers from e.g. ROAM are designed to suit heavy mobile phone systems which use 60 mm OD steel pipes and square/angle brackets to install instruments. These poles and brackets are not suitable out-of-the-box to install flux-related instruments as these are usually designed around round tubes with maximum 48 mm outer diameter.
 
 Manufacturers, engineering companies of stand-alone towers and telecommunication infrastructure:
 

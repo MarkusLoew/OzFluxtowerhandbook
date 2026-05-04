@@ -37,6 +37,8 @@ One-day refresher courses are available for people who already did the full two-
 
 ## Climbing gear
 
+All harnesses must comply with [Australian Standards AS NZS-1891-1-2020](https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-1891-1-2020) for "Personal equipment for work at height, Part 1: Manufacturing requirements for full body combination and lower body harnesses".
+
 Two certified persons must be present when climbing a tower! Each person must have a full set of climbing safety gear and work gear. All items must comply with the Australian Safety ratings and must be within their expiry dates. Harnesses and general climbing gear expires after 10 years. Expired items must be "tagged out" and replaced immediately!
 
 Gear list - See [Tower Climbing equipment (Heightdynamics)](https://www.heightdynamics.com.au/tower-climbing-tools-for-telco-workers/) for details.
@@ -77,7 +79,7 @@ Gear list - See [Tower Climbing equipment (Heightdynamics)](https://www.heightdy
 
 -   gloves
 
-Yearly climbing gear inspections by a certified inspector are required. Contact rigging companies to schedule inspection.
+Yearly climbing gear inspections by a certified inspector are required. Contact rigging companies to schedule inspection. Or get certified your self via e.g. [Pinnacle online course "Prepare, maintain and test response equipment"](https://www.pinnaclesafety.com.au/courses/height-safety/height-safety-equipment-inspection)
 
 ## Pick-off tower rescue
 
