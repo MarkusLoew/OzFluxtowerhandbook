@@ -41,9 +41,13 @@ All harnesses must comply with [Australian Standards AS NZS-1891-1-2020](https:/
 
 Two certified persons must be present when climbing a tower! Each person must have a full set of climbing safety gear and work gear. All items must comply with the Australian Safety ratings and must be within their expiry dates. Harnesses and general climbing gear expires after 10 years. Expired items must be "tagged out" and replaced immediately!
 
-Gear list - See [Tower Climbing equipment (Heightdynamics)](https://www.heightdynamics.com.au/tower-climbing-tools-for-telco-workers/) for details.
+### Gear list 
+See [Tower Climbing equipment (Heightdynamics)](https://www.heightdynamics.com.au/tower-climbing-tools-for-telco-workers/) for details.
 
--   Harness
+
+Fall arrest gear must comply with Standard AS/NZS 1891.4:2025 that [specifies requirements and recommendations for the selection, safe use and maintenance of industrial fall-arrest systems and devices.](https://store.standards.org.au/product/as-nzs-1891-4-2025)
+
+-   Harness compliant with [Australian Standards AS NZS-1891-1-2020](https://www.standards.org.au/standards-catalogue/standard-details?designation=as-nzs-1891-1-2020)
 
 -   Helmet
 
@@ -57,7 +61,7 @@ Gear list - See [Tower Climbing equipment (Heightdynamics)](https://www.heightdy
 
 -   dynamic rescue rope 11 mm OD (longer than height of tower), Australian Standard 4142.3
 
--   Ladsafe detachable cable sleeve, fall arrest system compatible with the ladsafe rope system on the tower
+-   Ladsafe detachable cable sleeve, fall arrest system compatible with the ladsafe rope system on the tower - [must comply with Australian and New Zealand Standard AS/NZS 1891.4](https://store.standards.org.au/product/as-nzs-1891-4-2025)
 
 -   small first aid kit
 

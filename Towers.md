@@ -4,21 +4,15 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 
 # Tower types
 
-
 ## Tower size considerations
+
 From @aubinet_eddy_2012:
 
-“Tower size (horizontal dimensions, not height) shall be large enough to be **safe and secure** for many years of operation, but should also limit the impact on the surrounding environment and scientific measurements of interest and minimize the flow distortion” 
-[...]
+“Tower size (horizontal dimensions, not height) shall be large enough to be **safe and secure** for many years of operation, but should also limit the impact on the surrounding environment and scientific measurements of interest and minimize the flow distortion” \[...\]
 
+“Large tower structures create larger canopy openings, which promote wind recirculation \[...\], enforcing **chimney effect**, changing the local microclimate, and, for the biological concerns, introducing opportunistic plant species, which will locally alter ecosystem structure around tower due to the radiation and temperature changes at the opening (edge effects).” \[...\]
 
-“Large tower structures create larger canopy openings, which promote wind recirculation [...], enforcing **chimney effect**, changing the local microclimate, and, for the biological concerns, introducing opportunistic plant species, which will locally alter ecosystem structure around tower due to the radiation and temperature changes at the opening (edge effects).”
-[...]
-
-
-“As a general guideline for tower design and establishment, **the spacing between tower and nearby trees should mimic the existing mean distance between trees** (i.e., mimicking the existing natural ecosystem structures and openings).” 
-
-
+“As a general guideline for tower design and establishment, **the spacing between tower and nearby trees should mimic the existing mean distance between trees** (i.e., mimicking the existing natural ecosystem structures and openings).”
 
 ## Single pole towers
 
@@ -28,14 +22,15 @@ Very small distortion to the environment, but single pole tower need a foundatio
 
 ## Tripod towers
 
-Such tripod towers have  a maximum height up to \< 4 m. The tripod base has quite a large footprint, though. Tripods are very quick to deploy. They are easy to set up, which allows to get the tower into the ecosystem with little disturbance and can be removed without leaving much of a trace. Legs can be adjusted to allow for uneven ground.
+Such tripod towers have a maximum height up to \< 4 m. The tripod base has quite a large footprint, though. Tripods are very quick to deploy. They are easy to set up, which allows to get the tower into the ecosystem with little disturbance and can be removed without leaving much of a trace. Legs can be adjusted to allow for uneven ground.
 
 E.g. Campbell Scientific: [CM106B-CSA](https://www.campbellsci.com.au/cm106b-csa)
 
 ![Tripod tower in agricultural environment (Dookie 1, first year of operation, Markus Loew)](images/tower_types/Triod_tower_Dooke1_year1_PXL_20240911_030259457.jpg)
 
-For sites that are actively accruing canopy height, plan to construct the tower at least 5 (hc d), but mount the sensors at d C 4(hc d) at inception. The tower and measurement height shall be changed at a convenient time of the year when the height of the sensors (hm) is \< d C 3.6(hc d) (@aubinet_eddy_2012).
+![Dargo tripod tower (Ian McHugh, photo Markus Loew)](images/tower_types/Dargo_tripod_tower_IMG_20200224_120248.jpg)
 
+For sites that are actively accruing canopy height, plan to construct the tower at least 5 (hc d), but mount the sensors at d C 4(hc d) at inception. The tower and measurement height shall be changed at a convenient time of the year when the height of the sensors (hm) is \< d C 3.6(hc d) (@aubinet_eddy_2012).
 
 For crops with changing canopy heights that remain below 3 m, 8 m is the suggested measurement height” (@aubinet_eddy_2012).
 

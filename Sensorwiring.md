@@ -274,4 +274,12 @@ Kipp and Zonen yellow Thermistor yellow cable has different colours and requires
 
 ![Kipp & Zonen CNR4 wiring (yellow cables) on a Campbell Scientific Volt116. Note the 1 kΩ resistor between the excitation port X2 and H! (Markus Loew).](images/sensors/sensor_wiring/CNR4_wiring_resistor_PXL_20260402_003720694.jpg)
 
+
+# Cable faults
+In case of cable faults:
+To check check the integrity of copper cables: [Cable tester / verifier](https://www.trend-networks.com/au/product/vdv-ii-series/)
+
+# Cable repair
+*  various no-solder splices
+
 [Home](./Home.html)
