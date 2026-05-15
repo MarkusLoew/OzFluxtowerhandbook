@@ -24,7 +24,7 @@ To do: screenshots
 
 ## SDI-12 Hub
 
-While it is fantastic that SDI-12 allow to connect multiple sensors to a single port, the physical wiring can become cumbersome. Each sensor needs 12V power, a control wire, ground connection, etc. Space is limited on the logger. Use a SDI-12 hub instead, either DIY or commercial.
+While it is fantastic that the SDI-12 protocol allows to connect multiple sensors to a single port, the physical wiring can become cumbersome. Each sensor needs 12V power, a control wire, ground connection, etc. And space is limited on the logger. To get around that space limitation, use a SDI-12 hub instead, either DIY or commercial.
 
 Caution: It is possible that a single failing SDI-12 sensor affects all sensors affected to single port (shorted power, failing sensor). If possible spread SDI-12 sensors across multiple ports - if they are availabe.
 

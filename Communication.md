@@ -1,6 +1,6 @@
 # Communication
 
-## Direct communication with dta logger
+## Direct communication with a data logger
 
 In the simplest case, communication with a logger can be done directly, by connecting a computer to the logger and downloading the data and uploading/changing programs and settings manually. This method is straightforward but requires physical access to the logger.
 

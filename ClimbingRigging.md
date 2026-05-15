@@ -7,7 +7,7 @@ For tower builds, tower inspections, rigging, contact the rigging companies belo
 -   Commconns constructions, 30 Backwater Crt, Kirwans Bridge, VIC 3608, Phone 0407 576 343, Ian Burrowes [ian\@commcons.com.au](mailto:ian@commcons.com.au){.email}, admin\@commcons.com.au \
     → Built the Whroo tower and the guyed Wombat Forest tower
 
--   High Access Rigging, Ian Grivel, 0418 896 688
+-   High Access Rigging, Lot 64 Sand Mine Road, Mt Compass SA 5210. Ian Grivel, 0418 896 688.
 
 -   Karera Pty Ltd, 2/49 Gavenlock Road, Tuggerah, NSW, 2259, Phone 1300 425 905, Joel Dawes [joel.dawes\@karera.com](mailto:joel.dawes@karera.com){.email}, sales\@karera.com, [www.karera.com.au](www.karera.com.au) \
     → Built the Tumbarumba tower

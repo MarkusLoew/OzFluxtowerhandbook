@@ -187,4 +187,40 @@ Finally, in Loggernet’s ‘Setup’ utility, configure the IP and port numbers
 
 [2](#sdfootnote2anc) RV50(X)s running OS version 4.13 and older had both HTTP port 9191 and HTTPS port 9443 enabled by default. When using HTTP (not HTTPS) with these older OS versions, enter the IP address using port number 9191, for example, http://192.168.13.31:9191. You may be warned that the connection is not secure – allow an exception for this address and continue.
 
+# Konect
+
+Campbell Scientific offers their Konect service that allows to interact with loggers over the internet without the need for you own VPN. [Kinect Data services from Campbell Scientific](https://www.konectgds.com/)
+
+Konect provides a PakBus address and DNS name for the connected devices.
+
+Some modems from Campbell Scientific come with a voucher to use Konect for free:
+
+![Campbell Scientific Cell220 modem with voucher for Campbell Scientific's Konect Services (Markus Loew).](images/ovpn_images/CampbellScientific_Konect_Cell220.jpg)
+
+The DNS name for the connected data logger and the Pakbus routing is set up in the CRBasic logger program:
+
+`'----------------------------------------------------------------------------`
+
+`'*KONECT DETAILS`
+
+`Const KonectPBR_DNS = "devicenameprovidedtoyoufrom.konectgds.com"    'Unique per logger`
+
+`Const KonectPBR_Port = "9210"      'Pakbusrouting port provided by Konectgds.com for each logger/device`
+
+`Const KonectPBR_TCPPassword = "yourpasswordsetonkonectgds.com"`
+
+`Const KonectPBR_PakbusAddress = 1 'local pakbus address of the logger at your tower site`
+
+`Const Cell_APN = "telstra.internet"`
+
+`'----------------------------------------------------------------------------`
+
+![Konect Pakbus router service status for two data loggers from https://konectgds.com/ (Markus Loew).](images/ovpn_images/Konect_Pakbus_Router_status.png)
+
+In the `Campbell Scientific Loggernet Connect` or `PCConfig`, you set up the connection using the DNS address provided by the Konect website. The `Neighbour Pakbus Adress must be 4070` in the Datalogger settings of Loggernet setup when Konect is used.
+
+![Settings in Campbell Scientific Loggernet Setup to configure the Konect service. Make sure DNS address, and port must match the information from the Konect website and the CRBasic program on the logger (Markus Loew).](images/ovpn_images/Campbell_Scientific_Loggernet_Konect_setup.png)
+
+
+
 [Home](./Home.html)

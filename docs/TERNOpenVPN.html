@@ -223,6 +223,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sierra-wireless-rv50x1" id="toc-sierra-wireless-rv50x1" class="nav-link" data-scroll-target="#sierra-wireless-rv50x1">SIERRA WIRELESS RV50X1</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#konect" id="toc-konect" class="nav-link" data-scroll-target="#konect">Konect</a></li>
   </ul>
 </nav>
     </div>
@@ -408,12 +409,46 @@ the section of text between <key> and </key>, including only the text between (a
 <p><em>Figure 11: Loggernet Setup configuration (Ian McHugh).</em></p>
 <p><a href="#sdfootnote1anc">1</a> Campbell Scientific is a reseller of these modems; the Campbell manual for their use can be found here: <a href="https://s.campbellsci.com/documents/au/manuals/rv50.pdf" class="uri">https://s.campbellsci.com/documents/au/manuals/rv50.pdf</a></p>
 <p><a href="#sdfootnote2anc">2</a> RV50(X)s running OS version 4.13 and older had both HTTP port 9191 and HTTPS port 9443 enabled by default. When using HTTP (not HTTPS) with these older OS versions, enter the IP address using port number 9191, for example, http://192.168.13.31:9191. You may be warned that the connection is not secure – allow an exception for this address and continue.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="konect" class="level1">
+<h1>Konect</h1>
+<p>Campbell Scientific offers their Konect service that allows to interact with loggers over the internet without the need for you own VPN. <a href="https://www.konectgds.com/">Kinect Data services from Campbell Scientific</a></p>
+<p>Konect provides a PakBus address and DNS name for the connected devices.</p>
+<p>Some modems from Campbell Scientific come with a voucher to use Konect for free:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ovpn_images/CampbellScientific_Konect_Cell220.jpg" class="img-fluid figure-img"></p>
+<figcaption>Campbell Scientific Cell220 modem with voucher for Campbell Scientific’s Konect Services (Markus Loew).</figcaption>
+</figure>
+</div>
+<p>The DNS name for the connected data logger and the Pakbus routing is set up in the CRBasic logger program:</p>
+<p><code>'----------------------------------------------------------------------------</code></p>
+<p><code>'*KONECT DETAILS</code></p>
+<p><code>Const KonectPBR_DNS = "devicenameprovidedtoyoufrom.konectgds.com"    'Unique per logger</code></p>
+<p><code>Const KonectPBR_Port = "9210"      'Pakbusrouting port provided by Konectgds.com for each logger/device</code></p>
+<p><code>Const KonectPBR_TCPPassword = "yourpasswordsetonkonectgds.com"</code></p>
+<p><code>Const KonectPBR_PakbusAddress = 1 'local pakbus address of the logger at your tower site</code></p>
+<p><code>Const Cell_APN = "telstra.internet"</code></p>
+<p><code>'----------------------------------------------------------------------------</code></p>
+<p>In the <code>Campbell Scientific Loggernet Connect</code> or <code>PCConfig</code>, you set up the connection using the DNS address provided by the Konect website. The <code>Neighbour Pakbus Adress must be 4070</code> in the Datalogger settings of Loggernet setup when Konect is used.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ovpn_images/Campbell_Scientific_Loggernet_Konect_setup.png" class="img-fluid figure-img"></p>
+<figcaption>Settings in Campbell Scientific Loggernet Setup to configure the Konect service. Make sure DNS address, and port must match the information from the Konect website and the CRBasic program on the logger (Markus Loew).</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ovpn_images/Konect_Pakbus_Router_status.png" class="img-fluid figure-img"></p>
+<figcaption>Konect Pakbus router service status for two data loggers from https://konectgds.com/ (Markus Loew).</figcaption>
+</figure>
+</div>
 <p><a href="./Home.html">Home</a></p>
 
 
-</section>
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->
