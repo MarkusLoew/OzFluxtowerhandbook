@@ -227,6 +227,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#cable-faults" id="toc-cable-faults" class="nav-link" data-scroll-target="#cable-faults">Cable faults</a></li>
   <li><a href="#cable-repair" id="toc-cable-repair" class="nav-link" data-scroll-target="#cable-repair">Cable repair</a></li>
+  <li><a href="#plugs" id="toc-plugs" class="nav-link" data-scroll-target="#plugs">Plugs</a></li>
   </ul>
 </nav>
     </div>
@@ -262,7 +263,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This guide applies to tower using the OzFlux standard programs (available from <a href="https://github.com/OzFlux/logger_code">OzFlux logger code Github repository</a>, Ian McHugh).</p>
 <section id="wiring-information" class="level2">
 <h2 class="anchored" data-anchor-id="wiring-information">Wiring information</h2>
-<p>This wiring guide is for an all-in one flux tower system. This system consists of one logger with extension module handling all sensors at once, wired up in a single enclosure. Examples of towers using this wiring scheme and standard program are: Boolcoomatta, the three Dookie towers. Even if logger, extension module and soil system are separate from each other, the basic wiring still applies to some extent.</p>
+<p>This wiring guide is for an <strong>all-in one flux tower</strong> system. This system consists of one logger with extension module handling all sensors at once, wired up in a single enclosure. Examples of towers using this wiring scheme and standard program are: Boolcoomatta, the three Dookie towers. Even if logger, extension module and soil system are separate from each other, the basic wiring still applies to some extent.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Dookie1_Logger_enclosure_PXL_20240911_022955292.jpg" class="img-fluid figure-img" alt="All-in-one EC system with soil sensors, modem, logger, Volt116 module, fuse panel, SDI-12 hub, modem."></p>
@@ -282,15 +283,17 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Campbell Scientific CS650 soil mositure probe (four for Dookie towers, and Boolcoomatta tower)</p></li>
 <li><p>Campbell Scientific SoilVUE10 soil profile probe (Boolcoomatta only)</p></li>
 </ul>
-<p>While Campbell Scientific Easyflux uses are different logger software, their detailed manufacturer sensor and wiring information is a great read, even though the wiring is slightly different: <a href="https://www.campbellsci.com.au/easyflux-dl">EasyFlux</a> and <a href="https://s.campbellsci.com/documents/au/manuals/easyflux-dl-cr6op.pdf">specifically EasyFlux manual</a>.</p>
+<p>While Campbell Scientific Easyflux uses are different logger software, their detailed manufacturer sensor and wiring information is a great read, even though the wiring is slightly different: see <a href="https://www.campbellsci.com.au/easyflux-dl">EasyFlux</a> and <a href="https://s.campbellsci.com/documents/au/manuals/easyflux-dl-cr6op.pdf">specifically the EasyFlux manual</a>.</p>
 <section id="user-constants" class="level3">
 <h3 class="anchored" data-anchor-id="user-constants">User constants</h3>
-<p>Some parts of the standard program must be modified to unique settings for each tower.</p>
+<p>Some settings in the standard program must be modified as they are unique for each tower.</p>
 <p>Data logger constants:</p>
-<p><code>Const STATION_NAME = "Dookie2_EC" Const PAKBUS_ADDR = 1</code></p>
+<p><code>Const STATION_NAME = "Dookie2_EC"</code></p>
+<p><code>Const PAKBUS_ADDR = 1</code></p>
 <p><code>'Server information for data upload</code></p>
 <p><code>Const Server = "server.address.au"</code></p>
-<p><code>Const User = "username" Const Pass = ""</code></p>
+<p><code>Const User = "username" ' Username for file upload to server via Ftplient()</code></p>
+<p><code>Const Pass = "password" ' empty password for ssh connections</code></p>
 <p>VOLT116 user constants</p>
 <p><code>Const CDMVOLT116_1_SN = 1234 ' CDM-VOLT116 serial number ser no 7008 in Dookie1</code></p>
 <p><code>Const CDMVOLT116_1_ADDR = 1 ' CDM-VOLT116 CPI address (default is 1)</code></p>
@@ -298,7 +301,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="irgason-campbell-scientific-7500rs-irga-licor-csat3b-campbell-scientific" class="level3">
 <h3 class="anchored" data-anchor-id="irgason-campbell-scientific-7500rs-irga-licor-csat3b-campbell-scientific">Irgason (Campbell Scientific) / 7500RS Irga (Licor) + CSat3b (Campbell Scientific)</h3>
-<p>The integrated irga and 3D anemometer (Irgason) and separate instruments Licor 7500RS irga plus 3D anemometer Cambell Scientific are wired in a similar way. All instruments communicate via the SDM bus when using the OzFlux standard program. The SDM cables for the two separate iga/anemometer get combined in a SDM hub, and only one cable connects both to the data logger. See section on SDM hub for details when using separate IRGA and CSat.</p>
+<p>The integrated IRGA and 3D anemometer (Irgason) and separate instruments Licor 7500RS irga plus 3D anemometer Cambell Scientific are wired in a similar way. All instruments communicate via the SDM bus when using the OzFlux standard program. The SDM cables for the two separate iga/anemometer get combined in a SDM hub, and only one cable connects both to the data logger. See section on SDM hub for details when using separate IRGA and CSat.</p>
 <p>Wiring and constants.</p>
 <p><code>Const EC100_SDM_ADDR = 1 'Unique SDM address for EC100.</code></p>
 <p><code>Const CO2_SIG_STRGTH_THRESHOLD = 0.7 'Remove gas analyzer CO2 data when CO2 signal strength is less than sig_str_CO2.</code></p>
@@ -440,11 +443,12 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>TO ADD:</p>
-<p>Licor PAR sensor and multiplier configuration and wiring</p>
+<p>Licor PAR sensor and Licor multiplier configuration and wiring</p>
 </section>
 <section id="averging-soil-temperature-thermocouple-tcav" class="level3">
 <h3 class="anchored" data-anchor-id="averging-soil-temperature-thermocouple-tcav">Averging soil temperature thermocouple (TCAV)</h3>
-<p><code>Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel.</code> <code>Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.</code></p>
+<p><code>Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel.</code></p>
+<p><code>Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.</code></p>
 <p>TCAV #1</p>
 <table class="caption-top table">
 <thead>
@@ -885,7 +889,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/sensors/sensor_wiring/CNR4_wiring_resistor_PXL_20260402_003720694.jpg" class="img-fluid figure-img"></p>
-<figcaption>Kipp &amp; Zonen CNR4 wiring (yellow cables) on a Campbell Scientific Volt116. Note the 1 kΩ resistor between the excitation port X2 and H! (Markus Loew).</figcaption>
+<figcaption>Kipp &amp; Zonen CNR4 wiring (yellow cables) on a Campbell Scientific Volt116. Note the 1 kΩ resistor between the excitation port X2 and 8H (Markus Loew).</figcaption>
 </figure>
 </div>
 </section>
@@ -900,6 +904,19 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>various no-solder splices</li>
 </ul>
+</section>
+<section id="plugs" class="level1">
+<h1>Plugs</h1>
+<p>Plugs can be used to connect sensors to the datalogger going through a bulkhead. Plugs make sensor connections and tower setup very fast and easy on location. Plugs also minimise openings in the data logger enclosure. However, all sensor cables must be solder onto plugs, which is time-consuming.</p>
+<ul>
+<li><a href="https://au.rs-online.com/web/p/industrial-circular-connectors/6876541">Souriau Plug, 10 pin, IP68/IP69K</a></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sensors/sensor_wiring/Plug_for_radiometer_.jpg" class="img-fluid figure-img"></p>
+<figcaption>Solderin wired onto a Souriau plug for a net radiometer connection (Markus Loew)</figcaption>
+</figure>
+</div>
 <p><a href="./Home.html">Home</a></p>
 
 

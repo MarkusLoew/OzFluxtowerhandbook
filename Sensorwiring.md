@@ -4,7 +4,7 @@ This guide applies to tower using the OzFlux standard programs (available from [
 
 ## Wiring information
 
-This wiring guide is for an all-in one flux tower system. This system consists of one logger with extension module handling all sensors at once, wired up in a single enclosure. Examples of towers using this wiring scheme and standard program are: Boolcoomatta, the three Dookie towers. Even if logger, extension module and soil system are separate from each other, the basic wiring still applies to some extent.
+This wiring guide is for an **all-in one flux tower** system. This system consists of one logger with extension module handling all sensors at once, wired up in a single enclosure. Examples of towers using this wiring scheme and standard program are: Boolcoomatta, the three Dookie towers. Even if logger, extension module and soil system are separate from each other, the basic wiring still applies to some extent.
 
 ![All-in-one-enclosure EC system with Irgason, meteorological sensors, soil sensors (4 x CS650, 2x FG01, 2x TCAV), modem (Maxon Datamax MA-2055) with two internal antennas, fuse panel, SDI-12 hub.](images/Dookie1_Logger_enclosure_PXL_20240911_022955292.jpg){fig-alt="All-in-one EC system with soil sensors, modem, logger, Volt116 module, fuse panel, SDI-12 hub, modem."}
 
@@ -30,21 +30,25 @@ Hardware used:
 
 -   Campbell Scientific SoilVUE10 soil profile probe (Boolcoomatta only)
 
-While Campbell Scientific Easyflux uses are different logger software, their detailed manufacturer sensor and wiring information is a great read, even though the wiring is slightly different: [EasyFlux](https://www.campbellsci.com.au/easyflux-dl) and [specifically EasyFlux manual](https://s.campbellsci.com/documents/au/manuals/easyflux-dl-cr6op.pdf).
+While Campbell Scientific Easyflux uses are different logger software, their detailed manufacturer sensor and wiring information is a great read, even though the wiring is slightly different: see [EasyFlux](https://www.campbellsci.com.au/easyflux-dl) and [specifically the EasyFlux manual](https://s.campbellsci.com/documents/au/manuals/easyflux-dl-cr6op.pdf).
 
 ### User constants
 
-Some parts of the standard program must be modified to unique settings for each tower.
+Some settings in the standard program must be modified as they are unique for each tower.
 
 Data logger constants:
 
-`Const STATION_NAME = "Dookie2_EC" Const PAKBUS_ADDR = 1`
+`Const STATION_NAME = "Dookie2_EC"`
+
+`Const PAKBUS_ADDR = 1`
 
 `'Server information for data upload`
 
 `Const Server = "server.address.au"`
 
-`Const User = "username" Const Pass = ""`
+`Const User = "username" ' Username for file upload to server via Ftplient()`
+
+`Const Pass = "password" ' empty password for ssh connections`
 
 VOLT116 user constants
 
@@ -56,7 +60,7 @@ VOLT116 user constants
 
 ### Irgason (Campbell Scientific) / 7500RS Irga (Licor) + CSat3b (Campbell Scientific)
 
-The integrated irga and 3D anemometer (Irgason) and separate instruments Licor 7500RS irga plus 3D anemometer Cambell Scientific are wired in a similar way. All instruments communicate via the SDM bus when using the OzFlux standard program. The SDM cables for the two separate iga/anemometer get combined in a SDM hub, and only one cable connects both to the data logger. See section on SDM hub for details when using separate IRGA and CSat.
+The integrated IRGA and 3D anemometer (Irgason) and separate instruments Licor 7500RS irga plus 3D anemometer Cambell Scientific are wired in a similar way. All instruments communicate via the SDM bus when using the OzFlux standard program. The SDM cables for the two separate iga/anemometer get combined in a SDM hub, and only one cable connects both to the data logger. See section on SDM hub for details when using separate IRGA and CSat.
 
 Wiring and constants.
 
@@ -122,11 +126,13 @@ Apogee CS310 PAR sensor program constants and wiring:
 
 TO ADD:
 
-Licor PAR sensor and multiplier configuration and wiring
+Licor PAR sensor and Licor multiplier configuration and wiring
 
 ### Averging soil temperature thermocouple (TCAV)
 
-`Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel.` `Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.`
+`Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel.`
+
+`Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.`
 
 TCAV #1
 
@@ -272,14 +278,22 @@ CNR4 program and calibration constants with examples
 
 Kipp and Zonen yellow Thermistor yellow cable has different colours and requires to add an additional resistor to the wiring panel as follows:
 
-![Kipp & Zonen CNR4 wiring (yellow cables) on a Campbell Scientific Volt116. Note the 1 kΩ resistor between the excitation port X2 and H! (Markus Loew).](images/sensors/sensor_wiring/CNR4_wiring_resistor_PXL_20260402_003720694.jpg)
-
+![Kipp & Zonen CNR4 wiring (yellow cables) on a Campbell Scientific Volt116. Note the 1 kΩ resistor between the excitation port X2 and 8H (Markus Loew).](images/sensors/sensor_wiring/CNR4_wiring_resistor_PXL_20260402_003720694.jpg)
 
 # Cable faults
-In case of cable faults:
-To check check the integrity of copper cables: [Cable tester / verifier](https://www.trend-networks.com/au/product/vdv-ii-series/)
+
+In case of cable faults: To check check the integrity of copper cables: [Cable tester / verifier](https://www.trend-networks.com/au/product/vdv-ii-series/)
 
 # Cable repair
-*  various no-solder splices
+
+-   various no-solder splices
+
+# Plugs
+
+Plugs can be used to connect sensors to the datalogger going through a bulkhead. Plugs make sensor connections and tower setup very fast and easy on location. Plugs also minimise openings in the data logger enclosure. However, all sensor cables must be solder onto plugs, which is time-consuming.
+
+-   [Souriau Plug, 10 pin, IP68/IP69K](https://au.rs-online.com/web/p/industrial-circular-connectors/6876541)
+
+![Solderin wired onto a Souriau plug for a net radiometer connection (Markus Loew)](images/sensors/sensor_wiring/Plug_for_radiometer_.jpg)
 
 [Home](./Home.html)

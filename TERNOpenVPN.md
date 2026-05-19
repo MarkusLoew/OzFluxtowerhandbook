@@ -1,8 +1,8 @@
 # Virtual private networks
 
 -   OpenVPN (TERN)
--   Kinect (Campbell Scientific)
--   DynDNS
+-   Konect Data Services (Campbell Scientific)
+-   Dynamic DNS services
 
 ## TERN OpenVPN setup
 
@@ -117,7 +117,7 @@ This step requires that the MAC addresses of the devices be known (see section 5
 
 *Figure 5: Maxon DHCP IP reservation (Ian McHugh).*
 
-### SIERRA WIRELESS RV50X[1](#sdfootnote1sym)
+### SIERRA Wireless RV50X[1](#sdfootnote1sym)
 
 Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘user’ and ‘12345’, and the default IP address is 192.168.13.31 [2](#sdfootnote2sym)), and check that you have web connectivity. On the front panel of the device, the network LED will be lit if all is well (see url for manual in footnote below – LED descriptions in Table 8-1, p37). Check that you have the most recent firmware version (under ‘Software and Firmware’ button at top of screen). Many of the requisite openVPN settings may not be available if your firmware version is not current. Sierra firmware (radio and carrier) updates can be accessed here:
 
@@ -187,19 +187,19 @@ Finally, in Loggernet’s ‘Setup’ utility, configure the IP and port numbers
 
 [2](#sdfootnote2anc) RV50(X)s running OS version 4.13 and older had both HTTP port 9191 and HTTPS port 9443 enabled by default. When using HTTP (not HTTPS) with these older OS versions, enter the IP address using port number 9191, for example, http://192.168.13.31:9191. You may be warned that the connection is not secure – allow an exception for this address and continue.
 
-# Konect
+# Konect Data Services from Campbell Scientific
 
-Campbell Scientific offers their Konect service that allows to interact with loggers over the internet without the need for you own VPN. [Kinect Data services from Campbell Scientific](https://www.konectgds.com/)
+Campbell Scientific offers their Konect service that allows to interact with loggers over the internet without the need for you own VPN. [Konect Data services from Campbell Scientific](https://www.konectgds.com/)
 
-Konect provides a PakBus address and DNS name for the connected devices.
+Konect provides a PakBus address and DNS name for the connected devices. Beyond Pakbus routing and accessing your logger over the internet, Konect offers services to store your data, visualise data dashboards and to archive data.
 
-Some modems from Campbell Scientific come with a voucher to use Konect for free:
+Some modems from Campbell Scientific come with complementary Konect Pakbus routing:
 
-![Campbell Scientific Cell220 modem with voucher for Campbell Scientific's Konect Services (Markus Loew).](images/ovpn_images/CampbellScientific_Konect_Cell220.jpg)
+![Campbell Scientific Cell220 modem with complementary Konect PakBus routing Services (Markus Loew).](images/ovpn_images/CampbellScientific_Konect_Cell220.jpg)
 
 The DNS name for the connected data logger and the Pakbus routing is set up in the CRBasic logger program:
 
-`'----------------------------------------------------------------------------`
+`'-------------------------------------------------------------`
 
 `'*KONECT DETAILS`
 
@@ -213,14 +213,27 @@ The DNS name for the connected data logger and the Pakbus routing is set up in t
 
 `Const Cell_APN = "telstra.internet"`
 
-`'----------------------------------------------------------------------------`
+`'-------------------------------------------------------------`
 
-![Konect Pakbus router service status for two data loggers from https://konectgds.com/ (Markus Loew).](images/ovpn_images/Konect_Pakbus_Router_status.png)
+![Konect Pakbus router service status for two data loggers from [Konect Data services from Campbell Scientific](https://www.konectgds.com/) (Markus Loew).](images/ovpn_images/Konect_Pakbus_Router_status.png)
 
-In the `Campbell Scientific Loggernet Connect` or `PCConfig`, you set up the connection using the DNS address provided by the Konect website. The `Neighbour Pakbus Adress must be 4070` in the Datalogger settings of Loggernet setup when Konect is used.
+In the `Campbell Scientific Loggernet Connect` or `PCConfig`, you set up the connection using the DNS address provided by the Konect website. The `Neighbour Pakbus Adress must be 4070` in the "Datalogger settings" of Loggernet Setup when Konect is used.
 
 ![Settings in Campbell Scientific Loggernet Setup to configure the Konect service. Make sure DNS address, and port must match the information from the Konect website and the CRBasic program on the logger (Markus Loew).](images/ovpn_images/Campbell_Scientific_Loggernet_Konect_setup.png)
 
+# Dynamic DNS services
 
+Commercial services that provide dynamic DNS (DDNS) allow you to access your devices using a consistent domain name, even if your IP address changes frequently (e.g. daily for mobile networks). These services are useful for remote access to devices like data loggers without needing a dedicated virtual private network.
 
-[Home](./Home.html)
+The [Modems](./Communication.html#modem) listed [here](./Communication.html#modem) have some dynamic DNS clients built in. Check the individual manuals from your modem and check you selected dynamic DNS service provider for compatibility. Look for the "DDNS" option in the modem settings.
+
+In-complete list of Dynamic DNS services:
+
+-   [Duck DNS](https://www.duckdns.org/) (Free)
+-   [Oracle DynDNS](https://account.dyn.com/)
+-   [No-IP](https://www.noip.com/) 
+-   ...
+
+![Options for Dynamic DNS providers in the settings of a Maxon Dualmax modem (Markus Loew)](images/ovpn_images/Dualmax_modem_available_DynamicDNS_providers.png)
+
+-   [Home](./Home.html)

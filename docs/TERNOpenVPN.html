@@ -220,10 +220,11 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#maxon-dualmax-ma-2055" id="toc-maxon-dualmax-ma-2055" class="nav-link" data-scroll-target="#maxon-dualmax-ma-2055">Maxon Dualmax MA-2055</a></li>
   <li><a href="#maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060" id="toc-maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060" class="nav-link" data-scroll-target="#maxon-datamax-ma100-10101020-4g-and-maxon-quadmax-ma-6060">MAXON Datamax MA100-1010/1020-4G and Maxon Quadmax MA-6060</a></li>
-  <li><a href="#sierra-wireless-rv50x1" id="toc-sierra-wireless-rv50x1" class="nav-link" data-scroll-target="#sierra-wireless-rv50x1">SIERRA WIRELESS RV50X1</a></li>
+  <li><a href="#sierra-wireless-rv50x1" id="toc-sierra-wireless-rv50x1" class="nav-link" data-scroll-target="#sierra-wireless-rv50x1">SIERRA Wireless RV50X1</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#konect" id="toc-konect" class="nav-link" data-scroll-target="#konect">Konect</a></li>
+  <li><a href="#konect-data-services-from-campbell-scientific" id="toc-konect-data-services-from-campbell-scientific" class="nav-link" data-scroll-target="#konect-data-services-from-campbell-scientific">Konect Data Services from Campbell Scientific</a></li>
+  <li><a href="#dynamic-dns-services" id="toc-dynamic-dns-services" class="nav-link" data-scroll-target="#dynamic-dns-services">Dynamic DNS services</a></li>
   </ul>
 </nav>
     </div>
@@ -258,8 +259,8 @@ ul.task-list li input[type="checkbox"] {
 <h1>Virtual private networks</h1>
 <ul>
 <li>OpenVPN (TERN)</li>
-<li>Kinect (Campbell Scientific)</li>
-<li>DynDNS</li>
+<li>Konect Data Services (Campbell Scientific)</li>
+<li>Dynamic DNS services</li>
 </ul>
 <section id="tern-openvpn-setup" class="level2">
 <h2 class="anchored" data-anchor-id="tern-openvpn-setup">TERN OpenVPN setup</h2>
@@ -363,7 +364,7 @@ the section of text between <key> and </key>, including only the text between (a
 </section>
 </section>
 <section id="sierra-wireless-rv50x1" class="level3">
-<h3 class="anchored" data-anchor-id="sierra-wireless-rv50x1">SIERRA WIRELESS RV50X<a href="#sdfootnote1sym">1</a></h3>
+<h3 class="anchored" data-anchor-id="sierra-wireless-rv50x1">SIERRA Wireless RV50X<a href="#sdfootnote1sym">1</a></h3>
 <p>Connect to the modem (usually via ethernet – username and password on a unit fresh out of the box are ‘user’ and ‘12345’, and the default IP address is 192.168.13.31 <a href="#sdfootnote2sym">2</a>), and check that you have web connectivity. On the front panel of the device, the network LED will be lit if all is well (see url for manual in footnote below – LED descriptions in Table 8-1, p37). Check that you have the most recent firmware version (under ‘Software and Firmware’ button at top of screen). Many of the requisite openVPN settings may not be available if your firmware version is not current. Sierra firmware (radio and carrier) updates can be accessed here:</p>
 <p><a href="https://source.sierrawireless.com/resources/airlink/software_downloads/rv50/rv50-firmware-list/" class="uri">https://source.sierrawireless.com/resources/airlink/software_downloads/rv50/rv50-firmware-list/</a></p>
 <section id="establish-openvpn-connection-2" class="level4">
@@ -413,40 +414,60 @@ the section of text between <key> and </key>, including only the text between (a
 </section>
 </section>
 </section>
-<section id="konect" class="level1">
-<h1>Konect</h1>
-<p>Campbell Scientific offers their Konect service that allows to interact with loggers over the internet without the need for you own VPN. <a href="https://www.konectgds.com/">Kinect Data services from Campbell Scientific</a></p>
-<p>Konect provides a PakBus address and DNS name for the connected devices.</p>
-<p>Some modems from Campbell Scientific come with a voucher to use Konect for free:</p>
+<section id="konect-data-services-from-campbell-scientific" class="level1">
+<h1>Konect Data Services from Campbell Scientific</h1>
+<p>Campbell Scientific offers their Konect service that allows to interact with loggers over the internet without the need for you own VPN. <a href="https://www.konectgds.com/">Konect Data services from Campbell Scientific</a></p>
+<p>Konect provides a PakBus address and DNS name for the connected devices. Beyond Pakbus routing and accessing your logger over the internet, Konect offers services to store your data, visualise data dashboards and to archive data.</p>
+<p>Some modems from Campbell Scientific come with complementary Konect Pakbus routing:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/ovpn_images/CampbellScientific_Konect_Cell220.jpg" class="img-fluid figure-img"></p>
-<figcaption>Campbell Scientific Cell220 modem with voucher for Campbell Scientific’s Konect Services (Markus Loew).</figcaption>
+<figcaption>Campbell Scientific Cell220 modem with complementary Konect PakBus routing Services (Markus Loew).</figcaption>
 </figure>
 </div>
 <p>The DNS name for the connected data logger and the Pakbus routing is set up in the CRBasic logger program:</p>
-<p><code>'----------------------------------------------------------------------------</code></p>
+<p><code>'-------------------------------------------------------------</code></p>
 <p><code>'*KONECT DETAILS</code></p>
 <p><code>Const KonectPBR_DNS = "devicenameprovidedtoyoufrom.konectgds.com"    'Unique per logger</code></p>
 <p><code>Const KonectPBR_Port = "9210"      'Pakbusrouting port provided by Konectgds.com for each logger/device</code></p>
 <p><code>Const KonectPBR_TCPPassword = "yourpasswordsetonkonectgds.com"</code></p>
 <p><code>Const KonectPBR_PakbusAddress = 1 'local pakbus address of the logger at your tower site</code></p>
 <p><code>Const Cell_APN = "telstra.internet"</code></p>
-<p><code>'----------------------------------------------------------------------------</code></p>
-<p>In the <code>Campbell Scientific Loggernet Connect</code> or <code>PCConfig</code>, you set up the connection using the DNS address provided by the Konect website. The <code>Neighbour Pakbus Adress must be 4070</code> in the Datalogger settings of Loggernet setup when Konect is used.</p>
+<p><code>'-------------------------------------------------------------</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ovpn_images/Konect_Pakbus_Router_status.png" class="img-fluid figure-img"></p>
+<figcaption>Konect Pakbus router service status for two data loggers from <a href="https://www.konectgds.com/">Konect Data services from Campbell Scientific</a> (Markus Loew).</figcaption>
+</figure>
+</div>
+<p>In the <code>Campbell Scientific Loggernet Connect</code> or <code>PCConfig</code>, you set up the connection using the DNS address provided by the Konect website. The <code>Neighbour Pakbus Adress must be 4070</code> in the “Datalogger settings” of Loggernet Setup when Konect is used.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/ovpn_images/Campbell_Scientific_Loggernet_Konect_setup.png" class="img-fluid figure-img"></p>
 <figcaption>Settings in Campbell Scientific Loggernet Setup to configure the Konect service. Make sure DNS address, and port must match the information from the Konect website and the CRBasic program on the logger (Markus Loew).</figcaption>
 </figure>
 </div>
+</section>
+<section id="dynamic-dns-services" class="level1">
+<h1>Dynamic DNS services</h1>
+<p>Commercial services that provide dynamic DNS (DDNS) allow you to access your devices using a consistent domain name, even if your IP address changes frequently (e.g.&nbsp;daily for mobile networks). These services are useful for remote access to devices like data loggers without needing a dedicated virtual private network.</p>
+<p>The <a href="./Communication.html#modem">Modems</a> listed <a href="./Communication.html#modem">here</a> have some dynamic DNS clients built in. Check the individual manuals from your modem and check you selected dynamic DNS service provider for compatibility. Look for the “DDNS” option in the modem settings.</p>
+<p>In-complete list of Dynamic DNS services:</p>
+<ul>
+<li><a href="https://www.duckdns.org/">Duck DNS</a> (Free)</li>
+<li><a href="https://account.dyn.com/">Oracle DynDNS</a></li>
+<li><a href="https://www.noip.com/">No-IP</a></li>
+<li>…</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/ovpn_images/Konect_Pakbus_Router_status.png" class="img-fluid figure-img"></p>
-<figcaption>Konect Pakbus router service status for two data loggers from https://konectgds.com/ (Markus Loew).</figcaption>
+<p><img src="images/ovpn_images/Dualmax_modem_available_DynamicDNS_providers.png" class="img-fluid figure-img"></p>
+<figcaption>Options for Dynamic DNS providers in the settings of a Maxon Dualmax modem (Markus Loew)</figcaption>
 </figure>
 </div>
-<p><a href="./Home.html">Home</a></p>
+<ul>
+<li><a href="./Home.html">Home</a></li>
+</ul>
 
 
 </section>
