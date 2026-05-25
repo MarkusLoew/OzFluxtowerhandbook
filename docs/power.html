@@ -237,6 +237,7 @@ div.csl-indent {
   <li><a href="#power-demand" id="toc-power-demand" class="nav-link" data-scroll-target="#power-demand">Power demand</a></li>
   <li><a href="#power-sources" id="toc-power-sources" class="nav-link" data-scroll-target="#power-sources">Power sources</a></li>
   <li><a href="#solar-power-systems" id="toc-solar-power-systems" class="nav-link" data-scroll-target="#solar-power-systems">Solar power systems</a></li>
+  <li><a href="#charge-controllers" id="toc-charge-controllers" class="nav-link" data-scroll-target="#charge-controllers">Charge controllers</a></li>
   <li><a href="#power-to-the-instruments-electrical-wiring" id="toc-power-to-the-instruments-electrical-wiring" class="nav-link" data-scroll-target="#power-to-the-instruments-electrical-wiring">Power to the instruments, electrical wiring</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -278,13 +279,16 @@ div.csl-indent {
 <section id="power-demand" class="level3">
 <h3 class="anchored" data-anchor-id="power-demand">Power demand</h3>
 <ul>
-<li><a href="https://www.campbellsci.com.au/downloads/power-budget-spreadsheet">Campbell Scientific power budget spreadsheet</a> and tutorial. This spreadsheet provides power consumption data for Campbell Scientific devices and allows to calculate an overall power budget.</li>
+<li><p><a href="https://www.campbellsci.com.au/downloads/power-budget-spreadsheet">Campbell Scientific power budget spreadsheet</a> and tutorial. This spreadsheet provides power consumption data for Campbell Scientific devices and allows to calculate an overall power budget.</p></li>
+<li><p><a href="https://www.victronenergy.com/mppt-calculator">Victron MPPT calculator</a>: Suggests charge controller model, calculates daily yield from solar panel size and configuration, voltage, and location. This calculator includes an allowance for oversizing solar panels on a charge controller.</p></li>
 </ul>
-<!-- -->
-<ul>
-<li><a href="https://www.victronenergy.com/mppt-calculator">Victron MPPT calculator</a>: Suggests charge controller model, calculates daily yield from solar panel size and configuration, voltage, and location.</li>
-</ul>
-<p>For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous power available year-round <span class="citation" data-cites="rebmann_icos_2018">Rebmann et al. (<a href="#ref-rebmann_icos_2018" role="doc-biblioref">2018</a>)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/power/Whroo_Victron_MPPT_calculator.png" class="img-fluid figure-img"></p>
+<figcaption>Victron MPPT calculator result for a the Whroo tower. The tower is equipped with an EC logger system for flux and micrometeorology sensors, separate logger system for soil-related sensors, Heitronics surface temperature system, and six-level profile system. The tower is powered by two 445 W solar panels in series feeding two LifePo4 200 Ah batteries via a MPPT100/50 charge controller. The charge controller is just within the threshold of 130% oversized solar panels. The selected charge controller delivers only 50% (0.5C) of the possible charge current of the batteries! This low charge current is however high enough because high current, fast charging at 100A is not required at this location and fast charging would degrade the batteries faster in the long run. As the system is operated at up to 48°C air temperature, the heat-dissipation of charging at 100A would introduce additional thermal issues too (Markus Loew).</figcaption>
+</figure>
+</div>
+<p>For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous(!) power available year-round <span class="citation" data-cites="rebmann_icos_2018">Rebmann et al. (<a href="#ref-rebmann_icos_2018" role="doc-biblioref">2018</a>)</span> .</p>
 </section>
 <section id="power-sources" class="level3">
 <h3 class="anchored" data-anchor-id="power-sources">Power sources</h3>
@@ -302,7 +306,7 @@ If a generator is used, “the effect of its exhaust gases on the trace gas meas
 </section>
 <section id="solar" class="level4">
 <h4 class="anchored" data-anchor-id="solar">Solar</h4>
-<p>Solar panels on tower can affect the wind flow and radiation patterns.) Consider wind loading on tower!</p>
+<p>Solar panels on tower can affect the wind flow and radiation patterns. Consider wind loading on tower!</p>
 <ul>
 <li>DIY battery system / professionally installed power system</li>
 </ul>
@@ -320,14 +324,25 @@ If a generator is used, “the effect of its exhaust gases on the trace gas meas
 <li>Fuses, switches</li>
 </ul>
 </section>
+<section id="charge-controllers" class="level3">
+<h3 class="anchored" data-anchor-id="charge-controllers">Charge controllers</h3>
+<ul>
+<li><a href="https://www.morningstarcorp.com/products/prostar-mppt/">Morningstar ProStar MPPT solar charge controller</a></li>
+<li><a href="https://www.victronenergy.com/solar-charge-controllers">Victron SmartSolar Charge controllers</a> Usually, for a 400 W panel, use the 100/30A or 100/50A charge controller. Check the Victron MPPT sizing calculator to determine the <a href="https://www.victronenergy.com/mppt-calculator">charge controller size</a>, see below:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/power/Victron_MPPT_calculator.png" class="img-fluid figure-img"></p>
+<figcaption>Victron MPPT calculator result for a single 440W solar panel powering a small all-in-one flux-tower at Dookie, Victoria (Markus Loew).</figcaption>
+</figure>
+</div>
+</section>
 <section id="power-to-the-instruments-electrical-wiring" class="level3">
 <h3 class="anchored" data-anchor-id="power-to-the-instruments-electrical-wiring">Power to the instruments, electrical wiring</h3>
 <ul>
 <li>Victron wiring guidebook for solar power battery systems: “Wiring unlimited” <a href="https://www.victronenergy.com/upload/documents/Wiring-Unlimited-EN.pdf">Victron Energy Wiring unlimited (pdf)</a>, <span class="citation" data-cites="leeftink_wiring_2019">Leeftink (<a href="#ref-leeftink_wiring_2019" role="doc-biblioref">2019</a>)</span></li>
 <li>For general wiring and soldering practices, refer to <a href="https://standards.nasa.gov/standard/NASA/NASA-STD-87394">NASA Workmanship standard for crimping, interconnecting cables, harnesses and wiring</a>, <span class="citation" data-cites="nasa_workmanship_2015">NASA (<a href="#ref-nasa_workmanship_2015" role="doc-biblioref">2015</a>)</span></li>
 <li>12V, 24V, split systems</li>
-<li>terminals (Wago, DIN-mounted, fused, unfused, push-in)</li>
-<li>changing wire sizes</li>
 <li>cable connections (crimps, soldering, on-location options)</li>
 <li>earth bar (Jaycar copper bar with 3d printed feet)</li>
 <li>sensor hubs</li>
