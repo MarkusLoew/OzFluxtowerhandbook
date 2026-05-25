@@ -288,12 +288,50 @@ In case of cable faults: To check check the integrity of copper cables: [Cable t
 
 -   various no-solder splices
 
+# Terminals
+
+Wiring terminal that allows to connect a large wire with multiple small ones
+
+-   [Terminal Block connecting one large many small cables](https://au.rs-online.com/web/p/din-rail-terminal-blocks/3882861)
+
+# DIN rail terminals
+
+DIN rail terminals allow simple space saving connections for sensor and power wires. Inidividual terminals are connected via jumpers to distribute the same signal to various devices. Such wiring terminals require compatible jumpers and end caps to ensure proper connections. Mixing terminals from different manufacturers or model is not possible. Fused terminals are available that allow to isolate individual instruments in a space-saving way. Terminals can be used to aggregate SDI-12 signals from individual sensors, their power and ground connections to save room on the wiring panel of the data logger.
+
+A myriad of terminal interfaces exist. Screw-terminals and "push-in" terminals are the easiest to use on a tower. "Push-in" terminals are operated with e.g. screwdriver, pushing a button on top of the terminal in, seating the wire, and releasing the button.
+
+Some options are:
+
+Phoenix push-in terminals, wires go in from the top:
+
+-   [Phoenix fused terminal](https://au.rs-online.com/web/p/din-rail-terminal-blocks/7081627)
+
+-   [Phoenix unfused terminal](https://au.rs-online.com/web/p/din-rail-terminal-blocks/7081633)
+
+-   [Phoenix Jumper](https://au.rs-online.com/web/p/din-rail-terminal-accessories/6879792)
+
+-   [Phoenix terminal end cover](https://au.rs-online.com/web/p/din-rail-terminal-accessories/4580897)
+
+Wago push-in terminals:
+
+-   [WAGO 279 series 4-wire](https://au.rs-online.com/web/p/din-rail-terminal-blocks/0867617)
+
+Screw terminal, side-entry if the wires
+
+-   [Dinkle DK4N screw terminal](https://www.dinkle.com/en/terminal/DK4N)
+
+Locking terminals / end stop to limit movement of the terminals on the DIN-rail and to keep terminals falling off the rail:
+
+-   [WAGO 249 Series End Stop ](https://au.rs-online.com/web/p/din-rail-terminal-accessories/7960460)
+
+![Various DIN rail terminals. From left: Fused and unfused Phoenix terminals, Wago 279 series with three and four wire terminals, AB2429 terminal, Dinkle DK4N terminal and Wago 249 series locking end stop (right). Bottom: various jumpers to cross-connect terminals. (Markus Loew)](images/sensors/sensor_wiring/DIN_rail_terminals.jpg)
+
 # Plugs
 
-Plugs can be used to connect sensors to the datalogger going through a bulkhead. Plugs make sensor connections and tower setup very fast and easy on location. Plugs also minimise openings in the data logger enclosure. However, all sensor cables must be solder onto plugs, which is time-consuming.
+Plugs can be used to connect sensors to the datalogger going through a bulkhead. Plugs make sensor connections and tower setup very fast and easy on location, e.g. for a mobile flux tower. Plugs also minimise openings in the data logger enclosure. However, all sensor cables must be solder onto plugs, which is time-consuming during preparation.
 
--   [Souriau Plug, 10 pin, IP68/IP69K](https://au.rs-online.com/web/p/industrial-circular-connectors/6876541)
+-   [Souriau Plug, 10 pin, water resistant IP68/IP69K](https://au.rs-online.com/web/p/industrial-circular-connectors/6876541)
 
-![Solderin wired onto a Souriau plug for a net radiometer connection (Markus Loew)](images/sensors/sensor_wiring/Plug_for_radiometer_.jpg)
+![Soldering wires onto a Souriau plug for a net radiometer connection of mobile flux tower (Markus Loew)](images/sensors/sensor_wiring/Plug_for_radiometer_.jpg)
 
 [Home](./Home.html)

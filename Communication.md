@@ -86,6 +86,9 @@ In locations with marginal reception, it is recommended to use a modem that allo
 
 When designing the tower and instrumentation location on the tower, keep in mind that **antenna cables can only be 10 m long** before significant signal degradation occurs. Hence, the modem must be close to the antenna!
 
+### Antenna cable length limitation
+Cables between a 4G modem and a 4G antenna should not be longer than 10 m! Longer cables can cause significant (logarithmic?) signal degradation, reducing the effectiveness of the antenna setup. For tall towers, this means that the modem must be on top of the tower, out of reach of easy access, to be close to the antenna. This can be a problem for maintenance and troubleshooting. For towers up to 10 m tall, the modem can be inside the data logger and power enclosure (see e.g. Boolcoomatta tower) making it a compact and accessible setup.
+
 ### Check for available towers in your area on these websites:
 
 -   [RFNSA Radio Frequency National Site Archive](https://www.rfnsa.com.au/)
