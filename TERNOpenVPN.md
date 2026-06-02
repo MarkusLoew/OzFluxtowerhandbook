@@ -38,6 +38,67 @@ To enable communications between the modem / router and a remote machine, openVP
 
 This modem allows to upload the full *.ovpn* file provided by TERN as a single file! This allows a convenient and trouble-free, one-click configuration of the OpenVPN connection without the manual extraction of the various keys (see below).
 
+Manual OpenVPN configuration in cases when there is no full ovpn config file or when individual files are preferred: \
+Split the .ovpn file provided by TERN in sections. For that, open it in a text editor. Use text editor to create individual files for the CA, Public certificate, private key, and TA.
+
+**!!! The file extensions are important !!!** The modem only accepts "`.crt`" files for certificates, and "`.key`" files for keys!!! Otherwise the modem will not import the files!
+
+CA file:
+
+copy elements from Ovpn file after <ca>
+
+`-----BEGIN CERTIFICATE-----`
+
+`ss1jfd030fdfdfdf ....`
+
+`-----END CERTIFICATE-----`
+
+stop before </ca>
+
+Save file as e.g. `ca.crt` file
+
+Public certificate: copy elements including! <cert> and </cert>
+
+<cert>
+
+`----BEGIN----`
+
+`gfjkjfeieifn....`
+
+`----END ----`
+
+</cert>
+
+Save file as e.g. `client_1.crt` file
+
+Private Key:
+
+excluding <key>
+
+`---BEGIN Private key ----`
+
+`tjkgjdspksk....`
+
+`----END private key ----`
+
+excluding </key>
+
+Save as `client_1.key` file
+
+TA key:
+
+from <tls-auth> section, omitting <tls-auth> and </tls-auth>, copy
+
+`-----BEGIN OpenVPN Static key V1-----`
+
+`fdfdsweredd ...`
+
+`-----END OpenVPN` Static key V1-----
+
+Save as file with the name e.g. `ta.key`
+
+Remember that the suffix of the files are important.
+
 ![OpenVPN configuration interface for a Maxon Dualmax modem. The whole openVPN-file is uploaded as provided without further settings. The modem interface can be finicky about the filename. Use the shown filename if you encounter issues (Markus Loew).](images/ovpn_images/Dualmax_ovpn_file_config.png)
 
 OpenVPN on the Maxon Dualmax can also be configured manually by providing individual keys for each section and setting up the connection manually:
@@ -231,7 +292,7 @@ In-complete list of Dynamic DNS services:
 
 -   [Duck DNS](https://www.duckdns.org/) (Free)
 -   [Oracle DynDNS](https://account.dyn.com/)
--   [No-IP](https://www.noip.com/) 
+-   [No-IP](https://www.noip.com/)
 -   ...
 
 ![Options for Dynamic DNS providers in the settings of a Maxon Dualmax modem (Markus Loew)](images/ovpn_images/Dualmax_modem_available_DynamicDNS_providers.png)

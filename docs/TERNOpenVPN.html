@@ -295,6 +295,37 @@ ul.task-list li input[type="checkbox"] {
 <section id="maxon-dualmax-ma-2055" class="level3">
 <h3 class="anchored" data-anchor-id="maxon-dualmax-ma-2055">Maxon Dualmax MA-2055</h3>
 <p>This modem allows to upload the full <em>.ovpn</em> file provided by TERN as a single file! This allows a convenient and trouble-free, one-click configuration of the OpenVPN connection without the manual extraction of the various keys (see below).</p>
+<p>Manual OpenVPN configuration in cases when there is no full ovpn config file or when individual files are preferred:<br>
+Split the .ovpn file provided by TERN in sections. For that, open it in a text editor. Use text editor to create individual files for CA, Public certificate, private key and TA.</p>
+<p><strong>!!! The file extensions are important !!!</strong> The modem only accepts “<code>.crt</code>” files for certificates, and “<code>.key</code>” files for keys!!! Otherwise the modem will not import the files!</p>
+<p>CA file:</p>
+<p>copy elements from Ovpn file after <ca></ca></p>
+<p><code>-----BEGIN CERTIFICATE-----</code></p>
+<p><code>ss1jfd030fdfdfdf ....</code></p>
+<p><code>-----END CERTIFICATE-----</code></p>
+<p>stop before </p>
+<p>Save file as e.g.&nbsp;<code>ca.crt</code> file</p>
+<p>Public certifcate: copy elements including! <cert> and </cert></p>
+<p><cert></cert></p>
+<p><code>----BEGIN----</code></p>
+<p><code>gfjkjfeieifn....</code></p>
+<p><code>----END ----</code></p>
+<p></p>
+<p>Save file as e.g.&nbsp;<code>client_1.crt</code> file</p>
+<p>Private Key:</p>
+<p>excluding <key></key></p>
+<p><code>---BEGIN Private key ----</code></p>
+<p><code>tjkgjdspksk....</code></p>
+<p><code>----END private key ----</code></p>
+<p>excluding </p>
+<p>Save as <code>client_1.key</code> file</p>
+<p>TA key:</p>
+<p>from <tls-auth> section, omitting <tls-auth> and </tls-auth>, copy</tls-auth></p>
+<p><code>-----BEGIN OpenVPN Static key V1-----</code></p>
+<p><code>fdfdsweredd ...</code></p>
+<p><code>-----END OpenVPN</code> Static key V1—–</p>
+<p>Save as file with the name e.g.&nbsp;<code>ta.key</code></p>
+<p>Remember that the suffix of the files are important.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/ovpn_images/Dualmax_ovpn_file_config.png" class="img-fluid figure-img"></p>
