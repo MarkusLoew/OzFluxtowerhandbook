@@ -93,6 +93,7 @@ The CRBasic command for ftp upload is [`FTPClient()`](https://help.campbellsci.c
 
 ## sftp (ssh)
 
-*sftp* (SSH File Transfer Protocol) is a secure and more modern alternative to ftp. It encrypts both the command and data channels, providing confidentiality and integrity. Passwords are not necessarily stored in the CRBasic program. Instead, the sftp client uses private and public keys to authenticate. The keys are stored in the memory of the data logger. An introduction to setting up keys on the logger is available [from Campbell Scientific: "How to Generate SFTP Keys Easily"](https://www.campbellsci.com.au/blog/generate-sftp-keys-easily). In the program, the upload is done with `FTPClient()`, see example below.
+*sftp* (SSH File Transfer Protocol) is a secure and more modern alternative to ftp. It encrypts both the command and data channels, providing confidentiality and integrity. Passwords are not necessarily stored in the CRBasic program. Instead, the sftp client uses private and public keys to authenticate. The keys are stored in the memory of the data logger. An introduction to setting up keys on the logger is available [from Campbell Scientific: "How to Generate SFTP Keys Easily"](https://www.campbellsci.com.au/blog/generate-sftp-keys-easily). In the program, the upload is done with `FTPClient()`, see example below (to do).
 
 # http
+E.g. ICOS uses the http protocol to send data from the datalogger to a server, see [ICOS Carbon Portal http data upload](https://github.com/ICOS-Carbon-Portal/data#simplified-etc-specific-facade-api-for-data-uploads).

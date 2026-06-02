@@ -36,9 +36,23 @@ To enable communications between the modem / router and a remote machine, openVP
 
 ### Maxon Dualmax MA-2055
 
-This modem allows to upload the full *.ovpn* file provided by TERN as a single file! This allows a convenient and trouble-free, one-click configuration of the OpenVPN connection without the manual extraction of the various keys (see below).
 
-Manual OpenVPN configuration in cases when there is no full ovpn config file or when individual files are preferred: \
+
+1) Check for Firmware update:
+http://192.168.0.1/#maintenance/upgrade/upgrade
+compare firmware version with  files available at 
+http://support.maxon.com.au/download/DualMax/
+
+2a) Automatic openVPN configuration: This modem allows to upload the full *.ovpn* file provided by TERN as a single file! This allows a convenient and trouble-free, one-click configuration of the OpenVPN connection without the manual extraction of the various keys (see below).
+
+Get OpenVPn file from TERN / Gerhard Weiser
+Ovpn configuration on the modem is at 
+http://192.168.0.1/#network/vpn/client
+Enable OpenVPn client_1
+Configuration Method: File configuration
+Browse for and then import the ovpn file you received from TERN.
+
+2b) Manual OpenVPN configuration in cases when there is no full ovpn config file or when individual files are preferred: \
 Split the .ovpn file provided by TERN in sections. For that, open it in a text editor. Use text editor to create individual files for the CA, Public certificate, private key, and TA.
 
 **!!! The file extensions are important !!!** The modem only accepts "`.crt`" files for certificates, and "`.key`" files for keys!!! Otherwise the modem will not import the files!
@@ -98,6 +112,71 @@ from <tls-auth> section, omitting <tls-auth> and </tls-auth>, copy
 Save as file with the name e.g. `ta.key`
 
 Remember that the suffix of the files are important.
+
+TERN OpenVPN settings when using individual keys:
+Configure OpenVPN client
+http://192.168.0.1/#network/vpn/client
+OpenVPN client_1
+
+Enable: yes
+Protocol: UDP
+Remote IP adress: ovpn.tern.org.au
+Port: 1194
+Interface: tun
+Authentication: X.509 cert
+Global Traffic Forwarding: No
+Enable TLS authentication: Yes
+Enable NAT: yes
+Compression: None
+Link detection: 60
+Link detection timeout: 300
+Cipher: AES-26-CBC
+MTU: 1500
+Max frame Size: 1500
+Verbose level: Debug
+Expert options: none selected
+
+
+3) Network settings:
+
+http://192.168.0.1/#network/interfaces/bridge
+Bridge0
+STP: no
+IP address: set this addres to the assigned address from TERN openvpn, like 192.168.70.1
+Netmask 255.255.255.0
+IPv6 address: none
+MTU: 1500
+
+4) DHCP settings
+http://192.168.70.1/#network/dhcp/server
+Enable: yes
+Interface Bridge0
+Start Address: e.g. 192.168.70.2 (depends on your allocated IP address from TERN)
+End Address: e.g. 192.168.70.99
+Primary DNS Server 192.168.70.1 (should be .1, i.e. the modem itself)
+
+5) Set up Static IP addresses for loggers, etc:
+Same configuration page as DHCP server:
+http://192.168.70.1/#network/dhcp/server
+Assign MAC address of logger e.g. 00:d0:2c:06:81:25 to 192.168.70.100
+.100 is above the range of flexibly assigned IP addresses.
+
+Configure both ethernet ports on the modem as LAN ports. Otherwise the modem only provides the single, pre-configured LAN port.
+http://192.168.70.1/#network/interfaces/port
+select property setting to "lan" for both ports.
+
+6) Allow access to the modem from the outside world, when connected via VPN
+http://192.168.70.1/#network/firewall/security
+Allow access for services HTTP and HTTPS:
+HTTP:  Port 80  Local: yes Remote: yes
+HTTPs: Port 443 Local: yes Remote: yes
+Note on https: The modem uses a self-signed certificate for https connections. This causes security warnings on modern browsers. Accept the Risk and create an exemption to connect to the modem via https.
+
+7) Open Firewall to access to the modem configuration pages over the internet:
+Without that the modem is not reachable without connecting an ethnernet cable directly.
+http://192.168.70.1/#network/firewall/security
+Access service control section
+Tick box for HTTP in the "remote" column.
 
 ![OpenVPN configuration interface for a Maxon Dualmax modem. The whole openVPN-file is uploaded as provided without further settings. The modem interface can be finicky about the filename. Use the shown filename if you encounter issues (Markus Loew).](images/ovpn_images/Dualmax_ovpn_file_config.png)
 

@@ -331,11 +331,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="sftp-ssh" class="level2">
 <h2 class="anchored" data-anchor-id="sftp-ssh">sftp (ssh)</h2>
-<p><em>sftp</em> (SSH File Transfer Protocol) is a secure and more modern alternative to ftp. It encrypts both the command and data channels, providing confidentiality and integrity. Passwords are not necessarily stored in the CRBasic program. Instead, the sftp client uses private and public keys to authenticate. The keys are stored in the memory of the data logger. An introduction to setting up keys on the logger is available <a href="https://www.campbellsci.com.au/blog/generate-sftp-keys-easily">from Campbell Scientific: “How to Generate SFTP Keys Easily”</a>. In the program, the upload is done with <code>FTPClient()</code>, see example below.</p>
+<p><em>sftp</em> (SSH File Transfer Protocol) is a secure and more modern alternative to ftp. It encrypts both the command and data channels, providing confidentiality and integrity. Passwords are not necessarily stored in the CRBasic program. Instead, the sftp client uses private and public keys to authenticate. The keys are stored in the memory of the data logger. An introduction to setting up keys on the logger is available <a href="https://www.campbellsci.com.au/blog/generate-sftp-keys-easily">from Campbell Scientific: “How to Generate SFTP Keys Easily”</a>. In the program, the upload is done with <code>FTPClient()</code>, see example below (to do).</p>
 </section>
 </section>
 <section id="http" class="level1">
 <h1>http</h1>
+<p>E.g. ICOS uses the http protocol to send data from the datalogger to a server, see <a href="https://github.com/ICOS-Carbon-Portal/data#simplified-etc-specific-facade-api-for-data-uploads">ICOS Carbon Portal http data upload</a>.</p>
 
 
 </section>

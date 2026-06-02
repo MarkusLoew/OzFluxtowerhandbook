@@ -50,14 +50,17 @@ Recommendations for **industrial-grade modems**:
 
 -   [Maxon Quadmax MA-6060](https://rfi-sb.rfi.com.au/MA-6060) Slim-line modem, dual SIM slots, four ethernet ports, dual 4G antennas, two WiFi antennas, DIN rail on the thin side. Has built-in analog relay to devices like e.g. phenocam. Capable to connect to OpenVPN, and similar services.
 
--   [Maxon Dualmax MA-2055](https://rfi-sb.rfi.com.au/MA-2055) Flat, but slightly wide modem, dual SIM slots, two ethernet ports, dual 4G antennas, no WiFi (!), DIN rail on the wide side (not space-saving out of the box, but custom angle bracket available, see below). Capable to connect to OpenVPN, and similar services. While the dualmax modem comes with a DIN-rail mount in the back, it uses quite a bit of space in an enclosure. Here is a 3D-printed angle mount that suits the 2.54 cm grid pattern of Campbell Scientific enclosures. This allows the Dualmax modem to be mounted flat or vertical to save space ([see photo](./Sensorwiring.html#wiring-information)).\
+-   [Maxon Dualmax MA-2055](https://rfi-sb.rfi.com.au/MA-2055) Flat, but slightly wide modem, dual SIM slots, two ethernet ports, dual 4G antennas, no WiFi (!), DIN rail on the wide side (not space-saving out of the box, but custom angle bracket available, see below). Capable to connect to OpenVPN, and similar services. See [setup notes for this modem here](./TERNOpenVPN.md).\
+    While the dualmax modem comes with a DIN-rail mount on the back, it uses quite a bit of space in an enclosure. Here is a 3D-printed angle mount that suits the 2.54 cm grid pattern of Campbell Scientific enclosures. This allows the Dualmax modem to be mounted flat or vertical to save space ([see photo](./Sensorwiring.html#wiring-information)).\
     [Download modem angle bracket mount, STL 3D print file](./downloads/Dualmax_modem_panel_mount_Loew.stl "STL file download") (Markus Loew).
 
--   [Robustel R1520](https://www.rfi.com.au/R1520) Wide modem, but rather small size, dual SIM slots, four ethernet ports, dual 4G antennas, WiFi, DIN rail on the wide side. Capable to connect to OpenVPN, and similar services.
+-   [Robustel R1520](https://www.rfi.com.au/R1520) Wide modem, but rather small size, dual SIM slots, four ethernet ports, dual 4G antennas, WiFi, DIN rail on the wide side. Capable to connect to OpenVPN, and similar services. ***!!There are unresolved issues with this modem and the TERN OpenVPN encryption, unfortunately!!***
 
 -   [Comset CM685V-4](https://comset.com.au/product/4g-lte-cat-4-wifi-router-with-sim-card-slot-cm685v-4/) 4G LTE Cat 4 WiFi router with SIM card slot. Quite compact form factor. This modem operates on the powerful OpenWRT OS and provides an OpenVPN client, MiMo antenna linking, 2 ethernet ports, and WiFi. Melbourne-based company.
 
 -   [Belden Netmodule 1601](https://www.belden.com/products/industrial-networking-cybersecurity/wireless/iiot-and-industrial-routers/nb1601-lsc) Slim-line modem, dual SIM slots, four ethernet ports, dual 4G antennas, two WiFI antennas, DIN rail on the thin side. Has built-in analog relay to devices like e.g. phenocam. Capable to connect to OpenVPN, and similar services.
+
+-   [Teltonika RUT951](https://www.telcoantennas.com.au/teltonika-rut951) Dual antenna, dual SIM modem with three ethernet ports. OpenWRT-based. BEware of the Molex 4-pin power plug! See [Teltonika power options](https://www.teltonika-networks.com/products/accessories/powering-options), [4-way Molex power plug](https://www.digikey.com.au/en/products/detail/molex/0430250400/252497), and [plug accessories](https://www.digikey.com.au/en/product-highlight/m/molex-connector/micro-fit-3-interconnect-system). The DIN rail is sold separately.
 
 -   [Campbell Scientific Cell220](https://www.campbellsci.com.au/cell220) Serial modem well integrated the the Campbell Scientifc logger ecosystem. The Modem is conveniently configured via the logger program (CRBasic). This modem can interact directly with logger, and data and provides diagnostic output (like signal strength, uptime) to data tables on the logger. Modem actions can be triggered depending on logger or measurement status. No WiFi, no ethernet ports, dual antenna, single SIM card. Small form factor, highly configurable. Similar serial modems are available elsewhere too, as long as they support he full range of AT modem commands (ie Netmodule NB1600).
 
@@ -87,6 +90,7 @@ In locations with marginal reception, it is recommended to use a modem that allo
 When designing the tower and instrumentation location on the tower, keep in mind that **antenna cables can only be 10 m long** before significant signal degradation occurs. Hence, the modem must be close to the antenna!
 
 ### Antenna cable length limitation
+
 Cables between a 4G modem and a 4G antenna should not be longer than 10 m! Longer cables can cause significant (logarithmic?) signal degradation, reducing the effectiveness of the antenna setup. For tall towers, this means that the modem must be on top of the tower, out of reach of easy access, to be close to the antenna. This can be a problem for maintenance and troubleshooting. For towers up to 10 m tall, the modem can be inside the data logger and power enclosure (see e.g. Boolcoomatta tower) making it a compact and accessible setup.
 
 ### Check for available towers in your area on these websites:
