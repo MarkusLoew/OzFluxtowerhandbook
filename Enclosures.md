@@ -56,7 +56,7 @@ The simplest way to feed cables into an enclosure is a simple hole with protecti
 
 ![Campbell Scientific enclosure with simple cable access and electrical putty as seal (Markus Loew)](images/Wombat_soil_enclosure_putty_PXL_20251023_034123598.jpg)
 
-### Glands with wulti-hole inserts
+### Glands with multi-hole inserts
 
 Multi-hole inserts provide a better seal around the cables than the electrical putty shown above.
 

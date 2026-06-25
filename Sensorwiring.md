@@ -74,7 +74,7 @@ Wiring and constants.
 |-------------|---------------|-------------|
 | C1          | SDM data      | green       |
 | C2          | SDM data      | white       |
-| C3          | SDM enable    | brown       |
+| C3          | SDM enable    | red        |
 | G           | SDM reference | black       |
 | g           | SDM shield    | clear       |
 | 12V         | Power         | red         |
