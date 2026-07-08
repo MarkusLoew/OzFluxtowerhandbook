@@ -36,6 +36,8 @@ website:
           file: SDI12sensors.md
         - text: Sensor calibration
           file: Sensorcalibration.md
+        - text: Phenocam
+          file: Phenocam.md
 format:
   html:
     theme: cosmo
