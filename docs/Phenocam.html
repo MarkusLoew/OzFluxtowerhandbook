@@ -242,7 +242,8 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#campbell-scientific-ccfc" id="toc-campbell-scientific-ccfc" class="nav-link" data-scroll-target="#campbell-scientific-ccfc">Campbell Scientific CCFC</a></li>
   <li><a href="#stardot-netcam-live-2" id="toc-stardot-netcam-live-2" class="nav-link" data-scroll-target="#stardot-netcam-live-2">Stardot Netcam Live 2</a></li>
-  <li><a href="#general-or-manual-upload-of-phenocam-images-to-tern" id="toc-general-or-manual-upload-of-phenocam-images-to-tern" class="nav-link" data-scroll-target="#general-or-manual-upload-of-phenocam-images-to-tern">General or manual upload of phenocam images to TERN</a></li>
+  <li><a href="#axis-cameras" id="toc-axis-cameras" class="nav-link" data-scroll-target="#axis-cameras">AXIS cameras</a></li>
+  <li><a href="#general-settings-for-tern-and-manual-upload" id="toc-general-settings-for-tern-and-manual-upload" class="nav-link" data-scroll-target="#general-settings-for-tern-and-manual-upload">General settings for TERN and manual upload</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -298,7 +299,7 @@ div.csl-indent {
 </section>
 <section id="stardot-netcam-live-2" class="level3">
 <h3 class="anchored" data-anchor-id="stardot-netcam-live-2">Stardot Netcam Live 2</h3>
-<p>A cheaper alternative to the Campbell Scientific CCFC is the Stardot <a href="http://stardot.com/netcamlive">Netcam Live 2 camera</a> (StarDot Technologies, Buena Park, CA, USA). For camera details and a performance review of the Netcam live 2 camera compared to the previous model see <span class="citation" data-cites="javadian_continuity_2025">Javadian et al. (<a href="#ref-javadian_continuity_2025" role="doc-biblioref">2025</a>)</span>. The camera does not have a deep sleep mode, it is always on. It uses about 400 mAh of power.</p>
+<p>A cheaper alternative to the Campbell Scientific CCFC is the Stardot <a href="http://stardot.com/netcamlive">Netcam Live 2 camera</a> (StarDot Technologies, Buena Park, CA, USA). For camera details and a performance review of the Netcam live 2 camera compared to the previous model see <span class="citation" data-cites="javadian_continuity_2025">Javadian et al. (<a href="#ref-javadian_continuity_2025" role="doc-biblioref">2025</a>)</span>. The camera does not have a deep sleep mode, it is always on. It uses about 400 mAh@12V of power.</p>
 <p>The Stardot <a href="https://stardot-kb.netlify.app/kb/files/">Knowledge base for the Netcam Live2 camera is available here</a>.</p>
 <p><strong>This camera does not capture NDVI images directly, but provides separate visible light (RGB) and IR images to calculate NDVI off-camera!</strong></p>
 <p>The weatherproof housing and mounting arm must be ordered additionally: <a href="http://stardot.com/products/compact-outdoor-enclosure">Compact Outdoor Enclosure with Wall Mount Enc-Outd3</a>. This wall-mount arm needs to be modified slightly to install it on a round pole (50 mm OD pipe) on a tower. The holes in the wall mount can be opened up further. Then use e.g.&nbsp;a <a href="https://autobarn.com.au/ab/Autobarn-Category/Shop-our-Full-Range-by-Brand-at-Autobarn/Walker/Walker-Exhaust-Clamp-54mm-2-1-8in---C09P-1-/p/SP00895">C9 2⅛” exhaust clamp</a> to adapt the flat mount to a pole mount, and use a second C9 clamp with a brace for additional rigidity. A U-bolt as provided by Campbell Scientific can be used as well.</p>
@@ -310,15 +311,24 @@ div.csl-indent {
 </figure>
 </div>
 <p>For detailed setup instructions for this camera, albeit for the international phenocam network, not the TERN data portal, see <a href="https://phenocam.nau.edu/pdf/PhenoCam_Install_Instructions.pdf">Phenocam network Netcam Live 2 install instructions</a>.</p>
-<section id="software-to-upload-images-to-tern" class="level4">
-<h4 class="anchored" data-anchor-id="software-to-upload-images-to-tern">Software to upload images to TERN:</h4>
+<section id="software-to-upload-images-from-the-netcam-live2-camera-to-tern" class="level4">
+<h4 class="anchored" data-anchor-id="software-to-upload-images-from-the-netcam-live2-camera-to-tern">Software to upload images from the netcam live2 camera to TERN:</h4>
 <p>See <a href="https://github.com/MarkusLoew/netcamTERNupload">the netcamTERN upload software repository</a> regarding uploading photos to TERN automatically.</p>
 </section>
 </section>
-<section id="general-or-manual-upload-of-phenocam-images-to-tern" class="level3">
-<h3 class="anchored" data-anchor-id="general-or-manual-upload-of-phenocam-images-to-tern">General or manual upload of phenocam images to TERN</h3>
+<section id="axis-cameras" class="level3">
+<h3 class="anchored" data-anchor-id="axis-cameras">AXIS cameras</h3>
+<p>Other camera options are</p>
+<ul>
+<li><p><a href="https://www.axis.com/products/axis-p1487-le.">Axis P1487-LE Bullet camera</a> (Older model as used within the OzFlux network was <a href="https://www.axis.com/products/axis-p1467-le/support">Axis P1467-LE camera</a> )</p></li>
+<li><p><a href="https://www.axis.com/products/axis-p1488-le">Axis P1488-LE Bullet Camera</a> (Older model as used within the OzFlux network was: <a href="https://www.axis.com/products/axis-p1468-le/support">Axis P1468-LE Bullet Camera</a>)</p></li>
+</ul>
+</section>
+<section id="general-settings-for-tern-and-manual-upload" class="level3">
+<h3 class="anchored" data-anchor-id="general-settings-for-tern-and-manual-upload">General settings for TERN and manual upload</h3>
 <p>See the upload paths on UQ RDM and the TERN naming conventions at <a href="https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam" class="uri">https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam</a></p>
-<p>Both camera models above allow to change the filename of the photos to match the pattern expected by TERN.</p>
+<p>The camera models above all allow to changing the filename of the photos to match the pattern expected by TERN.</p>
+<p>Images get uploaded to UQ RDM file storage via sftp, or if the camera is within the TERN OpenVPN network, via ftp. The images get ingested into the TERN data portal within 24 hours and are then deleted from UQ RDM.</p>
 
 
 

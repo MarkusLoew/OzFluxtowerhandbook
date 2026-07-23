@@ -28,7 +28,7 @@ Ensure the camera has the latest firmware installed! E.g. Older configurations d
 
 ### Stardot Netcam Live 2
 
-A cheaper alternative to the Campbell Scientific CCFC is the Stardot [Netcam Live 2 camera](http://stardot.com/netcamlive) (StarDot Technologies, Buena Park, CA, USA). For camera details and a performance review of the Netcam live 2 camera compared to the previous model see @javadian_continuity_2025. The camera does not have a deep sleep mode, it is always on. It uses about 400 mAh of power.
+A cheaper alternative to the Campbell Scientific CCFC is the Stardot [Netcam Live 2 camera](http://stardot.com/netcamlive) (StarDot Technologies, Buena Park, CA, USA). For camera details and a performance review of the Netcam live 2 camera compared to the previous model see @javadian_continuity_2025. The camera does not have a deep sleep mode, it is always on. It uses about 400 mAh\@12V of power.
 
 The Stardot [Knowledge base for the Netcam Live2 camera is available here](https://stardot-kb.netlify.app/kb/files/).
 
@@ -42,12 +42,22 @@ Power is provided either via a 12V barrel jack, or via POE.
 
 For detailed setup instructions for this camera, albeit for the international phenocam network, not the TERN data portal, see [Phenocam network Netcam Live 2 install instructions](https://phenocam.nau.edu/pdf/PhenoCam_Install_Instructions.pdf).
 
-#### Software to upload images to TERN:
+#### Software to upload images from the netcam live2 camera to TERN:
 
 See [the netcamTERN upload software repository](https://github.com/MarkusLoew/netcamTERNupload) regarding uploading photos to TERN automatically.
 
-### General or manual upload of phenocam images to TERN
+### AXIS cameras
+
+Other camera options are
+
+-   [Axis P1487-LE Bullet camera](https://www.axis.com/products/axis-p1487-le.) (Older model as used within the OzFlux network was [Axis P1467-LE camera](https://www.axis.com/products/axis-p1467-le/support) )
+
+-   [Axis P1488-LE Bullet Camera](https://www.axis.com/products/axis-p1488-le) (Older model as used within the OzFlux network was: [Axis P1468-LE Bullet Camera](https://www.axis.com/products/axis-p1468-le/support))
+
+### General settings for TERN and manual upload
 
 See the upload paths on UQ RDM and the TERN naming conventions at <https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam>
 
-Both camera models above allow to change the filename of the photos to match the pattern expected by TERN.
+The camera models above all allow to changing the filename of the photos to match the pattern expected by TERN.
+
+Images get uploaded to UQ RDM file storage via sftp, or if the camera is within the TERN OpenVPN network, via ftp. The images get ingested into the TERN data portal within 24 hours and are then deleted from UQ RDM.
