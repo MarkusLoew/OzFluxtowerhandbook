@@ -242,7 +242,7 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#campbell-scientific-ccfc" id="toc-campbell-scientific-ccfc" class="nav-link" data-scroll-target="#campbell-scientific-ccfc">Campbell Scientific CCFC</a></li>
   <li><a href="#stardot-netcam-live-2" id="toc-stardot-netcam-live-2" class="nav-link" data-scroll-target="#stardot-netcam-live-2">Stardot Netcam Live 2</a></li>
-  <li><a href="#general-manual-upload-of-phenocam-images-to-tern" id="toc-general-manual-upload-of-phenocam-images-to-tern" class="nav-link" data-scroll-target="#general-manual-upload-of-phenocam-images-to-tern">General / manual upload of phenocam images to TERN</a></li>
+  <li><a href="#general-or-manual-upload-of-phenocam-images-to-tern" id="toc-general-or-manual-upload-of-phenocam-images-to-tern" class="nav-link" data-scroll-target="#general-or-manual-upload-of-phenocam-images-to-tern">General or manual upload of phenocam images to TERN</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -282,25 +282,43 @@ div.csl-indent {
 <section id="campbell-scientific-ccfc" class="level3">
 <h3 class="anchored" data-anchor-id="campbell-scientific-ccfc">Campbell Scientific CCFC</h3>
 <p>Across the TERN OzFlux network, many sites are equipped with the Campbell Scientific <a href="https://www.campbellsci.com/ccfc">CCFC camera</a>.</p>
-<p>NDVI images capture is possible.</p>
 <p>This camera integrates well with the TERN network as it supports ssh-based sftp file upload via ssh-keys to the TERN data portal automatically. It is the preferred model for TERN-supported flux towers.</p>
+<p>In addition to the usual visible light photo, the camera provides NDVI images directly. Or it can be set up to and visible light, NDVI, and an IR image. Default for TERN is to provide the visible light photo and the NDVI image.</p>
 <p>The CCFC uses a weatherproof ethernet cable (10 m) for communication and a separate power cable for 9 to 30 V. Settings and live images can be accessed via the built-in WiFi connection.</p>
-<p>An external 12V relay (e.g.&nbsp;using the relay available in the Maxon Quadmax modem) to wake the camera from deep sleep. The camera is fully integrated into the Campbell Scientific sensor network and can interact with dataloggers and Loggernet via Pakbus.</p>
+<p>An external relay can be used (e.g.&nbsp;using the relay available in the Maxon Quadmax modem) to wake the camera from deep sleep via a 12V trigger signal.</p>
+<p>The camera is fully integrated into the Campbell Scientific sensor network and can interact with dataloggers and Loggernet via Pakbus.</p>
 <p>To mount the camera the bracket <a href="https://www.campbellsci.com/order/p18549">18549 ACC CC Camera or PWD22 Mounting Kit</a> is required. Alternatively, Nico provides a custom, versatile mount for it (or provides the CAD drawings to manufacture it yourself).</p>
 <p>Ensure the camera has the latest firmware installed! E.g. Older configurations do not add a colour scale to the NDVI images - this makes it difficult to interpret NDVI images across the network.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/phenocam/Campbell_Scientific_CCFC_PXL_20260611_002924827.jpg" class="img-fluid figure-img"></p>
+<figcaption>Campbell Scientific CCFC phenocam on the Tumbarumba tower (Markus Loew). Custom mounting bracket provided by Nico Weigand.</figcaption>
+</figure>
+</div>
 </section>
 <section id="stardot-netcam-live-2" class="level3">
 <h3 class="anchored" data-anchor-id="stardot-netcam-live-2">Stardot Netcam Live 2</h3>
-<p>A cheaper alternative to the Campbell Scientific CCFC is the Stardot <a href="http://stardot.com/netcamlive">Netcam Live 2 camera</a> (StarDot Technologies, Buena Park, CA, USA). For camera details and a performance review of the Netcam live 2 camera see <span class="citation" data-cites="javadian_continuity_2025">Javadian et al. (<a href="#ref-javadian_continuity_2025" role="doc-biblioref">2025</a>)</span>.</p>
-<p>However: <strong>This camera does not capture NDVI images!</strong></p>
-<p>Weatherproof housing and mounting arm must be ordered additionally: <a href="http://stardot.com/products/compact-outdoor-enclosure">Compact Outdoor Enclosure with Wall Mount Enc-Outd3</a>.</p>
-<p>See the install scripts provided by ICOS (via bluegreenlabs) at <a href="https://github.com/icos-etc/phenocam_installation_tool_StardotLive2">PhenoCam Installation Tool</a> for further details regarding configuration and ssh keys.</p>
+<p>A cheaper alternative to the Campbell Scientific CCFC is the Stardot <a href="http://stardot.com/netcamlive">Netcam Live 2 camera</a> (StarDot Technologies, Buena Park, CA, USA). For camera details and a performance review of the Netcam live 2 camera compared to the previous model see <span class="citation" data-cites="javadian_continuity_2025">Javadian et al. (<a href="#ref-javadian_continuity_2025" role="doc-biblioref">2025</a>)</span>. The camera does not have a deep sleep mode, it is always on. It uses about 400 mAh of power.</p>
 <p>The Stardot <a href="https://stardot-kb.netlify.app/kb/files/">Knowledge base for the Netcam Live2 camera is available here</a>.</p>
+<p><strong>This camera does not capture NDVI images directly, but provides separate visible light (RGB) and IR images to calculate NDVI off-camera!</strong></p>
+<p>The weatherproof housing and mounting arm must be ordered additionally: <a href="http://stardot.com/products/compact-outdoor-enclosure">Compact Outdoor Enclosure with Wall Mount Enc-Outd3</a>. This wall-mount arm needs to be modified slightly to install it on a round pole (50 mm OD pipe) on a tower. The holes in the wall mount can be opened up further. Then use e.g.&nbsp;a <a href="https://autobarn.com.au/ab/Autobarn-Category/Shop-our-Full-Range-by-Brand-at-Autobarn/Walker/Walker-Exhaust-Clamp-54mm-2-1-8in---C09P-1-/p/SP00895">C9 2⅛” exhaust clamp</a> to adapt the flat mount to a pole mount, and use a second C9 clamp with a brace for additional rigidity. A U-bolt as provided by Campbell Scientific can be used as well.</p>
+<p>Power is provided either via a 12V barrel jack, or via POE.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/phenocam/Stardot_phenocam_enclosure_and_bracket.jpg" class="img-fluid figure-img"></p>
+<figcaption>Stardot Netcam Live2 enclosure test install (left) and C9 clamp (right). Photo: Markus Loew.</figcaption>
+</figure>
+</div>
+<p>For detailed setup instructions for this camera, albeit for the international phenocam network, not the TERN data portal, see <a href="https://phenocam.nau.edu/pdf/PhenoCam_Install_Instructions.pdf">Phenocam network Netcam Live 2 install instructions</a>.</p>
+<section id="software-to-upload-images-to-tern" class="level4">
+<h4 class="anchored" data-anchor-id="software-to-upload-images-to-tern">Software to upload images to TERN:</h4>
+<p>See <a href="https://github.com/MarkusLoew/netcamTERNupload">the netcamTERN upload software repository</a> regarding uploading photos to TERN automatically.</p>
 </section>
-<section id="general-manual-upload-of-phenocam-images-to-tern" class="level3">
-<h3 class="anchored" data-anchor-id="general-manual-upload-of-phenocam-images-to-tern">General / manual upload of phenocam images to TERN</h3>
+</section>
+<section id="general-or-manual-upload-of-phenocam-images-to-tern" class="level3">
+<h3 class="anchored" data-anchor-id="general-or-manual-upload-of-phenocam-images-to-tern">General or manual upload of phenocam images to TERN</h3>
 <p>See the upload paths on UQ RDM and the TERN naming conventions at <a href="https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam" class="uri">https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam</a></p>
-<p>The camera above allow to change the filename of the photos to match the pattern expected by TERN.</p>
+<p>Both camera models above allow to change the filename of the photos to match the pattern expected by TERN.</p>
 
 
 

@@ -12,9 +12,7 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 
 -   [Victron MPPT calculator](https://www.victronenergy.com/mppt-calculator): Suggests charge controller model, calculates daily yield from solar panel size and configuration, voltage, and location. This calculator includes an allowance for oversizing solar panels on a charge controller.
 
-![Victron MPPT calculator result for the Whroo flux tower Au-Whr. The tower is equipped with an EC logger system for flux and micrometeorology sensors, a separate logger system for soil-related sensors, a Heitronics surface temperature system, and a six-level storage profile system. The tower is powered by two 445 W solar panels in series feeding two LifePo4 200 Ah batteries via a MPPT100/50 charge controller. \
-The charge controller is just within the allowed threshold of 130% oversized solar panels. \
-The selected charge controller delivers only 50% (0.5C) of the possible charge current of the batteries! This low charge current is however high enough because high current, fast charging at 100A is not required at this location and fast charging would degrade the batteries faster in the long run. As the system is operated at up to 48°C air temperature, the heat-dissipation of charging at 100A would introduce unnecessary additional thermal issues too (Markus Loew).](images/power/Whroo_Victron_MPPT_calculator.png){alt="Victron MPPT calculator result for a the Whroo tower. Tower is equipped with EC logger system for flux and micrometeorology sensors, separate logger for soil-related sensors, Heitronics suface temperature system, six-level profile system. The tower is powered by two 445 W solar panels in series (Markus Loew)."}
+![Victron MPPT calculator result for a the Whroo tower. Tower is equipped with EC logger system for flux and micrometeorology sensors, separate logger for soil-related sensors, Heitronics suface temperature system, six-level profile system. The tower is powered by two 445 W solar panels in series (Markus Loew).](images/power/Whroo_Victron_MPPT_calculator.png)
 
 For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous(!) power available year-round @rebmann_icos_2018 .
 
@@ -51,7 +49,7 @@ Solar panels on tower can affect the wind flow and radiation patterns. Consider 
 
 ### Charge controllers
 
--   [Morningstar ProStar MPPT solar charge controller](https://www.morningstarcorp.com/products/prostar-mppt/). The maximum solar panel size: 300W@12V.
+-   [Morningstar ProStar MPPT solar charge controller](https://www.morningstarcorp.com/products/prostar-mppt/). The maximum solar panel size: 300W\@12V.
 -   [Victron SmartSolar Charge controllers](https://www.victronenergy.com/solar-charge-controllers) Usually, for a 400 W panel, use the 100/30A or 100/50A charge controller. Check the Victron MPPT sizing calculator to determine the [charge controller size](https://www.victronenergy.com/mppt-calculator), see below:
 
 ![Victron MPPT calculator result for a single 440W solar panel powering a small, all-in-one flux-tower at Dookie, Victoria (Markus Loew).](images/power/Victron_MPPT_calculator.png)
@@ -65,5 +63,35 @@ Solar panels on tower can affect the wind flow and radiation patterns. Consider 
 -   earth bars (e.g. Jaycar copper bar with 3d printed feet)
 -   sensor hubs
 -   glue-on cable routing
+
+### Fuses
+
+#### Circuit breakers
+
+Always check if the circuit breaker is rated for your desired voltage, e.g. 12V or 24V.
+
+12-60V rated circuit breakers, DIN-rail mountable e.g
+
+-   [Schneider Acti 9 iC60L, 10 A](https://www.se.com/au/en/product/A9F94110/miniature-circuit-breaker-mcb-acti9-ic60l-1p-10a-c-curve-15000a-iec-en-608981-25ka-iec-en-609472/)
+
+-   [General Minature circuit breakers](https://www.se.com/au/en/product-range/7556-acti9-ic60/12144422927-miniature-circuit-breakers/) (check voltage ratings!)
+
+    ![Schneider DIN-rail mounted miniature circuit breaker rated for 12 - 60V. Here used for the 24V circuit that powers all equipment on top of the Tumbarumba tower (Markus Loew).](images/power/MCB_DIN_rail.jpg)
+
+#### Fuses
+
+-   car fuses (blade or mini-blade)
+
+-   Miniblade fuses fit the Phoenix fused DIN-rail terminals (recommended option for sensors and instrumentation)
+
+-   In-line blade fuse for e.g. battery terminals from e.g. automotive applications: <https://www.jaycar.com.au/30a-32vdc-water-resistant-inline-standard-blade-fuse-holder/p/SZ2042>
+
+-   In-line glass fuse holder e.g. <https://au.rs-online.com/web/p/fuse-holders/2375259>
+
+-   ANL bolt-down fuses usually for high amperages for e.g. solar battery systems <https://www.solar4rvs.com.au/collections/circuit-breakers-fuses-holders-anl-cnn>
+
+-   MIDI bolt-down fuses (smaller than ANL fuses, do not support the very high end of amperage compared to ANL, but similar functionality in general) <https://au.rs-online.com/web/c/?searchTerm=midi+fuses>
+
+    Check amperage, bolt size, overall dimension to suit your application!
 
 [Home](./Home.html)

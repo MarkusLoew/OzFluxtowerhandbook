@@ -245,6 +245,7 @@ div.csl-indent {
   <li><a href="#solar-power-systems" id="toc-solar-power-systems" class="nav-link" data-scroll-target="#solar-power-systems">Solar power systems</a></li>
   <li><a href="#charge-controllers" id="toc-charge-controllers" class="nav-link" data-scroll-target="#charge-controllers">Charge controllers</a></li>
   <li><a href="#power-to-the-instruments-electrical-wiring" id="toc-power-to-the-instruments-electrical-wiring" class="nav-link" data-scroll-target="#power-to-the-instruments-electrical-wiring">Power to the instruments, electrical wiring</a></li>
+  <li><a href="#fuses" id="toc-fuses" class="nav-link" data-scroll-target="#fuses">Fuses</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -290,9 +291,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/power/Whroo_Victron_MPPT_calculator.png" class="img-fluid figure-img"></p>
-<figcaption>Victron MPPT calculator result for the Whroo flux tower Au-Whr. The tower is equipped with an EC logger system for flux and micrometeorology sensors, a separate logger system for soil-related sensors, a Heitronics surface temperature system, and a six-level storage profile system. The tower is powered by two 445 W solar panels in series feeding two LifePo4 200 Ah batteries via a MPPT100/50 charge controller.<br>
-The charge controller is just within the allowed threshold of 130% oversized solar panels.<br>
-The selected charge controller delivers only 50% (0.5C) of the possible charge current of the batteries! This low charge current is however high enough because high current, fast charging at 100A is not required at this location and fast charging would degrade the batteries faster in the long run. As the system is operated at up to 48°C air temperature, the heat-dissipation of charging at 100A would introduce unnecessary additional thermal issues too (Markus Loew).</figcaption>
+<figcaption>Victron MPPT calculator result for a the Whroo tower. Tower is equipped with EC logger system for flux and micrometeorology sensors, separate logger for soil-related sensors, Heitronics suface temperature system, six-level profile system. The tower is powered by two 445 W solar panels in series (Markus Loew).</figcaption>
 </figure>
 </div>
 <p>For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous(!) power available year-round <span class="citation" data-cites="rebmann_icos_2018">Rebmann et al. (<a href="#ref-rebmann_icos_2018" role="doc-biblioref">2018</a>)</span> .</p>
@@ -355,10 +354,40 @@ If a generator is used, “the effect of its exhaust gases on the trace gas meas
 <li>sensor hubs</li>
 <li>glue-on cable routing</li>
 </ul>
+</section>
+<section id="fuses" class="level3">
+<h3 class="anchored" data-anchor-id="fuses">Fuses</h3>
+<section id="circuit-breakers" class="level4">
+<h4 class="anchored" data-anchor-id="circuit-breakers">Circuit breakers</h4>
+<p>Always check if the circuit breaker is rated for your desired voltage, e.g.&nbsp;12V or 24V.</p>
+<p>12-60V rated circuit breakers, DIN-rail mountable e.g</p>
+<ul>
+<li><p><a href="https://www.se.com/au/en/product/A9F94110/miniature-circuit-breaker-mcb-acti9-ic60l-1p-10a-c-curve-15000a-iec-en-608981-25ka-iec-en-609472/">Schneider Acti 9 iC60L, 10 A</a></p></li>
+<li><p><a href="https://www.se.com/au/en/product-range/7556-acti9-ic60/12144422927-miniature-circuit-breakers/">General Minature circuit breakers</a> (check voltage ratings!)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/power/MCB_DIN_rail.jpg" class="img-fluid figure-img"></p>
+<figcaption>Schneider DIN-rail mounted miniature circuit breaker rated for 12 - 60V. Here used for the 24V circuit that powers all equipment on top of the Tumbarumba tower (Markus Loew).</figcaption>
+</figure>
+</div></li>
+</ul>
+</section>
+<section id="fuses-1" class="level4">
+<h4 class="anchored" data-anchor-id="fuses-1">Fuses</h4>
+<ul>
+<li><p>car fuses (blade or mini-blade)</p></li>
+<li><p>Miniblade fuses fit the Phoenix fused DIN-rail terminals (recommended option for sensors and instrumentation)</p></li>
+<li><p>In-line blade fuse for e.g.&nbsp;battery terminals from e.g.&nbsp;automotive applications: <a href="https://www.jaycar.com.au/30a-32vdc-water-resistant-inline-standard-blade-fuse-holder/p/SZ2042" class="uri">https://www.jaycar.com.au/30a-32vdc-water-resistant-inline-standard-blade-fuse-holder/p/SZ2042</a></p></li>
+<li><p>In-line glass fuse holder e.g.&nbsp;<a href="https://au.rs-online.com/web/p/fuse-holders/2375259" class="uri">https://au.rs-online.com/web/p/fuse-holders/2375259</a></p></li>
+<li><p>ANL bolt-down fuses usually for high amperages for e.g.&nbsp;solar battery systems <a href="https://www.solar4rvs.com.au/collections/circuit-breakers-fuses-holders-anl-cnn" class="uri">https://www.solar4rvs.com.au/collections/circuit-breakers-fuses-holders-anl-cnn</a></p></li>
+<li><p>MIDI bolt-down fuses (smaller than ANL fuses, do not support the very high end of amperage compared to ANL, but similar functionality in general) <a href="https://au.rs-online.com/web/c/?searchTerm=midi+fuses" class="uri">https://au.rs-online.com/web/c/?searchTerm=midi+fuses</a></p>
+<p>Check amperage, bolt size, overall dimension to suit your application!</p></li>
+</ul>
 <p><a href="./Home.html">Home</a></p>
 
 
 
+</section>
 </section>
 </section>
 </section>
