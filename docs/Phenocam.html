@@ -282,8 +282,9 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="phenocam-models">Phenocam models</h2>
 <section id="campbell-scientific-ccfc" class="level3">
 <h3 class="anchored" data-anchor-id="campbell-scientific-ccfc">Campbell Scientific CCFC</h3>
-<p>Across the TERN OzFlux network, many sites are equipped with the Campbell Scientific <a href="https://www.campbellsci.com/ccfc">CCFC camera</a>.</p>
-<p>This camera integrates well with the TERN network as it supports ssh-based sftp file upload via ssh-keys to the TERN data portal automatically. It is extremely well built, is its own wheaterproof housing, but rather expensive. It is the <strong>preferred model</strong> for TERN-supported flux towers.</p>
+<p>Across the TERN OzFlux network, many sites are equipped with the <a href="https://www.campbellsci.com/ccfc">Campbell Scientific CCFC camera</a>.</p>
+<p>This camera integrates well with the TERN network as it supports ssh-based sftp file upload via ssh-keys to the TERN data portal automatically. It is extremely well built, it is its own wheaterproof housing, has a deep-sleep power mode of &lt; 6 mA, large built-in file storage, and has a simple configuration web interface. But it is rather expensive.</p>
+<p>It is the <strong>preferred model</strong> for TERN-supported flux towers.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/phenocam/Campbell_Scientific_CCFC_PXL_20260611_002924827.jpg" class="img-fluid figure-img"></p>
@@ -295,10 +296,10 @@ div.csl-indent {
 <p>An external relay can be used (e.g.&nbsp;using the relay available in the Maxon Quadmax modem) to wake the camera from deep sleep via a 12V trigger signal.</p>
 <p>The camera is fully integrated into the Campbell Scientific sensor network and can interact with dataloggers and Loggernet via Pakbus.</p>
 <p>To mount the camera the bracket <a href="https://www.campbellsci.com/order/p18549">18549 ACC CC Camera or PWD22 Mounting Kit</a> is required. Alternatively, Nico provides a custom, versatile mount for the CCFC (or provides the CAD drawings to manufacture it yourself).</p>
-<p>Ensure the camera has the latest firmware installed! E.g. Older configurations do not add a colour scale to the NDVI images - this makes it difficult to interpret NDVI images across the network.</p>
+<p>Ensure the camera has the latest firmware installed! E.g. Older firmware versions do not add a colour scale to the NDVI images - this makes it difficult to interpret NDVI images across the network.</p>
 <section id="data-upload-to-tern-from-a-campbell-scientific-ccfc-camera" class="level4">
 <h4 class="anchored" data-anchor-id="data-upload-to-tern-from-a-campbell-scientific-ccfc-camera">Data upload to TERN from a Campbell Scientific CCFC camera</h4>
-<p>A generic configuration file to enable taking scheduled photos, file names, and upload setting is available for download <a href="./downloads/CCFC-9999-20260723_generic.xml">here (CCFC XML configuration file)</a>. After loading this configuration file onto the camera via <code>Settings/Advanced/Upload configuration</code> in the web interface, adjust the site name (<code>AU-Xxx</code>), WiFi access point password, etc to suit your camera.</p>
+<p>A generic configuration file to enable taking scheduled photos, file names, and upload setting is available for download <a href="./downloads/CCFC-9999-20260723_generic.xml">here (CCFC XML configuration file)</a> (Use <code>Safe link as</code> in your browser to download this XML file!). After loading this configuration file onto the camera via <code>Settings/Advanced/Upload configuration</code> in the web interface, adjust the site name (<code>AU-Xxx</code>), time zone, WiFi access point password, etc to suit your camera.</p>
 <p>The camera provides an ssh key in its web interface. Send this key to TERN (Gerhard) via keybase file transfer. Username for the upload is usually the camera name - check with Gerhard or TERN support.</p>
 </section>
 </section>

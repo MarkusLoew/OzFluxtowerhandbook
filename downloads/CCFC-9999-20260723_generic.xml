@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<device-config major-version="0" minor-version="0" model-no="CCFC" serial-no="999" timestamp="20260723 15:12:51">
+<device-config major-version="0" minor-version="0" model-no="CCFC" serial-no="9999" timestamp="20260723 15:12:51">
   <setting id="1" name="Firmware Version">
     <component name="Firmware Version" repeat-count="0">2.7.6</component>
   </setting>
   <setting id="2" name="Serial Number">
-    <component name="Serial Number" repeat-count="0">9843</component>
+    <component name="Serial Number" repeat-count="0">9999</component>
   </setting>
   <setting id="3" name="PakBus Port">
     <component name="PakBus Port" repeat-count="0">2</component>
@@ -154,7 +154,7 @@
     <component name="CCFC Power Mode" repeat-count="0">2</component>
   </setting>
   <setting id="81" name="CCFC Title">
-    <component name="CCFC Title" repeat-count="0">CCFC-1884</component>
+    <component name="CCFC Title" repeat-count="0">CCFC-9999</component>
   </setting>
   <setting id="90" name="Self Timed Capture1 Enable">
     <component name="Self Timed Capture1 Enable" repeat-count="0">1</component>

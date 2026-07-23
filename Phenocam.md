@@ -8,9 +8,11 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 
 ### Campbell Scientific CCFC
 
-Across the TERN OzFlux network, many sites are equipped with the Campbell Scientific [CCFC camera](https://www.campbellsci.com/ccfc).
+Across the TERN OzFlux network, many sites are equipped with the [Campbell Scientific CCFC camera](https://www.campbellsci.com/ccfc).
 
-This camera integrates well with the TERN network as it supports ssh-based sftp file upload via ssh-keys to the TERN data portal automatically. It is extremely well built, is its own wheaterproof housing, but rather expensive. It is the **preferred model** for TERN-supported flux towers.
+This camera integrates well with the TERN network as it supports ssh-based sftp file upload via ssh-keys to the TERN data portal automatically. It is extremely well built, it is its own wheaterproof housing, has a deep-sleep power mode of < 6 mA, large built-in file storage, and has a simple configuration web interface. But it is rather expensive.
+
+It is the **preferred model** for TERN-supported flux towers.
 
 ![Campbell Scientific CCFC phenocam on the Tumbarumba tower (Markus Loew). Custom mounting bracket provided by Nico Weigand.](images/phenocam/Campbell_Scientific_CCFC_PXL_20260611_002924827.jpg)
 
@@ -28,7 +30,7 @@ Ensure the camera has the latest firmware installed! E.g. Older firmware version
 
 #### Data upload to TERN from a Campbell Scientific CCFC camera
 
-A generic configuration file to enable taking scheduled photos, file names, and upload setting is available for download [here (CCFC XML configuration file)](./downloads/CCFC-9999-20260723_generic.xml). After loading this configuration file onto the camera via `Settings/Advanced/Upload configuration` in the web interface, adjust the site name (`AU-Xxx`), WiFi access point password, etc to suit your camera.
+A generic configuration file to enable taking scheduled photos, file names, and upload setting is available for download [here (CCFC XML configuration file)](./downloads/CCFC-9999-20260723_generic.xml) (Use `Safe link as` in your browser to download this XML file!). After loading this configuration file onto the camera via `Settings/Advanced/Upload configuration` in the web interface, adjust the site name (`AU-Xxx`), time zone, WiFi access point password, etc to suit your camera.
 
 The camera provides an ssh key in its web interface. Send this key to TERN (Gerhard) via keybase file transfer. Username for the upload is usually the camera name - check with Gerhard or TERN support.
 
