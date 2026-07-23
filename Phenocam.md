@@ -10,9 +10,11 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 
 Across the TERN OzFlux network, many sites are equipped with the Campbell Scientific [CCFC camera](https://www.campbellsci.com/ccfc).
 
-This camera integrates well with the TERN network as it supports ssh-based sftp file upload via ssh-keys to the TERN data portal automatically. It is the preferred model for TERN-supported flux towers.
+This camera integrates well with the TERN network as it supports ssh-based sftp file upload via ssh-keys to the TERN data portal automatically. It is extremely well built, is its own wheaterproof housing, but rather expensive. It is the **preferred model** for TERN-supported flux towers.
 
-In addition to the usual visible light photo, the camera provides NDVI images directly. Or it can be set up to and visible light, NDVI, and an IR image. Default for TERN is to provide the visible light photo and the NDVI image.
+![Campbell Scientific CCFC phenocam on the Tumbarumba tower (Markus Loew). Custom mounting bracket provided by Nico Weigand.](images/phenocam/Campbell_Scientific_CCFC_PXL_20260611_002924827.jpg)
+
+In addition to the usual visible light photo, the camera provides NDVI images directly. Or it can be set up to take visible light, NDVI, and an IR image. Default for TERN for this camera is to provide the visible light photo and the NDVI image.
 
 The CCFC uses a weatherproof ethernet cable (10 m) for communication and a separate power cable for 9 to 30 V. Settings and live images can be accessed via the built-in WiFi connection.
 
@@ -20,11 +22,16 @@ An external relay can be used (e.g. using the relay available in the Maxon Quadm
 
 The camera is fully integrated into the Campbell Scientific sensor network and can interact with dataloggers and Loggernet via Pakbus.
 
-To mount the camera the bracket [18549 ACC CC Camera or PWD22 Mounting Kit](https://www.campbellsci.com/order/p18549) is required. Alternatively, Nico provides a custom, versatile mount for it (or provides the CAD drawings to manufacture it yourself).
+To mount the camera the bracket [18549 ACC CC Camera or PWD22 Mounting Kit](https://www.campbellsci.com/order/p18549) is required. Alternatively, Nico provides a custom, versatile mount for the CCFC (or provides the CAD drawings to manufacture it yourself).
 
-Ensure the camera has the latest firmware installed! E.g. Older configurations do not add a colour scale to the NDVI images - this makes it difficult to interpret NDVI images across the network.
+Ensure the camera has the latest firmware installed! E.g. Older firmware versions do not add a colour scale to the NDVI images - this makes it difficult to interpret NDVI images across the network.
 
-![Campbell Scientific CCFC phenocam on the Tumbarumba tower (Markus Loew). Custom mounting bracket provided by Nico Weigand.](images/phenocam/Campbell_Scientific_CCFC_PXL_20260611_002924827.jpg)
+#### Data upload to TERN from a Campbell Scientific CCFC camera
+
+A generic configuration file to enable taking scheduled photos, file names, and upload setting is available for download [here (CCFC XML configuration file)](./downloads/CCFC-9999-20260723_generic.xml). After loading this configuration file onto the camera via `Settings/Advanced/Upload configuration` in the web interface, adjust the site name (`AU-Xxx`), WiFi access point password, etc to suit your camera.
+
+The camera provides an ssh key in its web interface. Send this key to TERN (Gerhard) via keybase file transfer. Username for the upload is usually the camera name - check with Gerhard or TERN support.
+
 
 ### Stardot Netcam Live 2
 

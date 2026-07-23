@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device-config major-version="0" minor-version="0" model-no="CCFC" serial-no="999" timestamp="20260723 15:12:51">
+  <setting id="1" name="Firmware Version">
+    <component name="Firmware Version" repeat-count="0">2.7.6</component>
+  </setting>
+  <setting id="2" name="Serial Number">
+    <component name="Serial Number" repeat-count="0">9843</component>
+  </setting>
+  <setting id="3" name="PakBus Port">
+    <component name="PakBus Port" repeat-count="0">2</component>
+  </setting>
+  <setting id="4" name="PakBus Address">
+    <component name="PakBus Address" repeat-count="0">55</component>
+  </setting>
+  <setting id="5" name="PakBus Destination Address">
+    <component name="PakBus Destination Address" repeat-count="0">1</component>
+  </setting>
+  <setting id="6" name="Extra Communications Delay">
+    <component name="Extra Communications Delay" repeat-count="0">1</component>
+  </setting>
+  <setting id="7" name="PakBus Security Code">
+    <component name="PakBus Security Code" repeat-count="0">0</component>
+  </setting>
+  <setting id="8" name="RS-485 BAUD Rate">
+    <component name="RS-485 BAUD Rate" repeat-count="0">0</component>
+  </setting>
+  <setting id="9" name="RS-232 BAUD Rate">
+    <component name="RS-232 BAUD Rate" repeat-count="0">0</component>
+  </setting>
+  <setting id="10" name="Automatic Time Sync">
+    <component name="Automatic Time Sync" repeat-count="0">2</component>
+  </setting>
+  <setting id="11" name="Time Sync Threshold">
+    <component name="Time Sync Threshold" repeat-count="0">5</component>
+  </setting>
+  <setting id="12" name="PakBus Neighbour Address">
+    <component name="PakBus Neighbour Address" repeat-count="0">0</component>
+  </setting>
+  <setting id="20" name="DHCP/Static IP">
+    <component name="DHCP/Static IP" repeat-count="0">1</component>
+  </setting>
+  <setting id="21" name="Static IP Address">
+    <component name="Static IP Address" repeat-count="0">192.168.1.90</component>
+  </setting>
+  <setting id="22" name="Network Mask">
+    <component name="Network Mask" repeat-count="0">255.255.255.0</component>
+  </setting>
+  <setting id="23" name="Default Gateway">
+    <component name="Default Gateway" repeat-count="0">192.168.1.1</component>
+  </setting>
+  <setting id="24" name="Primary Name Server">
+    <component name="Primary Name Server" repeat-count="0">192.168.1.1</component>
+  </setting>
+  <setting id="25" name="HTTP Port">
+    <component name="HTTP Port" repeat-count="0">80</component>
+  </setting>
+  <setting id="26" name="Ethernet Power Mode">
+    <component name="Ethernet Power Mode" repeat-count="0">0</component>
+  </setting>
+  <setting id="30" name="FTP Server#1 Address">
+    <component name="FTP Server#1 Address" repeat-count="0">192.168.13.50</component>
+  </setting>
+  <setting id="31" name="FTP #1 Port">
+    <component name="FTP #1 Port" repeat-count="0">21</component>
+  </setting>
+  <setting id="32" name="FTP #1 User Name">
+    <component name="FTP #1 User Name" repeat-count="0">CCFC</component>
+  </setting>
+  <setting id="33" name="FTP #1 User Password">
+    <component name="FTP #1 User Password" repeat-count="0">EPCN</component>
+  </setting>
+  <setting id="34" name="FTP #1 Dest. File Path">
+    <component name="FTP #1 Dest. File Path" repeat-count="0">/CRD/</component>
+  </setting>
+  <setting id="35" name="FTP Server#2 Address">
+    <component name="FTP Server#2 Address" repeat-count="0"/>
+  </setting>
+  <setting id="36" name="FTP #2 Port">
+    <component name="FTP #2 Port" repeat-count="0">21</component>
+  </setting>
+  <setting id="37" name="FTP #2 User Name">
+    <component name="FTP #2 User Name" repeat-count="0"/>
+  </setting>
+  <setting id="38" name="FTP #2 User Password">
+    <component name="FTP #2 User Password" repeat-count="0"/>
+  </setting>
+  <setting id="39" name="FTP #2 Dest. File Path">
+    <component name="FTP #2 Dest. File Path" repeat-count="0"/>
+  </setting>
+  <setting id="40" name="FTP #1 Transfer Mode">
+    <component name="FTP #1 Transfer Mode" repeat-count="0">1</component>
+  </setting>
+  <setting id="41" name="FTP #2 Transfer Mode">
+    <component name="FTP #2 Transfer Mode" repeat-count="0">1</component>
+  </setting>
+  <setting id="44" name="FTP #1 Title">
+    <component name="FTP #1 Title" repeat-count="0">CR3000</component>
+  </setting>
+  <setting id="45" name="FTP #2 Title">
+    <component name="FTP #2 Title" repeat-count="0"/>
+  </setting>
+  <setting id="50" name="EMAIL Server #1 Authentication">
+    <component name="EMAIL Server #1 Authentication" repeat-count="0">0</component>
+  </setting>
+  <setting id="51" name="EMAIL Server #1 Address">
+    <component name="EMAIL Server #1 Address" repeat-count="0"/>
+  </setting>
+  <setting id="52" name="EMAIL #1 Account Name">
+    <component name="EMAIL #1 Account Name" repeat-count="0"/>
+  </setting>
+  <setting id="53" name="EMAIL #1 Account Password">
+    <component name="EMAIL #1 Account Password" repeat-count="0"/>
+  </setting>
+  <setting id="54" name="Dest. Email #1 Address">
+    <component name="Dest. Email #1 Address" repeat-count="0"/>
+  </setting>
+  <setting id="55" name="Email #1 Sender Address">
+    <component name="Email #1 Sender Address" repeat-count="0"/>
+  </setting>
+  <setting id="57" name="EMAIL Server #2 Authentication">
+    <component name="EMAIL Server #2 Authentication" repeat-count="0">0</component>
+  </setting>
+  <setting id="58" name="EMAIL Server #2 Address">
+    <component name="EMAIL Server #2 Address" repeat-count="0"/>
+  </setting>
+  <setting id="59" name="EMAIL #2 Account Name">
+    <component name="EMAIL #2 Account Name" repeat-count="0"/>
+  </setting>
+  <setting id="60" name="EMAIL #2 Account Password">
+    <component name="EMAIL #2 Account Password" repeat-count="0"/>
+  </setting>
+  <setting id="61" name="Dest. Email #2 Address">
+    <component name="Dest. Email #2 Address" repeat-count="0"/>
+  </setting>
+  <setting id="62" name="Email #2 Sender Address">
+    <component name="Email #2 Sender Address" repeat-count="0"/>
+  </setting>
+  <setting id="64" name="Email #1 Title">
+    <component name="Email #1 Title" repeat-count="0"/>
+  </setting>
+  <setting id="65" name="Email #2 Title">
+    <component name="Email #2 Title" repeat-count="0"/>
+  </setting>
+  <setting id="70" name="SNTP Address">
+    <component name="SNTP Address" repeat-count="0">pool.ntp.org</component>
+  </setting>
+  <setting id="71" name="TIME ZONE">
+    <component name="TIME ZONE" repeat-count="0">10</component>
+  </setting>
+  <setting id="72" name="Auto Daylight Time Adjust">
+    <component name="Auto Daylight Time Adjust" repeat-count="0">0</component>
+  </setting>
+  <setting id="80" name="CCFC Power Mode">
+    <component name="CCFC Power Mode" repeat-count="0">2</component>
+  </setting>
+  <setting id="81" name="CCFC Title">
+    <component name="CCFC Title" repeat-count="0">CCFC-1884</component>
+  </setting>
+  <setting id="90" name="Self Timed Capture1 Enable">
+    <component name="Self Timed Capture1 Enable" repeat-count="0">1</component>
+  </setting>
+  <setting id="91" name="Start Minutes STC1">
+    <component name="Start Minutes STC1" repeat-count="0">600</component>
+  </setting>
+  <setting id="92" name="Stop Minutes STC1">
+    <component name="Stop Minutes STC1" repeat-count="0">850</component>
+  </setting>
+  <setting id="93" name="Capture Interval STC1">
+    <component name="Capture Interval STC1" repeat-count="0">30</component>
+  </setting>
+  <setting id="94" name="Still Image Capture STC1">
+    <component name="Still Image Capture STC1" repeat-count="0">1</component>
+  </setting>
+  <setting id="95" name="Number of Stills STC1">
+    <component name="Number of Stills STC1" repeat-count="0">1</component>
+  </setting>
+  <setting id="96" name="Image Time Spacing STC1">
+    <component name="Image Time Spacing STC1" repeat-count="0">1</component>
+  </setting>
+  <setting id="97" name="Still Capture to Memory Card STC1">
+    <component name="Still Capture to Memory Card STC1" repeat-count="0">1</component>
+  </setting>
+  <setting id="98" name="Still Max. Memory Size STC1">
+    <component name="Still Max. Memory Size STC1" repeat-count="0">14000</component>
+  </setting>
+  <setting id="99" name="Still Management Options STC1">
+    <component name="Still Management Options STC1" repeat-count="0">1</component>
+  </setting>
+  <setting id="100" name="Still Image Settings - Card STC1">
+    <component name="Still Image Settings - Card STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="101" name="Still Sub Folder Options STC1">
+    <component name="Still Sub Folder Options STC1" repeat-count="0">1</component>
+  </setting>
+  <setting id="102" name="Send Still Via Email STC1">
+    <component name="Send Still Via Email STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="103" name="Still Image Settings EMAIL STC1">
+    <component name="Still Image Settings EMAIL STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="104" name="Send Still Via FTP STC1">
+    <component name="Send Still Via FTP STC1" repeat-count="0">1</component>
+  </setting>
+  <setting id="105" name="Still Image Settings FTP STC1">
+    <component name="Still Image Settings FTP STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="106" name="Send Still Via PakBus STC1">
+    <component name="Send Still Via PakBus STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="107" name="Still Image Settings PakBus STC1">
+    <component name="Still Image Settings PakBus STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="108" name="Video Capture STC1">
+    <component name="Video Capture STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="109" name="Video Settings STC1">
+    <component name="Video Settings STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="110" name="Video Duration - Seconds STC1">
+    <component name="Video Duration - Seconds STC1" repeat-count="0">1</component>
+  </setting>
+  <setting id="111" name="Video Capture to Memory Card STC1">
+    <component name="Video Capture to Memory Card STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="112" name="Video Max. Memory Size STC1">
+    <component name="Video Max. Memory Size STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="113" name="Video Management Options STC1">
+    <component name="Video Management Options STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="114" name="Video Sub Folder Options STC1">
+    <component name="Video Sub Folder Options STC1" repeat-count="0">2</component>
+  </setting>
+  <setting id="115" name="Send Video Via Email STC1">
+    <component name="Send Video Via Email STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="116" name="Send Video Via FTP STC1">
+    <component name="Send Video Via FTP STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="117" name="Send Video Via PakBus STC1">
+    <component name="Send Video Via PakBus STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="118" name="Lens Positions STC1">
+    <component name="Lens Positions STC1" repeat-count="0">1</component>
+  </setting>
+  <setting id="119" name="STC1 Title">
+    <component name="STC1 Title" repeat-count="0">10:00-14:00 every 30 min</component>
+  </setting>
+  <setting id="130" name="Self Timed Capture2 Enable">
+    <component name="Self Timed Capture2 Enable" repeat-count="0">0</component>
+  </setting>
+  <setting id="131" name="Start Minutes STC2">
+    <component name="Start Minutes STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="132" name="Stop Minutes STC2">
+    <component name="Stop Minutes STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="133" name="Capture Interval STC2">
+    <component name="Capture Interval STC2" repeat-count="0">1</component>
+  </setting>
+  <setting id="134" name="Still Image Capture STC2">
+    <component name="Still Image Capture STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="135" name="Number of Stills STC2">
+    <component name="Number of Stills STC2" repeat-count="0">1</component>
+  </setting>
+  <setting id="136" name="Image Time Spacing STC2">
+    <component name="Image Time Spacing STC2" repeat-count="0">1</component>
+  </setting>
+  <setting id="137" name="Still Capture to Memory Card STC2">
+    <component name="Still Capture to Memory Card STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="138" name="Still Max. Memory Size STC2">
+    <component name="Still Max. Memory Size STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="139" name="Still Management Options STC2">
+    <component name="Still Management Options STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="140" name="Still Image Settings - Card STC2">
+    <component name="Still Image Settings - Card STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="141" name="Still Sub Folder Options STC2">
+    <component name="Still Sub Folder Options STC2" repeat-count="0">2</component>
+  </setting>
+  <setting id="142" name="Send Still Via Email STC2">
+    <component name="Send Still Via Email STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="143" name="Still Image Settings EMAIL STC2">
+    <component name="Still Image Settings EMAIL STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="144" name="Send Still Via FTP STC2">
+    <component name="Send Still Via FTP STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="145" name="Still Image Settings FTP STC2">
+    <component name="Still Image Settings FTP STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="146" name="Send Still Via PakBus STC2">
+    <component name="Send Still Via PakBus STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="147" name="Still Image Settings PakBus STC2">
+    <component name="Still Image Settings PakBus STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="148" name="Video Capture STC2">
+    <component name="Video Capture STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="149" name="Video Settings STC2">
+    <component name="Video Settings STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="150" name="Video Duration - Seconds STC2">
+    <component name="Video Duration - Seconds STC2" repeat-count="0">1</component>
+  </setting>
+  <setting id="151" name="Video Capture to Memory Card STC2">
+    <component name="Video Capture to Memory Card STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="152" name="Video Max. Memory Size STC2">
+    <component name="Video Max. Memory Size STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="153" name="Video Management Options STC2">
+    <component name="Video Management Options STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="154" name="Video Sub Folder Options STC2">
+    <component name="Video Sub Folder Options STC2" repeat-count="0">2</component>
+  </setting>
+  <setting id="155" name="Send Video Via Email STC2">
+    <component name="Send Video Via Email STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="156" name="Send Video Via FTP STC2">
+    <component name="Send Video Via FTP STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="157" name="Send Video Via PakBus STC2">
+    <component name="Send Video Via PakBus STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="158" name="Lens Positions STC2">
+    <component name="Lens Positions STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="159" name="STC2 Title">
+    <component name="STC2 Title" repeat-count="0"/>
+  </setting>
+  <setting id="170" name="External Trigger Enable">
+    <component name="External Trigger Enable" repeat-count="0">0</component>
+  </setting>
+  <setting id="171" name="Still Image Capture EXT TRIG">
+    <component name="Still Image Capture EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="172" name="Number of Stills EXT TRIG">
+    <component name="Number of Stills EXT TRIG" repeat-count="0">1</component>
+  </setting>
+  <setting id="173" name="Image Time Spacing EXT TRIG">
+    <component name="Image Time Spacing EXT TRIG" repeat-count="0">1</component>
+  </setting>
+  <setting id="174" name="Still Capture to Memory Card EXT TRIG">
+    <component name="Still Capture to Memory Card EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="175" name="Still Max. Memory Size EXT TRIG">
+    <component name="Still Max. Memory Size EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="176" name="Still Management Options EXT TRIG">
+    <component name="Still Management Options EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="177" name="Still Image Settings - Card EXT TRIG">
+    <component name="Still Image Settings - Card EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="178" name="Still Sub Folder Options EXT TRIG">
+    <component name="Still Sub Folder Options EXT TRIG" repeat-count="0">2</component>
+  </setting>
+  <setting id="179" name="Send Still Via Email EXT TRIG">
+    <component name="Send Still Via Email EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="180" name="Still Image Settings EMAIL EXT TRIG">
+    <component name="Still Image Settings EMAIL EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="181" name="Send Still Via FTP EXT TRIG">
+    <component name="Send Still Via FTP EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="182" name="Still Image Settings FTP EXT TRIG">
+    <component name="Still Image Settings FTP EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="183" name="Send Still Via PakBus EXT TRIG">
+    <component name="Send Still Via PakBus EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="184" name="Still Image Settings PakBus EXT TRIG">
+    <component name="Still Image Settings PakBus EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="185" name="Video Capture EXT TRIG">
+    <component name="Video Capture EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="186" name="Video Settings EXT TRIG">
+    <component name="Video Settings EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="187" name="Video Duration - Seconds EXT TRIG">
+    <component name="Video Duration - Seconds EXT TRIG" repeat-count="0">1</component>
+  </setting>
+  <setting id="188" name="Video Capture to Memory Card EXT TRIG">
+    <component name="Video Capture to Memory Card EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="189" name="Video Max. Memory Size EXT TRIG">
+    <component name="Video Max. Memory Size EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="190" name="Video Management Options EXT TRIG">
+    <component name="Video Management Options EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="191" name="Video Sub Folder Options EXT TRIG">
+    <component name="Video Sub Folder Options EXT TRIG" repeat-count="0">2</component>
+  </setting>
+  <setting id="192" name="Send Video Via Email EXT TRIG">
+    <component name="Send Video Via Email EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="193" name="Send Video Via FTP EXT TRIG">
+    <component name="Send Video Via FTP EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="194" name="Send Video Via PakBus EXT TRIG">
+    <component name="Send Video Via PakBus EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="195" name="Lens Positions EXT TRIG">
+    <component name="Lens Positions EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="196" name="ETC Title">
+    <component name="ETC Title" repeat-count="0"/>
+  </setting>
+  <setting id="200" name="Motion Detect Enable">
+    <component name="Motion Detect Enable" repeat-count="0">0</component>
+  </setting>
+  <setting id="201" name="Motion Sensitivity Level">
+    <component name="Motion Sensitivity Level" repeat-count="0">1</component>
+  </setting>
+  <setting id="202" name="Start Minutes Motion">
+    <component name="Start Minutes Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="203" name="Stop Minutes Motion">
+    <component name="Stop Minutes Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="204" name="Still Image Capture Motion">
+    <component name="Still Image Capture Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="205" name="Number of Stills Motion">
+    <component name="Number of Stills Motion" repeat-count="0">1</component>
+  </setting>
+  <setting id="206" name="Image Time Spacing Motion">
+    <component name="Image Time Spacing Motion" repeat-count="0">1</component>
+  </setting>
+  <setting id="207" name="Still Capture to Memory Card Motion">
+    <component name="Still Capture to Memory Card Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="208" name="Still Max. Memory Size Motion">
+    <component name="Still Max. Memory Size Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="209" name="Still Management Options Motion">
+    <component name="Still Management Options Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="210" name="Still Image Settings - Card Motion">
+    <component name="Still Image Settings - Card Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="211" name="Still Sub Folder Options Motion">
+    <component name="Still Sub Folder Options Motion" repeat-count="0">2</component>
+  </setting>
+  <setting id="212" name="Send Still Via Email Motion">
+    <component name="Send Still Via Email Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="213" name="Still Image Settings EMAIL Motion">
+    <component name="Still Image Settings EMAIL Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="214" name="Send Still Via FTP Motion">
+    <component name="Send Still Via FTP Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="215" name="Still Image Settings FTP Motion">
+    <component name="Still Image Settings FTP Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="216" name="Send Still Via PakBus Motion">
+    <component name="Send Still Via PakBus Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="217" name="Still Image Settings PakBus Motion">
+    <component name="Still Image Settings PakBus Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="218" name="Video Capture Motion">
+    <component name="Video Capture Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="219" name="Video Settings Motion">
+    <component name="Video Settings Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="220" name="Video Duration - Seconds Motion">
+    <component name="Video Duration - Seconds Motion" repeat-count="0">1</component>
+  </setting>
+  <setting id="221" name="Video Capture to Memory Card Motion">
+    <component name="Video Capture to Memory Card Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="222" name="Video Max. Memory Size Motion">
+    <component name="Video Max. Memory Size Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="223" name="Video Management Options Motion">
+    <component name="Video Management Options Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="224" name="Video Sub Folder Options Motion">
+    <component name="Video Sub Folder Options Motion" repeat-count="0">2</component>
+  </setting>
+  <setting id="225" name="Send Video Via Email Motion">
+    <component name="Send Video Via Email Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="226" name="Send Video Via FTP Motion">
+    <component name="Send Video Via FTP Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="227" name="Send Video Via PakBus Motion">
+    <component name="Send Video Via PakBus Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="228" name="Lens Positions EXT Motion">
+    <component name="Lens Positions EXT Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="229" name="MDC Title">
+    <component name="MDC Title" repeat-count="0"/>
+  </setting>
+  <setting id="240" name="Banner Position VS1">
+    <component name="Banner Position VS1" repeat-count="0">1</component>
+  </setting>
+  <setting id="241" name="Enable Banner Text VS1">
+    <component name="Enable Banner Text VS1" repeat-count="0">0</component>
+  </setting>
+  <setting id="242" name="Banner Text VS1">
+    <component name="Banner Text VS1" repeat-count="0"/>
+  </setting>
+  <setting id="243" name="Time Stamp on Banner VS1">
+    <component name="Time Stamp on Banner VS1" repeat-count="0">0</component>
+  </setting>
+  <setting id="244" name="File Name VS1">
+    <component name="File Name VS1" repeat-count="0">Video1</component>
+  </setting>
+  <setting id="245" name="File Count Type VS1">
+    <component name="File Count Type VS1" repeat-count="0">1</component>
+  </setting>
+  <setting id="246" name="Starting File Counter VS1">
+    <component name="Starting File Counter VS1" repeat-count="0">1</component>
+  </setting>
+  <setting id="247" name="Video Resolution VS1">
+    <component name="Video Resolution VS1" repeat-count="0">1</component>
+  </setting>
+  <setting id="248" name="Video Frame Rate VS1">
+    <component name="Video Frame Rate VS1" repeat-count="0">0</component>
+  </setting>
+  <setting id="249" name="Title VS1">
+    <component name="Title VS1" repeat-count="0">Default (High Resolution)</component>
+  </setting>
+  <setting id="260" name="Banner Position VS2">
+    <component name="Banner Position VS2" repeat-count="0">1</component>
+  </setting>
+  <setting id="261" name="Enable Banner Text VS2">
+    <component name="Enable Banner Text VS2" repeat-count="0">0</component>
+  </setting>
+  <setting id="262" name="Banner Text VS2">
+    <component name="Banner Text VS2" repeat-count="0"/>
+  </setting>
+  <setting id="263" name="Time Stamp on Banner VS2">
+    <component name="Time Stamp on Banner VS2" repeat-count="0">0</component>
+  </setting>
+  <setting id="264" name="File Name VS2">
+    <component name="File Name VS2" repeat-count="0">Video1</component>
+  </setting>
+  <setting id="265" name="File Count Type VS2">
+    <component name="File Count Type VS2" repeat-count="0">1</component>
+  </setting>
+  <setting id="266" name="Starting File Counter VS2">
+    <component name="Starting File Counter VS2" repeat-count="0">1</component>
+  </setting>
+  <setting id="267" name="Video Resolution VS2">
+    <component name="Video Resolution VS2" repeat-count="0">0</component>
+  </setting>
+  <setting id="268" name="Video Frame Rate VS2">
+    <component name="Video Frame Rate VS2" repeat-count="0">0</component>
+  </setting>
+  <setting id="269" name="Title VS2">
+    <component name="Title VS2" repeat-count="0">Default (Low Resolution)</component>
+  </setting>
+  <setting id="280" name="Resolution SS1">
+    <component name="Resolution SS1" repeat-count="0">7</component>
+  </setting>
+  <setting id="281" name="Banner Position SS1">
+    <component name="Banner Position SS1" repeat-count="0">1</component>
+  </setting>
+  <setting id="282" name="Enable Banner Text SS1">
+    <component name="Enable Banner Text SS1" repeat-count="0">1</component>
+  </setting>
+  <setting id="283" name="Banner Text SS1">
+    <component name="Banner Text SS1" repeat-count="0">AU-Xxx_overstorey_oblique</component>
+  </setting>
+  <setting id="284" name="Time Stamp on Banner SS1">
+    <component name="Time Stamp on Banner SS1" repeat-count="0">1</component>
+  </setting>
+  <setting id="285" name="Serial Number on Banner SS1">
+    <component name="Serial Number on Banner SS1" repeat-count="0">1</component>
+  </setting>
+  <setting id="286" name="File Name SS1">
+    <component name="File Name SS1" repeat-count="0">AU-Xxx_overstorey_oblique</component>
+  </setting>
+  <setting id="288" name="File Count Type SS1">
+    <component name="File Count Type SS1" repeat-count="0">2</component>
+  </setting>
+  <setting id="289" name="Starting File Counter SS1">
+    <component name="Starting File Counter SS1" repeat-count="0">1</component>
+  </setting>
+  <setting id="291" name="JPEG Compression Setting SS1">
+    <component name="JPEG Compression Setting SS1" repeat-count="0">2</component>
+  </setting>
+  <setting id="292" name="Title SS1">
+    <component name="Title SS1" repeat-count="0">2592x1944 RGB + NDVI</component>
+  </setting>
+  <setting id="300" name="Resolution SS2">
+    <component name="Resolution SS2" repeat-count="0">7</component>
+  </setting>
+  <setting id="301" name="Banner Position SS2">
+    <component name="Banner Position SS2" repeat-count="0">1</component>
+  </setting>
+  <setting id="302" name="Enable Banner Text SS2">
+    <component name="Enable Banner Text SS2" repeat-count="0">0</component>
+  </setting>
+  <setting id="303" name="Banner Text SS2">
+    <component name="Banner Text SS2" repeat-count="0">AU-Xxx_overstorey_oblique</component>
+  </setting>
+  <setting id="304" name="Time Stamp on Banner SS2">
+    <component name="Time Stamp on Banner SS2" repeat-count="0">1</component>
+  </setting>
+  <setting id="305" name="Serial Number on Banner SS2">
+    <component name="Serial Number on Banner SS2" repeat-count="0">1</component>
+  </setting>
+  <setting id="306" name="File Name SS2">
+    <component name="File Name SS2" repeat-count="0">Balls</component>
+  </setting>
+  <setting id="308" name="File Count Type SS2">
+    <component name="File Count Type SS2" repeat-count="0">2</component>
+  </setting>
+  <setting id="309" name="Starting File Counter SS2">
+    <component name="Starting File Counter SS2" repeat-count="0">1</component>
+  </setting>
+  <setting id="311" name="JPEG Compression Setting SS2">
+    <component name="JPEG Compression Setting SS2" repeat-count="0">2</component>
+  </setting>
+  <setting id="312" name="Title SS2">
+    <component name="Title SS2" repeat-count="0">2592x1944 RGB + NDVI_3</component>
+  </setting>
+  <setting id="320" name="Web Security">
+    <component name="Web Security" repeat-count="0">0</component>
+  </setting>
+  <setting id="321" name="Name User 1">
+    <component name="Name User 1" repeat-count="0">admin</component>
+  </setting>
+  <setting id="322" name="Name User 2">
+    <component name="Name User 2" repeat-count="0"/>
+  </setting>
+  <setting id="323" name="Name User 3">
+    <component name="Name User 3" repeat-count="0"/>
+  </setting>
+  <setting id="324" name="Name User 4">
+    <component name="Name User 4" repeat-count="0"/>
+  </setting>
+  <setting id="325" name="Name User 5">
+    <component name="Name User 5" repeat-count="0"/>
+  </setting>
+  <setting id="326" name="Name User 6">
+    <component name="Name User 6" repeat-count="0"/>
+  </setting>
+  <setting id="327" name="Name User 7">
+    <component name="Name User 7" repeat-count="0"/>
+  </setting>
+  <setting id="328" name="Name User 8">
+    <component name="Name User 8" repeat-count="0"/>
+  </setting>
+  <setting id="329" name="Name User 9">
+    <component name="Name User 9" repeat-count="0"/>
+  </setting>
+  <setting id="330" name="Name User 10">
+    <component name="Name User 10" repeat-count="0"/>
+  </setting>
+  <setting id="331" name="Password User 1">
+    <component name="Password User 1" repeat-count="0">9999</component>
+  </setting>
+  <setting id="332" name="Password User 2">
+    <component name="Password User 2" repeat-count="0"/>
+  </setting>
+  <setting id="333" name="Password User 3">
+    <component name="Password User 3" repeat-count="0"/>
+  </setting>
+  <setting id="334" name="Password User 4">
+    <component name="Password User 4" repeat-count="0"/>
+  </setting>
+  <setting id="335" name="Password User 5">
+    <component name="Password User 5" repeat-count="0"/>
+  </setting>
+  <setting id="336" name="Password User 6">
+    <component name="Password User 6" repeat-count="0"/>
+  </setting>
+  <setting id="337" name="Password User 7">
+    <component name="Password User 7" repeat-count="0"/>
+  </setting>
+  <setting id="338" name="Password User 8">
+    <component name="Password User 8" repeat-count="0"/>
+  </setting>
+  <setting id="339" name="Password User 9">
+    <component name="Password User 9" repeat-count="0"/>
+  </setting>
+  <setting id="340" name="Password User 10">
+    <component name="Password User 10" repeat-count="0"/>
+  </setting>
+  <setting id="341" name="Authority User 1">
+    <component name="Authority User 1" repeat-count="0">0</component>
+  </setting>
+  <setting id="342" name="Authority User 2">
+    <component name="Authority User 2" repeat-count="0">2</component>
+  </setting>
+  <setting id="343" name="Authority User 3">
+    <component name="Authority User 3" repeat-count="0">2</component>
+  </setting>
+  <setting id="344" name="Authority User 4">
+    <component name="Authority User 4" repeat-count="0">2</component>
+  </setting>
+  <setting id="345" name="Authority User 5">
+    <component name="Authority User 5" repeat-count="0">2</component>
+  </setting>
+  <setting id="346" name="Authority User 6">
+    <component name="Authority User 6" repeat-count="0">2</component>
+  </setting>
+  <setting id="347" name="Authority User 7">
+    <component name="Authority User 7" repeat-count="0">2</component>
+  </setting>
+  <setting id="348" name="Authority User 8">
+    <component name="Authority User 8" repeat-count="0">2</component>
+  </setting>
+  <setting id="349" name="Authority User 9">
+    <component name="Authority User 9" repeat-count="0">2</component>
+  </setting>
+  <setting id="350" name="Authority User 10">
+    <component name="Authority User 10" repeat-count="0">2</component>
+  </setting>
+  <setting id="360" name="External Trigger Input Logic">
+    <component name="External Trigger Input Logic" repeat-count="0">0</component>
+  </setting>
+  <setting id="361" name="Light Power Control">
+    <component name="Light Power Control" repeat-count="0">0</component>
+  </setting>
+  <setting id="362" name="Communication Power Control">
+    <component name="Communication Power Control" repeat-count="0">0</component>
+  </setting>
+  <setting id="363" name="Communication Warm Up time">
+    <component name="Communication Warm Up time" repeat-count="0">120</component>
+  </setting>
+  <setting id="364" name="Window Defroster Enable">
+    <component name="Window Defroster Enable" repeat-count="0">0</component>
+  </setting>
+  <setting id="365" name="Defroster Power Management">
+    <component name="Defroster Power Management" repeat-count="0">0</component>
+  </setting>
+  <setting id="366" name="Defroster Temp Threshold">
+    <component name="Defroster Temp Threshold" repeat-count="0">0</component>
+  </setting>
+  <setting id="367" name="Defroster Prior On Time">
+    <component name="Defroster Prior On Time" repeat-count="0">1</component>
+  </setting>
+  <setting id="368" name="Prebuffer Time EXT TRIG">
+    <component name="Prebuffer Time EXT TRIG" repeat-count="0">0</component>
+  </setting>
+  <setting id="369" name="Prebuffer Time Motion">
+    <component name="Prebuffer Time Motion" repeat-count="0">0</component>
+  </setting>
+  <setting id="371" name="Lens Pos 1 Title">
+    <component name="Lens Pos 1 Title" repeat-count="0"/>
+  </setting>
+  <setting id="372" name="Lens Pos 1 Zoom">
+    <component name="Lens Pos 1 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="373" name="Lens Pos 1 Focus">
+    <component name="Lens Pos 1 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="375" name="Lens Pos 2 Title">
+    <component name="Lens Pos 2 Title" repeat-count="0"/>
+  </setting>
+  <setting id="376" name="Lens Pos 2 Zoom">
+    <component name="Lens Pos 2 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="377" name="Lens Pos 2 Focus">
+    <component name="Lens Pos 2 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="379" name="Lens Pos 3 Title">
+    <component name="Lens Pos 3 Title" repeat-count="0"/>
+  </setting>
+  <setting id="380" name="Lens Pos 3 Zoom">
+    <component name="Lens Pos 3 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="381" name="Lens Pos 3 Focus">
+    <component name="Lens Pos 3 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="383" name="Lens Pos 4 Title">
+    <component name="Lens Pos 4 Title" repeat-count="0"/>
+  </setting>
+  <setting id="384" name="Lens Pos 4 Zoom">
+    <component name="Lens Pos 4 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="385" name="Lens Pos 4 Focus">
+    <component name="Lens Pos 4 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="386" name="GPS Latitude">
+    <component name="GPS Latitude" repeat-count="0">-37.42220000</component>
+  </setting>
+  <setting id="387" name="GPS Longitude">
+    <component name="GPS Longitude" repeat-count="0">144.09440000</component>
+  </setting>
+  <setting id="400" name="Year">
+    <component name="Year" repeat-count="0">2026</component>
+  </setting>
+  <setting id="401" name="Month">
+    <component name="Month" repeat-count="0">7</component>
+  </setting>
+  <setting id="402" name="Day of Month">
+    <component name="Day of Month" repeat-count="0">23</component>
+  </setting>
+  <setting id="403" name="Weekday">
+    <component name="Weekday" repeat-count="0">5</component>
+  </setting>
+  <setting id="404" name="Hour">
+    <component name="Hour" repeat-count="0">15</component>
+  </setting>
+  <setting id="405" name="Minute">
+    <component name="Minute" repeat-count="0">12</component>
+  </setting>
+  <setting id="406" name="Seconds">
+    <component name="Seconds" repeat-count="0">51</component>
+  </setting>
+  <setting id="410" name="WiFi Power Mode">
+    <component name="WiFi Power Mode" repeat-count="0">2</component>
+  </setting>
+  <setting id="411" name="WiFi Access Mode">
+    <component name="WiFi Access Mode" repeat-count="0">1</component>
+  </setting>
+  <setting id="412" name="AP SSID">
+    <component name="AP SSID" repeat-count="0">CCFC-9999</component>
+  </setting>
+  <setting id="413" name="AP Channel">
+    <component name="AP Channel" repeat-count="0">6</component>
+  </setting>
+  <setting id="414" name="AP Security">
+    <component name="AP Security" repeat-count="0">3</component>
+  </setting>
+  <setting id="415" name="AP Password">
+    <component name="AP Password" repeat-count="0">123456-1884</component>
+  </setting>
+  <setting id="416" name="AP IP Address">
+    <component name="AP IP Address" repeat-count="0">10.0.0.1</component>
+  </setting>
+  <setting id="417" name="AP Netmask">
+    <component name="AP Netmask" repeat-count="0">255.255.255.0</component>
+  </setting>
+  <setting id="418" name="AP DHCP Start Address">
+    <component name="AP DHCP Start Address" repeat-count="0">10.0.0.10</component>
+  </setting>
+  <setting id="419" name="AP DHCP End Address">
+    <component name="AP DHCP End Address" repeat-count="0">10.0.0.19</component>
+  </setting>
+  <setting id="420" name="Client #1 SSID">
+    <component name="Client #1 SSID" repeat-count="0"/>
+  </setting>
+  <setting id="421" name="Client #1 Password">
+    <component name="Client #1 Password" repeat-count="0"/>
+  </setting>
+  <setting id="422" name="Client #1 Security">
+    <component name="Client #1 Security" repeat-count="0">0</component>
+  </setting>
+  <setting id="423" name="Client #1 DHCP">
+    <component name="Client #1 DHCP" repeat-count="0">1</component>
+  </setting>
+  <setting id="424" name="Client #1 IP Address">
+    <component name="Client #1 IP Address" repeat-count="0">192.168.1.110</component>
+  </setting>
+  <setting id="425" name="Client #1 Netmask">
+    <component name="Client #1 Netmask" repeat-count="0">255.255.254.0</component>
+  </setting>
+  <setting id="426" name="Client #1 Gateway">
+    <component name="Client #1 Gateway" repeat-count="0">192.168.1.1</component>
+  </setting>
+  <setting id="427" name="Client #1 DNS">
+    <component name="Client #1 DNS" repeat-count="0">192.168.1.1</component>
+  </setting>
+  <setting id="428" name="Client #1 Enable">
+    <component name="Client #1 Enable" repeat-count="0">0</component>
+  </setting>
+  <setting id="430" name="Client #2 SSID">
+    <component name="Client #2 SSID" repeat-count="0"/>
+  </setting>
+  <setting id="431" name="Client #2 Password">
+    <component name="Client #2 Password" repeat-count="0"/>
+  </setting>
+  <setting id="432" name="Client #2 Security">
+    <component name="Client #2 Security" repeat-count="0">0</component>
+  </setting>
+  <setting id="433" name="Client #2 DHCP">
+    <component name="Client #2 DHCP" repeat-count="0">1</component>
+  </setting>
+  <setting id="434" name="Client #2 IP Address">
+    <component name="Client #2 IP Address" repeat-count="0">192.168.1.91</component>
+  </setting>
+  <setting id="435" name="Client #2 Netmask">
+    <component name="Client #2 Netmask" repeat-count="0">255.255.254.0</component>
+  </setting>
+  <setting id="436" name="Client #2 Gateway">
+    <component name="Client #2 Gateway" repeat-count="0">192.168.1.1</component>
+  </setting>
+  <setting id="437" name="Client #2 DNS">
+    <component name="Client #2 DNS" repeat-count="0">192.168.1.1</component>
+  </setting>
+  <setting id="438" name="Client #2 Enable">
+    <component name="Client #2 Enable" repeat-count="0">0</component>
+  </setting>
+  <setting id="440" name="Client #3 SSID">
+    <component name="Client #3 SSID" repeat-count="0"/>
+  </setting>
+  <setting id="441" name="Client #3 Password">
+    <component name="Client #3 Password" repeat-count="0"/>
+  </setting>
+  <setting id="442" name="Client #3 Security">
+    <component name="Client #3 Security" repeat-count="0">0</component>
+  </setting>
+  <setting id="443" name="Client #3 DHCP">
+    <component name="Client #3 DHCP" repeat-count="0">1</component>
+  </setting>
+  <setting id="444" name="Client #3 IP Address">
+    <component name="Client #3 IP Address" repeat-count="0">192.168.1.91</component>
+  </setting>
+  <setting id="445" name="Client #3 Netmask">
+    <component name="Client #3 Netmask" repeat-count="0">255.255.254.0</component>
+  </setting>
+  <setting id="446" name="Client #3 Gateway">
+    <component name="Client #3 Gateway" repeat-count="0">192.168.1.1</component>
+  </setting>
+  <setting id="447" name="Client #3 DNS">
+    <component name="Client #3 DNS" repeat-count="0">192.168.1.1</component>
+  </setting>
+  <setting id="448" name="Client #3 Enable">
+    <component name="Client #3 Enable" repeat-count="0">0</component>
+  </setting>
+  <setting id="449" name="Pan Tilt Enable">
+    <component name="Pan Tilt Enable" repeat-count="0">0</component>
+  </setting>
+  <setting id="450" name="Lens Pos 1 Pan">
+    <component name="Lens Pos 1 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="451" name="Lens Pos 1 Tilt">
+    <component name="Lens Pos 1 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="452" name="Lens Pos 2 Pan">
+    <component name="Lens Pos 2 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="453" name="Lens Pos 2 Tilt">
+    <component name="Lens Pos 2 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="454" name="Lens Pos 3 Tilt">
+    <component name="Lens Pos 3 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="455" name="Lens Pos 5 Title">
+    <component name="Lens Pos 5 Title" repeat-count="0"/>
+  </setting>
+  <setting id="456" name="Lens Pos 5 Zoom">
+    <component name="Lens Pos 5 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="457" name="Lens Pos 5 Focus">
+    <component name="Lens Pos 5 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="458" name="Lens Pos 5 Pan">
+    <component name="Lens Pos 5 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="459" name="Lens Pos 5 Tilt">
+    <component name="Lens Pos 5 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="460" name="Lens Pos 6 Title">
+    <component name="Lens Pos 6 Title" repeat-count="0"/>
+  </setting>
+  <setting id="461" name="Lens Pos 6 Zoom">
+    <component name="Lens Pos 6 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="462" name="Lens Pos 6 Focus">
+    <component name="Lens Pos 6 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="463" name="Lens Pos 6 Pan">
+    <component name="Lens Pos 6 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="464" name="Lens Pos 6 Tilt">
+    <component name="Lens Pos 6 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="465" name="Lens Pos 7 Title">
+    <component name="Lens Pos 7 Title" repeat-count="0"/>
+  </setting>
+  <setting id="466" name="Lens Pos 7 Zoom">
+    <component name="Lens Pos 7 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="467" name="Lens Pos 7 Focus">
+    <component name="Lens Pos 7 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="468" name="Lens Pos 7 Pan">
+    <component name="Lens Pos 7 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="469" name="Lens Pos 7 Tilt">
+    <component name="Lens Pos 7 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="470" name="Lens Pos 8 Title">
+    <component name="Lens Pos 8 Title" repeat-count="0"/>
+  </setting>
+  <setting id="471" name="Lens Pos 8 Zoom">
+    <component name="Lens Pos 8 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="472" name="Lens Pos 8 Focus">
+    <component name="Lens Pos 8 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="473" name="Lens Pos 8 Pan">
+    <component name="Lens Pos 8 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="474" name="Lens Pos 8 Tilt">
+    <component name="Lens Pos 8 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="475" name="Lens Pos 9 Title">
+    <component name="Lens Pos 9 Title" repeat-count="0"/>
+  </setting>
+  <setting id="476" name="Lens Pos 9 Zoom">
+    <component name="Lens Pos 9 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="477" name="Lens Pos 9 Focus">
+    <component name="Lens Pos 9 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="478" name="Lens Pos 9 Pan">
+    <component name="Lens Pos 9 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="479" name="Lens Pos 9 Tilt">
+    <component name="Lens Pos 9 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="480" name="Lens Pos 10 Title">
+    <component name="Lens Pos 10 Title" repeat-count="0"/>
+  </setting>
+  <setting id="481" name="Lens Pos 10 Zoom">
+    <component name="Lens Pos 10 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="482" name="Lens Pos 10 Focus">
+    <component name="Lens Pos 10 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="483" name="Lens Pos 10 Pan">
+    <component name="Lens Pos 10 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="484" name="Lens Pos 10 Tilt">
+    <component name="Lens Pos 10 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="485" name="Lens Pos 11 Title">
+    <component name="Lens Pos 11 Title" repeat-count="0"/>
+  </setting>
+  <setting id="486" name="Lens Pos 11 Zoom">
+    <component name="Lens Pos 11 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="487" name="Lens Pos 11 Focus">
+    <component name="Lens Pos 11 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="488" name="Lens Pos 11 Pan">
+    <component name="Lens Pos 11 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="489" name="Lens Pos 11 Tilt">
+    <component name="Lens Pos 11 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="490" name="Lens Pos 12 Title">
+    <component name="Lens Pos 12 Title" repeat-count="0"/>
+  </setting>
+  <setting id="491" name="Lens Pos 12 Zoom">
+    <component name="Lens Pos 12 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="492" name="Lens Pos 12 Focus">
+    <component name="Lens Pos 12 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="493" name="Lens Pos 12 Pan">
+    <component name="Lens Pos 12 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="494" name="Lens Pos 12 Tilt">
+    <component name="Lens Pos 12 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="495" name="Lens Pos 13 Title">
+    <component name="Lens Pos 13 Title" repeat-count="0"/>
+  </setting>
+  <setting id="496" name="Lens Pos 13 Zoom">
+    <component name="Lens Pos 13 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="497" name="Lens Pos 13 Focus">
+    <component name="Lens Pos 13 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="498" name="Lens Pos 13 Pan">
+    <component name="Lens Pos 13 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="499" name="Lens Pos 13 Tilt">
+    <component name="Lens Pos 13 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="500" name="Lens Pos 14 Title">
+    <component name="Lens Pos 14 Title" repeat-count="0"/>
+  </setting>
+  <setting id="501" name="Lens Pos 14 Zoom">
+    <component name="Lens Pos 14 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="502" name="Lens Pos 14 Focus">
+    <component name="Lens Pos 14 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="503" name="Lens Pos 14 Pan">
+    <component name="Lens Pos 14 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="504" name="Lens Pos 14 Tilt">
+    <component name="Lens Pos 14 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="505" name="Lens Pos 15 Title">
+    <component name="Lens Pos 15 Title" repeat-count="0"/>
+  </setting>
+  <setting id="506" name="Lens Pos 15 Zoom">
+    <component name="Lens Pos 15 Zoom" repeat-count="0">0</component>
+  </setting>
+  <setting id="507" name="Lens Pos 15 Focus">
+    <component name="Lens Pos 15 Focus" repeat-count="0">180</component>
+  </setting>
+  <setting id="508" name="Lens Pos 15 Pan">
+    <component name="Lens Pos 15 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="509" name="Lens Pos 15 Tilt">
+    <component name="Lens Pos 15 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="510" name="SFTP Server#1 Address">
+    <component name="SFTP Server#1 Address" repeat-count="0">sftp.tern.org.au</component>
+  </setting>
+  <setting id="511" name="SFTP #1 Port">
+    <component name="SFTP #1 Port" repeat-count="0">2222</component>
+  </setting>
+  <setting id="512" name="SFTP #1 User Name">
+    <component name="SFTP #1 User Name" repeat-count="0">ccfc-9999</component>
+  </setting>
+  <setting id="513" name="SFTP #1 User Password">
+    <component name="SFTP #1 User Password" repeat-count="0"/>
+  </setting>
+  <setting id="514" name="SFTP #1 Dest. File Path">
+    <component name="SFTP #1 Dest. File Path" repeat-count="0"/>
+  </setting>
+  <setting id="515" name="SFTP #1 Title">
+    <component name="SFTP #1 Title" repeat-count="0">TERN-Upload</component>
+  </setting>
+  <setting id="516" name="SFTP Server#2 Address">
+    <component name="SFTP Server#2 Address" repeat-count="0"/>
+  </setting>
+  <setting id="517" name="SFTP #2 Port">
+    <component name="SFTP #2 Port" repeat-count="0">22</component>
+  </setting>
+  <setting id="518" name="SFTP #2 User Name">
+    <component name="SFTP #2 User Name" repeat-count="0"/>
+  </setting>
+  <setting id="519" name="SFTP #2 User Password">
+    <component name="SFTP #2 User Password" repeat-count="0"/>
+  </setting>
+  <setting id="520" name="SFTP #2 Dest. File Path">
+    <component name="SFTP #2 Dest. File Path" repeat-count="0"/>
+  </setting>
+  <setting id="521" name="SFTP #2 Title">
+    <component name="SFTP #2 Title" repeat-count="0"/>
+  </setting>
+  <setting id="522" name="Send Still Via SFTP STC1">
+    <component name="Send Still Via SFTP STC1" repeat-count="0">1</component>
+  </setting>
+  <setting id="523" name="Still Image Settings SFTP STC1">
+    <component name="Still Image Settings SFTP STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="524" name="Send Video Via SFTP STC1">
+    <component name="Send Video Via SFTP STC1" repeat-count="0">0</component>
+  </setting>
+  <setting id="525" name="Send Still Via SFTP STC2">
+    <component name="Send Still Via SFTP STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="526" name="Still Image Settings SFTP STC2">
+    <component name="Still Image Settings SFTP STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="527" name="Send Video Via SFTP STC2">
+    <component name="Send Video Via SFTP STC2" repeat-count="0">0</component>
+  </setting>
+  <setting id="528" name="Send Still Via SFTP ETC">
+    <component name="Send Still Via SFTP ETC" repeat-count="0">0</component>
+  </setting>
+  <setting id="529" name="Still Image Settings SFTP ETC">
+    <component name="Still Image Settings SFTP ETC" repeat-count="0">0</component>
+  </setting>
+  <setting id="530" name="Send Video Via SFTP ETC">
+    <component name="Send Video Via SFTP ETC" repeat-count="0">0</component>
+  </setting>
+  <setting id="531" name="Send Still Via SFTP MDC">
+    <component name="Send Still Via SFTP MDC" repeat-count="0">0</component>
+  </setting>
+  <setting id="532" name="Still Image Settings SFTP MDC">
+    <component name="Still Image Settings SFTP MDC" repeat-count="0">0</component>
+  </setting>
+  <setting id="533" name="Send Video Via SFTP MDC">
+    <component name="Send Video Via SFTP MDC" repeat-count="0">0</component>
+  </setting>
+  <setting id="534" name="White Balance Enable">
+    <component name="White Balance Enable" repeat-count="0">1</component>
+  </setting>
+  <setting id="535" name="Fine Tune Focus Enable">
+    <component name="Fine Tune Focus Enable" repeat-count="0">1</component>
+  </setting>
+  <setting id="536" name="Lens Pos 3 Pan">
+    <component name="Lens Pos 3 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="537" name="Lens Pos 4 Pan">
+    <component name="Lens Pos 4 Pan" repeat-count="0">15000</component>
+  </setting>
+  <setting id="538" name="Lens Pos 4 Tilt">
+    <component name="Lens Pos 4 Tilt" repeat-count="0">0</component>
+  </setting>
+  <setting id="539" name="Config Update Interval">
+    <component name="Config Update Interval" repeat-count="0">1440</component>
+  </setting>
+  <setting id="540" name="Config Server Address">
+    <component name="Config Server Address" repeat-count="0">config.weatherbrain.com</component>
+  </setting>
+  <setting id="541" name="GPS Altitude">
+    <component name="GPS Altitude" repeat-count="0">0.00000000</component>
+  </setting>
+  <setting id="542" name="GPS Direction">
+    <component name="GPS Direction" repeat-count="0">0.00000000</component>
+  </setting>
+  <setting id="543" name="GPS Bearing">
+    <component name="GPS Bearing" repeat-count="0">0.00000000</component>
+  </setting>
+  <setting id="544" name="GPS AltitudeRef">
+    <component name="GPS AltitudeRef" repeat-count="0">0</component>
+  </setting>
+  <setting id="545" name="GPS DirectionRef">
+    <component name="GPS DirectionRef" repeat-count="0">T</component>
+  </setting>
+  <setting id="546" name="GPS BearingRef">
+    <component name="GPS BearingRef" repeat-count="0">T</component>
+  </setting>
+  <setting id="547" name="Image Artist Image 1">
+    <component name="Image Artist Image 1" repeat-count="0"/>
+  </setting>
+  <setting id="548" name="User Comment Image 1">
+    <component name="User Comment Image 1" repeat-count="0"/>
+  </setting>
+  <setting id="549" name="Image Artist Image 2">
+    <component name="Image Artist Image 2" repeat-count="0"/>
+  </setting>
+  <setting id="550" name="User Comment Image 2">
+    <component name="User Comment Image 2" repeat-count="0"/>
+  </setting>
+</device-config>
