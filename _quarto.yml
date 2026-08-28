@@ -38,6 +38,8 @@ website:
           file: Sensorcalibration.md
         - text: Phenocam
           file: Phenocam.md
+      - text: Tips and Tricks
+        file: tips.md
 format:
   html:
     theme: cosmo

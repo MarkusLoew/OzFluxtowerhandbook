@@ -8,7 +8,7 @@
 
 <meta name="author" content="Markus Loew">
 
-<title>towers – OzFlux Tower Handbook</title>
+<title>tips – OzFlux Tower Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -101,7 +81,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Towers.html">Tower Types</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tips.html">Tips and Tricks</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,7 +114,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Towers.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Towers.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tower Types</span></a>
   </div>
 </li>
@@ -228,7 +208,7 @@ div.csl-indent {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tips.html" class="sidebar-item-text sidebar-link">
+  <a href="./tips.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tips and Tricks</span></a>
   </div>
 </li>
@@ -242,20 +222,9 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tower-types" id="toc-tower-types" class="nav-link active" data-scroll-target="#tower-types">Tower types</a>
+  <li><a href="#tips-and-tricks-for-campbell-scientific-data-loggers" id="toc-tips-and-tricks-for-campbell-scientific-data-loggers" class="nav-link active" data-scroll-target="#tips-and-tricks-for-campbell-scientific-data-loggers">Tips and Tricks for Campbell Scientific data loggers</a>
   <ul class="collapse">
-  <li><a href="#tower-size-considerations" id="toc-tower-size-considerations" class="nav-link" data-scroll-target="#tower-size-considerations">Tower size considerations</a></li>
-  <li><a href="#single-pole-towers" id="toc-single-pole-towers" class="nav-link" data-scroll-target="#single-pole-towers">Single pole towers</a></li>
-  <li><a href="#tripod-towers" id="toc-tripod-towers" class="nav-link" data-scroll-target="#tripod-towers">Tripod towers</a></li>
-  <li><a href="#lattice-tower" id="toc-lattice-tower" class="nav-link" data-scroll-target="#lattice-tower">Lattice tower</a></li>
-  <li><a href="#hinged-towers" id="toc-hinged-towers" class="nav-link" data-scroll-target="#hinged-towers">Hinged towers</a>
-  <ul class="collapse">
-  <li><a href="#foundations-for-small-andor-hinged-towers" id="toc-foundations-for-small-andor-hinged-towers" class="nav-link" data-scroll-target="#foundations-for-small-andor-hinged-towers">Foundations for small and/or hinged towers</a></li>
-  </ul></li>
-  <li><a href="#telescopic-towers" id="toc-telescopic-towers" class="nav-link" data-scroll-target="#telescopic-towers">Telescopic towers</a></li>
-  <li><a href="#scaffolding-towers" id="toc-scaffolding-towers" class="nav-link" data-scroll-target="#scaffolding-towers">Scaffolding towers</a></li>
-  <li><a href="#guyed-towers" id="toc-guyed-towers" class="nav-link" data-scroll-target="#guyed-towers">Guyed towers</a></li>
-  <li><a href="#stand-alone-towers" id="toc-stand-alone-towers" class="nav-link" data-scroll-target="#stand-alone-towers">Stand-alone towers</a></li>
+  <li><a href="#cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease" id="toc-cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease" class="nav-link" data-scroll-target="#cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease">CR6 and CR1000x Ethernet connectivity issues, no DHCP lease</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -287,216 +256,30 @@ div.csl-indent {
 </header>
 
 
-<section id="tower-types" class="level1">
-<h1>Tower types</h1>
-<section id="tower-size-considerations" class="level2">
-<h2 class="anchored" data-anchor-id="tower-size-considerations">Tower size considerations</h2>
-<p>From <span class="citation" data-cites="aubinet_eddy_2012">Aubinet, Vesala, and Papale (<a href="#ref-aubinet_eddy_2012" role="doc-biblioref">2012</a>)</span>:</p>
-<p>“Tower size (horizontal dimensions, not height) shall be large enough to be <strong>safe and secure</strong> for many years of operation, but should also limit the impact on the surrounding environment and scientific measurements of interest and minimize the flow distortion” […]</p>
-<p>“Large tower structures create larger canopy openings, which promote wind recirculation […], enforcing <strong>chimney effect</strong>, changing the local microclimate, and, for the biological concerns, introducing opportunistic plant species, which will locally alter ecosystem structure around tower due to the radiation and temperature changes at the opening (edge effects).” […]</p>
-<p>“As a general guideline for tower design and establishment, <strong>the spacing between tower and nearby trees should mimic the existing mean distance between trees</strong> (i.e., mimicking the existing natural ecosystem structures and openings).”</p>
-</section>
-<section id="single-pole-towers" class="level2">
-<h2 class="anchored" data-anchor-id="single-pole-towers">Single pole towers</h2>
-<p>Very small distortion to the environment, but single pole tower need a foundation for the pole and potentially guy wires to avoid movement, especially avoiding resonance at some windspeeds. This tower type is cheap to build, easy to install without disturbing the environment. The access to the sensors is via a portable ladder.</p>
+<section id="tips-and-tricks-for-campbell-scientific-data-loggers" class="level1">
+<h1>Tips and Tricks for Campbell Scientific data loggers</h1>
+<section id="cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease" class="level2">
+<h2 class="anchored" data-anchor-id="cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease">CR6 and CR1000x Ethernet connectivity issues, no DHCP lease</h2>
+<p>In rare occasions, Campbell Scientific data loggers like the CR6 and the CR1000x do not connect to the ethernet network. The loggers does not even appear in the overview table of connected devices of the router. The lights of the ethernet port on the logger do not illuminate - except for a short blink right at connection and second blink about 30 to 60 seconds later and once per minute from then on.</p>
+<p>While the logger will come online eventually, this can be very frustrating when working on a tight schedule or when working at heights.</p>
+<p>This behaviour is most likely caused by the power saving settings for the ethernet port on the logger:</p>
+<p>Connect to your data logger via the Campbell Scientific DevConfig tools. Select the tab “Deployment” -&gt; “Ethernet”:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/tower_types/Dookie_single_pole_PXL_20250902_034506670.jpg" class="img-fluid figure-img"></p>
-<figcaption>One of the Dookie towers, second season of operation: single pole tower (48 mm OD pole 4 m long, 1 m set in ground in concrete foundation) to allow machinery to get close to the tower. Steep guy wires (Markus Loew).</figcaption>
+<p><img src="images/tips+tricks/Ethernet_power_saving_setting_on_logger.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshof of the Campbell Scientific DevConfig tool. To change the ethernet power settings, select the tab “Deployment”, then “Ethernet”. Use the option “Always on” to minimise issues with delayed connection of the data logger to the etherner network. (Markus Loew)</figcaption>
 </figure>
 </div>
-</section>
-<section id="tripod-towers" class="level2">
-<h2 class="anchored" data-anchor-id="tripod-towers">Tripod towers</h2>
-<p>Such tripod towers have a maximum height up to &lt; 4 m. The tripod base has quite a large footprint, though. Tripods are very quick to deploy. They are easy to set up, which allows to get the tower into the ecosystem with little disturbance and can be removed without leaving much of a trace. Legs can be adjusted to allow for uneven ground.</p>
-<p>E.g. Campbell Scientific: <a href="https://www.campbellsci.com.au/cm106b-csa">CM106B-CSA</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/Triod_tower_Dooke1_year1_PXL_20240911_030259457.jpg" class="img-fluid figure-img"></p>
-<figcaption>Tripod tower in agricultural environment (Dookie 1, first year of operation, Markus Loew)</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/Dargo_tripod_tower_IMG_20200224_120248.jpg" class="img-fluid figure-img"></p>
-<figcaption>Dargo tripod tower (Ian McHugh, photo Markus Loew)</figcaption>
-</figure>
-</div>
-<p>For sites that are actively accruing canopy height, plan to construct the tower at least 5 (hc d), but mount the sensors at d C 4(hc d) at inception. The tower and measurement height shall be changed at a convenient time of the year when the height of the sensors (hm) is &lt; d C 3.6(hc d) (<span class="citation" data-cites="aubinet_eddy_2012">Aubinet, Vesala, and Papale (<a href="#ref-aubinet_eddy_2012" role="doc-biblioref">2012</a>)</span>).</p>
-<p>For crops with changing canopy heights that remain below 3 m, 8 m is the suggested measurement height” (<span class="citation" data-cites="aubinet_eddy_2012">Aubinet, Vesala, and Papale (<a href="#ref-aubinet_eddy_2012" role="doc-biblioref">2012</a>)</span>).</p>
-</section>
-<section id="lattice-tower" class="level2">
-<h2 class="anchored" data-anchor-id="lattice-tower">Lattice tower</h2>
-<ul>
-<li><a href="https://nbsmasts.com.au/">NBS Masts</a>: Telescopic, hinged/tilt, lattice towers</li>
-<li><a href="https://apacinfrastructure.com.au/product-catalogue/mounting-structures">APAC Infrastructure mounting structures</a></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/Lund_towers_bafkreidpdzcmwtwzfppy2coa6zbdozl6vgo44rw43kwc2ltpeyi5tftq7e.jpg" class="img-fluid figure-img"></p>
-<figcaption>Lattice tower and tripod tower (Lund University Flux Measurement Group, <a href="https://bsky.app/profile/lufluxes.bsky.social/post/3m3d4yyv5nc2x">lufluxes.bsky.social/</a>).</figcaption>
-</figure>
-</div>
-</section>
-<section id="hinged-towers" class="level2">
-<h2 class="anchored" data-anchor-id="hinged-towers">Hinged towers</h2>
-<p>Various heights up to 14 m. These towers can be climbed (working at heights certificate required). But the hinged construction allows to lower the tower down for instrument installation and maintenance to avoid climbing.</p>
-<p>Available from:</p>
-<ul>
-<li><p><a href="https://apacinfrastructure.com.au/al340-portable-tripod-lattice-tower-8-metre">APAC Portable Hinged Tripod Lattice Tower, AL340 Series</a><br>
-and<br>
-<a href="https://apacinfrastructure.com.au/product-catalogue/mounting-structures/gh100-galvanised-steel-hinged-mast-winch-raised">APAC Hinged Winch Mast</a><br>
-APAC Infrastructure Pty Ltd, Unit 6/33-47 Fred Chaplin Circuit, Caloundra, Sunshine Coast, QLD, 4551</p></li>
-<li><p><a href="https://nbsmasts.com.au/">NBS Masts</a>: Telescopic, hinged/tilt, lattice towers<br>
-NBS Masts, PO Box 7, Lindenow, Victoria, Australia, 3865, 03 5157 1203, sales@nbsmasts.com.au</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/Hinged_tower_IMG_20251128_125001.jpg" class="img-fluid figure-img"></p>
-<figcaption>APAC hinged winch mast with surefoot base (Liam Grace).</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/Boolcoomatta_hinged_tower_PXL_20250813_061750715.jpg" class="img-fluid figure-img"></p>
-<figcaption>Boolcoomatta hinged tower on tripod base from APAC. (Markus Loew)</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/Boolcoomatta_hinged_tower_PXL_20250812_010904174.MP.jpg" class="img-fluid figure-img"></p>
-<figcaption>Boolcoomatta hinged tower: hinge and alignment test. (Markus Loew)</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/Boolcoomatta_hinged_tower_PXL_20250813_002338525.jpg" class="img-fluid figure-img"></p>
-<figcaption>Boolcoomatta hinged tower during sensor and equipment install on the ground. No climbing required (Markus Loew).</figcaption>
-</figure>
-</div>
-<section id="foundations-for-small-andor-hinged-towers" class="level3">
-<h3 class="anchored" data-anchor-id="foundations-for-small-andor-hinged-towers">Foundations for small and/or hinged towers</h3>
-<p>These small or hinged towers do not require an extensive foundation in the ground. Two options of installing the APAC towers exist:</p>
-<ul>
-<li>Tripod: leave-no-trace, convenient, not as stable as surefoot base (see photos above).</li>
-<li>Surefoot base: very solid, but requires steel rods to be driven into the ground with a jackhammer at various directions. A petrol-powered jackhammer with anvil attachement is required. See the Surefoot jackhammer suggestions and requirements in the <a href="https://surefootfootings.com.au/wp-content/uploads/2022/08/Surefoot_B-Low-Resolution-1.pdf">Surefootings manual</a>. These rods can not be removed when the flux tower reaches its end-of-life or end of project and is taken down. Rocky locations might hinder the installation of the ground rods.<br>
-See <a href="https://apacinfrastructure.com.au/search?keywords=products%20modules%20components">APAC surefoot modules</a>, and <a href="https://surefootfootings.com.au/surefoot-pile-cap-s600-16p/">Surefoot base</a> plate websites.</li>
-</ul>
-</section>
-</section>
-<section id="telescopic-towers" class="level2">
-<h2 class="anchored" data-anchor-id="telescopic-towers">Telescopic towers</h2>
-<p>E.g. pneumatic towers:</p>
-<ul>
-<li><p><a href="https://evtagroup.com.au/2-uncategorised/117-telescopic-light-tower">EVTA Group Light telescopic towers</a><br>
-EVTA Group, Gisborne, 12 Meek Street, New Gisborne, Victoria, 3438</p></li>
-<li><p><a href="https://nbsmasts.com.au/product-category/telescopic-mast/">NBS Masts - Telescopic-mast</a><br>
-NBS Masts, PO Box 7, Lindenow, Victoria, Australia, 3865</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/telescopic_hinged_tower_IMG_20210223_090158.jpg" class="img-fluid figure-img"></p>
-<figcaption>Pneumatically operated telescopic, hinged tower on trailer platform using telescopic pole from EVTA (Swinburne University mobile flux towers, Markus Loew)</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/telescopic_hinged_tower_PXL_20220311_031446953.MP.jpg" class="img-fluid figure-img"></p>
-<figcaption>Stowed-away pneumatic, telescopic, hinged tower (Swinburne University mobile flux towers, Markus Loew)</figcaption>
-</figure>
-</div>
-</section>
-<section id="scaffolding-towers" class="level2">
-<h2 class="anchored" data-anchor-id="scaffolding-towers">Scaffolding towers</h2>
-<p>Not recommended in Australia!</p>
-<p>OHS regulations require tower safety inspection every 30 days! But scaffolding towers are commonly used in Europe (Americas?) with and without guy wires. Benefit: scaffolding towers are cheap to build, and can be built on location without bringing in large cranes. This allows to minimise disturbance of the ecosystem during the build phase. The scaffolding can be buit in close vicinity of trees / branches which potentially allows to undertake leaf-level measurements and sampling in the canopy. The small size and lack of disturbance minimises the updraft, “chimney” effect that surround tall towers. Scaffolding towers can even have internal staircases or short ladders that make working at height easy. Regarding the relationship between tower size and average tree canopy horizontal size, scaffolding towers are clear winners due to their relatively small infrastructure footprint.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://wildfiretaskforce.org/wp-content/uploads/2025/10/Flux-Tower.jpg" class="img-fluid figure-img"></p>
-<figcaption>CNRA Redwood Forest Observatory scaffolding tower (from <a href="https://wildfiretaskforce.org/cnra-and-partners-install-first-ever-redwood-forest-observatory/">CNRA Redwood Forest Observatory</a>)</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://fileshare.icos-cp.eu/s/SrorJ6ZyjkGkAQT/preview.png" class="img-fluid figure-img"></p>
-<figcaption>ICOS RF-FBn Font-Blanche tower <a href="https://meta.icos-cp.eu/resources/stations/ES_FR-FBn" class="uri">https://meta.icos-cp.eu/resources/stations/ES_FR-FBn</a></figcaption>
-</figure>
-</div>
-</section>
-<section id="guyed-towers" class="level2">
-<h2 class="anchored" data-anchor-id="guyed-towers">Guyed towers</h2>
-<p>Small footprint, but usually require crane to install, hence more initial disturbance to the environment. Guywires allow for slim and tall tower structures. However, the guy wires can bring the tower down when a tree falls on them (see Warra and Wombat Forest incidents).</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/Tumbarumba_pre-2025_guyed_tower_PXL_20220707_004347948.jpg" class="img-fluid figure-img"></p>
-<figcaption>Tumbarumba guyed tower (post fire, pre-2025) (Markus Loew).</figcaption>
-</figure>
-</div>
-</section>
-<section id="stand-alone-towers" class="level2">
-<h2 class="anchored" data-anchor-id="stand-alone-towers">Stand-alone towers</h2>
-<p>Stand-alone towers provide a safe and stable work platform without the danger of trees falling on a guy wire taking the tower down in the process. They requires considerable amount of construction work, that will affect the vicinity of the tower. Large and deep excavations for the foundation are required, causing considerable disturbance of the immediate ecosystem. Cranes are needed to install the tower that bring soil compaction, disturbance and might require removal of trees to allow the crane to turn. Good road access to the tower is required as well to bring in excavators, concrete trucks, and cranes. Tall stand-alone towers can be big enough for a stair case. That allows easy access to the instrumentation on top. With a regulation-conform staircase on the tower, climbing certificates might not be required, similar to a public look-out tower (check your local laws and regulations).</p>
-<p>The large physical footprint of stand-alone towers allows generous platforms on top. Such platforms make it easy to work at height compared to sitting in a harness suspended off the tower. However, in some cases, it can be difficult to install instrumentation along the height of the tall stand-alone towers where there is no platform and if the desired instrument location is far away from the staircase or ladder. Large. tall towers like e.g.&nbsp;Tumbarumba, have a wide lattice construction, limiting options for accessing some locations without extensive climbing. Tube dimensions of lattice and tower legs might require specific instrumentation mounts that are not available off-the-shelf. Check with your tower-construction company reagding instrumentation mounts when designing the tower. Off the shelf towers from e.g.&nbsp;ROAM are designed to suit heavy mobile phone systems which use 60 mm OD steel pipes and square/angle brackets to install instruments. These poles and brackets are not suitable out-of-the-box to install flux-related instruments as these are usually designed around round tubes with maximum 48 mm outer diameter.</p>
-<p>Manufacturers, engineering companies of stand-alone towers and telecommunication infrastructure:</p>
-<ul>
-<li><p><a href="https://www.roameng.com.au/">Roam engineering</a> Design, Manufacture and Construction of Steel Infrastructure<br>
-437 Victoria Road<br>
-Malaga, WA 6090 Australia<br>
-Phone <a href="tel:+61%20892%20484%20950">+61 892 484 950</a><br>
-<a href="mailto:roam@roameng.com.au">roam@roameng.com.au</a><br>
-–&gt; Roam engineered the stand-alone Tumbarumba and Wombat Forest towers</p></li>
-<li><p><a href="https://www.clivesteele.com.au/">Clive Steele Partners</a> Consulting Structural &amp; Civic Engineers<br>
-62/195 Wellington Road<br>
-Clayton, VIC 3168 Australia<br>
-Phone: +61 3 9545 0223<br>
-csp@clivesteele.com.au<br>
-–&gt; Clive Steele Partners engineered the 36 m stand-alone Whroo flux tower</p></li>
-<li><p><a href="https://amplitel.com.au/">Amplitel</a> Tower infrastructure<br>
-Level 41, 242 Exhibition St<br>
-Melbourne, VIC 3000 Australia<br>
-Phone: 1800 267 548</p></li>
-<li><p><a href="https://everestinfrastructure.com.au/">Everest infrastructure</a><br>
-Suite 801, 203 Robina Town Centre Drive<br>
-Robina, QLD 4226 Australia<br>
-Phone +61 7 5551 4338<br>
-info@everestinfrastructure.com.au</p></li>
-<li><p><a href="https://www.futureau.com.au/">Futureau Telecommunication engineering</a><br>
-7 Tamara Drive<br>
-Cockburn Central, WA 6164 Australia<br>
-Phone: +61 8 9417 4999<br>
-sales@futureau.com.au</p></li>
-</ul>
-<p>See <a href="./ClimbingRigging.html#riggers">here for rigging companies that then build the tower at your location</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/Whroo_stand_alone_tower_PXL_20251119_072928938.jpg" class="img-fluid figure-img"></p>
-<figcaption>Whroo 36 m stand-alone tower with small footprint and ladder. Engineered by Clive Steele Partners, built by Commcons constructions. (Markus Loew)</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/Tumbarumba_post_2025_PXL_20250328_005142813.jpg" class="img-fluid figure-img"></p>
-<figcaption>Tumbarumba stand-alone 70 m tower (post 2025) with staircase. Engineered by Roam, built by Karera Pty. (Markus Loew)</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tower_types/WombatForest_stand_alone_tower_PXL_20240606_025120478.jpg" class="img-fluid figure-img"></p>
-<figcaption>Wombat Forest 40 m stand-alone tower with ladder. Designed and engineered by Roam, built by Meridian Communications. (Markus Loew)</figcaption>
-</figure>
-</div>
-<p><a href="./Home.html">Home</a></p>
-
+<p>The default setting is “<code>1 minute</code>”: <code>The Ethernet interface powers on for a few seconds every 1 minute to detect an active network link pulse. If a link is present, the interface will remain on until the cable is removed or the network is shut down. This setting allows the Ethernet interface to be available for periodic use without a significant contribution to power consumption when a link is not present</code> (Campbell Scientific, DevConfig).</p>
+<p>From experience, this regular connection short reconnection of the logger to the ethernet netwrok every minute is not always sufficient to detect an active connection. Hence the data logger does not connect immediately. The reason for that is unknown.</p>
+<p>To avoid that, select the setting “<code>Always on</code>” from the drop-down menu: <code>The Ethernet interface will always be powered and will contribute approximately 50 mA at 12 Vdc to the power budget regardless of the connectivity. Using this mode is recommended if using IPNetPower() to control Ethernet power under program control</code> (Campbell Scientific, DevConfig).</p>
+<p>With this setting at “Always on” the activity lights on the ethernet port of the logger and router should illuminate immediately when the cable is plugged in. To confirm, check the DHCP client table on your router.</p>
 
 
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-aubinet_eddy_2012" class="csl-entry" role="listitem">
-Aubinet, Marc, Timo Vesala, and Dario Papale, eds. 2012. <em>Eddy <span>Covariance</span>: <span>A</span> <span>Practical</span> <span>Guide</span> to <span>Measurement</span> and <span>Data</span> <span>Analysis</span></em>. Dordrecht: Springer Netherlands. <a href="https://doi.org/10.1007/978-94-007-2351-1">https://doi.org/10.1007/978-94-007-2351-1</a>.
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
