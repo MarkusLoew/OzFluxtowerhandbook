@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tips.html">Tips and Tricks</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Tips.html">Tips and Tricks</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -208,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tips.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Tips.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tips and Tricks</span></a>
   </div>
 </li>
@@ -271,8 +271,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>The default setting is “<code>1 minute</code>”: <code>The Ethernet interface powers on for a few seconds every 1 minute to detect an active network link pulse. If a link is present, the interface will remain on until the cable is removed or the network is shut down. This setting allows the Ethernet interface to be available for periodic use without a significant contribution to power consumption when a link is not present</code> (Campbell Scientific, DevConfig).</p>
-<p>From experience, this regular connection short reconnection of the logger to the ethernet netwrok every minute is not always sufficient to detect an active connection. Hence the data logger does not connect immediately. The reason for that is unknown.</p>
-<p>To avoid that, select the setting “<code>Always on</code>” from the drop-down menu: <code>The Ethernet interface will always be powered and will contribute approximately 50 mA at 12 Vdc to the power budget regardless of the connectivity. Using this mode is recommended if using IPNetPower() to control Ethernet power under program control</code> (Campbell Scientific, DevConfig).</p>
+<p>From experience, this regular connection short reconnection of the logger to the ethernet network every minute is not always sufficient to detect an active connection. Hence the data logger does not connect immediately. The reason for that is unknown.</p>
+<p>To avoid that, select the setting “<code>Always on</code>” from the “Ethernet power” drop-down menu: <code>The Ethernet interface will always be powered and will contribute approximately 50 mA at 12 Vdc to the power budget regardless of the connectivity. Using this mode is recommended if using IPNetPower() to control Ethernet power under program control</code> (Campbell Scientific, DevConfig).</p>
 <p>With this setting at “Always on” the activity lights on the ethernet port of the logger and router should illuminate immediately when the cable is plugged in. To confirm, check the DHCP client table on your router.</p>
 
 

@@ -208,7 +208,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tips.html" class="sidebar-item-text sidebar-link">
+  <a href="./Tips.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tips and Tricks</span></a>
   </div>
 </li>
@@ -267,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="site-level">Site level</h2>
 <p>Each flux tower site has its own local network, typically using a private IP range within the 192.168.x.x subnet. This local network connects all devices at the site, including data loggers, modems, and routers. All network-connected devices at the site should have a fixed IP address within this range. Check your modem settings on how to assign IP addresses to devices ie MAC-address mapping. See e.g.&nbsp;DHCP settings <a href="./TERNOpenVPN.html#configure-dhcp-server">Modem network setup</a> or similar for your modem.</p>
 <p>Once a device connected to the modem, it takes time to change its IP address (<code>IP lease time</code>). Therefore, it is best to set up the desired device MAC-to-IP mapping before the first connection. Then the device uses the designated address from the start. Otherwise, it can take several hours or even days for the device to accept the new IP address (depending on the lease time configured in the DHCP server). Some modems /devices are stubborn to change the IP address of a DHCP client, but it usually resolves itself after some time.</p>
-<p>You can discover the MAC address of a specific device in your <a href="./TERNOpenVPN.html#configure-dhcp-server">modem management interface</a>. Or you can check if the MAC address is printed on the device or provided in the configuration software of the device. For Campbell Scientific systems, the MAC address is usually available through <code>Loggernet Connect</code>, <code>PC 400</code>, <code>ECMon</code>, <code>Devconfig</code>, etc. For Licor instruments, use device specific software e.g.&nbsp;<code>LI-7500 3.0.2</code>, <code>Li-7x00 A RS DS</code> or <code>Li-COR Li-8x0</code>.</p>
+<p>You can discover the MAC address of a specific device in your <a href="./TERNOpenVPN.html#configure-dhcp-server">modem management interface</a> - after the device is connected. Or you can check if the MAC address is printed on the device or provided in the configuration software of the device. For Campbell Scientific systems, the MAC address is usually available through the software tools <code>Loggernet Connect</code>, <code>PC 400</code>, <code>ECMon</code>, <code>Devconfig</code>, etc. For Licor instruments, use device specific software e.g.&nbsp;<code>LI-7500 3.0.2</code>, <code>Li-7x00 A RS DS</code> or <code>Li-COR Li-8x0</code>.</p>
 <p>To make network management and troubleshooting easier across OzFlux, it is recommended that all sites use similar device-to-IP address mappings:</p>
 <ul>
 <li>Modem: 192.168.x.1</li>

@@ -82,16 +82,24 @@ Turning off the upload of 10/20 Hz flux data can help "clean the airwaves" to al
 
 In locations with marginal reception, it is recommended to use a modem that allows the use of **two antennas, preferably yagi, in parallel (MiMo)**. Both antennas must be pointing to the same phone network tower (!), and must be about 50 cm apart vertically for optimal signal boost.
 
--   [BlackHawk Directional antenna, MiMo capable](https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/)
+-   [BlackHawk Directional antenna, MiMo capable](https://blackhawkantennas.com.au/product/blackhawk-lpda-antenna/) You need two of these antennas for MiMo operation!
 -   [Comset Directional antenna, 4x Yagi antenna MiMo capable](https://comset.com.au/product/5g-mimo-4x4-lpda-antenna-3g4g5g-10-m-ant-yagi-4x4-10sp/)
+-   [Phased Array Yagi Kit](https://www.telcoantennas.com.au/ultimate-antenna-kit-19dbi-rfi-phased-yagis) for maximum distance.
 -   [ZCG Scalar directional antenna](https://zcg.com.au/product/broadband-uhf-4g-lte-and-dualband-4g-log-periodic-antenna-304-stainless-steel-650-2250-mhz-250w-n-type-female-10-2-dbi-1-15m-4/)
 -   [ZCG Various antenna mounts](https://zcg.com.au/catalogue/mobile-vehicle-mount/)
 
-When designing the tower and instrumentation location on the tower, keep in mind that **antenna cables can only be 10 m long** before significant signal degradation occurs. Hence, the modem must be close to the antenna!
+When designing the tower and instrumentation location on the tower, keep in mind that **standard antenna cables can only be 10 m long** before significant signal degradation occurs. Hence, the modem must be close to the antenna! See section anttenna cable length limitation below.
+
 
 ### Antenna cable length limitation
 
-Cables between a 4G modem and a 4G antenna should not be longer than 10 m! Longer cables can cause significant (logarithmic?) signal degradation, reducing the effectiveness of the antenna setup. For tall towers, this means that the modem must be on top of the tower, out of reach of easy access, to be close to the antenna. This can be a problem for maintenance and troubleshooting. For towers up to 10 m tall, the modem can be inside the data logger and power enclosure (see e.g. Boolcoomatta tower) making it a compact and accessible setup.
+Cables between a 4G modem and a 4G antenna should not be longer than 10 m! Longer cables can cause significant (logarithmic?) signal degradation, reducing the effectiveness of the antenna setup. 
+For tall towers, this means that the modem must be on top of the tower, out of reach of easy access, to be close to the antenna. This can be a problem for maintenance and troubleshooting. For towers up to 10 m tall, the modem can be inside the data logger and power enclosure (see e.g. Boolcoomatta tower) making it a compact and accessible setup.
+
+If a <10 m modem cable is not an option at all:
+
+For **longer antenna-to-modem distances**, beyond 10 m, but less than 30 m, one could try a eg [Ultra Low Loss Flexible Coaxial Cable](https://www.telcoantennas.com.au/telco-antennas-lcu600-ultra-low-loss-flexible-coax~87862). 
+
 
 ### Check for available towers in your area on these websites:
 

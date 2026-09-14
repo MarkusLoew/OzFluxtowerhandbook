@@ -39,7 +39,7 @@ website:
         - text: Phenocam
           file: Phenocam.md
       - text: Tips and Tricks
-        file: tips.md
+        file: Tips.md
 format:
   html:
     theme: cosmo
