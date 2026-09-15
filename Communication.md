@@ -189,4 +189,10 @@ Recommended 12V-operated POE injectors (<https://www.telcoantennas.com.au/>):
 
 -   [POE+ 12V to 56V](https://www.telcoantennas.com.au/12vdc-to-56vdc-poe-power-over-ethernet-injector)
 
+
+## WiFi extenders
+-   [UniFi AC Mesh](https://techspecs.ui.com/unifi/wifi/uap-ac-mesh?) Despite the name, it is powered by any POE system. It includes an injector for for a 240V household outlet.
+-   [TPlink EAP225 Outdoor](https://www.omadanetworks.com/au/business-networking/omada-wifi-outdoor/eap225-outdoor/)
+There are start similarities between the two models above.
+
 [Home](./Home.html)

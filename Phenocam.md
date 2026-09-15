@@ -32,7 +32,7 @@ Ensure the camera has the latest firmware installed! Because: Older firmware ver
 
 A generic configuration file to enable taking scheduled photos, file names, and upload setting is available for download [here (CCFC XML configuration file)](./downloads/CCFC-9999-20260723_generic.xml) (Use the right-click `Save link as` option in your browser to download this XML file instead of displaying it!). After loading this generic configuration file onto the camera via `Settings/Advanced/Upload configuration` in the CCFC web interface, adjust the camera name (usually similar to `CCFC-xxxx`), site name (`AU-Xxx`), time zone, and WiFi access point password, etc to suit your camera.
 
-The camera provides a ssh key in its web interface. Send this key to TERN (Gerhard) via keybase file transfer. Ask Gerhard or TERN support for account details for file upload.
+The camera provides a ssh key in its web interface. Send this key to TERN (Gerhard) via keybase file transfer. Ask Gerhard or TERN support (esupport@tern.org.au) for account details for file upload.
 
 
 ### Stardot Netcam Live 2
@@ -60,9 +60,15 @@ See [the netcamTERN upload software repository (Markus Loew)](https://github.com
 
 Other camera options are
 
--   [Axis P1487-LE Bullet camera](https://www.axis.com/products/axis-p1487-le.) (Older model as used within the OzFlux network was [Axis P1467-LE camera](https://www.axis.com/products/axis-p1467-le/support) )
+-   [Axis P1487-LE Bullet camera](https://www.axis.com/products/axis-p1487-le) (Older model as used within the OzFlux network was [Axis P1467-LE camera](https://www.axis.com/products/axis-p1467-le/support) )
 
--   [Axis P1488-LE Bullet Camera](https://www.axis.com/products/axis-p1488-le) (Older model as used within the OzFlux network was: [Axis P1468-LE Bullet Camera](https://www.axis.com/products/axis-p1468-le/support))
+-   [Axis P1488-LE Bullet Camera](https://www.axis.com/products/axis-p1488-le) (Older model as used within the OzFlux network was [Axis P1468-LE Bullet Camera](https://www.axis.com/products/axis-p1468-le/support))
+
+Axis cameras use POE for power (~4W constant power draw).
+Use "hanger bolts" to install cameras on trees: M6 metric thread on one side and a wood thread on the other, e.g. [Bunnings Hanger bolts](https://www.bunnings.com.au/everhang-m6-x-48mm-zinc-plated-hanger-bolt-4-pack_p2310854)
+
+### ReoLink
+-   [Reolink Argus PT Ultra](https://reolink.com/au/product/argus-pt-ultra/) (a model with WIFi and Solar panel available - but this model does not have automatic ftp upload, though)
 
 ### General settings for TERN and manual upload
 
@@ -70,4 +76,6 @@ See the upload paths on UQ RDM and the TERN naming conventions at <https://terna
 
 The camera models listed here  all allow changing the filename of the photos to match the pattern expected by TERN.
 
-Images get uploaded to UQ RDM file storage via sftp, or if the camera is within the TERN OpenVPN network, via ftp. Within 24 hours the images get ingested into the TERN data portal and are then deleted from UQ RDM.
+Images get uploaded to UQ RDM file storage via sftp. Or, if the camera is within the TERN OpenVPN network, ftp upload is an option (check with TERN support for ftp server details - esupport@tern.org.au). 
+
+The images get ingested into the TERN data portal within 24 hours and are then removed from UQ RDM.
