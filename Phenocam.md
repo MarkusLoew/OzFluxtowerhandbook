@@ -10,7 +10,7 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 
 Across the TERN OzFlux network, many sites are equipped with the [Campbell Scientific CCFC camera](https://www.campbellsci.com/ccfc).
 
-This camera integrates well with the TERN network as it supports key-based sftp file upload via ssh to the TERN file storage and data portal automatically. It is extremely well built, it is its own wheaterproof housing, has a deep-sleep power mode of < 6 mA, large built-in file storage, and has a simple configuration web interface. But it is rather expensive!
+This camera integrates well with the TERN network as it supports key-based sftp file upload via ssh to the TERN file storage and data portal automatically. It is extremely well built, it is its own wheaterproof housing, has a deep-sleep power mode of \< 6 mA, large built-in file storage, and has a simple configuration web interface. But it is rather expensive!
 
 It is the **preferred model** for TERN-supported flux towers to ensure standardisation.
 
@@ -32,21 +32,21 @@ Ensure the camera has the latest firmware installed! Because: Older firmware ver
 
 A generic configuration file to enable taking scheduled photos, file names, and upload setting is available for download [here (CCFC XML configuration file)](./downloads/CCFC-9999-20260723_generic.xml) (Use the right-click `Save link as` option in your browser to download this XML file instead of displaying it!). After loading this generic configuration file onto the camera via `Settings/Advanced/Upload configuration` in the CCFC web interface, adjust the camera name (usually similar to `CCFC-xxxx`), site name (`AU-Xxx`), time zone, and WiFi access point password, etc to suit your camera.
 
-The camera provides a ssh key in its web interface. Send this key to TERN (Gerhard) via keybase file transfer. Ask Gerhard or TERN support (esupport@tern.org.au) for account details for file upload.
-
+The camera provides a ssh key in its web interface. Send this key to TERN (Gerhard) via keybase file transfer. Ask Gerhard or TERN support (esupport\@tern.org.au) for account details for file upload.
 
 ### Stardot Netcam Live 2
 
 A cheaper alternative to the Campbell Scientific CCFC is the Stardot [Netcam Live 2 camera](http://stardot.com/netcamlive) (StarDot Technologies, Buena Park, CA, USA). For camera details and a performance review of the Netcam live 2 camera compared to the previous model see @javadian_continuity_2025.
 
-The camera does not have a deep sleep mode, it is always on! It uses about 400 mAh\@12V of power. Power is provided either via a 12V barrel jack, or via POE. To save power at tower sites with limited energy availability, the power to the netcam live 2 would need to be switched off physically via a scheduled / programmed relay.
+The camera does not have a deep sleep mode, it is always on! It uses about 400 mAh\@12V of power as stated by the manufacturer. As tested, for taking occasional photos, the constant power consumption (while idle) is just below 200 mAh\@12V. Power (between 10 to 20V DC) is provided either via a 12V barrel jack, or via POE. To save power at tower sites with limited energy availability, the power to the netcam live 2 would need to be switched off physically via a scheduled / programmed relay.
 
 The Stardot [Knowledge base for the Netcam Live2 camera is available here](https://stardot-kb.netlify.app/kb/files/).
 
 **This camera does not capture NDVI images directly, but provides separate visible light (RGB) and IR images to calculate NDVI off-camera!**
 
-The weatherproof housing and mounting arm must be ordered additionally: [Compact Outdoor Enclosure with Wall Mount Enc-Outd3](http://stardot.com/products/compact-outdoor-enclosure).
-This wall-mount arm needs to be modified slightly to install it on a round pole (50 mm OD pipe) on a tower: The upper holes in the wall mount can be opened up further. Then use a clamp, e.g. a [C9 2⅛" exhaust clamp](https://autobarn.com.au/ab/Autobarn-Category/Shop-our-Full-Range-by-Brand-at-Autobarn/Walker/Walker-Exhaust-Clamp-54mm-2-1-8in---C09P-1-/p/SP00895), to adapt the flat mount to a pole mount, and use a second C9 clamp with a brace for additional rigidity. A U-bolt as provided by Campbell Scientific can be used as well.
+NDVI can later be calculated as `NDVI = (NIR - Red) / (NIR + Red)` from the corresponding RGB and IR images.
+
+The weatherproof housing and mounting arm must be ordered additionally: [Compact Outdoor Enclosure with Wall Mount Enc-Outd3](http://stardot.com/products/compact-outdoor-enclosure). This wall-mount arm needs to be modified slightly to install it on a round pole (50 mm OD pipe) on a tower: The upper holes in the wall mount can be opened up further. Then use a clamp, e.g. a [C9 2⅛" exhaust clamp](https://autobarn.com.au/ab/Autobarn-Category/Shop-our-Full-Range-by-Brand-at-Autobarn/Walker/Walker-Exhaust-Clamp-54mm-2-1-8in---C09P-1-/p/SP00895), to adapt the flat mount to a pole mount, and use a second C9 clamp with a brace for additional rigidity. A U-bolt as provided by Campbell Scientific can be used as well.
 
 ![Stardot Netcam Live2 enclosure test install (left) and C9 clamp (right). Photo: Markus Loew.](images/phenocam/Stardot_phenocam_enclosure_and_bracket.jpg)
 
@@ -64,18 +64,18 @@ Other camera options are
 
 -   [Axis P1488-LE Bullet Camera](https://www.axis.com/products/axis-p1488-le) (Older model as used within the OzFlux network was [Axis P1468-LE Bullet Camera](https://www.axis.com/products/axis-p1468-le/support))
 
-Axis cameras use POE for power (~4W constant power draw).
-Use "hanger bolts" to install cameras on trees: M6 metric thread on one side and a wood thread on the other, e.g. [Bunnings Hanger bolts](https://www.bunnings.com.au/everhang-m6-x-48mm-zinc-plated-hanger-bolt-4-pack_p2310854)
+Axis cameras use POE for power (\~4W constant power draw). Use "hanger bolts" to install cameras on trees: M6 metric thread on one side and a wood thread on the other, e.g. [Bunnings Hanger bolts](https://www.bunnings.com.au/everhang-m6-x-48mm-zinc-plated-hanger-bolt-4-pack_p2310854)
 
 ### ReoLink
+
 -   [Reolink Argus PT Ultra](https://reolink.com/au/product/argus-pt-ultra/) (a model with WIFi and Solar panel available - but this model does not have automatic ftp upload, though)
 
 ### General settings for TERN and manual upload
 
 See the upload paths on UQ RDM and the TERN naming conventions at <https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam>
 
-The camera models listed here  all allow changing the filename of the photos to match the pattern expected by TERN.
+The camera models listed here all allow changing the filename of the photos to match the pattern expected by TERN.
 
-Images get uploaded to UQ RDM file storage via sftp. Or, if the camera is within the TERN OpenVPN network, ftp upload is an option (check with TERN support for ftp server details - esupport@tern.org.au). 
+Images get uploaded to UQ RDM file storage via sftp. Or, if the camera is within the TERN OpenVPN network, ftp upload is an option (check with TERN support for ftp server details - esupport\@tern.org.au).
 
 The images get ingested into the TERN data portal within 24 hours and are then removed from UQ RDM.
