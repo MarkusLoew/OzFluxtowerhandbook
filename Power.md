@@ -14,9 +14,9 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 
 -   [Victron MPPT calculator](https://www.victronenergy.com/mppt-calculator): Suggests charge controller model, calculates daily yield from solar panel size and configuration, voltage, and location. This calculator includes an allowance for oversizing solar panels on a charge controller.
 
-![Victron MPPT calculator result for a the Whroo tower. Tower is equipped with EC logger system for flux and micrometeorology sensors, separate logger for soil-related sensors, Heitronics suface temperature system, six-level profile system. The tower is powered by two 445 W solar panels in series (Markus Loew).](images/power/Whroo_Victron_MPPT_calculator.png)
+![Victron MPPT calculator result for a the Whroo tower suggesting a MPTT 100\|50 charge controller model. Tower is equipped with EC logger system for flux and micrometeorology sensors, separate logger for soil-related sensors, Heitronics surface temperature system, six-level profile system. The tower is powered by two 445 W solar panels in series and uses 2x 200 Ah LifePo4 batteries. (Markus Loew)](images/power/Whroo_Victron_MPPT_calculator.png)
 
-The all-in-one flux tower described at [Sensorwiring](./Sensorwiring.md) with the described sensors and Maxon Dualmax modem has a constant power draw of about `0.6 to 0.9 A at 12V (< ~10W)`.
+The all-in-one flux tower described in the [Sensorwiring](./Sensorwiring.md) section with the described sensors and Maxon Dualmax modem has a constant power draw of about `0.6 to 0.9 A at 12V (< ~10W)`.
 
 For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous(!) power available year-round @rebmann_icos_2018 .
 
@@ -53,7 +53,7 @@ to do - Solar panel size (to do) E.g. JinkoSolar 440W - in many electrical whole
 -   [Morningstar ProStar MPPT solar charge controller](https://www.morningstarcorp.com/products/prostar-mppt/). The maximum solar panel size: 300W\@12V.
 -   [Victron SmartSolar Charge controllers](https://www.victronenergy.com/solar-charge-controllers) Usually, for a 400 W panel, use the 100/30A or 100/50A charge controller. Check the Victron MPPT sizing calculator to determine the [charge controller size](https://www.victronenergy.com/mppt-calculator), see below:
 
-![Victron MPPT calculator result for a single 440W solar panel powering a small, all-in-one flux-tower at Dookie, Victoria (Markus Loew).](images/power/Victron_MPPT_calculator.png)
+![Victron MPPT calculator result for a single 440W solar panel powering a small, all-in-one flux-tower at Dookie, Victoria, suggesting a MPTT 100\|30 charge controller (Markus Loew).](images/power/Victron_MPPT_calculator.png)
 
 ## Battery
 
@@ -97,11 +97,11 @@ A non-exhaustive list of selected batteries that power some Australian flux towe
 
 ## Battery box
 
-Too many options to list, but here are two options in use at UoM towers
+Too many options to list, but here are two options in use at UoM towers:
 
--   [Aluminium tool/ute box from Total Tools](https://www.totaltools.com.au/100586-hrd-2-0mm-900mm-low-profile-aluminium-tool-box-a950lphrds2) that houses multiple 100/200 Ah batteries for Dookie, and Whroo, and other towers, easy to work with but requires custom interior mounting panel)
+-   [Aluminium tool/ute box from Total Tools](https://www.totaltools.com.au/100586-hrd-2-0mm-900mm-low-profile-aluminium-tool-box-a950lphrds2) that houses multiple 100/200 Ah batteries for several towers (Whroo, Dookie, and others). Easy to work with but requires custom interior mounting panel. Had the exact dimensions to fit the platform on the Whroo tower while also allowing two 200 Ah batteries with room to spare. Box requires additional glue-on foamstrip to improve dust and water ingress, but that turned out not be a problem.
 
-![Battery box and solar power system for Whroo tower. This toobox from Total Tools houses 2x 200 Ah LiFePo4 batteries (BigWei batteries) to power the EC system, profile system, separate soil system, surface temperature system, and accessories. Picture taken during tower upgrade. Switches, solar panel fuse (Noark 2-pole Exbp9) Victron charge controller 100 \| 50, fuses, etc. (Markus Loew)](images/power/Battery_solar_power_system_double_battery_Whroo_tower.jpg)
+![Battery box and solar power system for Whroo tower. This toobox from Total Tools houses 2x 200 Ah LiFePo4 batteries (BigWei batteries) to power the EC system, profile system, separate soil system, surface temperature system, and accessories. Picture taken during tower upgrade. Switches, solar panel fuse (Noark 2-pole Exbp9), Victron charge controller 100 \| 50, fuses, etc. With added glue-on foam strip around the outside edge of the box to improve the already good seal further. (Markus Loew)](images/power/Battery_solar_power_system_double_battery_Whroo_tower.jpg)
 
 -   Very compact battery box that still fits two Century 105Ah AGM batteries plus essential solar charge equipment: [Tool chest / generator tool box from Victorian Toolboxes, Melbourne](https://www.victoriantoolboxes.com.au/product/heavy-duty-aluminium-generator-tool-box-caravan-ute-trailer-truck-tool-box/). This model was in use on the Whroo flux tower before the tower-refurbishment.
 
