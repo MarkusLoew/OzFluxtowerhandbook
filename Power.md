@@ -94,7 +94,7 @@ A non-exhaustive list of selected batteries that power some Australian flux towe
 
 -   [Two of these batteries in parallel (Century 105 Ah)](https://www.centurybatteries.com.au/products/c12-105xda) Two 100 Ah batteries were used for the Whroo flux tower before the re-build.
 
-![DIY solar power battery system for the Boolcoomatta flux tower. 200 Ah steel-enclosed LiFePo4 battery, Victron Mppt 100 \| 50 solar charge controller (overpowered for this application) on aluminium back plate, solar fuses, load fuse, battery switch, battery fuse, earth rod for tower and power system. All installed inside a passively ventilated aluminium tool box. Box located underneath the solar panel for shading. (Markus Loew). ](images/power/Solar_power_system.jpg)
+![DIY solar power battery system for the Boolcoomatta flux tower. Left: overview, right: top view of electrical components (ignore tools stored in the box). 200 Ah steel-enclosed LiFePo4 battery, Victron Mppt 100 \| 50 solar charge controller (overpowered for this application) on aluminium back plate, solar fuses, load fuse, battery switch, battery fuse, earth rod for tower and power system. All installed inside a passively ventilated aluminium tool box. Box located underneath the solar panel for shading. (Markus Loew). ](images/power/Solar_power_system.jpg)
 
 ## Power to the instruments, electrical wiring
 
