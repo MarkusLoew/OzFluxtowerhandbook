@@ -14,7 +14,9 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 
 ![Victron MPPT calculator result for a the Whroo tower. Tower is equipped with EC logger system for flux and micrometeorology sensors, separate logger for soil-related sensors, Heitronics suface temperature system, six-level profile system. The tower is powered by two 445 W solar panels in series (Markus Loew).](images/power/Whroo_Victron_MPPT_calculator.png)
 
-The all-in-one flux tower described at [Sensorwiring](./Sensorwiring.md) with the described sensors and Maxon Dualmax modem has a constant power draw of about 0.6 to 0.8 A at 12V (9.6W). For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous(!) power available year-round @rebmann_icos_2018 .
+The all-in-one flux tower described at [Sensorwiring](./Sensorwiring.md) with the described sensors and Maxon Dualmax modem has a constant power draw of about \`0.6 to 0.9 A at 12V (\< \~10W)\`.
+
+For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous(!) power available year-round @rebmann_icos_2018 .
 
 ### Power sources
 
@@ -28,24 +30,24 @@ The install of a 240V electrical system at a tower location requires a certified
 
 #### Generator
 
-A generator is a powerful source of energy. I requires regular maintenance (e.g. every 100 hours of runtime) and re-fueling, though. Daily running costs are relatively high compared to solar power. Operational costs of the generator powering the Tumbarumba tower is about \$9 per day (fuel - pre-2026 price - and regular maintenance included). That generator requires maintenance four times a year and re-fueling twice per year. It runs for about six to eight hours every 8 days to charge the batteries that power the research site. A local car mechanic services the generator when the maintenance interval is up. The run-time of the generator is monitored online to advice the mechanic.\
-If a generator is used, "the effect of its exhaust gases on the trace gas measurements must be minimised" and wind-direction-based screening might be required to avoid generator exhaust gases in the footprint (@aubinet_eddy_2012). The generator should be deployed away from the flux instruments to avoid bias @moore_beginners_2024 , @rebmann_icos_2018 .
+A generator is a powerful source of energy. It requires regular maintenance (e.g. every 100 hours of runtime) and re-fueling, though. Daily running costs are relatively high compared to solar power. Operational costs of the generator powering the Tumbarumba tower is about \$9 per day (fuel - pre-2026 price - and regular maintenance included). That generator requires maintenance four times a year and re-fueling twice per year. It runs for about six to eight hours every 8 days to charge the batteries that power the research site. A local car mechanic services the generator when the maintenance interval is up. The run-time of the generator is monitored online to advice the mechanic.
 
-#### Solar
+\
+If a generator is used, "*the effect of its exhaust gases on the trace gas measurements must be minimised*" and wind-direction-based screening might be required to avoid generator exhaust gases in the footprint (@aubinet_eddy_2012). The generator should be deployed away from the flux instruments to avoid bias @moore_beginners_2024 , @rebmann_icos_2018 .
 
-Solar panels on tower can affect the wind flow and radiation patterns. Consider wind loading on tower!
+#### Solar panels
 
--   DIY battery system / professionally installed power system
+Solar panels on tower can affect the wind flow, turbulence, and radiation patterns around the flux tower. **Consider wind loading** on tower! The tower must be rated to carry solar panels of the specific physical size!
+
+-   DIY battery system / professionally installed power system ?
+-   no specific suggestion on solar panels, models, brands?
 
 ### Solar power systems
 
--   Battery box
--   Solar panel size
--   Solar panel mount
--   Charge controller
--   Battery type, recommendations
--   Earth rod
--   Fuses, switches
+-   Battery box (to do) (myriad of options, e.g. [Aluminium tool/ute box](https://www.totaltools.com.au/100586-hrd-2-0mm-900mm-low-profile-aluminium-tool-box-a950lphrds2) that houses multiple 100/200 Ah batteries for Dookie, and Whroo, and other towers, easy to work with but requires custom interior mounting panel)
+-   Solar panel size (to do) E.g. JinkoSolar 440W - in many electrical wholesale shops it is difficult to find smaller solar panels!
+-   Solar panel mount (to do)
+-   Earth rod (to do)
 
 ### Charge controllers
 
@@ -58,11 +60,11 @@ Solar panels on tower can affect the wind flow and radiation patterns. Consider 
 
 To continuously operate a flux tower that uses about 0.8 A constantly, a battery of about 100 Ah capacity is recommended. This large battery allows to operate the flox tower for about four days without solar input.
 
-To calculate the battery size use
+To calculate the battery size:
 
-`constant current (A) x 24 hours/day x days of autonomy = battery size in Ah`
+`Constant current (A) x 24 hours/day x days of autonomy = battery size in Ah`
 
-i.e. `0.8 A x 24h/day/4 days = 76.8 Ah`. So, *mathematically*, a battery of 76.8 Ah size is sufficient.
+i.e. `0.8 A x 24h/day x 4 days = 76.8 Ah`. So, *mathematically*, a battery of 76.8 Ah size is sufficient.
 
 **However**, do not discharge the battery too deep!
 
@@ -76,17 +78,17 @@ i.e. for
 
 -   Lead acid battery: `76.8 Ah / 0.5 = 153 Ah`. This will require a **200 Ah** lead acid battery (or **two** 100 Ah lead acid batteries in parallel!
 
-Check for batteries that are being offered for camping, outdoor live, and boating available from auto or marine shops, camping shops ore specialised battery manufacturers.
+Check for batteries that are being offered for camping, outdoor live, and boating available from auto or marine shops, camping shops or specialised battery manufacturers.
 
-A non-exhaustive list of selected batteries that power some Australian flux towers:
+A non-exhaustive list of selected batteries that power some Australian flux towers in the UoM hub:
 
 ### LiFePo4 battery:
 
 -   [Steel-encapsulated LifePo4 battery 100 Ah (BigWei)](https://www.bigweibattery.com.au/product/100ah-bwb-12v-lifepo4-deep-cycle/)
 
--   or for even more power, and autonomy
+-   or for even more power, room for additional sensors and devices, and/or longer autonomy:
 
-    [Steel-encapsulated LifePo4 battery 200 Ah (BigWei)](https://www.bigweibattery.com.au/product/200ah-bwb-12v-lifepo4-deep-cycle-marine-boat-series-3/) This battery powers the Whroo flux tower (initially one 200 Ah battery was used - when the profile system was added, we connected a second battery 200 Ah). A single one of these batteries powers several "small", all-in-one flux towers.
+    [Steel-encapsulated LifePo4 battery 200 Ah (BigWei)](https://www.bigweibattery.com.au/product/200ah-bwb-12v-lifepo4-deep-cycle-marine-boat-series-3/) This battery powers the Whroo flux tower (initially one 200 Ah battery was used - when the profile system was added, we connected a second battery 200 Ah). A single one of these batteries power a "small", all-in-one flux tower easily.
 
 ### AGM lead acid battery:
 
@@ -98,15 +100,15 @@ A non-exhaustive list of selected batteries that power some Australian flux towe
 
 -   For general wiring and soldering practices, refer to [NASA Workmanship standard for crimping, interconnecting cables, harnesses and wiring](https://standards.nasa.gov/standard/NASA/NASA-STD-87394), @nasa_workmanship_2015
 
--   12V, 24V, split systems
+-   12V, 24V, split systems (24V for instruments far away on top of the tower, 12V for small towers) to do
 
--   cable connections (crimps, soldering, on-location options)
+-   cable connections (crimps, soldering, on-location options) to do
 
--   earth bars (e.g. Jaycar copper bar with 3d printed feet)
+-   earth bars (e.g. Jaycar copper bar with 3d printed feet) to do
 
--   sensor hubs
+-   sensor hubs (to do)
 
--   glue-on cable routing
+-   glue-on cable routing (to do)
 
 ## Fuses
 
@@ -122,11 +124,9 @@ Always check if the circuit breaker is rated for your desired voltage, e.g. 12V 
 
     ![Schneider DIN-rail mounted miniature circuit breaker rated for 12 - 60V. Here used for the 24V circuit that powers all equipment on top of the Tumbarumba tower (Markus Loew).](images/power/MCB_DIN_rail.jpg)
 
-#### Fuses
+### Fuses
 
--   car fuses (blade or mini-blade)
-
--   Miniblade fuses fit the Phoenix fused DIN-rail terminals (recommended option for sensors and instrumentation)
+-   [Miniblade fuses](https://au.rs-online.com/web/p/car-fuses/0563536) to fit the Phoenix fused DIN-rail terminals (**recommended option** for sensors and instrumentation) [Fused DIN-rail terminal block](https://au.rs-online.com/web/p/din-rail-terminal-blocks/7081627)
 
 -   In-line blade fuse for e.g. battery terminals from e.g. automotive applications: <https://www.jaycar.com.au/30a-32vdc-water-resistant-inline-standard-blade-fuse-holder/p/SZ2042>
 
