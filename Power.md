@@ -8,7 +8,9 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 
 ### Power demand
 
--   [Campbell Scientific power budget spreadsheet](https://www.campbellsci.com.au/downloads/power-budget-spreadsheet) and tutorial. This spreadsheet provides power consumption data for Campbell Scientific devices and allows to calculate an overall power budget.
+-   [Campbell Scientific power budget spreadsheet](https://www.campbellsci.com.au/downloads/power-budget-spreadsheet) and online tool. This spreadsheet and online tool provides power consumption data for Campbell Scientific devices and allows to calculate an overall power budget.
+
+![Campbell Scientific Power Budget Calculator screenshots from https://www.campbellsci.com.au/downloads/power-budget-spreadsheet. (Campbell Scientific)](images/power/Campbell_power_budget_online_calculator.png)
 
 -   [Victron MPPT calculator](https://www.victronenergy.com/mppt-calculator): Suggests charge controller model, calculates daily yield from solar panel size and configuration, voltage, and location. This calculator includes an allowance for oversizing solar panels on a charge controller.
 
@@ -94,7 +96,7 @@ A non-exhaustive list of selected batteries that power some Australian flux towe
 
 -   [Two of these batteries in parallel (Century 105 Ah)](https://www.centurybatteries.com.au/products/c12-105xda) Two 100 Ah batteries were used for the Whroo flux tower before the re-build.
 
-![DIY solar power battery system for the Boolcoomatta flux tower. Left: overview, right: top view of electrical components (ignore tools stored in the box). 200 Ah steel-enclosed LiFePo4 battery, Victron Mppt 100 \| 50 solar charge controller (overpowered for this application) on aluminium back plate, solar fuses, load fuse, battery switch, battery fuse, earth rod for tower and power system. All installed inside a passively ventilated aluminium tool box. Box located underneath the solar panel for shading. (Markus Loew). ](images/power/Solar_power_system.jpg)
+![DIY solar power battery system for the Boolcoomatta flux tower. Left: overview, right: top view of electrical components (ignore tools stored in the box). 200 Ah steel-enclosed LiFePo4 battery, Victron Mppt 100 \| 50 solar charge controller (overpowered for this application) on aluminium back plate, solar fuses, load fuse, battery switch, battery fuse, earth rod for tower and power system. All installed inside a passively ventilated aluminium tool box. Box located underneath the solar panel for shading. (Markus Loew).](images/power/Solar_power_system.jpg)
 
 ## Power to the instruments, electrical wiring
 
