@@ -256,6 +256,7 @@ div.csl-indent {
   <li><a href="#lifepo4-battery" id="toc-lifepo4-battery" class="nav-link" data-scroll-target="#lifepo4-battery">LiFePo4 battery:</a></li>
   <li><a href="#agm-lead-acid-battery" id="toc-agm-lead-acid-battery" class="nav-link" data-scroll-target="#agm-lead-acid-battery">AGM lead acid battery:</a></li>
   </ul></li>
+  <li><a href="#battery-box" id="toc-battery-box" class="nav-link" data-scroll-target="#battery-box">Battery box</a></li>
   <li><a href="#power-to-the-instruments-electrical-wiring" id="toc-power-to-the-instruments-electrical-wiring" class="nav-link" data-scroll-target="#power-to-the-instruments-electrical-wiring">Power to the instruments, electrical wiring</a></li>
   <li><a href="#fuses" id="toc-fuses" class="nav-link" data-scroll-target="#fuses">Fuses</a>
   <ul class="collapse">
@@ -317,7 +318,7 @@ div.csl-indent {
 <figcaption>Victron MPPT calculator result for a the Whroo tower. Tower is equipped with EC logger system for flux and micrometeorology sensors, separate logger for soil-related sensors, Heitronics suface temperature system, six-level profile system. The tower is powered by two 445 W solar panels in series (Markus Loew).</figcaption>
 </figure>
 </div>
-<p>The all-in-one flux tower described at <a href="./Sensorwiring.html">Sensorwiring</a> with the described sensors and Maxon Dualmax modem has a constant power draw of about `0.6 to 0.9 A at 12V (&lt; ~10W)`.</p>
+<p>The all-in-one flux tower described at <a href="./Sensorwiring.html">Sensorwiring</a> with the described sensors and Maxon Dualmax modem has a constant power draw of about <code>0.6 to 0.9 A at 12V (&lt; ~10W)</code>.</p>
 <p>For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous(!) power available year-round <span class="citation" data-cites="rebmann_icos_2018">Rebmann et al. (<a href="#ref-rebmann_icos_2018" role="doc-biblioref">2018</a>)</span> .</p>
 </section>
 <section id="power-sources" class="level3">
@@ -346,12 +347,7 @@ If a generator is used, “<em>the effect of its exhaust gases on the trace gas 
 </section>
 <section id="solar-power-systems" class="level3">
 <h3 class="anchored" data-anchor-id="solar-power-systems">Solar power systems</h3>
-<ul>
-<li>Battery box (to do) (myriad of options, e.g.&nbsp;<a href="https://www.totaltools.com.au/100586-hrd-2-0mm-900mm-low-profile-aluminium-tool-box-a950lphrds2">Aluminium tool/ute box</a> that houses multiple 100/200 Ah batteries for Dookie, and Whroo, and other towers, easy to work with but requires custom interior mounting panel)</li>
-<li>Solar panel size (to do) E.g. JinkoSolar 440W - in many electrical wholesale shops it is difficult to find smaller solar panels!</li>
-<li>Solar panel mount (to do)</li>
-<li>Earth rod (to do)</li>
-</ul>
+<p>to do - Solar panel size (to do) E.g. JinkoSolar 440W - in many electrical wholesale shops it is difficult to find smaller solar panels! - Solar panel mount (to do) - Earth rod (to do)</p>
 </section>
 <section id="charge-controllers" class="level3">
 <h3 class="anchored" data-anchor-id="charge-controllers">Charge controllers</h3>
@@ -388,7 +384,7 @@ If a generator is used, “<em>the effect of its exhaust gases on the trace gas 
 <ul>
 <li><p><a href="https://www.bigweibattery.com.au/product/100ah-bwb-12v-lifepo4-deep-cycle/">Steel-encapsulated LifePo4 battery 100 Ah (BigWei)</a></p></li>
 <li><p>or for even more power, room for additional sensors and devices, and/or longer autonomy:</p>
-<p><a href="https://www.bigweibattery.com.au/product/200ah-bwb-12v-lifepo4-deep-cycle-marine-boat-series-3/">Steel-encapsulated LifePo4 battery 200 Ah (BigWei)</a> This battery powers the Whroo flux tower (initially one 200 Ah battery was used - when the profile system was added, we connected a second battery 200 Ah). A single one of these batteries power a “small”, all-in-one flux tower easily.</p></li>
+<p><a href="https://www.bigweibattery.com.au/product/200ah-bwb-12v-lifepo4-deep-cycle-marine-boat-series-3/">Steel-encapsulated LifePo4 battery 200 Ah (BigWei)</a> This battery powers the Whroo flux tower (initially one 200 Ah battery was used. When we added the profile system, we connected a second 200 Ah battery). However, a single one of these batteries power a “small”, all-in-one flux tower comfortably.</p></li>
 </ul>
 </section>
 <section id="agm-lead-acid-battery" class="level3">
@@ -399,10 +395,32 @@ If a generator is used, “<em>the effect of its exhaust gases on the trace gas 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/power/Solar_power_system.jpg" class="img-fluid figure-img"></p>
-<figcaption>DIY solar power battery system for the Boolcoomatta flux tower. Left: overview, right: top view of electrical components (ignore tools stored in the box). 200 Ah steel-enclosed LiFePo4 battery, Victron Mppt 100 | 50 solar charge controller (overpowered for this application) on aluminium back plate, solar fuses, load fuse, battery switch, battery fuse, earth rod for tower and power system. All installed inside a passively ventilated aluminium tool box. Box located underneath the solar panel for shading. (Markus Loew).</figcaption>
+<figcaption>DIY solar power battery system for the Boolcoomatta flux tower. Left: overview, right: top view of electrical components (ignore tools stored in the box). 200 Ah steel-enclosed LiFePo4 battery (BigWei batteries), Victron Mppt 100 | 50 solar charge controller (overpowered for this “small” tower application) mounted on a aluminium back plate, solar panel circuit breaker (Noark 2-pole <a href="https://www.noark.eu/en/products/Photovoltaics/DC_Miniature_Circuit_Breakers_Ex9BP_%28New%29">Ex9BP</a>), load fuse, battery switch, battery fuse, earth rod for tower and power system. All installed inside a passively ventilated aluminium tool box (Total Tools). Box located underneath the solar panel for shading. (Markus Loew).</figcaption>
 </figure>
 </div>
 </section>
+</section>
+<section id="battery-box" class="level2">
+<h2 class="anchored" data-anchor-id="battery-box">Battery box</h2>
+<p>Too many options to list, but here are two options in use at UoM towers</p>
+<ul>
+<li><a href="https://www.totaltools.com.au/100586-hrd-2-0mm-900mm-low-profile-aluminium-tool-box-a950lphrds2">Aluminium tool/ute box from Total Tools</a> that houses multiple 100/200 Ah batteries for Dookie, and Whroo, and other towers, easy to work with but requires custom interior mounting panel)</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/power/Battery_solar_power_system_double_battery_Whroo_tower.jpg" class="img-fluid figure-img"></p>
+<figcaption>Battery box and solar power system for Whroo tower. This toobox from Total Tools houses 2x 200 Ah LiFePo4 batteries (BigWei batteries) to power the EC system, profile system, separate soil system, surface temperature system, and accessories. Picture taken during tower upgrade. Switches, solar panel fuse (Noark 2-pole Exbp9) Victron charge controller 100 | 50, fuses, etc. (Markus Loew)</figcaption>
+</figure>
+</div>
+<ul>
+<li>Very compact battery box that still fits two Century 105Ah AGM batteries plus essential solar charge equipment: <a href="https://www.victoriantoolboxes.com.au/product/heavy-duty-aluminium-generator-tool-box-caravan-ute-trailer-truck-tool-box/">Tool chest / generator tool box from Victorian Toolboxes, Melbourne</a>. This model was in use on the Whroo flux tower before the tower-refurbishment.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/power/Whroo_old_compact_battery_box.jpg" class="img-fluid figure-img"></p>
+<figcaption>Battery box and power system for the Whroo tower, now re-used for one of the Dookie agricultural towers. Morningstar ProStar charge controller, two Century 105 Ah AGM batteries, switches, fuses. (Markus Loew)</figcaption>
+</figure>
+</div>
 </section>
 <section id="power-to-the-instruments-electrical-wiring" class="level2">
 <h2 class="anchored" data-anchor-id="power-to-the-instruments-electrical-wiring">Power to the instruments, electrical wiring</h2>
@@ -423,15 +441,16 @@ If a generator is used, “<em>the effect of its exhaust gases on the trace gas 
 <p>Always check if the circuit breaker is rated for your desired voltage, e.g.&nbsp;12V or 24V.</p>
 <p>12-60V rated circuit breakers, DIN-rail mountable e.g</p>
 <ul>
-<li><p><a href="https://www.se.com/au/en/product/A9F94110/miniature-circuit-breaker-mcb-acti9-ic60l-1p-10a-c-curve-15000a-iec-en-608981-25ka-iec-en-609472/">Schneider Acti 9 iC60L, 10 A</a></p></li>
-<li><p><a href="https://www.se.com/au/en/product-range/7556-acti9-ic60/12144422927-miniature-circuit-breakers/">General Minature circuit breakers</a> (check voltage ratings!)</p>
+<li><p><a href="https://www.se.com/au/en/product/A9F94110/miniature-circuit-breaker-mcb-acti9-ic60l-1p-10a-c-curve-15000a-iec-en-608981-25ka-iec-en-609472/">Schneider Acti 9 iC60L, 10 A</a> For DC (and AC) circuits.</p></li>
+<li><p>Solar panel circuit breaker: <a href="https://www.noark.eu/en/products/Photovoltaics/DC_Miniature_Circuit_Breakers_Ex9BP_%28New%29">Noark Miniature Circuit Breakers Ex9BP</a>, 2-pole version for solar panels is available</p></li>
+<li><p><a href="https://www.se.com/au/en/product-range/7556-acti9-ic60/12144422927-miniature-circuit-breakers/">General Minature circuit breakers</a> (check voltage ratings!)</p></li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/power/MCB_DIN_rail.jpg" class="img-fluid figure-img"></p>
 <figcaption>Schneider DIN-rail mounted miniature circuit breaker rated for 12 - 60V. Here used for the 24V circuit that powers all equipment on top of the Tumbarumba tower (Markus Loew).</figcaption>
 </figure>
-</div></li>
-</ul>
+</div>
 </section>
 <section id="fuses-1" class="level3">
 <h3 class="anchored" data-anchor-id="fuses-1">Fuses</h3>

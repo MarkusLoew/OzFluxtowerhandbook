@@ -16,7 +16,7 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 
 ![Victron MPPT calculator result for a the Whroo tower. Tower is equipped with EC logger system for flux and micrometeorology sensors, separate logger for soil-related sensors, Heitronics suface temperature system, six-level profile system. The tower is powered by two 445 W solar panels in series (Markus Loew).](images/power/Whroo_Victron_MPPT_calculator.png)
 
-The all-in-one flux tower described at [Sensorwiring](./Sensorwiring.md) with the described sensors and Maxon Dualmax modem has a constant power draw of about \`0.6 to 0.9 A at 12V (\< \~10W)\`.
+The all-in-one flux tower described at [Sensorwiring](./Sensorwiring.md) with the described sensors and Maxon Dualmax modem has a constant power draw of about `0.6 to 0.9 A at 12V (< ~10W)`.
 
 For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous(!) power available year-round @rebmann_icos_2018 .
 
@@ -46,10 +46,7 @@ Solar panels on tower can affect the wind flow, turbulence, and radiation patter
 
 ### Solar power systems
 
--   Battery box (to do) (myriad of options, e.g. [Aluminium tool/ute box](https://www.totaltools.com.au/100586-hrd-2-0mm-900mm-low-profile-aluminium-tool-box-a950lphrds2) that houses multiple 100/200 Ah batteries for Dookie, and Whroo, and other towers, easy to work with but requires custom interior mounting panel)
--   Solar panel size (to do) E.g. JinkoSolar 440W - in many electrical wholesale shops it is difficult to find smaller solar panels!
--   Solar panel mount (to do)
--   Earth rod (to do)
+to do - Solar panel size (to do) E.g. JinkoSolar 440W - in many electrical wholesale shops it is difficult to find smaller solar panels! - Solar panel mount (to do) - Earth rod (to do)
 
 ### Charge controllers
 
@@ -90,13 +87,25 @@ A non-exhaustive list of selected batteries that power some Australian flux towe
 
 -   or for even more power, room for additional sensors and devices, and/or longer autonomy:
 
-    [Steel-encapsulated LifePo4 battery 200 Ah (BigWei)](https://www.bigweibattery.com.au/product/200ah-bwb-12v-lifepo4-deep-cycle-marine-boat-series-3/) This battery powers the Whroo flux tower (initially one 200 Ah battery was used - when the profile system was added, we connected a second battery 200 Ah). A single one of these batteries power a "small", all-in-one flux tower easily.
+    [Steel-encapsulated LifePo4 battery 200 Ah (BigWei)](https://www.bigweibattery.com.au/product/200ah-bwb-12v-lifepo4-deep-cycle-marine-boat-series-3/) This battery powers the Whroo flux tower (initially one 200 Ah battery was used. When we added the profile system, we connected a second 200 Ah battery). However, a single one of these batteries power a "small", all-in-one flux tower comfortably.
 
 ### AGM lead acid battery:
 
 -   [Two of these batteries in parallel (Century 105 Ah)](https://www.centurybatteries.com.au/products/c12-105xda) Two 100 Ah batteries were used for the Whroo flux tower before the re-build.
 
-![DIY solar power battery system for the Boolcoomatta flux tower. Left: overview, right: top view of electrical components (ignore tools stored in the box). 200 Ah steel-enclosed LiFePo4 battery, Victron Mppt 100 \| 50 solar charge controller (overpowered for this application) on aluminium back plate, solar fuses, load fuse, battery switch, battery fuse, earth rod for tower and power system. All installed inside a passively ventilated aluminium tool box. Box located underneath the solar panel for shading. (Markus Loew).](images/power/Solar_power_system.jpg)
+![DIY solar power battery system for the Boolcoomatta flux tower. Left: overview, right: top view of electrical components (ignore tools stored in the box). 200 Ah steel-enclosed LiFePo4 battery (BigWei batteries), Victron Mppt 100 \| 50 solar charge controller (overpowered for this "small" tower application) mounted on a aluminium back plate, solar panel circuit breaker (Noark 2-pole [Ex9BP](https://www.noark.eu/en/products/Photovoltaics/DC_Miniature_Circuit_Breakers_Ex9BP_%28New%29)), load fuse, battery switch, battery fuse, earth rod for tower and power system. All installed inside a passively ventilated aluminium tool box (Total Tools). Box located underneath the solar panel for shading. (Markus Loew).](images/power/Solar_power_system.jpg)
+
+## Battery box
+
+Too many options to list, but here are two options in use at UoM towers
+
+-   [Aluminium tool/ute box from Total Tools](https://www.totaltools.com.au/100586-hrd-2-0mm-900mm-low-profile-aluminium-tool-box-a950lphrds2) that houses multiple 100/200 Ah batteries for Dookie, and Whroo, and other towers, easy to work with but requires custom interior mounting panel)
+
+![Battery box and solar power system for Whroo tower. This toobox from Total Tools houses 2x 200 Ah LiFePo4 batteries (BigWei batteries) to power the EC system, profile system, separate soil system, surface temperature system, and accessories. Picture taken during tower upgrade. Switches, solar panel fuse (Noark 2-pole Exbp9) Victron charge controller 100 \| 50, fuses, etc. (Markus Loew)](images/power/Battery_solar_power_system_double_battery_Whroo_tower.jpg)
+
+-   Very compact battery box that still fits two Century 105Ah AGM batteries plus essential solar charge equipment: [Tool chest / generator tool box from Victorian Toolboxes, Melbourne](https://www.victoriantoolboxes.com.au/product/heavy-duty-aluminium-generator-tool-box-caravan-ute-trailer-truck-tool-box/). This model was in use on the Whroo flux tower before the tower-refurbishment.
+
+![Battery box and power system for the Whroo tower, now re-used for one of the Dookie agricultural towers. Morningstar ProStar charge controller, two Century 105 Ah AGM batteries, switches, fuses. (Markus Loew)](images/power/Whroo_old_compact_battery_box.jpg)
 
 ## Power to the instruments, electrical wiring
 
@@ -122,11 +131,13 @@ Always check if the circuit breaker is rated for your desired voltage, e.g. 12V 
 
 12-60V rated circuit breakers, DIN-rail mountable e.g
 
--   [Schneider Acti 9 iC60L, 10 A](https://www.se.com/au/en/product/A9F94110/miniature-circuit-breaker-mcb-acti9-ic60l-1p-10a-c-curve-15000a-iec-en-608981-25ka-iec-en-609472/)
+-   [Schneider Acti 9 iC60L, 10 A](https://www.se.com/au/en/product/A9F94110/miniature-circuit-breaker-mcb-acti9-ic60l-1p-10a-c-curve-15000a-iec-en-608981-25ka-iec-en-609472/) For DC (and AC) circuits.
+
+-   Solar panel circuit breaker: [Noark Miniature Circuit Breakers Ex9BP](https://www.noark.eu/en/products/Photovoltaics/DC_Miniature_Circuit_Breakers_Ex9BP_%28New%29), 2-pole version for solar panels is available
 
 -   [General Minature circuit breakers](https://www.se.com/au/en/product-range/7556-acti9-ic60/12144422927-miniature-circuit-breakers/) (check voltage ratings!)
 
-    ![Schneider DIN-rail mounted miniature circuit breaker rated for 12 - 60V. Here used for the 24V circuit that powers all equipment on top of the Tumbarumba tower (Markus Loew).](images/power/MCB_DIN_rail.jpg)
+![Schneider DIN-rail mounted miniature circuit breaker rated for 12 - 60V. Here used for the 24V circuit that powers all equipment on top of the Tumbarumba tower (Markus Loew).](images/power/MCB_DIN_rail.jpg)
 
 ### Fuses
 
