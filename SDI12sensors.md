@@ -6,7 +6,7 @@ Each SDI-12 sensor has an internal address/ID that is used to identify the senso
 
 ## Set SDI-12 sensor address
 
-SDI12 sensors come with a default address from the factory. See the manual of the specific sensor. e.g. Campbell Scientic takes the last digit of the sensors's serial number as address. Other manufacturers assign the same address e.g. '0' to all sensors.
+SDI12 sensors come with a default address from the factory. See the manual of the specific sensor. e.g. Campbell Scientific takes the last digit of the sensors's serial number as address. Other manufacturers assign the same address e.g. '0' to all sensors out of the box.
 
 There are at least two options to see and change the address of the sensor:
 
@@ -32,7 +32,7 @@ The easiest way to multiply the space on a logger is a terminal block with dedic
 
 -   Commercial SDM and SDI-12 hub: <https://www.campbellsci.com.au/hub-sdm5>
 
-![Campbell Scientific SDM5 hub. Can be used for SDI-12 or, as in this case, as SDM hub (Markus Loew).](images/sensors/SDI12/CampbellScientific_SDM5_SDI12_hub.jpg)
+![Campbell Scientific SDM5 hub. Can be used for SDI-12 too. Or, as in this case, as SDM hub (Markus Loew).](images/sensors/SDI12/CampbellScientific_SDM5_SDI12_hub.jpg)
 
 -   DIY terminal hub: see example below
 
