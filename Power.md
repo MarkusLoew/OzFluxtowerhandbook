@@ -14,7 +14,7 @@ bibliography: ./references/References.bib # path and bibliography .bib file name
 
 ![Victron MPPT calculator result for a the Whroo tower. Tower is equipped with EC logger system for flux and micrometeorology sensors, separate logger for soil-related sensors, Heitronics suface temperature system, six-level profile system. The tower is powered by two 445 W solar panels in series (Markus Loew).](images/power/Whroo_Victron_MPPT_calculator.png)
 
-For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous(!) power available year-round @rebmann_icos_2018 .
+The all-in-one flux tower described at [Sensorwiring](./Sensorwiring.md) with the described sensors and Maxon Dualmax modem has a constant power draw of about 0.6 to 0.8 A at 12V (9.6W). For comparison: Flux-towers in the ICOS network (Class 1, 2) are required to have at least 2.5-3 kW of continuous(!) power available year-round @rebmann_icos_2018 .
 
 ### Power sources
 
@@ -54,19 +54,63 @@ Solar panels on tower can affect the wind flow and radiation patterns. Consider 
 
 ![Victron MPPT calculator result for a single 440W solar panel powering a small, all-in-one flux-tower at Dookie, Victoria (Markus Loew).](images/power/Victron_MPPT_calculator.png)
 
-### Power to the instruments, electrical wiring
+## Battery
+
+To continuously operate a flux tower that uses about 0.8 A constantly, a battery of about 100 Ah capacity is recommended. This large battery allows to operate the flox tower for about four days without solar input.
+
+To calculate the battery size use
+
+`constant current (A) x 24 hours/day x days of autonomy = battery size in Ah`
+
+i.e. `0.8 A x 24h/day/4 days = 76.8 Ah`. So, *mathematically*, a battery of 76.8 Ah size is sufficient.
+
+**However**, do not discharge the battery too deep!
+
+Stay at least above a state of charge (SOC) of 50% for lead acid batteries, and stay above 80% for a LiFePo4 battery! This avoids damaging the battery and allows to pro-long battery life.
+
+Calculate the actual battery size via `required amphours / lowest SOC = battery size in Ah`
+
+i.e. for
+
+-   LiFePo4 battery: `76.8 Ah / 0.8 = 96 Ah`. The next available 12V battery size is usually **100 Ah**.
+
+-   Lead acid battery: `76.8 Ah / 0.5 = 153 Ah`. This will require a **200 Ah** lead acid battery (or **two** 100 Ah lead acid batteries in parallel!
+
+Check for batteries that are being offered for camping, outdoor live, and boating available from auto or marine shops, camping shops ore specialised battery manufacturers.
+
+A non-exhaustive list of selected batteries that power some Australian flux towers:
+
+### LiFePo4 battery:
+
+-   [Steel-encapsulated LifePo4 battery 100 Ah (BigWei)](https://www.bigweibattery.com.au/product/100ah-bwb-12v-lifepo4-deep-cycle/)
+
+-   or for even more power, and autonomy
+
+    [Steel-encapsulated LifePo4 battery 200 Ah (BigWei)](https://www.bigweibattery.com.au/product/200ah-bwb-12v-lifepo4-deep-cycle-marine-boat-series-3/) This battery powers the Whroo flux tower (initially one 200 Ah battery was used - when the profile system was added, we connected a second battery 200 Ah). A single one of these batteries powers several "small", all-in-one flux towers.
+
+### AGM lead acid battery:
+
+-   [Two of these batteries in parallel (Century 105 Ah)](https://www.centurybatteries.com.au/products/c12-105xda) Two 100 Ah batteries were used for the Whroo flux tower before the re-build.
+
+## Power to the instruments, electrical wiring
 
 -   Victron wiring guidebook for solar power battery systems: "Wiring unlimited" [Victron Energy Wiring unlimited (pdf)](https://www.victronenergy.com/upload/documents/Wiring-Unlimited-EN.pdf), @leeftink_wiring_2019
+
 -   For general wiring and soldering practices, refer to [NASA Workmanship standard for crimping, interconnecting cables, harnesses and wiring](https://standards.nasa.gov/standard/NASA/NASA-STD-87394), @nasa_workmanship_2015
+
 -   12V, 24V, split systems
+
 -   cable connections (crimps, soldering, on-location options)
+
 -   earth bars (e.g. Jaycar copper bar with 3d printed feet)
+
 -   sensor hubs
+
 -   glue-on cable routing
 
-### Fuses
+## Fuses
 
-#### Circuit breakers
+### Circuit breakers
 
 Always check if the circuit breaker is rated for your desired voltage, e.g. 12V or 24V.
 

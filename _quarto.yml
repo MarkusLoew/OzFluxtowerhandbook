@@ -25,7 +25,7 @@ website:
       - text: Climbing & Rigging
         file: ClimbingRigging.md
       - text: Power
-        file: power.md
+        file: Power.md
       - text: Enclosures
         file: Enclosures.md
       - section: "Sensors"
