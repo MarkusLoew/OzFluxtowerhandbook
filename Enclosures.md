@@ -43,7 +43,7 @@ Better protection in harsh environments from wildlife, and weather. Matt Northwo
 ![Custom shade cover for enclosure (Matt Northwood)](images/Matt_shade_cover_image004.jpg)\
 Custom shade cover for a Campbell Scientific fibreglass enclosure (Matt Northwood)
 
-# Cable glands, cable entry into enclosures
+# Cable glands, waterproof cable entry into enclosures
 
 ## Glands and putty
 
@@ -89,10 +89,10 @@ An alternative to cable glands are *Lapp skintop cubes* or *Icotek cable entry s
 
 ### Split glands
 
-A cheaper alternative and a mixture of cable gland end entry system are split cable glands - if the plug fits through the gland.
+A cheaper alternative and a mixture of cable gland and cable entry system are split cable glands - if the plug fits through the gland.
 
 [Icotek split cable glands](https://www.icotek.com/en/products/cable-glands/qvt)
 
-![Icotek compact split cable gland QVT. Left: Split gland used to feed the combined network and power cable into the outdoor enclosure of the [Stardot NetcamLive2 camera](./Phenocam.html#stardot-netcam-live-2) Right: detailed view of a Icotek QVT split gland. (Markus Loew)](images/enclosure/Split_gland.jpg)
+![Icotek compact split cable gland QVT. Left: Split gland used to feed the combined network and power cable into the outdoor enclosure of the [Stardot NetcamLive2 camera](Phenocam.html#stardot-netcam-live-2) Right: detailed view of a Icotek QVT split gland. (Markus Loew)](images/enclosure/Split_gland.jpg)
 
 [Home](./Home.html)

@@ -250,7 +250,7 @@ div.csl-indent {
   <li><a href="#stardot-netcam-live-2" id="toc-stardot-netcam-live-2" class="nav-link" data-scroll-target="#stardot-netcam-live-2">Stardot Netcam Live 2</a></li>
   <li><a href="#axis-cameras" id="toc-axis-cameras" class="nav-link" data-scroll-target="#axis-cameras">AXIS cameras</a></li>
   <li><a href="#reolink" id="toc-reolink" class="nav-link" data-scroll-target="#reolink">ReoLink</a></li>
-  <li><a href="#general-settings-for-tern-and-manual-upload" id="toc-general-settings-for-tern-and-manual-upload" class="nav-link" data-scroll-target="#general-settings-for-tern-and-manual-upload">General settings for TERN and manual upload</a></li>
+  <li><a href="#general-protocol-for-tern-phenocams-and-manual-image-upload" id="toc-general-protocol-for-tern-phenocams-and-manual-image-upload" class="nav-link" data-scroll-target="#general-protocol-for-tern-phenocams-and-manual-image-upload">General protocol for TERN phenocams and manual image upload</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -317,16 +317,17 @@ div.csl-indent {
 <p>The Stardot <a href="https://stardot-kb.netlify.app/kb/files/">Knowledge base for the Netcam Live2 camera is available here</a>.</p>
 <p><strong>This camera does not capture NDVI images directly, but provides separate visible light (RGB) and IR images to calculate NDVI off-camera!</strong></p>
 <p>NDVI can later be calculated as <code>NDVI = (NIR - Red) / (NIR + Red)</code> from the corresponding RGB and IR images.</p>
-<p>The weatherproof housing and mounting arm must be ordered additionally: <a href="http://stardot.com/products/compact-outdoor-enclosure">Compact Outdoor Enclosure with Wall Mount Enc-Outd3</a>. This wall-mount arm needs to be modified slightly to install it on a round pole (50 mm OD pipe) on a tower: The upper holes in the wall mount can be opened up further. Then use a clamp, e.g.&nbsp;a <a href="https://autobarn.com.au/ab/Autobarn-Category/Shop-our-Full-Range-by-Brand-at-Autobarn/Walker/Walker-Exhaust-Clamp-54mm-2-1-8in---C09P-1-/p/SP00895">C9 2⅛” exhaust clamp</a>, to adapt the flat mount to a pole mount, and use a second C9 clamp with a brace for additional rigidity. A U-bolt as provided by Campbell Scientific can be used as well.</p>
+<p>The weatherproof housing and mounting arm must be ordered additionally: <a href="http://stardot.com/products/compact-outdoor-enclosure">Compact Outdoor Enclosure with Wall Mount Enc-Outd3</a>. The wall-mount arm of the outdoor enclosure needs to be modified slightly to install it on a round pole (50 mm OD pipe) on a tower: The upper holes in the wall mount can be opened up further. Then use a clamp, e.g.&nbsp;a <a href="https://autobarn.com.au/ab/Autobarn-Category/Shop-our-Full-Range-by-Brand-at-Autobarn/Walker/Walker-Exhaust-Clamp-54mm-2-1-8in---C09P-1-/p/SP00895">C9 2⅛” exhaust clamp</a> (or from a nuts and bolts shop), to adapt the flat mount to a pole mount, and use a second C9 clamp with a brace for additional rigidity. A U-bolt as provided by Campbell Scientific can be used as well.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/phenocam/Stardot_phenocam_enclosure_and_bracket.jpg" class="img-fluid figure-img"></p>
-<figcaption>Stardot Netcam Live2 enclosure test install (left) and C9 clamp (right). Photo: Markus Loew.</figcaption>
+<figcaption>Stardot Netcam Live2 test install (left) and C9 clamp (right). Photo: Markus Loew.</figcaption>
 </figure>
 </div>
+<p>The cable gland provided with the outdoor enclosure by Stardot does not suit the combined power and ethernet cable that Stardot provides. See <a href="./Enclosures.html">Split Glands section</a> for a weatherproof solution.</p>
 <p>For detailed setup instructions for this camera, albeit for the international phenocam network, not the TERN data portal, see <a href="https://phenocam.nau.edu/pdf/PhenoCam_Install_Instructions.pdf">Phenocam network Netcam Live 2 install instructions</a>.</p>
 <section id="software-to-upload-images-from-the-netcam-live2-camera-to-tern" class="level4">
-<h4 class="anchored" data-anchor-id="software-to-upload-images-from-the-netcam-live2-camera-to-tern">Software to upload images from the netcam live2 camera to TERN:</h4>
+<h4 class="anchored" data-anchor-id="software-to-upload-images-from-the-netcam-live2-camera-to-tern">Software to upload images from the Netcam live2 camera to TERN:</h4>
 <p>See <a href="https://github.com/MarkusLoew/netcamTERNupload">the netcamTERN upload software repository (Markus Loew)</a> regarding uploading photos to TERN automatically.</p>
 </section>
 </section>
@@ -345,10 +346,10 @@ div.csl-indent {
 <li><a href="https://reolink.com/au/product/argus-pt-ultra/">Reolink Argus PT Ultra</a> (a model with WIFi and Solar panel available - but this model does not have automatic ftp upload, though)</li>
 </ul>
 </section>
-<section id="general-settings-for-tern-and-manual-upload" class="level3">
-<h3 class="anchored" data-anchor-id="general-settings-for-tern-and-manual-upload">General settings for TERN and manual upload</h3>
-<p>See the upload paths on UQ RDM and the TERN naming conventions at <a href="https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam" class="uri">https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam</a></p>
-<p>The camera models listed here all allow changing the filename of the photos to match the pattern expected by TERN.</p>
+<section id="general-protocol-for-tern-phenocams-and-manual-image-upload" class="level3">
+<h3 class="anchored" data-anchor-id="general-protocol-for-tern-phenocams-and-manual-image-upload">General protocol for TERN phenocams and manual image upload</h3>
+<p>See the upload paths on UQ RDM and the TERN naming conventions in the Knoweldge Base at: <a href="https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam" class="uri">https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam</a></p>
+<p>The camera models listed above all allow changing the filename of the photos to match the pattern expected by TERN.</p>
 <p>Images get uploaded to UQ RDM file storage via sftp. Or, if the camera is within the TERN OpenVPN network, ftp upload is an option (check with TERN support for ftp server details - esupport@tern.org.au).</p>
 <p>The images get ingested into the TERN data portal within 24 hours and are then removed from UQ RDM.</p>
 

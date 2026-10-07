@@ -46,13 +46,15 @@ The Stardot [Knowledge base for the Netcam Live2 camera is available here](https
 
 NDVI can later be calculated as `NDVI = (NIR - Red) / (NIR + Red)` from the corresponding RGB and IR images.
 
-The weatherproof housing and mounting arm must be ordered additionally: [Compact Outdoor Enclosure with Wall Mount Enc-Outd3](http://stardot.com/products/compact-outdoor-enclosure). This wall-mount arm needs to be modified slightly to install it on a round pole (50 mm OD pipe) on a tower: The upper holes in the wall mount can be opened up further. Then use a clamp, e.g. a [C9 2⅛" exhaust clamp](https://autobarn.com.au/ab/Autobarn-Category/Shop-our-Full-Range-by-Brand-at-Autobarn/Walker/Walker-Exhaust-Clamp-54mm-2-1-8in---C09P-1-/p/SP00895), to adapt the flat mount to a pole mount, and use a second C9 clamp with a brace for additional rigidity. A U-bolt as provided by Campbell Scientific can be used as well.
+The weatherproof housing and mounting arm must be ordered additionally: [Compact Outdoor Enclosure with Wall Mount Enc-Outd3](http://stardot.com/products/compact-outdoor-enclosure). The wall-mount arm of the outdoor enclosure needs to be modified slightly to install it on a round pole (50 mm OD pipe) on a tower: The upper holes in the wall mount can be opened up further. Then use a clamp, e.g. a [C9 2⅛" exhaust clamp](https://autobarn.com.au/ab/Autobarn-Category/Shop-our-Full-Range-by-Brand-at-Autobarn/Walker/Walker-Exhaust-Clamp-54mm-2-1-8in---C09P-1-/p/SP00895) (or from a nuts and bolts shop), to adapt the flat mount to a pole mount, and use a second C9 clamp with a brace for additional rigidity. A U-bolt as provided by Campbell Scientific can be used as well.
 
-![Stardot Netcam Live2 enclosure test install (left) and C9 clamp (right). Photo: Markus Loew.](images/phenocam/Stardot_phenocam_enclosure_and_bracket.jpg)
+![Stardot Netcam Live2 test install (left) and C9 clamp (right). Photo: Markus Loew.](images/phenocam/Stardot_phenocam_enclosure_and_bracket.jpg)
+
+The cable gland provided with the outdoor enclosure by Stardot does not suit the combined power and ethernet cable that Stardot provides. See [Split Glands section](Enclosures.md) for a weatherproof solution.
 
 For detailed setup instructions for this camera, albeit for the international phenocam network, not the TERN data portal, see [Phenocam network Netcam Live 2 install instructions](https://phenocam.nau.edu/pdf/PhenoCam_Install_Instructions.pdf).
 
-#### Software to upload images from the netcam live2 camera to TERN:
+#### Software to upload images from the Netcam live2 camera to TERN:
 
 See [the netcamTERN upload software repository (Markus Loew)](https://github.com/MarkusLoew/netcamTERNupload) regarding uploading photos to TERN automatically.
 
@@ -70,11 +72,11 @@ Axis cameras use POE for power (\~4W constant power draw). Use "hanger bolts" to
 
 -   [Reolink Argus PT Ultra](https://reolink.com/au/product/argus-pt-ultra/) (a model with WIFi and Solar panel available - but this model does not have automatic ftp upload, though)
 
-### General settings for TERN and manual upload
+### General protocol for TERN phenocams and manual image upload
 
-See the upload paths on UQ RDM and the TERN naming conventions at <https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam>
+See the upload paths on UQ RDM and the TERN naming conventions in the Knoweldge Base at: <https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam>
 
-The camera models listed here all allow changing the filename of the photos to match the pattern expected by TERN.
+The camera models listed above all allow changing the filename of the photos to match the pattern expected by TERN.
 
 Images get uploaded to UQ RDM file storage via sftp. Or, if the camera is within the TERN OpenVPN network, ftp upload is an option (check with TERN support for ftp server details - esupport\@tern.org.au).
 
