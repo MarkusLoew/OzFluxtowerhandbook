@@ -141,7 +141,7 @@ Check signal strength:
 
 ![Signal strength display and tower location displays from two phone apps: "SignalStrength" (left), indicating marginal 4G reception and showing an overall classification of the the 4G signal strength range. Location of 4G towers mapped by the app "Opensignal" (middle), and direction indicator of the "Opensignal" app pointing towards the nearest cell tower (right). (Markus Loew)](images/communication/signal_strength.jpg)
 
-![Checking and mapping 4G connectivity on location months before deciding on a location for the flux tower. Two directional antennas on telescopic pruning pole connected to a battery-powered Maxon Quadmax modem were used to test mobile network reception and data transmission bandwidth. A good 4G connection was established to a tower 20 km away. (Markus Loew)](images/communication/checking_for_connectivity.jpg)
+![Checking and mapping 4G connectivity on location months before deciding on a location for the flux tower. Two directional mimo antennas on a telescopic pruning pole connected to a battery-powered Maxon Quadmax modem were used to test mobile network reception and data transmission bandwidth. A good 4G connection was established to a tower 20 km away. (Markus Loew)](images/communication/checking_for_connectivity.jpg)
 
 ## Satellite communication
 
@@ -191,8 +191,10 @@ Recommended 12V-operated POE injectors (<https://www.telcoantennas.com.au/>):
 
 
 ## WiFi extenders
--   [UniFi AC Mesh](https://techspecs.ui.com/unifi/wifi/uap-ac-mesh?) Despite the name, it is powered by any POE system. It includes an injector for for a 240V household outlet.
+-   [UniFi AC Mesh](https://techspecs.ui.com/unifi/wifi/uap-ac-mesh?) Despite the name, it is powered by via POE. But it includes an injector for a 240V AC household outlet.
 -   [TPlink EAP225 Outdoor](https://www.omadanetworks.com/au/business-networking/omada-wifi-outdoor/eap225-outdoor/)
-There are start similarities between the two models above.
+
+
+There are stark similarities between the two models above.
 
 [Home](./Home.html)

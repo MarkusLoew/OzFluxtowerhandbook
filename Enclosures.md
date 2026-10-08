@@ -21,9 +21,9 @@ Metal enclosures are standard in many electrical installations. They are not alw
 Working with steel enclosures can be difficult to drill into to install cabling, and they can rust. The weight of steel enclosures can make install on tower more difficult.\
 Aluminium enclosures can be too flimsy for long-term use in the field, depending on type. A big downside of aluminium is heat buildup inside. A sun cover is recommended depending on location.
 
--   In general, check the quality of hinges, locks, and ensure that wast can not pool on top of the seals of the enclosure. Ensure good grounding / earth protection for metal enclosures
+-   In general, check the quality of hinges, locks, and ensure that water can not pool on top of the seals of the enclosure. Ensure good grounding / earth protection for metal enclosures!
 
--   If vandalism or theft is a possibility at the tower location, consider heavy duty enclosure are add additional protection around the instrumentation (see below)
+-   If vandalism or theft is a possibility at the tower location, consider heavy duty enclosure or add additional protection around the instrumentation via a cover (see below)
 
 -   Suppliers of enclosures\
     [IP Enclosures](https://www.ipenclosures.com.au/aluminium-electrical-enclosures/)\
@@ -45,7 +45,7 @@ Custom shade cover for a Campbell Scientific fibreglass enclosure (Matt Northwoo
 
 # Cable glands, waterproof cable entry into enclosures
 
-## Glands and putty
+## Glands sealed with putty
 
 The simplest way to feed cables into an enclosure is a simple hole with protective pipe. Once the cables are installed, the hole is sealed with electrical putty against water ingress and wildlife.\
 
@@ -62,7 +62,7 @@ Multi-hole inserts provide a better seal around the cables than the electrical p
 
 -   Installing and removing cables is not as easy compared to the other methods, especially if there are plugs at the end.
 
--   these inserts provide excellent cable management
+-   these inserts provide excellent cable management, though.
 
 -   [Lapp Australia Multi-Hole inserts](https://lappaustralia.com.au/en/multi-hole-inserts)
 
@@ -93,6 +93,6 @@ A cheaper alternative and a mixture of cable gland and cable entry system are sp
 
 [Icotek split cable glands](https://www.icotek.com/en/products/cable-glands/qvt)
 
-![Icotek compact split cable gland QVT. Left: Split gland used to feed the combined network and power cable into the outdoor enclosure of the [Stardot NetcamLive2 camera](Phenocam.html#stardot-netcam-live-2) Right: detailed view of a Icotek QVT split gland. (Markus Loew)](images/enclosure/Split_gland.jpg)
+![Icotek compact split cable gland QVT. Left: Split gland used to feed the combined network and power cable into the outdoor enclosure of the [Stardot NetcamLive2 camera](Phenocam.html#stardot-netcam-live-2). Right: detailed view of a Icotek QVT split gland. (Markus Loew)](images/enclosure/Split_gland.jpg)
 
 [Home](./Home.html)

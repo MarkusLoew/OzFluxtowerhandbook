@@ -70,9 +70,9 @@ Axis cameras use POE for power (\~4W constant power draw). Use "hanger bolts" to
 
 ### ReoLink
 
--   [Reolink Argus PT Ultra](https://reolink.com/au/product/argus-pt-ultra/) (a model with WIFi and Solar panel available - but this model does not have automatic ftp upload, though)
+-   [Reolink Argus PT Ultra](https://reolink.com/au/product/argus-pt-ultra/) (a model with WiFi and solar panel available - but this model does not have automatic ftp upload, though)
 
-### General protocol for TERN phenocams and manual image upload
+## General protocol for TERN phenocams and manual image upload
 
 See the upload paths on UQ RDM and the TERN naming conventions in the Knoweldge Base at: <https://ternaus.atlassian.net/wiki/spaces/TERNSup/pages/2629730756/Phenocam>
 
