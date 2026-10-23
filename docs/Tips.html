@@ -222,9 +222,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#tips-and-tricks-for-campbell-scientific-data-loggers" id="toc-tips-and-tricks-for-campbell-scientific-data-loggers" class="nav-link active" data-scroll-target="#tips-and-tricks-for-campbell-scientific-data-loggers">Tips and Tricks for Campbell Scientific data loggers</a>
+  <li><a href="#tips-and-tricks" id="toc-tips-and-tricks" class="nav-link active" data-scroll-target="#tips-and-tricks">Tips and Tricks</a>
+  <ul class="collapse">
+  <li><a href="#campbell-scientific-data-loggers" id="toc-campbell-scientific-data-loggers" class="nav-link" data-scroll-target="#campbell-scientific-data-loggers">Campbell Scientific data loggers</a>
   <ul class="collapse">
   <li><a href="#cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease" id="toc-cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease" class="nav-link" data-scroll-target="#cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease">CR6 and CR1000x Ethernet connectivity issues, no DHCP lease</a></li>
+  </ul></li>
+  <li><a href="#critters" id="toc-critters" class="nav-link" data-scroll-target="#critters">Critters</a>
+  <ul class="collapse">
+  <li><a href="#critters-and-conduit" id="toc-critters-and-conduit" class="nav-link" data-scroll-target="#critters-and-conduit">Critters and conduit</a></li>
+  </ul></li>
+  <li><a href="#birds" id="toc-birds" class="nav-link" data-scroll-target="#birds">Birds</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -256,24 +264,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="tips-and-tricks-for-campbell-scientific-data-loggers" class="level1">
-<h1>Tips and Tricks for Campbell Scientific data loggers</h1>
-<section id="cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease" class="level2">
-<h2 class="anchored" data-anchor-id="cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease">CR6 and CR1000x Ethernet connectivity issues, no DHCP lease</h2>
-<p>In rare occasions, Campbell Scientific data loggers like the CR6 and the CR1000x do not connect to the ethernet network. The loggers does not even appear in the overview table of connected devices of the router. The lights of the ethernet port on the logger do not illuminate - except for a short blink right at connection and second blink about 30 to 60 seconds later and once per minute from then on.</p>
-<p>While the logger will come online eventually, this can be very frustrating when working on a tight schedule or when working at heights.</p>
+<section id="tips-and-tricks" class="level1">
+<h1>Tips and Tricks</h1>
+<section id="campbell-scientific-data-loggers" class="level2">
+<h2 class="anchored" data-anchor-id="campbell-scientific-data-loggers">Campbell Scientific data loggers</h2>
+<section id="cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease" class="level3">
+<h3 class="anchored" data-anchor-id="cr6-and-cr1000x-ethernet-connectivity-issues-no-dhcp-lease">CR6 and CR1000x Ethernet connectivity issues, no DHCP lease</h3>
+<p>In rare occasions, Campbell Scientific data loggers like the CR6 and the CR1000x do not connect to the ethernet network when the ethernet cable gets plugged in. The loggers does not even appear in the overview table of connected devices of the router. The lights of the ethernet port on the logger do not illuminate either - except for a short blink right at connection and second blink about 30 to 60 seconds later and once per minute from then on.</p>
+<p>While the logger will come online eventually, waiting for the connection can be very frustrating when working on a tight schedule or when working at height.</p>
 <p>This behaviour is most likely caused by the power saving settings for the ethernet port on the logger:</p>
 <p>Connect to your data logger via the Campbell Scientific DevConfig tools. Select the tab “Deployment” -&gt; “Ethernet”:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/tips+tricks/Ethernet_power_saving_setting_on_logger.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshof of the Campbell Scientific DevConfig tool. To change the ethernet power settings, select the tab “Deployment”, then “Ethernet”. Use the option “Always on” to minimise issues with delayed connection of the data logger to the etherner network. (Markus Loew)</figcaption>
+<figcaption>Screenshot of the Campbell Scientific DevConfig tool. To change the ethernet power settings, select the tab “Deployment”, then “Ethernet”. Use the option “Always on” to minimise issues with delayed connection of the data logger to the ethernet network. (Markus Loew)</figcaption>
 </figure>
 </div>
-<p>The default setting is “<code>1 minute</code>”: <code>The Ethernet interface powers on for a few seconds every 1 minute to detect an active network link pulse. If a link is present, the interface will remain on until the cable is removed or the network is shut down. This setting allows the Ethernet interface to be available for periodic use without a significant contribution to power consumption when a link is not present</code> (Campbell Scientific, DevConfig).</p>
-<p>From experience, this regular connection short reconnection of the logger to the ethernet network every minute is not always sufficient to detect an active connection. Hence the data logger does not connect immediately. The reason for that is unknown.</p>
-<p>To avoid that, select the setting “<code>Always on</code>” from the “Ethernet power” drop-down menu: <code>The Ethernet interface will always be powered and will contribute approximately 50 mA at 12 Vdc to the power budget regardless of the connectivity. Using this mode is recommended if using IPNetPower() to control Ethernet power under program control</code> (Campbell Scientific, DevConfig).</p>
-<p>With this setting at “Always on” the activity lights on the ethernet port of the logger and router should illuminate immediately when the cable is plugged in. To confirm, check the DHCP client table on your router.</p>
+<p>The default setting is “<code>1 minute</code>”: From Campbell Scientific, DevConfig help:</p>
+<p><code>The Ethernet interface powers on for a few seconds every 1 minute to detect an active network link pulse. If a link is present, the interface will remain on until the cable is removed or the network is shut down. This setting allows the Ethernet interface to be available for periodic use without a significant contribution to power consumption when a link is not present</code>.</p>
+<p>From experience, this regular, but short reconnection of the logger to the ethernet network every minute is not always sufficient to detect an active connection. Hence the data logger does not connect immediately. The reason for that is unknown.</p>
+<p>To avoid that, select the setting “<code>Always on</code>” from the “Ethernet power” drop-down menu:</p>
+<p><code>The Ethernet interface will always be powered and will contribute approximately 50 mA at 12 Vdc to the power budget regardless of the connectivity. Using this mode is recommended if using IPNetPower() to control Ethernet power under program control</code> (from Campbell Scientific, DevConfig).</p>
+<p>With this setting at “Always on” the activity lights on the ethernet port of the logger and router should illuminate immediately when the cable is plugged in. The logger should connect. To confirm, check the DHCP client table on your router.</p>
+</section>
+</section>
+<section id="critters" class="level2">
+<h2 class="anchored" data-anchor-id="critters">Critters</h2>
+<section id="critters-and-conduit" class="level3">
+<h3 class="anchored" data-anchor-id="critters-and-conduit">Critters and conduit</h3>
+<p>Stuff some steel wool into the end of any open conduit, cable ducts, or open cable glands. That will keep animals, including larger insects, out of the cable ducts. Ants will still get through, though! Replace the steel wool regularly, as it rusts and deteriorates quickly.</p>
+</section>
+</section>
+<section id="birds" class="level2">
+<h2 class="anchored" data-anchor-id="birds">Birds</h2>
+<p>Birds like to nibble on cables. Use rigid or split conduit or even metal conduit to protect cables from getting eaten.</p>
+<p>Use bird spikes to keep them away from sensitive instruments.</p>
+<p><a href="./Home.html">Home</a></p>
 
 
 </section>

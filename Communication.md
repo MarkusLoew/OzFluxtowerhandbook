@@ -12,7 +12,7 @@ Many modern computers don't have a serial port any more, so a USB-to-serial adap
 
 Available via e.g.
 
--   [RS-online](https://au.rs-online.com/web/p/interface-adapters-converters/0429274)
+-   [recommended FTDI Chip RS232 USB to serial converter, RS-online](https://au.rs-online.com/web/p/interface-adapters-converters/0429274)
 
 -   [Li-COR USB-to-serial connector](https://shop.licor.com/env/store/product?c=photoextra&n=6400-27)
 
@@ -90,16 +90,13 @@ In locations with marginal reception, it is recommended to use a modem that allo
 
 When designing the tower and instrumentation location on the tower, keep in mind that **standard antenna cables can only be 10 m long** before significant signal degradation occurs. Hence, the modem must be close to the antenna! See section anttenna cable length limitation below.
 
-
 ### Antenna cable length limitation
 
-Cables between a 4G modem and a 4G antenna should not be longer than 10 m! Longer cables can cause significant (logarithmic?) signal degradation, reducing the effectiveness of the antenna setup. 
-For tall towers, this means that the modem must be on top of the tower, out of reach of easy access, to be close to the antenna. This can be a problem for maintenance and troubleshooting. For towers up to 10 m tall, the modem can be inside the data logger and power enclosure (see e.g. Boolcoomatta tower) making it a compact and accessible setup.
+Cables between a 4G modem and a 4G antenna should not be longer than 10 m! Longer cables can cause significant (logarithmic?) signal degradation, reducing the effectiveness of the antenna setup. For tall towers, this means that the modem must be on top of the tower, out of reach of easy access, to be close to the antenna. This can be a problem for maintenance and troubleshooting. For towers up to 10 m tall, the modem can be inside the data logger and power enclosure (see e.g. Boolcoomatta tower) making it a compact and accessible setup.
 
-If a <10 m modem cable is not an option at all:
+If a \<10 m modem cable is not an option at all:
 
-For **longer antenna-to-modem distances**, beyond 10 m, but less than 30 m, one could try a eg [Ultra Low Loss Flexible Coaxial Cable](https://www.telcoantennas.com.au/telco-antennas-lcu600-ultra-low-loss-flexible-coax~87862). 
-
+For **longer antenna-to-modem distances**, beyond 10 m, but less than 30 m, one could try a eg [Ultra Low Loss Flexible Coaxial Cable](https://www.telcoantennas.com.au/telco-antennas-lcu600-ultra-low-loss-flexible-coax~87862).
 
 ### Check for available towers in your area on these websites:
 
@@ -189,11 +186,10 @@ Recommended 12V-operated POE injectors (<https://www.telcoantennas.com.au/>):
 
 -   [POE+ 12V to 56V](https://www.telcoantennas.com.au/12vdc-to-56vdc-poe-power-over-ethernet-injector)
 
-
 ## WiFi extenders
+
 -   [UniFi AC Mesh](https://techspecs.ui.com/unifi/wifi/uap-ac-mesh?) Despite the name, it is powered by via POE. But it includes an injector for a 240V AC household outlet.
 -   [TPlink EAP225 Outdoor](https://www.omadanetworks.com/au/business-networking/omada-wifi-outdoor/eap225-outdoor/)
-
 
 There are stark similarities between the two models above.
 

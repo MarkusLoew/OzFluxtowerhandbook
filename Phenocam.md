@@ -66,6 +66,8 @@ Other camera options are
 
 -   [Axis P1488-LE Bullet Camera](https://www.axis.com/products/axis-p1488-le) (Older model as used within the OzFlux network was [Axis P1468-LE Bullet Camera](https://www.axis.com/products/axis-p1468-le/support))
 
+-   [AXIS P3747-PLVE Panoramic Camera](https://www.axis.com/products/axis-p3747-plve) 
+
 Axis cameras use POE for power (\~4W constant power draw). Use "hanger bolts" to install cameras on trees: M6 metric thread on one side and a wood thread on the other, e.g. [Bunnings Hanger bolts](https://www.bunnings.com.au/everhang-m6-x-48mm-zinc-plated-hanger-bolt-4-pack_p2310854)
 
 ### ReoLink
