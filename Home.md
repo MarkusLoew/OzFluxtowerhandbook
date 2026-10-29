@@ -10,6 +10,10 @@ nocite: |
 
 Building a eddycovarariance tower from scratch can be a daunting task. This handbook covers *technical* aspects of building a flux tower. It does not cover the *scientific* background of eddy covariance. While there are resources already that help with getting started (see references below), this handbook will provide practical guidance of getting a tower off with hands-on sections on hardware, and software used in the [OzFlux network](https://www.ozflux.org.au/).
 
+Do you want to get involved? 
+
+Contact Markus Loew (m.loew at unimelb.edu.au) or [contribute directly to the repository behind the handbook.](https://github.com/MarkusLoew/OzFluxtowerhandbook?tab=contributing-ov-file)
+
 Please refer to the manuals and papers below for in-depth information on building a flux tower:
 
 ## References
