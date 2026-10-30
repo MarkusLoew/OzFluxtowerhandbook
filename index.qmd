@@ -1,7 +1,7 @@
 ---
-title: "Home (redirect)"
+title: "OzFlux tower handbook book (Markus Loew)"
 format: html
 ---
 
 <meta http-equiv="refresh" content="0; URL=Home.html" />
-<p>If you are not redirected automatically, <a href="Home.html">click here</a>.</p>
+<p>Welcome to the website of the OzFlux tower Handbook. https://markusloew.github.io/OzFluxtowerhandbook/ . If you are not redirected automatically, <a href="Home.html">click here</a>.</p>
