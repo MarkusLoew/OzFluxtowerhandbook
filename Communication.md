@@ -60,7 +60,7 @@ Recommendations for **industrial-grade modems**:
 
 -   [Belden Netmodule 1601](https://www.belden.com/products/industrial-networking-cybersecurity/wireless/iiot-and-industrial-routers/nb1601-lsc) Slim-line modem, dual SIM slots, four ethernet ports, dual 4G antennas, two WiFI antennas, DIN rail on the thin side. Has built-in analog relay to devices like e.g. phenocam. Capable to connect to OpenVPN, and similar services.
 
--   [Teltonika RUT951](https://www.telcoantennas.com.au/teltonika-rut951) Dual antenna, dual SIM modem with three ethernet ports. OpenWRT-based. BEware of the Molex 4-pin power plug! See [Teltonika power options](https://www.teltonika-networks.com/products/accessories/powering-options), [4-way Molex power plug](https://www.digikey.com.au/en/products/detail/molex/0430250400/252497), and [plug accessories](https://www.digikey.com.au/en/product-highlight/m/molex-connector/micro-fit-3-interconnect-system). The DIN rail is sold separately.
+-   [Teltonika RUT951](https://www.telcoantennas.com.au/teltonika-rut951) Dual antenna, dual SIM modem with three ethernet ports. OpenWRT-based. Beware of the Molex 4-pin power plug! See [Teltonika power options](https://www.teltonika-networks.com/products/accessories/powering-options), [4-way Molex power plug](https://www.digikey.com.au/en/products/detail/molex/0430250400/252497), and [plug accessories](https://www.digikey.com.au/en/product-highlight/m/molex-connector/micro-fit-3-interconnect-system). The DIN rail is sold separately for this modem!
 
 -   [Campbell Scientific Cell220](https://www.campbellsci.com.au/cell220) Serial modem well integrated the the Campbell Scientifc logger ecosystem. The Modem is conveniently configured via the logger program (CRBasic). This modem can interact directly with logger, and data and provides diagnostic output (like signal strength, uptime) to data tables on the logger. Modem actions can be triggered depending on logger or measurement status. No WiFi, no ethernet ports, dual antenna, single SIM card. Small form factor, highly configurable. Similar serial modems are available elsewhere too, as long as they support he full range of AT modem commands (ie Netmodule NB1600).
 
@@ -98,7 +98,19 @@ If a \<10 m modem cable is not an option at all:
 
 For **longer antenna-to-modem distances**, beyond 10 m, but less than 30 m, one could try a eg [Ultra Low Loss Flexible Coaxial Cable](https://www.telcoantennas.com.au/telco-antennas-lcu600-ultra-low-loss-flexible-coax~87862).
 
-### Check for available towers in your area on these websites:
+### General antenna plugs / converters / cable assemmblies
+
+[Antenna plugs and converters](https://rfshop.com.au/product-category/coaxial-cable/coaxial-cable-assemblies/sma-to-sma/)
+
+### Antenna lightning protection
+
+To protect the modem from lightning strikes, consider a Lightning protectors e.g.
+
+-   [4G antenna Lightning Arrestor Pack, SMA](https://powertec.com.au/lightning-arrestor-pack-for-cel-fi/).
+
+-   [Various lightning protectors, including SMA plugs](https://rfshop.com.au/product-category/splitters-lightning/lightning-protectors/)
+
+    ### Check for available towers in your area on these websites:
 
 -   [RFNSA Radio Frequency National Site Archive](https://www.rfnsa.com.au/)
 

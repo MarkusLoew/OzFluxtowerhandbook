@@ -53,6 +53,7 @@ The CRBasic command for ftp upload is [`FTPClient()`](https://help.campbellsci.c
 `Const server = "my.server.here.au"`
 
 `'default ftp port is 21, sftp is 22 but check your server configuration. This setting is only needed if defaults of ftp or sftp are not used.`
+
 `Const FTP_Port = 21` 
 
 `' insert the username you set up on your server `

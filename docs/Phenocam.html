@@ -303,7 +303,13 @@ div.csl-indent {
 <p>An external trigger can be used (e.g.&nbsp;via a relay as available in the Maxon Quadmax modem or a control port on a Campbell Scientific logger) to wake the camera from deep sleep via a 12V signal.</p>
 <p>The camera is fully integrated into the Campbell Scientific sensor network and can interact with dataloggers and Loggernet via Pakbus.</p>
 <p>To mount the camera on a pole, the bracket <a href="https://www.campbellsci.com/order/p18549">18549 ACC CC Camera or PWD22 Mounting Kit</a> is required. Alternatively, Nico provides a custom built, versatile mount for the CCFC (or provides the CAD drawings to manufacture it yourself).</p>
-<p>Ensure the camera has the latest firmware installed! Because: Older firmware versions do not add a colour scale to the NDVI images - this makes it difficult to interpret NDVI images across the network.</p>
+<p>Ensure the camera has the latest firmware (2.9) <a href="https://www.campbellsci.com/resources/software/ccfc-firmware">Campbell Scientific CCFC Firmware resources</a> installed! Because: Older firmware versions do not add a colour scale to the NDVI images - this makes it difficult to interpret NDVI images across the network.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/phenocam/Phenocam_example.jpg" class="img-fluid figure-img"></p>
+<figcaption>Campbell Scientific CCFC phenocam examples. Left: RGB photo, Right: false-colour NDVI image. Please note the colour scale bar at the bottom of the NDVI image. This scalebar is a feature of the v2.9 CCFC firmware (Markus Loew)</figcaption>
+</figure>
+</div>
 <section id="data-upload-to-tern-from-a-campbell-scientific-ccfc-camera" class="level4">
 <h4 class="anchored" data-anchor-id="data-upload-to-tern-from-a-campbell-scientific-ccfc-camera">Data upload to TERN from a Campbell Scientific CCFC camera</h4>
 <p>A generic configuration file to enable taking scheduled photos, file names, and upload setting is available for download <a href="./downloads/CCFC-9999-20260723_generic.xml">here (CCFC XML configuration file)</a> (Use the right-click <code>Save link as</code> option in your browser to download this XML file instead of displaying it!). After loading this generic configuration file onto the camera via <code>Settings/Advanced/Upload configuration</code> in the CCFC web interface, adjust the camera name (usually similar to <code>CCFC-xxxx</code>), site name (<code>AU-Xxx</code>), time zone, and WiFi access point password, etc to suit your camera.</p>

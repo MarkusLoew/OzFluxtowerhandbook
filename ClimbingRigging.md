@@ -172,4 +172,11 @@ Aluminum and steel tubing usually have in-compatible diameters!
 
 Connections between steel and aluminium can become oxidised!
 
+## Attaching instruments to the tower
+
+Swing arms,
+sliding pipes
+
+[to do]
+
 [Home](./Home.html)

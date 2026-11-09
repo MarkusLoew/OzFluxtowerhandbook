@@ -26,7 +26,9 @@ The camera is fully integrated into the Campbell Scientific sensor network and c
 
 To mount the camera on a pole, the bracket [18549 ACC CC Camera or PWD22 Mounting Kit](https://www.campbellsci.com/order/p18549) is required. Alternatively, Nico provides a custom built, versatile mount for the CCFC (or provides the CAD drawings to manufacture it yourself).
 
-Ensure the camera has the latest firmware installed! Because: Older firmware versions do not add a colour scale to the NDVI images - this makes it difficult to interpret NDVI images across the network.
+Ensure the camera has the latest firmware (2.9) [Campbell Scientific CCFC Firmware resources](https://www.campbellsci.com/resources/software/ccfc-firmware) installed! Because: Older firmware versions do not add a colour scale to the NDVI images - this makes it difficult to interpret NDVI images across the network.
+
+![Campbell Scientific CCFC phenocam examples. Left: RGB photo, Right: false-colour NDVI image. Please note the colour scale bar at the bottom of the NDVI image. This scalebar is a feature of the v2.9 CCFC firmware (Markus Loew).](images/phenocam/Phenocam_example.jpg)
 
 #### Data upload to TERN from a Campbell Scientific CCFC camera
 
@@ -66,7 +68,7 @@ Other camera options are
 
 -   [Axis P1488-LE Bullet Camera](https://www.axis.com/products/axis-p1488-le) (Older model as used within the OzFlux network was [Axis P1468-LE Bullet Camera](https://www.axis.com/products/axis-p1468-le/support))
 
--   [AXIS P3747-PLVE Panoramic Camera](https://www.axis.com/products/axis-p3747-plve) 
+-   [AXIS P3747-PLVE Panoramic Camera](https://www.axis.com/products/axis-p3747-plve)
 
 Axis cameras use POE for power (\~4W constant power draw). Use "hanger bolts" to install cameras on trees: M6 metric thread on one side and a wood thread on the other, e.g. [Bunnings Hanger bolts](https://www.bunnings.com.au/everhang-m6-x-48mm-zinc-plated-hanger-bolt-4-pack_p2310854)
 
