@@ -74,7 +74,7 @@ Wiring and constants.
 |-------------|---------------|-------------|
 | C1          | SDM data      | green       |
 | C2          | SDM data      | white       |
-| C3          | SDM enable    | red        |
+| C3          | SDM enable    | red         |
 | G           | SDM reference | black       |
 | g           | SDM shield    | clear       |
 | 12V         | Power         | red         |
@@ -124,11 +124,28 @@ Apogee CS310 PAR sensor program constants and wiring:
 | gnd         | PAR signal ground | black       |
 | gnd         | PAR shield        | clear       |
 
-TO ADD:
-
 Licor PAR sensor and Licor multiplier configuration and wiring
 
-### Averging soil temperature thermocouple (TCAV)
+`Const PAR_ANALOG_INPUT = 9 ' Unique SE analog input channel or Volt116 input`
+
+`Const PAR_MULT = 243.833 ' calculated as 1000 / 0.604 / 6.79 uA sensor Calib factor from sensor #Q49xx )`
+
+See Campbell Scientific Li190b manual!
+
+The Li190 multiplier is calculated as 1000 / 0.604 / calibration constant ie 7.09 microamps per 1000 µmol s-1 m-2: 1000/0.604/7.09.
+
+You find the calibration certificate with the calibration constants for your sensor at [Licor LI-190R & LI-191R Help Center](https://www.licor.com/support/LI-190R-and-LI-191R/home.html) based on the serial number of the sensor (printed on the sensor). Look for the link to "calibration certificates" in the top right corner of the website next to the search bar.
+
+The Licor Li190 wiring for a Campbell Scientific logger is similar to the Apogee wiring:
+
+| Logger port     | Function          | Wire colour |
+|-----------------|-------------------|-------------|
+| 9H              | PAR signal        | red         |
+| 9L              | PAR signal ground | black       |
+| gnd             | PAR shield        | clear       |
+| jumper gnd to L | Jumper            |             |
+
+### Averaging soil temperature thermocouple (TCAV)
 
 `Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel.`
 
@@ -322,7 +339,7 @@ Screw terminal, side-entry if the wires
 
 Locking terminals / end stop to limit movement of the terminals on the DIN-rail and to keep terminals falling off the rail:
 
--   [WAGO 249 Series End Stop ](https://au.rs-online.com/web/p/din-rail-terminal-accessories/7960460)
+-   [WAGO 249 Series End Stop](https://au.rs-online.com/web/p/din-rail-terminal-accessories/7960460)
 
 ![Various DIN rail terminals. From left: Fused and unfused Phoenix terminals, Wago 279 series with three and four wire terminals, AB2429 terminal, Dinkle DK4N terminal and Wago 249 series locking end stop (right). Bottom: various jumpers to cross-connect terminals. (Markus Loew)](images/sensors/sensor_wiring/DIN_rail_terminals.jpg)
 

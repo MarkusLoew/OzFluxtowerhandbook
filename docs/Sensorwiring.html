@@ -230,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#irgason-campbell-scientific-7500rs-irga-licor-csat3b-campbell-scientific" id="toc-irgason-campbell-scientific-7500rs-irga-licor-csat3b-campbell-scientific" class="nav-link" data-scroll-target="#irgason-campbell-scientific-7500rs-irga-licor-csat3b-campbell-scientific">Irgason (Campbell Scientific) / 7500RS Irga (Licor) + CSat3b (Campbell Scientific)</a></li>
   <li><a href="#soil-heat-flux" id="toc-soil-heat-flux" class="nav-link" data-scroll-target="#soil-heat-flux">Soil heat flux</a></li>
   <li><a href="#par-sensor" id="toc-par-sensor" class="nav-link" data-scroll-target="#par-sensor">PAR sensor</a></li>
-  <li><a href="#averging-soil-temperature-thermocouple-tcav" id="toc-averging-soil-temperature-thermocouple-tcav" class="nav-link" data-scroll-target="#averging-soil-temperature-thermocouple-tcav">Averging soil temperature thermocouple (TCAV)</a></li>
+  <li><a href="#averaging-soil-temperature-thermocouple-tcav" id="toc-averaging-soil-temperature-thermocouple-tcav" class="nav-link" data-scroll-target="#averaging-soil-temperature-thermocouple-tcav">Averaging soil temperature thermocouple (TCAV)</a></li>
   <li><a href="#soil-moisture-user-constants-wiring-cr1000x" id="toc-soil-moisture-user-constants-wiring-cr1000x" class="nav-link" data-scroll-target="#soil-moisture-user-constants-wiring-cr1000x">Soil moisture user constants / wiring (CR1000X)</a></li>
   <li><a href="#rain-gauge-cs701-user-constants-wiring-cr1000x" id="toc-rain-gauge-cs701-user-constants-wiring-cr1000x" class="nav-link" data-scroll-target="#rain-gauge-cs701-user-constants-wiring-cr1000x">Rain gauge CS701 user constants / wiring (CR1000X)</a></li>
   <li><a href="#air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" id="toc-air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116" class="nav-link" data-scroll-target="#air-temperature-and-humidity-vailsala-hmp155-wired-to-volt116">Air temperature and humidity (Vailsala HMP155 wired to Volt116)</a></li>
@@ -456,11 +456,47 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>TO ADD:</p>
 <p>Licor PAR sensor and Licor multiplier configuration and wiring</p>
+<p><code>Const PAR_ANALOG_INPUT = 9 ' Unique SE analog input channel or Volt116 input</code></p>
+<p><code>Const PAR_MULT = 243.833 ' calculated as 1000 / 0.604 / 6.79 uA sensor Calib factor from sensor #Q49xx )</code></p>
+<p>See Campbell Scientific Li190b manual!</p>
+<p>The Li190 multiplier is calculated as 1000 / 0.604 / calibration constant ie 7.09 microamps per 1000 µmol s-1 m-2: 1000/0.604/7.09.</p>
+<p>You find the calibration certificate with the calibration constants for your sensor at <a href="https://www.licor.com/support/LI-190R-and-LI-191R/home.html">Licor LI-190R &amp; LI-191R Help Center</a> based on the serial number of the sensor (printed on the sensor). Look for the link to “calibration certificates” in the top right corner of the website next to the search bar.</p>
+<p>The Licor Li190 wiring for a Campbell Scientific logger is similar to the Apogee wiring:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Logger port</th>
+<th>Function</th>
+<th>Wire colour</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>9H</td>
+<td>PAR signal</td>
+<td>red</td>
+</tr>
+<tr class="even">
+<td>9L</td>
+<td>PAR signal ground</td>
+<td>black</td>
+</tr>
+<tr class="odd">
+<td>gnd</td>
+<td>PAR shield</td>
+<td>clear</td>
+</tr>
+<tr class="even">
+<td>jumper gnd to L</td>
+<td>Jumper</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="averging-soil-temperature-thermocouple-tcav" class="level3">
-<h3 class="anchored" data-anchor-id="averging-soil-temperature-thermocouple-tcav">Averging soil temperature thermocouple (TCAV)</h3>
+<section id="averaging-soil-temperature-thermocouple-tcav" class="level3">
+<h3 class="anchored" data-anchor-id="averaging-soil-temperature-thermocouple-tcav">Averaging soil temperature thermocouple (TCAV)</h3>
 <p><code>Const TSOIL_ANALOG_INPUT = 3 'Unique differential analog input channel.</code></p>
 <p><code>Const NMBR_TSOIL = 2 'Unique number of TCAV to measure.</code></p>
 <p>TCAV #1</p>
