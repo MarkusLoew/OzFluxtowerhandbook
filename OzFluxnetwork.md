@@ -27,6 +27,6 @@ To make network management and troubleshooting easier across OzFlux, it is recom
 
 Centralised data download and processing via TERN EPCN requires that IP-addresses for all flux-related devices are known and stable!
 
-`To be debated if loggers (like Cosmoz and surface temperature / radiation loggers) should share adjacent IP-ranges and only non-logger systems use the IP range > .130`
+`To be debated if non-flux loggers (like Cosmoz and surface temperature / radiation loggers, or loggers for ongoing non-TERN experiments at the site) should share adjacent IP-ranges in 192.168.x.104ff and only non-logger systems should use the IP range > .130`
 
 [Home](./Home.html)

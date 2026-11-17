@@ -21,10 +21,9 @@ It can be faster to go to the tower, copy the data off the logger, and then tran
 -   Manual download via *Loggernet Connect*
 -   Scheduled collection
 
-
 ## Data transfer without using Loggernet
-A major benefit of having the logger initiating and doing the data uploads autonomously that there is no need for a permanently runnin Campbell Scientific Loggernet software instance. The Logger will push the data to server as specified in the program. This also allows the logger to send ata without using VPN. And, in case the direct connection between the Loggernet instance and the logger fails, data will still get delivered as long as the logger has an internet connection.
-Loggernet is not required any more, or is only used to interact with the logger to change programs, settings, etc. The Campbell Scientific PC400 software is sufficient for these maintenance tasks.
+
+A major benefit of having the logger initiating and doing the data uploads autonomously that there is no need for a permanently runnin Campbell Scientific Loggernet software instance. The Logger will push the data to server as specified in the program. This also allows the logger to send ata without using VPN. And, in case the direct connection between the Loggernet instance and the logger fails, data will still get delivered as long as the logger has an internet connection. Loggernet is not required any more, or is only used to interact with the logger to change programs, settings, etc. The Campbell Scientific PC400 software is sufficient for these maintenance tasks.
 
 ### ftp
 
@@ -36,14 +35,14 @@ The CRBasic command for ftp upload is [`FTPClient()`](https://help.campbellsci.c
 
 ### sftp (ssh)
 
-*sftp* (SSH File Transfer Protocol) is a secure and more modern alternative to ftp. It encrypts both the command and data channels, providing confidentiality and integrity. Passwords are not necessarily stored in the CRBasic program. Instead, the sftp client uses private and public keys to authenticate. The keys are stored in the memory of the data logger. An introduction to setting up keys on the logger is available [from Campbell Scientific: "How to Generate SFTP Keys Easily"](https://www.campbellsci.com.au/blog/generate-sftp-keys-easily). In the program, the upload is done with `FTPClient()` , see example below (to do).
+*sftp* (SSH File Transfer Protocol) is a secure and more modern alternative to ftp. It encrypts both the command and data channels, providing confidentiality and integrity. Passwords are not necessarily stored in the CRBasic program. Instead, the sftp client uses private and public keys to authenticate. The keys are stored in the memory of the data logger. An introduction to setting up keys on the logger is available [from Campbell Scientific: "How to Generate SFTP Keys Easily"](https://www.campbellsci.com.au/blog/generate-sftp-keys-easily). In the program, the upload is done with `FTPClient()`, see example below.
 
 #### ftp upload to a server
 
 -   use CRBasic `FTPClient()` command to send data from the logger to a server
--   set up in a SlowSequence as not to interrupt the measurements
--   optionally create the filename depending in time and date, to create a new file for each upload, or append to an existing file.
--   see [FTPClient() CR Basic for details](https://help.campbellsci.com/crbasic/cr1000x/#Instructions/ftpclient.htm)
+-   use a SlowSequence for the upload as not to interrupt the measurements
+-   optionally create the filename dynamically depending in time and date, to create a new file for each upload, or append to an existing file.
+-   see [FTPClient() CR Basic Help for details](https://help.campbellsci.com/crbasic/cr1000x/#Instructions/ftpclient.htm)
 -   Ensure you use the Campbell Scientific Logger operating system with much improved internet connectivity, improved ssh/ftp handling [CR1000X(e) OS v.9.0.0 from 2026-08-27](https://www.campbellsci.com.au/revisions/612) or the corresponding CR6 Operating system [CR6 OS v.15.0.0](https://www.campbellsci.com.au/revisions/324)
 
 #### *Example CRBasic program for ftp upload*
@@ -54,29 +53,31 @@ The CRBasic command for ftp upload is [`FTPClient()`](https://help.campbellsci.c
 
 `'default ftp port is 21, sftp is 22 but check your server configuration. This setting is only needed if defaults of ftp or sftp are not used.`
 
-`Const FTP_Port = 21` 
+`Const FTP_Port = 21`
 
-`' insert the username you set up on your server `
-`Const User = "logger"` 
+`' insert the username you set up on your server`
+
+`Const User = "logger"`
 
 `' this is PASS setting is empty "" in case ssh keys are used for sftp. For ftp you must specify the password in clear text here!`
-`Const Pass = ""` 
+
+`Const Pass = ""`
 
 `Const Folder = "/destination/ftp/towername/"`
 
 \[...\]
 
-`' Create public variable to keep track of data transfer sucess / status`
+`' Create public variable to keep track of data transfer sucess / status in the "public table" to check status via Loggernet Connect or similar`
 
 `' must exist for each table`
 
-`Upload_status_TERNflux Public`
+`Upload_status_TERNflux Public` `Upload_status_mytable Public`
 
 \[...\]
 
-`' If the filename of the server requires a timestamp`
+`' If the filename on the server requires a timestamp, ie to create a new file for each upload for e.g. Eddypro-compatible 10/20 Hz data as one file per 30 minutes`
 
-`Public TStamp As String * 16 ' create a 30 min timestamp for ts_data`
+`Public TStamp As String * 16 ' create string suitable to hold a 30 min timestamp`
 
 \[...\]
 
@@ -86,9 +87,7 @@ The CRBasic command for ftp upload is [`FTPClient()`](https://help.campbellsci.c
 
 `Upload_status_TERNflux = FTPClient(server, User, Pass, "TERNFlux", "Towername/TERNFlux.dat", 9, 0, 0, 0, -1008)`
 
-`' to create a filename on the server that includes a timestamp:`
-`'e.g. create a 30 min timestamp:`
-`TStamp = Public.Timestamp(5, 1)`
+`' to create a filename on the server that includes a timestamp:` `'e.g. create a 30 min timestamp, cut off excessively detailed time-elements via Left():` `TStamp = Public.Timestamp(5, 1)`
 
 `TStamp = Left(TStamp, 16)`
 
@@ -111,5 +110,9 @@ The CRBasic command for ftp upload is [`FTPClient()`](https://help.campbellsci.c
 -   Campbell Scientific data loggers have an optional, built-in *ftp server* that allows files to be downloaded directly from the logger.
 -   use any ftp computer software to download files from the logger.
 
-### http
-E.g. ICOS uses the http protocol to send data from the datalogger to a server, see [ICOS Carbon Portal http data upload](https://github.com/ICOS-Carbon-Portal/data#simplified-etc-specific-facade-api-for-data-uploads).
+### http(s)
+
+E.g. ICOS uses the http protocol to send data from the datalogger to a server, see [ICOS Carbon Portal http data upload](https://github.com/ICOS-Carbon-Portal/data#simplified-etc-specific-facade-api-for-data-uploads). \
+Upload is then via HTTPPut() instead of FTPClient() in the CRBasic program on a Campbell Scientific data logger.
+
+The benefit of HTTPPut() is, that it is supported by all(?) network-enabled CampbellScientific data loggers, not just the latest flagship loggers (CR6, CR1000x). HTTP file-upload requires a compatible webserver/website to handle the file transfer on the server side. Usually done via php. See above ICOS link for details for the server side example.
